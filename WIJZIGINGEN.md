@@ -70,3 +70,10 @@ In het nieuwe thema staan nu alleen beloftes die op de eigen beleidspagina's sta
 **Algemene voorwaarden:** concept-pagina `/pages/algemene-voorwaarden` aangemaakt (NIET gepubliceerd). Gebaseerd op de eigen bedrijfsgegevens en beleidspagina's, met het wettelijke herroepingsrecht (14 dagen; uitzondering voor verzegelde hygiëneproducten die na levering zijn geopend). Laten nakijken voor publicatie.
 
 **Let op:** het hygiënebeleid ("geen retour zodra verzonden") is strenger dan de wet toestaat. De uitzondering geldt alleen voor geopende, verzegelde producten.
+
+## Update: beige & zwart (1 oktober 2026)
+Op verzoek volledig omgezet naar een strak beige-zwart ontwerp:
+- Palet: beige `#f5f0e8` / `#ede4d8` / `#e6d9c7` / `#d8c8b4`, zwart `#111111`, grijs `#3a3a3a`, wit.
+- Koppen: Josefin Sans; tekst: Jost.
+- Alle hoeken recht (knoppen, foto's, kaarten, badges, invoervelden).
+- Zwarte aankondigingsbalk en footer; homepage-hero gecentreerd met kop in hoofdletters.

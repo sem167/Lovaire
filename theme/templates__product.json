@@ -15,10 +15,10 @@
             "slideshow_mobile_controls_style": "dots",
             "thumbnail_position": "bottom",
             "thumbnail_width": 64,
-            "thumbnail_radius": 8,
+            "thumbnail_radius": 0,
             "aspect_ratio": "1/1.25",
             "media_fit": "cover",
-            "media_radius": 16,
+            "media_radius": 0,
             "zoom": true,
             "hide_variants": false
           },
@@ -134,8 +134,8 @@
                 "color": "var(--color-foreground)",
                 "wrap": "pretty",
                 "background": true,
-                "background_color": "#f6e9e6",
-                "corner_radius": 12,
+                "background_color": "#ede4d8",
+                "corner_radius": 0,
                 "padding-block-start": 16,
                 "padding-block-end": 16,
                 "padding-inline-start": 18,
@@ -306,7 +306,7 @@
           "type": "ai_gen_block_1e9e953",
           "settings": {
             "desktop_width_percent": 100,
-            "background_color": "#fbf7f4",
+            "background_color": "#f5f0e8",
             "padding_top": 28,
             "padding_bottom": 28,
             "padding_horizontal": 16,
@@ -316,8 +316,8 @@
             "section_spacing": 20,
             "show_payment_icons": true,
             "payment_bg_color": "#ffffff",
-            "payment_border_color": "#eadfd8",
-            "payment_border_radius": 6,
+            "payment_border_color": "#ddd2c3",
+            "payment_border_radius": 0,
             "columns_desktop": "3",
             "columns_mobile": "3",
             "show_feature_1": true,
@@ -330,10 +330,10 @@
             "feature_3_title": "Persoonlijke service",
             "feature_3_text": "Ma–vr 09:00–17:00",
             "icon_size": 28,
-            "icon_color": "#b9818a",
+            "icon_color": "#111111",
             "title_font_weight": "500",
-            "title_color": "#3b2a26",
-            "text_color": "#5c4a44"
+            "title_color": "#111111",
+            "text_color": "#3a3a3a"
           },
           "blocks": {}
         }
@@ -382,7 +382,7 @@
               "type": "_product-card-gallery",
               "settings": {
                 "image_ratio": "portrait",
-                "border_radius": 16
+                "border_radius": 0
               },
               "blocks": {}
             },

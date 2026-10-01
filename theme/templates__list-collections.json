@@ -59,7 +59,7 @@
             "collection_card_gap": 12,
             "inherit_color_scheme": true,
             "border": "none",
-            "border_radius": 16
+            "border_radius": 0
           },
           "blocks": {
             "collection-card-image": {
@@ -68,7 +68,7 @@
               "settings": {
                 "image_ratio": "portrait",
                 "border": "none",
-                "border_radius": 16
+                "border_radius": 0
               },
               "blocks": {}
             },
@@ -113,7 +113,7 @@
           "type": "ai_gen_block_1e9e953",
           "settings": {
             "desktop_width_percent": 100,
-            "background_color": "#fbf7f4",
+            "background_color": "#f5f0e8",
             "padding_top": 28,
             "padding_bottom": 28,
             "padding_horizontal": 16,
@@ -123,8 +123,8 @@
             "section_spacing": 20,
             "show_payment_icons": true,
             "payment_bg_color": "#ffffff",
-            "payment_border_color": "#eadfd8",
-            "payment_border_radius": 6,
+            "payment_border_color": "#ddd2c3",
+            "payment_border_radius": 0,
             "columns_desktop": "3",
             "columns_mobile": "3",
             "show_feature_1": true,
@@ -137,10 +137,10 @@
             "feature_3_title": "Persoonlijke service",
             "feature_3_text": "Ma–vr 09:00–17:00",
             "icon_size": 28,
-            "icon_color": "#b9818a",
+            "icon_color": "#111111",
             "title_font_weight": "500",
-            "title_color": "#3b2a26",
-            "text_color": "#5c4a44"
+            "title_color": "#111111",
+            "text_color": "#3a3a3a"
           },
           "blocks": {}
         }

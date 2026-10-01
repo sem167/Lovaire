@@ -14,7 +14,7 @@ help_cta = {"type": "section", "name": "Hulp nodig", **ordered([
 
 product_card = {"type": "_product-card", "static": True, "settings": {"product_card_gap": 10, "inherit_color_scheme": True},
                 "blocks": {
-                    "card-gallery": {"type": "_product-card-gallery", "settings": {"image_ratio": "portrait", "border_radius": 16}, "blocks": {}},
+                    "card-gallery": {"type": "_product-card-gallery", "settings": {"image_ratio": "portrait", "border_radius": 0}, "blocks": {}},
                     "group": {"type": "_product-card-group", "settings": {"content_direction": "column", "gap": 4,
                                                                          "horizontal_alignment_flex_direction_column": "flex-start",
                                                                          "width": "fill", "width_mobile": "fill", "inherit_color_scheme": True},
@@ -51,10 +51,10 @@ list_collections = {"sections": {
                             ("p", text("<p>Ontdek onze beauty essentials per categorie.</p>", align="center", width="100%"))])},
         "static-collection-card": {"type": "_collection-card", "static": True, "settings": {
             "placement": "below_image", "horizontal_alignment": "center", "vertical_alignment": "flex-end",
-            "collection_card_gap": 12, "inherit_color_scheme": True, "border": "none", "border_radius": 16},
+            "collection_card_gap": 12, "inherit_color_scheme": True, "border": "none", "border_radius": 0},
             "blocks": {
                 "collection-card-image": {"type": "_collection-card-image", "static": True,
-                                          "settings": {"image_ratio": "portrait", "border": "none", "border_radius": 16}, "blocks": {}},
+                                          "settings": {"image_ratio": "portrait", "border": "none", "border_radius": 0}, "blocks": {}},
                 "ctitle": {"type": "collection-title", "settings": {"alignment": "center", "type_preset": "h4",
                                                                     "color": "var(--color-foreground-heading)"}, "blocks": {}}},
             "block_order": ["ctitle"]}},
