@@ -59,3 +59,14 @@ Bronbestanden: `theme/build.py` genereert de vier aangepaste themabestanden in `
 - **Alle collecties:** Nederlandse kop ("Alle collecties" i.p.v. "Collections"), kapot kleurenschema gerepareerd, voordelenbalk.
 - **Gewone pagina's** (Over ons, verzend- en retourbeleid…): sierlijke kop + blok "Nog vragen? Wij helpen je graag".
 - **Contactpagina:** "Hoe kunnen we je helpen?", drie infoblokken (e-mail, openingstijden, bestelling volgen), formulier met knop "Verstuur bericht" i.p.v. "Submit".
+
+## Update: eerlijke beloftes + algemene voorwaarden (1 oktober 2026)
+**Tegenstrijdigheid gevonden:** de live site belooft "30 dagen geld terug", maar de eigen pagina's zeggen 14 dagen (retourkosten voor de klant) en geen retour op hygiënische producten (cosmetica, huidverzorging, ondergoed).
+In het nieuwe thema staan nu alleen beloftes die op de eigen beleidspagina's staan:
+- Aankondigingsbalk: "Altijd gratis verzending" en "Levering in 5–12 werkdagen met track & trace".
+- Voordelenbalk: Gratis verzending / Veilig betalen / Persoonlijke service.
+- Productpagina, veelgestelde vragen en bestelstappen: 14 dagen bedenktijd, met verwijzing naar het hygiënebeleid.
+
+**Algemene voorwaarden:** concept-pagina `/pages/algemene-voorwaarden` aangemaakt (NIET gepubliceerd). Gebaseerd op de eigen bedrijfsgegevens en beleidspagina's, met het wettelijke herroepingsrecht (14 dagen; uitzondering voor verzegelde hygiëneproducten die na levering zijn geopend). Laten nakijken voor publicatie.
+
+**Let op:** het hygiënebeleid ("geen retour zodra verzonden") is strenger dan de wet toestaat. De uitzondering geldt alleen voor geopende, verzegelde producten.

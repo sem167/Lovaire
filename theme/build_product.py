@@ -2,7 +2,7 @@
 import json
 from build import text, button, ordered, faq_row, sec_flex, index, CREAM, BLUSH, NUDE, ROSE, COCOA, COCOA_TEXT, WHITE
 
-TRUST_LINES = ("<p>✓ 30 dagen bedenktijd – niet goed, geld terug<br/>"
+TRUST_LINES = ("<p>✓ Altijd gratis verzending<br/>"
                "✓ Veilig betalen met iDEAL of Klarna<br/>"
                "✓ Levertijd 5–12 werkdagen, met track &amp; trace</p>")
 
@@ -47,7 +47,7 @@ product = {"sections": {
                     faq_row("ship", "Verzending & levering",
                             "De gemiddelde levertijd is 5 tot 12 werkdagen. Je ontvangt een e-mail met track &amp; trace zodra je bestelling onderweg is. Meer info: <a href=\"/pages/verzendbeleid\">verzendbeleid</a>."),
                     faq_row("ret", "Retourneren",
-                            "Je hebt 30 dagen bedenktijd. Voor sommige verzorgingsproducten gelden om hygiënische redenen aparte voorwaarden. Lees alles op <a href=\"/pages/bestellingen-en-levering-1\">Ruilen en retourneren</a>."),
+                            "Je kunt je bestelling tot 14 dagen na ontvangst retourneren. Voor hygiënische producten, zoals cosmetica en ondergoed, gelden aparte voorwaarden: zie <a href=\"/pages/ruilen-en-retourneren\">hygiënische producten</a>. Alle stappen vind je op <a href=\"/pages/bestellingen-en-levering-1\">Ruilen en retourneren</a>."),
                     faq_row("pay", "Veilig betalen",
                             "Je betaalt via de beveiligde checkout van Shopify, met o.a. iDEAL en Klarna. Wij zien en bewaren nooit je betaalgegevens."),
                     faq_row("help", "Vragen? Wij helpen je graag",
@@ -102,8 +102,8 @@ index["sections"]["steps"] = {"type": "section", "name": "Zo werkt bestellen", *
                                            "width": "fill", "width_mobile": "fill", "inherit_color_scheme": True},
              **ordered([
                  ("s1", step("01", "Bestel veilig", "Betaal vertrouwd met iDEAL of Klarna via de beveiligde checkout.")),
-                 ("s2", step("02", "Wij verzenden", "Binnen 5–12 werkdagen bij je thuis, met track &amp; trace in je mail.")),
-                 ("s3", step("03", "Niet tevreden?", "Je hebt 30 dagen bedenktijd. We denken graag met je mee.")),
+                 ("s2", step("02", "Gratis verzonden", "Binnen 5–12 werkdagen bij je thuis, met track &amp; trace in je mail.")),
+                 ("s3", step("03", "Persoonlijke hulp", "Een vraag of probleem? Mail ons, we reageren op werkdagen tussen 09:00 en 17:00.")),
              ])}),
 ]), "settings": {**sec_flex, "gap": 40, "color_scheme": "scheme-5",
                  "padding-block-start": 72, "padding-block-end": 72}}

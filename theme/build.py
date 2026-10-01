@@ -146,7 +146,7 @@ index = {"sections": {
             "section_spacing": 20, "show_payment_icons": True,
             "payment_bg_color": WHITE, "payment_border_color": "#eadfd8", "payment_border_radius": 6,
             "columns_desktop": "3", "columns_mobile": "3",
-            "show_feature_1": True, "feature_1_title": "30 dagen retour", "feature_1_text": "Niet goed, geld terug",
+            "show_feature_1": True, "feature_1_title": "Gratis verzending", "feature_1_text": "Op elke bestelling",
             "show_feature_2": True, "feature_2_title": "Veilig betalen", "feature_2_text": "iDEAL · Klarna",
             "show_feature_3": True, "feature_3_title": "Persoonlijke service", "feature_3_text": "Ma–vr 09:00–17:00",
             "icon_size": 28, "icon_color": ROSE, "title_font_weight": "500",
@@ -220,8 +220,8 @@ index = {"sections": {
         ("acc", {"type": "accordion", "settings": {"icon": "plus", "dividers": True, "type_preset": "h5",
                                                    "inherit_color_scheme": True}, **ordered([
             faq_row("q1", "Wanneer ontvang ik mijn bestelling?", "De gemiddelde levertijd is 5 tot 12 werkdagen. Zodra je bestelling is verzonden, ontvang je een e-mail met je track & trace."),
-            faq_row("q2", "Wat zijn de verzendkosten?", "De verzendkosten zie je altijd in de checkout, voordat je je bestelling afrondt."),
-            faq_row("q3", "Kan ik mijn bestelling retourneren?", "Ja, je hebt 30 dagen bedenktijd. Voor sommige verzorgingsproducten gelden om hygiënische redenen aparte voorwaarden. Lees meer op onze pagina <a href=\"/pages/bestellingen-en-levering-1\">Ruilen en retourneren</a>."),
+            faq_row("q2", "Wat zijn de verzendkosten?", "Niets: bij Lovaire is verzending altijd gratis."),
+            faq_row("q3", "Kan ik mijn bestelling retourneren?", "Je kunt je bestelling tot 14 dagen na ontvangst retourneren. Voor hygiënische producten, zoals cosmetica en ondergoed, gelden aparte voorwaarden. Lees alles op <a href=\"/pages/bestellingen-en-levering-1\">Ruilen en retourneren</a>."),
             faq_row("q4", "Waar worden jullie producten gemaakt?", "Onze producten worden zowel lokaal als wereldwijd geproduceerd. We selecteren onze productiepartners zorgvuldig, zodat je kwaliteit krijgt voor een eerlijke prijs."),
             faq_row("q5", "Ik heb een vraag, hoe bereik ik jullie?", "Stuur ons een bericht via de <a href=\"/pages/contact\">contactpagina</a>. We reageren op werkdagen tussen 09:00 en 17:00."),
         ])}),
@@ -232,10 +232,10 @@ index = {"sections": {
 header_group = {"type": "header", "name": "Header", "sections": {
     "header_announcements_pbXTDf": {"type": "header-announcements", "name": "t:names.announcement_bar",
         **ordered([
-            ("a1", {"type": "_announcement", "settings": {"text": "Vandaag gratis verzending", "link": "shopify://collections/all",
+            ("a1", {"type": "_announcement", "settings": {"text": "Altijd gratis verzending", "link": "shopify://pages/bestellingen-en-levering",
                                                           "font": "var(--font-accent--family)", "font_size": "0.75rem",
                                                           "letter_spacing": "loose", "case": "uppercase"}, "blocks": {}}),
-            ("a2", {"type": "_announcement", "settings": {"text": "30 dagen geld-terug-garantie", "link": "shopify://pages/bestellingen-en-levering-1",
+            ("a2", {"type": "_announcement", "settings": {"text": "Levering in 5–12 werkdagen met track & trace", "link": "shopify://pages/verzendbeleid",
                                                           "font": "var(--font-accent--family)", "font_size": "0.75rem",
                                                           "letter_spacing": "loose", "case": "uppercase"}, "blocks": {}}),
         ]),

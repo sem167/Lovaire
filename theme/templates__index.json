@@ -138,8 +138,8 @@
             "columns_desktop": "3",
             "columns_mobile": "3",
             "show_feature_1": true,
-            "feature_1_title": "30 dagen retour",
-            "feature_1_text": "Niet goed, geld terug",
+            "feature_1_title": "Gratis verzending",
+            "feature_1_text": "Op elke bestelling",
             "show_feature_2": true,
             "feature_2_title": "Veilig betalen",
             "feature_2_text": "iDEAL · Klarna",
@@ -555,7 +555,7 @@
                 "q2_t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>De verzendkosten zie je altijd in de checkout, voordat je je bestelling afrondt.</p>",
+                    "text": "<p>Niets: bij Lovaire is verzending altijd gratis.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -582,7 +582,7 @@
                 "q3_t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Ja, je hebt 30 dagen bedenktijd. Voor sommige verzorgingsproducten gelden om hygiënische redenen aparte voorwaarden. Lees meer op onze pagina <a href=\"/pages/bestellingen-en-levering-1\">Ruilen en retourneren</a>.</p>",
+                    "text": "<p>Je kunt je bestelling tot 14 dagen na ontvangst retourneren. Voor hygiënische producten, zoals cosmetica en ondergoed, gelden aparte voorwaarden. Lees alles op <a href=\"/pages/bestellingen-en-levering-1\">Ruilen en retourneren</a>.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -799,7 +799,7 @@
                 "t": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>Wij verzenden</h3>",
+                    "text": "<h3>Gratis verzonden</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -861,7 +861,7 @@
                 "t": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>Niet tevreden?</h3>",
+                    "text": "<h3>Persoonlijke hulp</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -875,7 +875,7 @@
                 "b": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Je hebt 30 dagen bedenktijd. We denken graag met je mee.</p>",
+                    "text": "<p>Een vraag of probleem? Mail ons, we reageren op werkdagen tussen 09:00 en 17:00.</p>",
                     "width": "fit-content",
                     "max_width": "narrow",
                     "alignment": "center",

@@ -126,7 +126,7 @@
             "trust": {
               "type": "text",
               "settings": {
-                "text": "<p>✓ 30 dagen bedenktijd – niet goed, geld terug<br/>✓ Veilig betalen met iDEAL of Klarna<br/>✓ Levertijd 5–12 werkdagen, met track &amp; trace</p>",
+                "text": "<p>✓ Altijd gratis verzending<br/>✓ Veilig betalen met iDEAL of Klarna<br/>✓ Levertijd 5–12 werkdagen, met track &amp; trace</p>",
                 "width": "100%",
                 "alignment": "left",
                 "type_preset": "rte",
@@ -195,7 +195,7 @@
                     "ret_t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Je hebt 30 dagen bedenktijd. Voor sommige verzorgingsproducten gelden om hygiënische redenen aparte voorwaarden. Lees alles op <a href=\"/pages/bestellingen-en-levering-1\">Ruilen en retourneren</a>.</p>",
+                        "text": "<p>Je kunt je bestelling tot 14 dagen na ontvangst retourneren. Voor hygiënische producten, zoals cosmetica en ondergoed, gelden aparte voorwaarden: zie <a href=\"/pages/ruilen-en-retourneren\">hygiënische producten</a>. Alle stappen vind je op <a href=\"/pages/bestellingen-en-levering-1\">Ruilen en retourneren</a>.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -321,8 +321,8 @@
             "columns_desktop": "3",
             "columns_mobile": "3",
             "show_feature_1": true,
-            "feature_1_title": "30 dagen retour",
-            "feature_1_text": "Niet goed, geld terug",
+            "feature_1_title": "Gratis verzending",
+            "feature_1_text": "Op elke bestelling",
             "show_feature_2": true,
             "feature_2_title": "Veilig betalen",
             "feature_2_text": "iDEAL · Klarna",

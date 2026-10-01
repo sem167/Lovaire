@@ -9,8 +9,8 @@
         "a1": {
           "type": "_announcement",
           "settings": {
-            "text": "Vandaag gratis verzending",
-            "link": "shopify://collections/all",
+            "text": "Altijd gratis verzending",
+            "link": "shopify://pages/bestellingen-en-levering",
             "font": "var(--font-accent--family)",
             "font_size": "0.75rem",
             "letter_spacing": "loose",
@@ -21,8 +21,8 @@
         "a2": {
           "type": "_announcement",
           "settings": {
-            "text": "30 dagen geld-terug-garantie",
-            "link": "shopify://pages/bestellingen-en-levering-1",
+            "text": "Levering in 5–12 werkdagen met track & trace",
+            "link": "shopify://pages/verzendbeleid",
             "font": "var(--font-accent--family)",
             "font_size": "0.75rem",
             "letter_spacing": "loose",
