@@ -1,0 +1,205 @@
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "newsletter": {
+      "type": "section",
+      "name": "Nieuwsbrief",
+      "blocks": {
+        "h": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Word een Lovaire insider</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-heading--family)",
+            "color": "var(--color-foreground-heading)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "p": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Als eerste op de hoogte van nieuwe producten, acties en beauty tips.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "color": "var(--color-foreground)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "form": {
+          "type": "email-signup",
+          "settings": {
+            "width": "custom",
+            "custom_width": 100,
+            "inherit_color_scheme": true,
+            "border_style": "all",
+            "border_width": 1,
+            "border_radius": 40,
+            "style_class": "button",
+            "display_type": "text",
+            "label": "Aanmelden",
+            "integrated_button": true
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "h",
+        "p",
+        "form"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "section_width": "page-width",
+        "gap": 16,
+        "color_scheme": "scheme-5",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "about": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Lovaire</strong></p><p>Beauty essentials die jouw natuurlijke schoonheid laten stralen.</p>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "color": "var(--color-foreground)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "shop": {
+          "type": "menu",
+          "settings": {
+            "menu": "main-menu",
+            "heading": "Shop",
+            "menu_spacing": 10,
+            "show_as_accordion": true,
+            "accordion_icon": "plus",
+            "inherit_color_scheme": true,
+            "heading_preset": "h4",
+            "link_preset": "paragraph"
+          },
+          "blocks": {}
+        },
+        "info": {
+          "type": "menu",
+          "settings": {
+            "menu": "informatie",
+            "heading": "Informatie",
+            "menu_spacing": 10,
+            "show_as_accordion": true,
+            "accordion_icon": "plus",
+            "inherit_color_scheme": true,
+            "heading_preset": "h4",
+            "link_preset": "paragraph"
+          },
+          "blocks": {}
+        },
+        "contact": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>KLANTENSERVICE</strong></p><p>Ma–vr: 09:00–17:00<br/>Za: 10:00–14:00<br/>Zo: gesloten</p><p>lovairesupport@gmail.com</p><p>KVK: 42074062<br/>BTW: NL005474481B21</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "color": "var(--color-foreground)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "about",
+        "shop",
+        "info",
+        "contact"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "gap": 40,
+        "color_scheme": "scheme-3",
+        "padding-block-start": 56,
+        "padding-block-end": 32
+      }
+    },
+    "utilities": {
+      "type": "footer-utilities",
+      "blocks": {
+        "copyright": {
+          "type": "footer-copyright",
+          "settings": {
+            "show_powered_by": false,
+            "font_size": "0.75rem",
+            "case": "none"
+          },
+          "blocks": {}
+        },
+        "policy_list": {
+          "type": "footer-policy-list",
+          "settings": {
+            "font_size": "0.75rem",
+            "case": "none"
+          },
+          "blocks": {}
+        },
+        "social_icons": {
+          "type": "social-links",
+          "settings": {
+            "facebook_url": "",
+            "instagram_url": "",
+            "youtube_url": "",
+            "tiktok_url": "",
+            "twitter_url": "",
+            "threads_url": "",
+            "linkedin_url": "",
+            "bluesky_url": "",
+            "snapchat_url": "",
+            "pinterest_url": "",
+            "tumblr_url": "",
+            "vimeo_url": "",
+            "custom_url": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "copyright",
+        "policy_list",
+        "social_icons"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "gap": 24,
+        "divider_thickness": 1,
+        "color_scheme": "scheme-3",
+        "padding-block-start": 20,
+        "padding-block-end": 20
+      }
+    }
+  },
+  "order": [
+    "newsletter",
+    "footer",
+    "utilities"
+  ]
+}

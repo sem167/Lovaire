@@ -31,3 +31,17 @@ Voor alle producten:
 - Voorraad staat op 0 of negatief (mascara −12, shampoo −4, foundation −2). Als je via dropshipping verkoopt, zet voorraadtracking uit. Doe je dat niet, dan klopt de voorraad niet.
 - De Self Tan Mousse heeft maar 1 foto, de borstel 2. Voeg meer beelden toe.
 - Afbeeldingsnamen zoals `WhatsApp_Image_...` / `ChatGPT_Image_...`: geef ze alt-teksten.
+
+# Nieuw thema "Lovaire – Nieuw design" — 1 oktober 2026
+
+Kopie van het live Dwell-thema (ID 208207184211), **niet gepubliceerd**.
+Voorbeeld: https://lovaire.nl/?preview_theme_id=208207184211
+
+Bronbestanden: `theme/build.py` genereert de vier aangepaste themabestanden in `theme/`.
+
+- **Stijl:** zacht & vrouwelijk. Crème `#fbf7f4`, blush `#f6e9e6`, nude `#efe4da`, oudroze `#b9818a`, cacao `#3b2a26`.
+- **Lettertypes:** Playfair Display (koppen), Jost (tekst). Knoppen afgerond.
+- **Header:** vaste header, zoeken rechts, cacaokleurige aankondigingsbalk.
+- **Homepage:** hero met twee knoppen → voordelen → bestsellers (alle 6 producten) → "Shop per categorie" (5 collecties, incl. Haarverzorging) → "Over Lovaire" → reviews → veelgestelde vragen.
+- **Footer:** nieuwsbriefblok, kolommen Shop / Informatie / Klantenservice, "Powered by Shopify" uit, lege social-links verwijderd.
+- App-embeds (Loox, Kaching Bundles, Upcart) blijven actief.

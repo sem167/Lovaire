@@ -1,0 +1,691 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "name": "Hero",
+      "blocks": {
+        "eyebrow": {
+          "type": "text",
+          "settings": {
+            "text": "<p>LOVAIRE BEAUTY</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h6",
+            "font": "var(--font-body--family)",
+            "color": "var(--color-foreground)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Jouw glow, elke dag</h1>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h1",
+            "font": "var(--font-heading--family)",
+            "color": "var(--color-foreground-heading)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "subtext": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Beauty essentials die jouw natuurlijke schoonheid laten stralen.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "color": "var(--color-foreground)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "buttons": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "gap": 12,
+            "width": "fit-content",
+            "width_mobile": "fit-content",
+            "inherit_color_scheme": true
+          },
+          "blocks": {
+            "btn_shop": {
+              "type": "button",
+              "settings": {
+                "label": "Shop bestsellers",
+                "link": "shopify://collections/all",
+                "style_class": "button",
+                "width": "fit-content",
+                "width_mobile": "fit-content"
+              },
+              "blocks": {}
+            },
+            "btn_coll": {
+              "type": "button",
+              "settings": {
+                "label": "Bekijk collecties",
+                "link": "/collections",
+                "style_class": "button-secondary",
+                "width": "fit-content",
+                "width_mobile": "fit-content"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "btn_shop",
+            "btn_coll"
+          ]
+        }
+      },
+      "block_order": [
+        "eyebrow",
+        "heading",
+        "subtext",
+        "buttons"
+      ],
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/WhatsApp_Image_2026-09-04_at_15.51.01.jpg",
+        "custom_mobile_media": true,
+        "media_type_1_mobile": "image",
+        "image_1_mobile": "shopify://shop_images/WhatsApp_Image_2026-09-11_at_19.34.28.jpg",
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "flex-end",
+        "gap": 16,
+        "section_width": "full-width",
+        "section_height": "custom",
+        "section_height_custom": 80,
+        "color_scheme": "scheme-6",
+        "toggle_overlay": true,
+        "overlay_color": "#3b2a2659",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "trust": {
+      "type": "_blocks",
+      "name": "Voordelen",
+      "blocks": {
+        "usp": {
+          "type": "ai_gen_block_1e9e953",
+          "settings": {
+            "desktop_width_percent": 100,
+            "background_color": "#fbf7f4",
+            "padding_top": 28,
+            "padding_bottom": 28,
+            "padding_horizontal": 16,
+            "padding_top_mobile": 20,
+            "padding_bottom_mobile": 20,
+            "padding_horizontal_mobile": 12,
+            "section_spacing": 20,
+            "show_payment_icons": true,
+            "payment_bg_color": "#ffffff",
+            "payment_border_color": "#eadfd8",
+            "payment_border_radius": 6,
+            "columns_desktop": "3",
+            "columns_mobile": "3",
+            "show_feature_1": true,
+            "feature_1_title": "30 dagen retour",
+            "feature_1_text": "Niet goed, geld terug",
+            "show_feature_2": true,
+            "feature_2_title": "Veilig betalen",
+            "feature_2_text": "iDEAL · Klarna",
+            "show_feature_3": true,
+            "feature_3_title": "Persoonlijke service",
+            "feature_3_text": "Ma–vr 09:00–17:00",
+            "icon_size": 28,
+            "icon_color": "#b9818a",
+            "title_font_weight": "500",
+            "title_color": "#3b2a26",
+            "text_color": "#5c4a44"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "usp"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "bestsellers": {
+      "type": "_blocks",
+      "name": "Bestsellers",
+      "blocks": {
+        "list": {
+          "type": "ai_gen_block_c52cb49",
+          "settings": {
+            "collection": "",
+            "selected_products": [
+              "lashlift-waterproof-mascara",
+              "zelfkleurende-foundation-spf15",
+              "self-tanner-tanning-lotion",
+              "lovaire-hairboost-shampoo",
+              "elektrische-spray-massage-borstel-lovaire",
+              "lovaire-support-bh"
+            ],
+            "heading": "Onze bestsellers",
+            "link_label": "Bekijk alles",
+            "desktop_width_percent": 100,
+            "heading_size": 34,
+            "image_radius": 16,
+            "background_color": "#fbf7f4",
+            "heading_color": "#3b2a26",
+            "text_color": "#3b2a26",
+            "link_color": "#b9818a",
+            "badge_color": "#b9818a",
+            "compare_color": "#9c8a84",
+            "placeholder_color": "#efe4da"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "list"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 56,
+        "padding-block-end": 24
+      }
+    },
+    "collections": {
+      "type": "collection-list",
+      "name": "Shop per categorie",
+      "block_order": [
+        "title"
+      ],
+      "blocks": {
+        "title": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "gap": 8,
+            "horizontal_alignment_flex_direction_column": "center",
+            "width": "fill",
+            "width_mobile": "fill",
+            "inherit_color_scheme": true
+          },
+          "blocks": {
+            "h": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Shop per categorie</h2>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "h2",
+                "font": "var(--font-heading--family)",
+                "color": "var(--color-foreground-heading)",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "h"
+          ]
+        },
+        "static-collection-card": {
+          "type": "_collection-card",
+          "static": true,
+          "settings": {
+            "placement": "below_image",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-end",
+            "collection_card_gap": 12,
+            "inherit_color_scheme": true,
+            "border": "none",
+            "border_radius": 16
+          },
+          "blocks": {
+            "collection-card-image": {
+              "type": "_collection-card-image",
+              "static": true,
+              "settings": {
+                "image_ratio": "portrait",
+                "border": "none",
+                "border_radius": 16
+              },
+              "blocks": {}
+            },
+            "ctitle": {
+              "type": "collection-title",
+              "settings": {
+                "alignment": "center",
+                "type_preset": "h4",
+                "color": "var(--color-foreground-heading)"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "ctitle"
+          ]
+        }
+      },
+      "settings": {
+        "collection_list": [
+          "make-up",
+          "huid-producten",
+          "haarverzorging",
+          "beauty-tools",
+          "shapewear"
+        ],
+        "layout_type": "grid",
+        "carousel_on_mobile": true,
+        "columns": 5,
+        "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 16,
+        "rows_gap": 16,
+        "max_collections": 5,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "gap": 24,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 56
+      }
+    },
+    "story": {
+      "type": "section",
+      "name": "Over Lovaire",
+      "blocks": {
+        "eyebrow": {
+          "type": "text",
+          "settings": {
+            "text": "<p>OVER LOVAIRE</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h6",
+            "font": "var(--font-body--family)",
+            "color": "var(--color-foreground)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Stijl, selfcare en trendy must-haves</h2>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-heading--family)",
+            "color": "var(--color-foreground-heading)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Zie jij ook steeds die virale producten voorbijkomen op TikTok en Instagram? Bij Lovaire brengen we ze samen: beauty essentials die écht werken, zorgvuldig voor jou geselecteerd.</p>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "color": "var(--color-foreground)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "cta": {
+          "type": "button",
+          "settings": {
+            "label": "Lees ons verhaal",
+            "link": "shopify://pages/over-ons",
+            "style_class": "button-secondary",
+            "width": "fit-content",
+            "width_mobile": "fit-content"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "eyebrow",
+        "heading",
+        "body",
+        "cta"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "section_width": "page-width",
+        "gap": 20,
+        "color_scheme": "scheme-4",
+        "padding-block-start": 80,
+        "padding-block-end": 80
+      }
+    },
+    "reviews": {
+      "type": "ss-testimonials-2",
+      "name": "Reviews",
+      "blocks": {
+        "r1": {
+          "type": "testimonial",
+          "settings": {
+            "stars_count": 5,
+            "text": "<p>Top ervaring met Lovaire Beauty! Mooie producten, snelle verzending en alles kwam netjes binnen. De kwaliteit is beter dan verwacht en ik bestel hier zeker vaker. Aanrader! ✨</p>",
+            "image": "shopify://shop_images/WhatsApp_Image_2026-06-05_at_20.43.21.jpg",
+            "author": "Laura",
+            "job_title": "Amsterdam"
+          }
+        },
+        "r2": {
+          "type": "testimonial",
+          "settings": {
+            "stars_count": 4.5,
+            "text": "<p>Erg tevreden met Lovaire! Mooie producten, goede kwaliteit en alles kwam netjes binnen. De website is overzichtelijk en bestellen gaat heel eenvoudig. Zeker een webshop waar ik in de toekomst vaker zal bestellen!</p>",
+            "image": "shopify://shop_images/WhatsApp_Image_2026-06-05_at_20.50.15.jpg",
+            "author": "Yvonne",
+            "job_title": "Eindhoven"
+          }
+        },
+        "r3": {
+          "type": "testimonial",
+          "settings": {
+            "stars_count": 5,
+            "text": "<p>Super blij met mijn bestelling bij Lovaire! De website werkt fijn, de producten zijn top en alles was netjes verpakt. Ik kom hier zeker vaker terug! 💕✨</p>",
+            "image": "shopify://shop_images/WhatsApp_Image_2026-06-05_at_20.55.26.jpg",
+            "author": "Fleur",
+            "job_title": "Utrecht"
+          }
+        },
+        "r5": {
+          "type": "testimonial",
+          "settings": {
+            "stars_count": 4.5,
+            "text": "<p>Lovaire heeft echt een leuke collectie. Ik kom regelmatig terug om rond te kijken en heb tot nu toe alleen maar goede ervaringen gehad. Zeker een aanrader! ✨</p>",
+            "image": "shopify://shop_images/WhatsApp_Image_2026-06-05_at_21.09.03.jpg",
+            "author": "Luna",
+            "job_title": "Maastricht"
+          }
+        },
+        "r6": {
+          "type": "testimonial",
+          "settings": {
+            "stars_count": 4.5,
+            "text": "<p>Je merkt meteen dat Lovaire aandacht besteedt aan de hele ervaring. Niet alleen de producten, maar ook de uitstraling van de webshop voelt verzorgd en luxe aan. Alles was duidelijk en ik voelde me echt gewaardeerd als klant.</p>",
+            "image": "shopify://shop_images/WhatsApp_Image_2026-06-05_at_21.16.05.jpg",
+            "author": "Esther",
+            "job_title": "Tilburg"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r5",
+        "r6"
+      ],
+      "settings": {
+        "heading": "<p>Wat klanten zeggen</p>",
+        "heading_custom": true,
+        "heading_font": "playfair_display_n4",
+        "heading_size": 36,
+        "heading_size_mobile": 28,
+        "heading_align": "center",
+        "heading_align_mobile": "center",
+        "slider_view": 3,
+        "slider_view_mobile": 1.2,
+        "slider_delay": 4,
+        "card_radius": 16,
+        "card_shadow": false,
+        "card_content_align": "center",
+        "card_content_align_mobile": "center",
+        "text_custom": true,
+        "text_font": "jost_n4",
+        "text_size": 16,
+        "text_size_mobile": 15,
+        "author_custom": true,
+        "author_font": "jost_n5",
+        "job_title_custom": true,
+        "job_title_font": "jost_n4",
+        "stars_color": "#b9818a",
+        "text_color": "#5c4a44",
+        "author_color": "#3b2a26",
+        "job_title_color": "#9c8a84",
+        "card_bg_color": "#ffffff",
+        "dots_color": "#b9818a",
+        "heading_color": "#3b2a26",
+        "background_color": "#f6e9e6",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "content_width": 1200,
+        "lazy": true
+      }
+    },
+    "faq": {
+      "type": "section",
+      "name": "Veelgestelde vragen",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Veelgestelde vragen</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-heading--family)",
+            "color": "var(--color-foreground-heading)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "acc": {
+          "type": "accordion",
+          "settings": {
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h5",
+            "inherit_color_scheme": true
+          },
+          "blocks": {
+            "q1": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Wanneer ontvang ik mijn bestelling?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "q1_t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>De gemiddelde levertijd is 5 tot 12 werkdagen. Zodra je bestelling is verzonden, ontvang je een e-mail met je track & trace.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "color": "var(--color-foreground)",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "q1_t"
+              ]
+            },
+            "q2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Wat zijn de verzendkosten?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "q2_t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>De verzendkosten zie je altijd in de checkout, voordat je je bestelling afrondt.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "color": "var(--color-foreground)",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "q2_t"
+              ]
+            },
+            "q3": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Kan ik mijn bestelling retourneren?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "q3_t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ja, je hebt 30 dagen bedenktijd. Voor sommige verzorgingsproducten gelden om hygiënische redenen aparte voorwaarden. Lees meer op onze pagina <a href=\"/pages/bestellingen-en-levering-1\">Ruilen en retourneren</a>.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "color": "var(--color-foreground)",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "q3_t"
+              ]
+            },
+            "q4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Waar worden jullie producten gemaakt?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "q4_t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Onze producten worden zowel lokaal als wereldwijd geproduceerd. We selecteren onze productiepartners zorgvuldig, zodat je kwaliteit krijgt voor een eerlijke prijs.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "color": "var(--color-foreground)",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "q4_t"
+              ]
+            },
+            "q5": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Ik heb een vraag, hoe bereik ik jullie?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "q5_t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Stuur ons een bericht via de <a href=\"/pages/contact\">contactpagina</a>. We reageren op werkdagen tussen 09:00 en 17:00.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "color": "var(--color-foreground)",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "q5_t"
+              ]
+            }
+          },
+          "block_order": [
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "q5"
+          ]
+        }
+      },
+      "block_order": [
+        "heading",
+        "acc"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "section_width": "page-width",
+        "gap": 32,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 72,
+        "padding-block-end": 72
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "trust",
+    "bestsellers",
+    "collections",
+    "story",
+    "reviews",
+    "faq"
+  ]
+}
