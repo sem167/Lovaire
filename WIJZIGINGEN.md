@@ -116,3 +116,10 @@ Alleen de stijl van de voorbeeldsite is overgenomen, niet het logo of de teksten
 - Afgeronde productkaarten. Bewust GEEN nep-uitverkoopbadges en GEEN "30 dagen garantie" (Lovaire hanteert 14 dagen).
 - Producttemplate ook gekopieerd naar product.support-bh-2/tanning-oil/foundation/kam.
 - Homepage-opbouw zoals het voorbeeld: hero → voordelen → "ONZE FAVORIETEN" (nieuwe sectie `lovaire-favorieten`: afgeronde productkaarten, 3 kolommen, zwarte "Shop alles →"-knop) → "ONTDEK" categorie-rondjes → "ONZE BELOFTE" → verhaal → reviews → FAQ. Tekstband en spotlight verwijderd voor een rustiger geheel.
+
+## Update: spectaculaire hero (1 oktober 2026)
+- Nieuwe eigen sectie `lovaire-hero`: tekst links op blush, grote sfeerfoto rechts (op mobiel bovenaan).
+- Foto: "A Portrait of a Woman in a White Robe Holding a Dropper Bottle" (Pexels 11179593, gratis commercieel bruikbaar) → `lovaire-hero-glow.jpg`.
+- Animaties: tekst schuift gefaseerd omhoog, foto zoomt langzaam in, zwevend glas-label "Altijd gratis verzending", draaiend embleem "LOVAIRE · BEAUTY · ESSENTIALS". Uit bij 'beperkte beweging'.
+- Kop "Voel je mooi, *elke dag*" met cursief accent; twee knoppen; vinkjes Gratis verzending / iDEAL / Persoonlijke service.
+- Alles aanpasbaar in de thema-editor (foto, focus, teksten, kleuren, hoogte).

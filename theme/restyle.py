@@ -77,3 +77,19 @@ S["trust"]["settings"]["padding-block-start"] = S["trust"]["settings"]["padding-
 idx["order"] = ["hero", "trust", "favorieten", "collections", "steps", "story", "reviews", "faq"]
 save("templates__index.json", idx)
 print("lyvelle-opbouw", idx["order"])
+
+# --- Eigen hero met sfeerfoto (Pexels 11179593), animaties, zwevend label en draaiend embleem
+idx = load("templates__index.json")
+idx["sections"]["hero"] = {"type": "lovaire-hero", "settings": {
+    "image": "shopify://shop_images/lovaire-hero-glow.jpg", "focal": "center 25%",
+    "eyebrow": "Lovaire beauty",
+    "title": "<p>Voel je mooi, <em>elke dag</em></p>",
+    "text": "Make-up, huid- en haarverzorging die je echt gebruikt. Zorgvuldig geselecteerd en altijd gratis verzonden.",
+    "button_label": "Shop nu", "button_link": "shopify://collections/all",
+    "button2_label": "Ontdek collecties", "button2_link": "/collections",
+    "trust_1": "Gratis verzending", "trust_2": "Veilig betalen met iDEAL", "trust_3": "Persoonlijke service",
+    "badge_title": "Altijd gratis verzending", "badge_text": "Met track & trace in je mail",
+    "seal_text": "LOVAIRE · BEAUTY · ESSENTIALS · ",
+    "background": "#f6e7de", "height": 85}}
+save("templates__index.json", idx)
+print("hero vervangen")

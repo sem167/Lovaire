@@ -1,0 +1,127 @@
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+{% style %}
+  .lvh-{{ sid }} { position: relative; background: {{ section.settings.background }}; overflow: hidden; }
+  .lvh-{{ sid }} .lvh__grid { display: grid; grid-template-columns: 1fr; min-height: 0; }
+  @media (min-width: 900px) { .lvh-{{ sid }} .lvh__grid { grid-template-columns: 1.05fr 1fr; min-height: {{ section.settings.height }}vh; } }
+
+  .lvh-{{ sid }} .lvh__text { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 44px 22px 52px; order: 2; }
+  @media (min-width: 900px) { .lvh-{{ sid }} .lvh__text { order: 1; padding: 80px 64px 80px max(48px, calc((100vw - 1240px) / 2 + 24px)); } }
+
+  .lvh-{{ sid }} .lvh__eyebrow { display: flex; align-items: center; gap: 14px; font-family: var(--font-body--family); font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: #8b6b4a; margin: 0 0 22px; }
+  .lvh-{{ sid }} .lvh__eyebrow::before { content: ""; width: 42px; height: 1px; background: #8b6b4a; }
+  .lvh-{{ sid }} .lvh__title { font-family: var(--font-heading--family); font-weight: 400; font-size: clamp(36px, 5.4vw, 72px); line-height: 1.04; letter-spacing: -.02em; color: #111; margin: 0 0 22px; max-width: 13ch; }
+  .lvh-{{ sid }} .lvh__title em { font-style: italic; color: #8b6b4a; }
+  .lvh-{{ sid }} .lvh__sub { font-family: var(--font-body--family); font-size: 16px; line-height: 1.7; color: #5a5a5a; max-width: 40ch; margin: 0 0 34px; }
+  .lvh-{{ sid }} .lvh__ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+  .lvh-{{ sid }} .lvh__btn { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-body--family); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; padding: 18px 34px; transition: all .3s ease; }
+  .lvh-{{ sid }} .lvh__btn--dark { background: #111; color: #fff; }
+  .lvh-{{ sid }} .lvh__btn--dark:hover { background: #8b6b4a; }
+  .lvh-{{ sid }} .lvh__btn--line { color: #111; border: 1px solid #111; }
+  .lvh-{{ sid }} .lvh__btn--line:hover { background: #111; color: #fff; }
+  .lvh-{{ sid }} .lvh__btn span { transition: transform .3s ease; }
+  .lvh-{{ sid }} .lvh__btn:hover span { transform: translateX(4px); }
+  .lvh-{{ sid }} .lvh__trust { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 38px; font-family: var(--font-body--family); font-size: 13px; color: #5a5a5a; }
+  .lvh-{{ sid }} .lvh__trust li { list-style: none; display: flex; align-items: center; gap: 8px; }
+  .lvh-{{ sid }} .lvh__trust ul { display: contents; }
+  .lvh-{{ sid }} .lvh__trust li::before { content: "✓"; color: #8b6b4a; font-weight: 600; }
+
+  .lvh-{{ sid }} .lvh__media { position: relative; order: 1; aspect-ratio: 4 / 5; overflow: hidden; }
+  @media (min-width: 900px) { .lvh-{{ sid }} .lvh__media { order: 2; aspect-ratio: auto; } }
+  .lvh-{{ sid }} .lvh__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: {{ section.settings.focal }}; animation: lvhZoom-{{ sid }} 18s ease-out both; }
+  .lvh-{{ sid }} .lvh__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, {{ section.settings.background }} 0%, rgba(0,0,0,0) 18%); pointer-events: none; }
+  @media (max-width: 899px) { .lvh-{{ sid }} .lvh__media::after { background: linear-gradient(0deg, {{ section.settings.background }} 0%, rgba(0,0,0,0) 22%); } }
+
+  .lvh-{{ sid }} .lvh__badge { position: absolute; z-index: 3; left: 18px; bottom: 26px; display: flex; align-items: center; gap: 12px; padding: 14px 18px; background: rgba(255,255,255,.78); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.9); border-radius: 14px; box-shadow: 0 18px 40px rgba(60,40,20,.12); font-family: var(--font-body--family); animation: lvhFloat-{{ sid }} 6s ease-in-out infinite, lvhUp-{{ sid }} 1s .9s both; }
+  @media (min-width: 900px) { .lvh-{{ sid }} .lvh__badge { left: 36px; bottom: 44px; } }
+  .lvh-{{ sid }} .lvh__badge b { display: block; font-size: 14px; font-weight: 600; color: #111; }
+  .lvh-{{ sid }} .lvh__badge small { display: block; font-size: 12px; color: #5a5a5a; margin-top: 2px; }
+  .lvh-{{ sid }} .lvh__dot { width: 38px; height: 38px; border-radius: 50%; background: #111; color: #fff; display: grid; place-items: center; font-size: 16px; flex: none; }
+
+  .lvh-{{ sid }} .lvh__seal { position: absolute; z-index: 3; top: 22px; right: 22px; width: 112px; height: 112px; animation: lvhSpin-{{ sid }} 22s linear infinite; }
+  @media (min-width: 900px) { .lvh-{{ sid }} .lvh__seal { top: 40px; right: 40px; width: 138px; height: 138px; } }
+  .lvh-{{ sid }} .lvh__seal text { font-family: var(--font-body--family); font-size: 10.5px; letter-spacing: 3.2px; fill: #111; text-transform: uppercase; }
+  .lvh-{{ sid }} .lvh__seal-core { position: absolute; z-index: 4; top: 22px; right: 22px; width: 112px; height: 112px; display: grid; place-items: center; pointer-events: none; font-family: var(--font-heading--family); font-size: 26px; color: #111; }
+  @media (min-width: 900px) { .lvh-{{ sid }} .lvh__seal-core { top: 40px; right: 40px; width: 138px; height: 138px; font-size: 30px; } }
+
+  .lvh-{{ sid }} .lvh__reveal { animation: lvhUp-{{ sid }} .9s cubic-bezier(.2,.7,.2,1) both; }
+  .lvh-{{ sid }} .lvh__reveal:nth-child(2) { animation-delay: .12s; }
+  .lvh-{{ sid }} .lvh__reveal:nth-child(3) { animation-delay: .24s; }
+  .lvh-{{ sid }} .lvh__reveal:nth-child(4) { animation-delay: .36s; }
+  .lvh-{{ sid }} .lvh__reveal:nth-child(5) { animation-delay: .48s; }
+
+  @keyframes lvhUp-{{ sid }} { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+  @keyframes lvhZoom-{{ sid }} { from { transform: scale(1.12); } to { transform: scale(1); } }
+  @keyframes lvhFloat-{{ sid }} { 0%, 100% { translate: 0 0; } 50% { translate: 0 -8px; } }
+  @keyframes lvhSpin-{{ sid }} { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .lvh-{{ sid }} * { animation: none !important; } }
+{% endstyle %}
+
+<section class="lvh-{{ sid }}">
+  <div class="lvh__grid">
+    <div class="lvh__text">
+      {%- if section.settings.eyebrow != blank -%}<p class="lvh__eyebrow lvh__reveal">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      <h1 class="lvh__title lvh__reveal">{{ section.settings.title | remove: '<p>' | remove: '</p>' }}</h1>
+      {%- if section.settings.text != blank -%}<p class="lvh__sub lvh__reveal">{{ section.settings.text | escape }}</p>{%- endif -%}
+      <div class="lvh__ctas lvh__reveal">
+        {%- if section.settings.button_label != blank -%}<a class="lvh__btn lvh__btn--dark" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }} <span>→</span></a>{%- endif -%}
+        {%- if section.settings.button2_label != blank -%}<a class="lvh__btn lvh__btn--line" href="{{ section.settings.button2_link | default: routes.collections_url }}">{{ section.settings.button2_label | escape }}</a>{%- endif -%}
+      </div>
+      <div class="lvh__trust lvh__reveal"><ul>
+        {%- if section.settings.trust_1 != blank -%}<li>{{ section.settings.trust_1 | escape }}</li>{%- endif -%}
+        {%- if section.settings.trust_2 != blank -%}<li>{{ section.settings.trust_2 | escape }}</li>{%- endif -%}
+        {%- if section.settings.trust_3 != blank -%}<li>{{ section.settings.trust_3 | escape }}</li>{%- endif -%}
+      </ul></div>
+    </div>
+
+    <div class="lvh__media">
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: width: 2000 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '(min-width: 900px) 50vw, 100vw', widths: '600, 900, 1200, 1600, 2000', alt: section.settings.image.alt }}
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag }}
+      {%- endif -%}
+
+      {%- if section.settings.seal_text != blank -%}
+        <svg class="lvh__seal" viewBox="0 0 140 140" aria-hidden="true">
+          <defs><path id="lvh-circle-{{ sid }}" d="M70,70 m-56,0 a56,56 0 1,1 112,0 a56,56 0 1,1 -112,0"/></defs>
+          <circle cx="70" cy="70" r="69" fill="rgba(255,255,255,.72)"/>
+          <text><textPath href="#lvh-circle-{{ sid }}">{{ section.settings.seal_text | escape }}</textPath></text>
+        </svg>
+        <div class="lvh__seal-core" aria-hidden="true">✦</div>
+      {%- endif -%}
+
+      {%- if section.settings.badge_title != blank -%}
+        <div class="lvh__badge">
+          <span class="lvh__dot">✦</span>
+          <span><b>{{ section.settings.badge_title | escape }}</b><small>{{ section.settings.badge_text | escape }}</small></span>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lovaire hero",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Foto" },
+    { "type": "select", "id": "focal", "label": "Focus van de foto", "default": "center", "options": [
+      { "value": "center", "label": "Midden" }, { "value": "center 25%", "label": "Iets boven" }, { "value": "top", "label": "Boven" }, { "value": "left", "label": "Links" }, { "value": "right", "label": "Rechts" } ] },
+    { "type": "text", "id": "eyebrow", "label": "Label", "default": "Lovaire beauty" },
+    { "type": "richtext", "id": "title", "label": "Kop (cursief = accentkleur)", "default": "<p>Jouw glow, <em>elke dag</em></p>" },
+    { "type": "text", "id": "text", "label": "Tekst" },
+    { "type": "text", "id": "button_label", "label": "Knop 1", "default": "Shop nu" },
+    { "type": "url", "id": "button_link", "label": "Link knop 1" },
+    { "type": "text", "id": "button2_label", "label": "Knop 2" },
+    { "type": "url", "id": "button2_link", "label": "Link knop 2" },
+    { "type": "text", "id": "trust_1", "label": "Voordeel 1" },
+    { "type": "text", "id": "trust_2", "label": "Voordeel 2" },
+    { "type": "text", "id": "trust_3", "label": "Voordeel 3" },
+    { "type": "text", "id": "badge_title", "label": "Zwevend label – titel" },
+    { "type": "text", "id": "badge_text", "label": "Zwevend label – tekst" },
+    { "type": "text", "id": "seal_text", "label": "Draaiend embleem – tekst" },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f6e7de" },
+    { "type": "range", "id": "height", "label": "Hoogte (desktop)", "min": 60, "max": 100, "step": 5, "unit": "vh", "default": 85 }
+  ],
+  "presets": [{ "name": "Lovaire hero" }]
+}
+{% endschema %}

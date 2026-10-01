@@ -1,82 +1,25 @@
 {
   "sections": {
     "hero": {
-      "type": "hero",
-      "name": "Hero",
-      "blocks": {
-        "eyebrow": {
-          "type": "text",
-          "settings": {
-            "text": "<p>—— LOVAIRE</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h6",
-            "font": "var(--font-body--family)",
-            "color": "var(--color-primary)",
-            "wrap": "pretty"
-          },
-          "blocks": {}
-        },
-        "heading": {
-          "type": "text",
-          "settings": {
-            "text": "<h1>Beauty essentials voor jouw glow, elke dag</h1>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "h1",
-            "font": "var(--font-heading--family)",
-            "color": "var(--color-foreground-heading)",
-            "wrap": "pretty"
-          },
-          "blocks": {}
-        },
-        "subtext": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Make-up, huid- en haarverzorging die je echt gebruikt. Altijd gratis verzending.</p>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "color": "var(--color-foreground)",
-            "wrap": "pretty"
-          },
-          "blocks": {}
-        },
-        "cta": {
-          "type": "button",
-          "settings": {
-            "label": "Shop nu →",
-            "link": "shopify://collections/all",
-            "style_class": "button",
-            "width": "fit-content",
-            "width_mobile": "fit-content"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "eyebrow",
-        "heading",
-        "subtext",
-        "cta"
-      ],
+      "type": "lovaire-hero",
       "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 20,
-        "section_width": "page-width",
-        "section_height": "custom",
-        "section_height_custom": 60,
-        "color_scheme": "scheme-5",
-        "toggle_overlay": false,
-        "padding-block-start": 64,
-        "padding-block-end": 64
+        "image": "shopify://shop_images/lovaire-hero-glow.jpg",
+        "focal": "center 25%",
+        "eyebrow": "Lovaire beauty",
+        "title": "<p>Voel je mooi, <em>elke dag</em></p>",
+        "text": "Make-up, huid- en haarverzorging die je echt gebruikt. Zorgvuldig geselecteerd en altijd gratis verzonden.",
+        "button_label": "Shop nu",
+        "button_link": "shopify://collections/all",
+        "button2_label": "Ontdek collecties",
+        "button2_link": "/collections",
+        "trust_1": "Gratis verzending",
+        "trust_2": "Veilig betalen met iDEAL",
+        "trust_3": "Persoonlijke service",
+        "badge_title": "Altijd gratis verzending",
+        "badge_text": "Met track & trace in je mail",
+        "seal_text": "LOVAIRE · BEAUTY · ESSENTIALS · ",
+        "background": "#f6e7de",
+        "height": 85
       }
     },
     "trust": {
