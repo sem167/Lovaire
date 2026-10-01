@@ -1,0 +1,94 @@
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+{%- comment -%} Telt de echte Loox-reviews van de gekozen producten op {%- endcomment -%}
+{%- assign total = 0 -%}
+{%- assign weighted = 0 -%}
+{%- for p in section.settings.products -%}
+  {%- assign n = p.metafields.loox.num_reviews.value | default: p.metafields.loox.num_reviews | plus: 0 -%}
+  {%- if n > 0 -%}
+    {%- assign r = p.metafields.loox.avg_rating.value | default: p.metafields.loox.avg_rating | times: 1.0 -%}
+    {%- assign total = total | plus: n -%}
+    {%- assign weighted = r | times: n | plus: weighted -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if total > 0 -%}{%- assign avg = weighted | divided_by: total | round: 1 -%}{%- endif -%}
+
+{% style %}
+  .lvr-{{ sid }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
+  .lvr-{{ sid }} .lvr__inner { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .lvr-{{ sid }} .lvr__head { text-align: center; margin-bottom: 44px; }
+  .lvr-{{ sid }} .lvr__eyebrow { font-family: var(--font-body--family); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: #8b6b4a; margin: 0 0 10px; }
+  .lvr-{{ sid }} .lvr__title { font-family: var(--font-heading--family); font-weight: 400; font-size: clamp(26px, 3.2vw, 38px); color: #111; margin: 0 0 18px; }
+  .lvr-{{ sid }} .lvr__summary { display: inline-flex; align-items: center; gap: 12px; padding: 10px 18px; background: #fff; border-radius: 999px; font-family: var(--font-body--family); font-size: 14px; color: #5a5a5a; box-shadow: 0 6px 20px rgba(60,40,20,.06); }
+  .lvr-{{ sid }} .lvr__summary b { color: #111; font-size: 16px; }
+  .lvr-{{ sid }} .lvr__stars { color: #8b6b4a; letter-spacing: 2px; font-size: 15px; }
+  .lvr-{{ sid }} .lvr__grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  @media (min-width: 750px) { .lvr-{{ sid }} .lvr__grid { grid-template-columns: repeat({{ section.blocks.size | at_most: 3 }}, minmax(0, 1fr)); gap: 24px; } }
+  .lvr-{{ sid }} .lvr__card { background: #fff; border-radius: 20px; padding: 28px 26px 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 10px 30px rgba(60,40,20,.06); }
+  .lvr-{{ sid }} .lvr__quote { font-family: var(--font-heading--family); font-size: 18px; line-height: 1.55; color: #111; margin: 0; flex: 1; }
+  .lvr-{{ sid }} .lvr__quote::before { content: "\201C"; display: block; font-size: 44px; line-height: .6; color: #e2cbbb; margin-bottom: 6px; }
+  .lvr-{{ sid }} .lvr__who { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-family: var(--font-body--family); font-size: 14px; color: #111; }
+  .lvr-{{ sid }} .lvr__verified { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: #4f7a52; }
+  .lvr-{{ sid }} .lvr__verified svg { width: 14px; height: 14px; }
+  .lvr-{{ sid }} .lvr__product { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid #f0e6de; text-decoration: none; color: #5a5a5a; font-family: var(--font-body--family); font-size: 13px; }
+  .lvr-{{ sid }} .lvr__product img { width: 46px; height: 46px; border-radius: 10px; object-fit: cover; background: #f8f5f0; }
+  .lvr-{{ sid }} .lvr__product:hover span { color: #111; text-decoration: underline; }
+  .lvr-{{ sid }} .lvr__note { text-align: center; margin-top: 28px; font-family: var(--font-body--family); font-size: 12px; color: #8a8a8a; }
+{% endstyle %}
+
+<section class="lvr-{{ sid }}">
+  <div class="lvr__inner">
+    <div class="lvr__head">
+      {%- if section.settings.eyebrow != blank -%}<p class="lvr__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      {%- if section.settings.heading != blank -%}<h2 class="lvr__title">{{ section.settings.heading | escape }}</h2>{%- endif -%}
+      {%- if total > 0 -%}
+        <div class="lvr__summary"><span class="lvr__stars" aria-hidden="true">★★★★★</span><span><b>{{ avg | replace: '.', ',' }}</b> / 5 · {{ total }} {% if total == 1 %}review{% else %}reviews{% endif %} van klanten</span></div>
+      {%- endif -%}
+    </div>
+
+    <div class="lvr__grid"{% if section.blocks.size == 1 %} style="max-width:680px;margin:0 auto"{% endif %}>
+      {%- for block in section.blocks -%}
+        {%- assign p = block.settings.product -%}
+        <article class="lvr__card" {{ block.shopify_attributes }}>
+          <span class="lvr__stars" aria-label="{{ block.settings.rating }} van 5 sterren">{% for i in (1..block.settings.rating) %}★{% endfor %}</span>
+          <p class="lvr__quote">{{ block.settings.text | escape | newline_to_br }}</p>
+          <div class="lvr__who">
+            <span>{{ block.settings.name | escape }}</span>
+            <span class="lvr__verified"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="7"/><path d="M5 8.2l2 2 4-4.4"/></svg>Review via Loox</span>
+          </div>
+          {%- if p != blank -%}
+            <a class="lvr__product" href="{{ p.url }}">
+              {%- if p.featured_image -%}{{ p.featured_image | image_url: width: 120 | image_tag: loading: 'lazy', alt: p.title }}{%- endif -%}
+              <span>{{ p.title | escape }}</span>
+            </a>
+          {%- endif -%}
+        </article>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.note != blank -%}<p class="lvr__note">{{ section.settings.note | escape }}</p>{%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lovaire reviews",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Label", "default": "ECHTE REVIEWS" },
+    { "type": "text", "id": "heading", "label": "Kop", "default": "Wat klanten zeggen" },
+    { "type": "product_list", "id": "products", "label": "Producten voor het gemiddelde (Loox)", "limit": 20 },
+    { "type": "text", "id": "note", "label": "Kleine tekst onder de reviews" },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f6e7de" },
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 72 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "default": 72 }
+  ],
+  "blocks": [
+    { "type": "review", "name": "Review", "settings": [
+      { "type": "textarea", "id": "text", "label": "Reviewtekst (letterlijk overnemen)" },
+      { "type": "text", "id": "name", "label": "Naam" },
+      { "type": "range", "id": "rating", "label": "Sterren", "min": 1, "max": 5, "step": 1, "default": 5 },
+      { "type": "product", "id": "product", "label": "Product" }
+    ] }
+  ],
+  "max_blocks": 6,
+  "presets": [{ "name": "Lovaire reviews" }]
+}
+{% endschema %}

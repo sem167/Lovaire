@@ -223,7 +223,7 @@ index = {"sections": {
                          font="var(--font-heading--family)", color="var(--color-foreground-heading)")),
         ("acc", {"type": "accordion", "settings": {"icon": "plus", "dividers": True, "type_preset": "h5",
                                                    "inherit_color_scheme": True}, **ordered([
-            faq_row("q1", "Wanneer ontvang ik mijn bestelling?", "De gemiddelde levertijd is 5 tot 12 werkdagen. Zodra je bestelling is verzonden, ontvang je een e-mail met je track & trace."),
+            faq_row("q1", "Wanneer ontvang ik mijn bestelling?", "Zodra je bestelling is verzonden, ontvang je een e-mail met je track & trace, zodat je precies kunt volgen waar je pakketje is. Alle details vind je in ons <a href=\"/pages/verzendbeleid\">verzendbeleid</a>."),
             faq_row("q2", "Wat zijn de verzendkosten?", "Niets: bij Lovaire is verzending altijd gratis."),
             faq_row("q3", "Kan ik mijn bestelling retourneren?", "Je kunt je bestelling tot 14 dagen na ontvangst retourneren. Voor hygiënische producten, zoals cosmetica en ondergoed, gelden aparte voorwaarden. Lees alles op <a href=\"/pages/bestellingen-en-levering-1\">Ruilen en retourneren</a>."),
             faq_row("q4", "Waar worden jullie producten gemaakt?", "Onze producten worden zowel lokaal als wereldwijd geproduceerd. We selecteren onze productiepartners zorgvuldig, zodat je kwaliteit krijgt voor een eerlijke prijs."),
@@ -239,7 +239,7 @@ header_group = {"type": "header", "name": "Header", "sections": {
             ("a1", {"type": "_announcement", "settings": {"text": "Altijd gratis verzending", "link": "shopify://pages/bestellingen-en-levering",
                                                           "font": "var(--font-accent--family)", "font_size": "0.75rem",
                                                           "letter_spacing": "loose", "case": "uppercase"}, "blocks": {}}),
-            ("a2", {"type": "_announcement", "settings": {"text": "Levering in 5–12 werkdagen met track & trace", "link": "shopify://pages/verzendbeleid",
+            ("a2", {"type": "_announcement", "settings": {"text": "Elke bestelling met track & trace", "link": "shopify://pages/verzendbeleid",
                                                           "font": "var(--font-accent--family)", "font_size": "0.75rem",
                                                           "letter_spacing": "loose", "case": "uppercase"}, "blocks": {}}),
             ("a3", {"type": "_announcement", "settings": {"text": "Veilig betalen met iDEAL & Klarna", "link": "",

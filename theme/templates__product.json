@@ -136,7 +136,7 @@
             "trust": {
               "type": "text",
               "settings": {
-                "text": "<p><strong>DE LOVAIRE BELOFTE</strong><br/>✓ Altijd gratis verzending<br/>✓ Veilig betalen met iDEAL of Klarna<br/>✓ Levertijd 5–12 werkdagen, met track &amp; trace</p>",
+                "text": "<p><strong>DE LOVAIRE BELOFTE</strong><br/>✓ Altijd gratis verzending<br/>✓ Veilig betalen met iDEAL of Klarna<br/>✓ Verzonden met track &amp; trace</p>",
                 "width": "100%",
                 "alignment": "left",
                 "type_preset": "rte",
@@ -178,7 +178,7 @@
                     "ship_t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>De gemiddelde levertijd is 5 tot 12 werkdagen. Je ontvangt een e-mail met track &amp; trace zodra je bestelling onderweg is. Meer info: <a href=\"/pages/verzendbeleid\">verzendbeleid</a>.</p>",
+                        "text": "<p>Je ontvangt een e-mail met track &amp; trace zodra je bestelling onderweg is. Meer info: <a href=\"/pages/verzendbeleid\">verzendbeleid</a>.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",

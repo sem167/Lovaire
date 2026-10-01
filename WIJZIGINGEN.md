@@ -123,3 +123,8 @@ Alleen de stijl van de voorbeeldsite is overgenomen, niet het logo of de teksten
 - Animaties: tekst schuift gefaseerd omhoog, foto zoomt langzaam in, zwevend glas-label "Altijd gratis verzending", draaiend embleem "LOVAIRE · BEAUTY · ESSENTIALS". Uit bij 'beperkte beweging'.
 - Kop "Voel je mooi, *elke dag*" met cursief accent; twee knoppen; vinkjes Gratis verzending / iDEAL / Persoonlijke service.
 - Alles aanpasbaar in de thema-editor (foto, focus, teksten, kleuren, hoogte).
+
+## Update: echte reviews en geen levertijd in de etalage (1 oktober 2026)
+- Oude homepage-testimonials (Laura, Yvonne, Fleur, Luna, Esther; herkomst niet controleerbaar) vervangen door nieuwe sectie `lovaire-reviews` met alleen echte Loox-reviews, letterlijk overgenomen, met productlink en het echte Loox-gemiddelde (5,0 uit 3 reviews).
+- Productkaarten tonen de echte Loox-sterren en het aantal reviews (alleen als er reviews zijn).
+- Levertijd (5–12 werkdagen) weggehaald uit aankondigingsbalk, homepage, FAQ en productpagina's; vervangen door "track & trace". Staat nog wel op de verzendbeleidpagina (wettelijk verplicht). Geen "snelle levering" beloofd, omdat 5–12 werkdagen dat niet is.

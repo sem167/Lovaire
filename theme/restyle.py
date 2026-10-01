@@ -93,3 +93,20 @@ idx["sections"]["hero"] = {"type": "lovaire-hero", "settings": {
     "background": "#f6e7de", "height": 85}}
 save("templates__index.json", idx)
 print("hero vervangen")
+
+# --- Reviews: alleen echte Loox-reviews (letterlijk), met productlink en echt gemiddelde
+idx = load("templates__index.json")
+S = idx["sections"]
+S["reviews"] = {"type": "lovaire-reviews", "blocks": {
+    "tiffany": {"type": "review", "settings": {
+        "text": "Ongelofelijk wat dit product doet. Ik ben 50 plus, door dit product zie je mijn rimpels oprecht minder. Heel natuurlijk en de kleur past zich inderdaad aan je eigen huidskleur. Heel erg tevreden.",
+        "name": "Tiffany T.", "rating": 5, "product": "zelfkleurende-foundation-spf15"}}},
+    "block_order": ["tiffany"],
+    "settings": {"eyebrow": "ECHTE REVIEWS", "heading": "Wat klanten zeggen",
+        "products": ["lashlift-waterproof-mascara", "zelfkleurende-foundation-spf15", "self-tanner-tanning-lotion",
+                     "lovaire-hairboost-shampoo", "elektrische-spray-massage-borstel-lovaire", "lovaire-support-bh"],
+        "note": "Reviews worden na een bestelling verzameld via Loox en ongewijzigd getoond.",
+        "background": "#f6e7de", "padding_top": 72, "padding_bottom": 72}}
+# echte sterren op productkaarten (lovaire-favorieten leest Loox-metafields)
+save("templates__index.json", idx)
+print("reviews echt")

@@ -12,6 +12,9 @@
   .lv-fav-{{ section.id }} .lv-card:hover .lv-card__media img { transform: scale(1.04); }
   .lv-fav-{{ section.id }} .lv-card__badge { position: absolute; top: 12px; left: 12px; background: #8b6b4a; color: #fff; font-family: var(--font-body--family); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; padding: 6px 10px; border-radius: 4px; }
   .lv-fav-{{ section.id }} .lv-card__title { font-family: var(--font-body--family); font-size: 15px; line-height: 1.35; margin: 14px 0 6px; }
+  .lv-fav-{{ section.id }} .lv-card__rating { display: block; margin-top: 14px; font-family: var(--font-body--family); font-size: 12px; color: #5a5a5a; }
+  .lv-fav-{{ section.id }} .lv-card__rating span { color: #8b6b4a; letter-spacing: 1px; }
+  .lv-fav-{{ section.id }} .lv-card__rating + .lv-card__title { margin-top: 6px; }
   .lv-fav-{{ section.id }} .lv-card__price { font-family: var(--font-body--family); font-size: 14px; display: flex; gap: 8px; align-items: baseline; }
   .lv-fav-{{ section.id }} .lv-card__compare { color: #8a8a8a; text-decoration: line-through; }
   .lv-fav-{{ section.id }} .lv-fav__cta { text-align: center; margin-top: 44px; }
@@ -36,6 +39,11 @@
             {%- endif -%}
             {%- if product.compare_at_price > product.price -%}<span class="lv-card__badge">Sale</span>{%- endif -%}
           </div>
+          {%- assign lx_n = product.metafields.loox.num_reviews.value | default: product.metafields.loox.num_reviews | plus: 0 -%}
+          {%- if lx_n > 0 -%}
+            {%- assign lx_r = product.metafields.loox.avg_rating.value | default: product.metafields.loox.avg_rating | times: 1.0 | round: 1 -%}
+            <span class="lv-card__rating"><span aria-hidden="true">★★★★★</span> {{ lx_r | replace: '.', ',' }} ({{ lx_n }})</span>
+          {%- endif -%}
           <p class="lv-card__title">{{ product.title | escape }}</p>
           <div class="lv-card__price">
             <span>{% if product.price_varies %}Vanaf {% endif %}{{ product.price | money }}</span>

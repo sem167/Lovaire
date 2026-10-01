@@ -21,7 +21,7 @@
         "a2": {
           "type": "_announcement",
           "settings": {
-            "text": "Levering in 5–12 werkdagen met track & trace",
+            "text": "Elke bestelling met track & trace",
             "link": "shopify://pages/verzendbeleid",
             "font": "var(--font-accent--family)",
             "font_size": "0.75rem",

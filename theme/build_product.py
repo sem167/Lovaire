@@ -4,7 +4,7 @@ from build import text, button, ordered, faq_row, sec_flex, index, CREAM, BLUSH,
 
 TRUST_LINES = ("<p><strong>DE LOVAIRE BELOFTE</strong><br/>✓ Altijd gratis verzending<br/>"
                "✓ Veilig betalen met iDEAL of Klarna<br/>"
-               "✓ Levertijd 5–12 werkdagen, met track &amp; trace</p>")
+               "✓ Verzonden met track &amp; trace</p>")
 
 product = {"sections": {
     "main": {"type": "product-information", "blocks": {
@@ -47,7 +47,7 @@ product = {"sections": {
                 ("info", {"type": "accordion", "settings": {"icon": "plus", "dividers": True, "type_preset": "h6",
                                                             "inherit_color_scheme": True}, **ordered([
                     faq_row("ship", "Verzending & levering",
-                            "De gemiddelde levertijd is 5 tot 12 werkdagen. Je ontvangt een e-mail met track &amp; trace zodra je bestelling onderweg is. Meer info: <a href=\"/pages/verzendbeleid\">verzendbeleid</a>."),
+                            "Je ontvangt een e-mail met track &amp; trace zodra je bestelling onderweg is. Meer info: <a href=\"/pages/verzendbeleid\">verzendbeleid</a>."),
                     faq_row("ret", "Retourneren",
                             "Je kunt je bestelling tot 14 dagen na ontvangst retourneren. Voor hygiënische producten, zoals cosmetica en ondergoed, gelden aparte voorwaarden: zie <a href=\"/pages/ruilen-en-retourneren\">hygiënische producten</a>. Alle stappen vind je op <a href=\"/pages/bestellingen-en-levering-1\">Ruilen en retourneren</a>."),
                     faq_row("pay", "Veilig betalen",
@@ -104,7 +104,7 @@ index["sections"]["steps"] = {"type": "section", "name": "Zo werkt bestellen", *
                                            "width": "fill", "width_mobile": "fill", "inherit_color_scheme": True},
              **ordered([
                  ("s1", step("01", "Bestel veilig", "Betaal vertrouwd met iDEAL of Klarna via de beveiligde checkout.")),
-                 ("s2", step("02", "Gratis verzonden", "Binnen 5–12 werkdagen bij je thuis, met track &amp; trace in je mail.")),
+                 ("s2", step("02", "Gratis verzonden", "Zorgvuldig verpakt en verzonden, met track &amp; trace in je mail.")),
                  ("s3", step("03", "Persoonlijke hulp", "Een vraag of probleem? Mail ons, we reageren op werkdagen tussen 09:00 en 17:00.")),
              ])}),
 ]), "settings": {**sec_flex, "gap": 40, "color_scheme": "scheme-5",
