@@ -45,3 +45,10 @@ Bronbestanden: `theme/build.py` genereert de vier aangepaste themabestanden in `
 - **Homepage:** hero met twee knoppen → voordelen → bestsellers (alle 6 producten) → "Shop per categorie" (5 collecties, incl. Haarverzorging) → "Over Lovaire" → reviews → veelgestelde vragen.
 - **Footer:** nieuwsbriefblok, kolommen Shop / Informatie / Klantenservice, "Powered by Shopify" uit, lege social-links verwijderd.
 - App-embeds (Loox, Kaching Bundles, Upcart) blijven actief.
+
+## Update: vertrouwen & productpagina (1 oktober 2026)
+- Eén universele productpagina voor alle producten (`theme/build_product.py`), ook gekopieerd naar de sjablonen `support-bh-2`, `tanning-oil`, `foundation` en `kam`. Alleen in het nieuwe thema; het live thema is ongewijzigd.
+  - Opbouw: foto's met miniaturen → titel → prijs (incl. termijnen/btw-info) → varianten als knoppen → winkelwagen + snelle checkout → blush-blok met garanties → beschrijving → uitklapblokken Verzending, Retourneren, Veilig betalen, Vragen.
+  - Daaronder de voordelenbalk en "Misschien vind je dit ook mooi".
+  - De oude productspecifieke blokken met claims als "Duizenden vrouwen…" en de shampoo-content die ook op de mascara stond, zijn verwijderd.
+- Homepage: nieuw blok "Zorgeloos bestellen" (3 stappen: bestel veilig → wij verzenden → niet tevreden).

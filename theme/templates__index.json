@@ -677,6 +677,245 @@
         "padding-block-start": 72,
         "padding-block-end": 72
       }
+    },
+    "steps": {
+      "type": "section",
+      "name": "Zo werkt bestellen",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Zorgeloos bestellen</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-heading--family)",
+            "color": "var(--color-foreground-heading)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "row": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "gap": 32,
+            "width": "fill",
+            "width_mobile": "fill",
+            "inherit_color_scheme": true
+          },
+          "blocks": {
+            "s1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 8,
+                "horizontal_alignment_flex_direction_column": "center",
+                "width": "fill",
+                "width_mobile": "fill",
+                "inherit_color_scheme": true,
+                "padding-block-start": 8,
+                "padding-block-end": 8
+              },
+              "blocks": {
+                "n": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>01</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h2",
+                    "font": "var(--font-heading--family)",
+                    "color": "var(--color-primary)",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                },
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Bestel veilig</h3>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "color": "var(--color-foreground)",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                },
+                "b": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Betaal vertrouwd met iDEAL of Klarna via de beveiligde checkout.</p>",
+                    "width": "fit-content",
+                    "max_width": "narrow",
+                    "alignment": "center",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "color": "var(--color-foreground)",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "n",
+                "t",
+                "b"
+              ]
+            },
+            "s2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 8,
+                "horizontal_alignment_flex_direction_column": "center",
+                "width": "fill",
+                "width_mobile": "fill",
+                "inherit_color_scheme": true,
+                "padding-block-start": 8,
+                "padding-block-end": 8
+              },
+              "blocks": {
+                "n": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>02</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h2",
+                    "font": "var(--font-heading--family)",
+                    "color": "var(--color-primary)",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                },
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Wij verzenden</h3>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "color": "var(--color-foreground)",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                },
+                "b": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Binnen 5–12 werkdagen bij je thuis, met track &amp; trace in je mail.</p>",
+                    "width": "fit-content",
+                    "max_width": "narrow",
+                    "alignment": "center",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "color": "var(--color-foreground)",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "n",
+                "t",
+                "b"
+              ]
+            },
+            "s3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 8,
+                "horizontal_alignment_flex_direction_column": "center",
+                "width": "fill",
+                "width_mobile": "fill",
+                "inherit_color_scheme": true,
+                "padding-block-start": 8,
+                "padding-block-end": 8
+              },
+              "blocks": {
+                "n": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>03</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h2",
+                    "font": "var(--font-heading--family)",
+                    "color": "var(--color-primary)",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                },
+                "t": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Niet tevreden?</h3>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "color": "var(--color-foreground)",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                },
+                "b": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Je hebt 30 dagen bedenktijd. We denken graag met je mee.</p>",
+                    "width": "fit-content",
+                    "max_width": "narrow",
+                    "alignment": "center",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "color": "var(--color-foreground)",
+                    "wrap": "pretty"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "n",
+                "t",
+                "b"
+              ]
+            }
+          },
+          "block_order": [
+            "s1",
+            "s2",
+            "s3"
+          ]
+        }
+      },
+      "block_order": [
+        "heading",
+        "row"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "section_width": "page-width",
+        "gap": 40,
+        "color_scheme": "scheme-5",
+        "padding-block-start": 72,
+        "padding-block-end": 72
+      }
     }
   },
   "order": [
@@ -684,6 +923,7 @@
     "trust",
     "bestsellers",
     "collections",
+    "steps",
     "story",
     "reviews",
     "faq"

@@ -296,13 +296,14 @@ footer_group = {"type": "footer", "name": "Footer", "sections": {
                      "color_scheme": "scheme-3", "padding-block-start": 20, "padding-block-end": 20}}},
     "order": ["newsletter", "footer", "utilities"]}
 
-files = {
+if __name__ == "__main__":
+  files = {
     "config/settings_data.json": settings_data,
     "templates/index.json": index,
     "sections/header-group.json": header_group,
     "sections/footer-group.json": footer_group,
-}
-for name, data in files.items():
+  }
+  for name, data in files.items():
     path = name.replace("/", "__")
     with open(path, "w") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
