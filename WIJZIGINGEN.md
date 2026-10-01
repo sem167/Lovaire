@@ -96,3 +96,8 @@ Op verzoek volledig omgezet naar een strak beige-zwart ontwerp:
 ## Update: sfeerfoto + Lovaire VIP (1 oktober 2026)
 - Nieuwe hero-sfeerfoto: "Woman Holding A Makeup Product" door Ron Lach (Pexels, foto 8128684, gratis commercieel te gebruiken), opgeslagen als `lovaire-hero-vrouw-make-up.jpg`. Desktop: naast de mascara-productfoto; mobiel: alleen de sfeerfoto.
 - Nieuwsbrief vervangen door zwart "Lovaire VIP"-blok dat naadloos overloopt in de zwarte footer (knop "Word VIP").
+
+## Update: strakke hero-foto (1 oktober 2026)
+- Twee foto's naast elkaar vervangen door één brede, strakke foto: "Minimalist Skincare Product Flat Lay" (Pexels 34939732) → `lovaire-hero-breed-2.jpg`.
+- Mobiel: staande foto uit dezelfde neutrale serie (Pexels 34939759) → `lovaire-hero-strak.jpg`.
+- Ongebruikte foto's (vrouw met make-up, "Variety of Makeup Products") verwijderd uit Bestanden.

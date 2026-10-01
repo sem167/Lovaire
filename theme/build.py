@@ -128,11 +128,10 @@ index = {"sections": {
                      **ordered([("btn_shop", button("Shop bestsellers", "shopify://collections/all")),
                                 ("btn_coll", button("Bekijk collecties", "/collections", "button-secondary"))])}),
     ]), "settings": {
-        # Sfeerfoto (Pexels, Ron Lach, foto 8128684) naast de mascara; op mobiel alleen de sfeerfoto
-        "media_type_1": "image", "image_1": "shopify://shop_images/lovaire-hero-vrouw-make-up.jpg",
-        "media_type_2": "image", "image_2": "shopify://shop_images/WhatsApp_Image_2026-07-02_at_07.58.57.jpg",
+        # Eén strakke brede foto (Pexels 34939732); op mobiel de staande foto uit dezelfde serie (Pexels 34939759)
+        "media_type_1": "image", "image_1": "shopify://shop_images/lovaire-hero-breed-2.jpg",
         "custom_mobile_media": True, "media_type_1_mobile": "image",
-        "image_1_mobile": "shopify://shop_images/lovaire-hero-vrouw-make-up.jpg",
+        "image_1_mobile": "shopify://shop_images/lovaire-hero-strak.jpg",
         "content_direction": "column", "vertical_on_mobile": True,
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center", "gap": 20,
