@@ -138,3 +138,64 @@ bo = det["block_order"]
 if "rating" not in bo: bo.insert(bo.index("title") + 1, "rating")
 save("templates__product.json", prod)
 print("strakker", idx["order"])
+
+# --- Lyvelle-mobiel: compacte voordelen, gestippelde categorie-rondjes, carrousel, statement, momenten-tabs
+idx = load("templates__index.json")
+S = idx["sections"]
+S["belofte"]["settings"].update({"layout": "list", "eyebrow": "", "heading": "", "show_payment": False,
+                                 "background": "#ffffff", "padding_top": 0, "padding_bottom": 0})
+S["categories"] = {"type": "lovaire-categories", "settings": {
+    "eyebrow": "ONTDEK", "heading": "Waar ben je naar op zoek?",
+    "collections": ["make-up", "huid-producten", "haarverzorging", "beauty-tools", "shapewear"],
+    "background": "#ffffff", "padding_top": 64, "padding_bottom": 64}}
+S["favorieten"]["settings"].update({"tab_label": "Alle producten", "button_label": "Bekijk alles",
+    "heading": "Shop de favorieten", "background": "#f6e9e1", "padding_top": 72, "padding_bottom": 72})
+S["statement"] = {"type": "lovaire-statement", "settings": {
+    "eyebrow": "LOVAIRE", "text": "<p>Make-up, huid en haar. Voor elk moment van <em>jouw dag</em>.</p>",
+    "show_line": True, "background": "#ffffff", "padding_top": 96, "padding_bottom": 72}}
+S["momenten"] = {"type": "lovaire-momenten", "blocks": {
+    "m1": {"type": "moment", "settings": {"label": "Ochtend", "icon": "sun", "intro": "Een frisse, stralende start van je dag.",
+           "products": ["zelfkleurende-foundation-spf15", "lashlift-waterproof-mascara"]}},
+    "m2": {"type": "moment", "settings": {"label": "Overdag", "icon": "cloud", "intro": "Comfortabel en verzorgd de hele dag door.",
+           "products": ["lovaire-support-bh", "self-tanner-tanning-lotion"]}},
+    "m3": {"type": "moment", "settings": {"label": "Avond", "icon": "moon", "intro": "Even tijd voor jezelf.",
+           "products": ["lovaire-hairboost-shampoo", "elektrische-spray-massage-borstel-lovaire"]}}},
+    "block_order": ["m1", "m2", "m3"],
+    "settings": {"eyebrow": "ELK MOMENT", "heading": "Jouw dag met Lovaire", "background": "#ffffff",
+                 "padding_top": 24, "padding_bottom": 88}}
+for k in ["collections", "story"]:
+    S.pop(k, None)
+idx["order"] = ["hero", "belofte", "categories", "favorieten", "statement", "momenten", "reviews", "faq"]
+save("templates__index.json", idx)
+print("lyvelle-mobiel", idx["order"])
+
+# --- Collectiepagina's: categorie-rondjes als navigatie, strakke vierkante kaarten, compacte belofte
+COLL = ["make-up", "huid-producten", "haarverzorging", "beauty-tools", "shapewear"]
+def belofte_list(pad_top=0, pad_bottom=0, payment=True):
+    b = json.loads(json.dumps(load("templates__index.json")["sections"]["belofte"]))
+    b["settings"].update({"layout": "list", "eyebrow": "", "heading": "", "show_payment": payment,
+                          "background": "#ffffff", "padding_top": pad_top, "padding_bottom": pad_bottom})
+    return b
+col = load("templates__collection.json")
+C = col["sections"]
+C["header"]["settings"].update({"color_scheme": "scheme-5", "padding-block-start": 48, "padding-block-end": 8})
+C["nav"] = {"type": "lovaire-categories", "settings": {"eyebrow": "", "heading": "", "collections": COLL,
+            "background": "#f6e7de", "padding_top": 16, "padding_bottom": 40}}
+card = C["main"]["blocks"]["product-card"]["blocks"]
+card["card-gallery"]["settings"].update({"image_ratio": "square", "border_radius": 0})
+card["group"]["blocks"]["title"]["settings"]["type_preset"] = "h5"
+C.pop("usps", None)
+C["belofte"] = belofte_list(0, 40)
+col["order"] = ["header", "nav", "main", "belofte"]
+save("templates__collection.json", col)
+
+lc = load("templates__list-collections.json")
+lc["sections"] = {
+    "intro": {"type": "lovaire-categories", "settings": {"eyebrow": "ONTDEK", "heading": "Alle collecties", "collections": COLL,
+              "background": "#f6e7de", "padding_top": 64, "padding_bottom": 64}},
+    "favorieten": json.loads(json.dumps(load("templates__index.json")["sections"]["favorieten"])),
+    "belofte": belofte_list(0, 40)}
+lc["sections"]["favorieten"]["settings"].update({"background": "#ffffff", "eyebrow": "ONZE FAVORIETEN", "heading": "Populair bij Lovaire"})
+lc["order"] = ["intro", "favorieten", "belofte"]
+save("templates__list-collections.json", lc)
+print("collecties strak")

@@ -134,3 +134,13 @@ Alleen de stijl van de voorbeeldsite is overgenomen, niet het logo of de teksten
 - Homepage: hero → favorieten → categorieën → belofte → over Lovaire → reviews → FAQ, met gelijkmatige witruimte (72–88 px).
 - Productpagina's: nieuw blok `lovaire-rating` onder de titel met de echte Loox-score en het aantal reviews (verborgen als een product nog geen reviews heeft); klikt door naar de Loox-reviews.
 - Verzoek om 100 reviews te verzinnen niet uitgevoerd: nep-reviews zijn verboden (Omnibus-richtlijn / ACM).
+
+## Update: mobiele Lyvelle-stijl overal (1 oktober 2026)
+Op basis van 4 mobiele screenshots van lyvelle.nl (alleen vormgeving overgenomen, geen teksten/logo/beloftes).
+- Nieuwe secties: `lovaire-categories` (rondjes met gestippelde gouden rand, scrollbaar op mobiel), `lovaire-statement` (groot merkstatement met animerende gouden lijn), `lovaire-momenten` (tabs Ochtend/Overdag/Avond met producten en winkelwagenknop), snippet `lovaire-buy` (direct in winkelwagen of "Kies opties").
+- `lovaire-favorieten`: blush achtergrond, tab "Alle producten", swipe-carrousel met bolletjes op mobiel, volle zwarte "In winkelwagen"-knop per product.
+- `lovaire-belofte`: extra weergave "Compacte lijst" (2×2 met ronde iconen en scheidingslijnen), direct onder de hero.
+- Hero: op mobiel eerst tekst, dan foto; volle knop met gouden rand.
+- Homepage: hero → voordelen → categorieën → favorieten → statement → momenten → reviews → FAQ.
+- Collectiepagina's: blush kop met categorie-rondjes als navigatie, vierkante productfoto's, compacte voordelen met betaaliconen. "Alle collecties"-pagina vernieuwd.
+- Niet overgenomen: "30 dagen garantie" (Lovaire: 14 dagen) en de verwachte leverdatum (op verzoek levertijd niet tonen).

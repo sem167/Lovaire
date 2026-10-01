@@ -1,0 +1,107 @@
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+{% style %}
+  .lvm-{{ sid }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
+  .lvm-{{ sid }} .lvm__inner { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+  .lvm-{{ sid }} .lvm__head { text-align: center; margin-bottom: 32px; }
+  .lvm-{{ sid }} .lvm__eyebrow { font-family: var(--font-body--family); font-size: 13px; letter-spacing: .32em; text-transform: uppercase; color: #8b6b4a; margin: 0 0 18px; }
+  .lvm-{{ sid }} .lvm__title { font-family: var(--font-heading--family); font-weight: 400; font-size: clamp(30px, 4.4vw, 46px); color: #111; margin: 0; letter-spacing: -.015em; }
+  .lvm-{{ sid }} .lvm__tabs { display: grid; grid-template-columns: repeat({{ section.blocks.size | at_least: 1 }}, minmax(0, 1fr)); gap: 8px; margin-bottom: 28px; }
+  .lvm-{{ sid }} .lvm__tab { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 8px; background: transparent; border: 1.5px solid #111; color: #111; cursor: pointer; font-family: var(--font-body--family); font-size: 13px; letter-spacing: .2em; text-transform: uppercase; transition: background .25s, color .25s; }
+  .lvm-{{ sid }} .lvm__tab svg { width: 20px; height: 20px; flex: none; }
+  .lvm-{{ sid }} .lvm__tab[aria-selected="true"] { background: #111; color: #fff; }
+  @media (max-width: 420px) { .lvm-{{ sid }} .lvm__tab { letter-spacing: .1em; font-size: 12px; gap: 6px; } }
+  .lvm-{{ sid }} .lvm__panel { display: grid; gap: 16px; }
+  .lvm-{{ sid }} .lvm__panel[hidden] { display: none; }
+  @media (min-width: 750px) { .lvm-{{ sid }} .lvm__panel { grid-template-columns: 1fr 1fr; } }
+  .lvm-{{ sid }} .lvm__intro { grid-column: 1 / -1; text-align: center; font-family: var(--font-body--family); font-size: 15px; color: #5a5a5a; margin: 0 0 4px; }
+  .lvm-{{ sid }} .lvm__card { display: grid; grid-template-columns: 44% 1fr; gap: 20px; align-items: center; padding: 22px; background: linear-gradient(135deg, #f6e7de, #f9efe8); animation: lvmIn-{{ sid }} .5s ease both; }
+  .lvm-{{ sid }} .lvm__img { display: block; aspect-ratio: 1; background: #fff; overflow: hidden; }
+  .lvm-{{ sid }} .lvm__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .lvm-{{ sid }} .lvm__name { display: block; font-family: var(--font-heading--family); font-weight: 500; font-size: 17px; line-height: 1.3; color: #111; text-decoration: none; margin-bottom: 8px; }
+  .lvm-{{ sid }} .lvm__price { font-family: var(--font-heading--family); font-size: 17px; color: #5a5a5a; margin-bottom: 16px; }
+  .lvm-{{ sid }} .lv-buy-form { margin: 0; }
+  .lvm-{{ sid }} .lv-buy { display: block; width: 100%; box-sizing: border-box; text-align: center; background: #111; color: #fff; border: 0; cursor: pointer; text-decoration: none; font-family: var(--font-body--family); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; padding: 16px 8px; transition: background .25s; }
+  .lvm-{{ sid }} .lv-buy:hover { background: #8b6b4a; }
+  .lvm-{{ sid }} .lv-buy--off { background: #d9d0c8; }
+  @keyframes lvmIn-{{ sid }} { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+{% endstyle %}
+
+<section class="lvm-{{ sid }}">
+  <div class="lvm__inner">
+    <div class="lvm__head">
+      {%- if section.settings.eyebrow != blank -%}<p class="lvm__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      {%- if section.settings.heading != blank -%}<h2 class="lvm__title">{{ section.settings.heading | escape }}</h2>{%- endif -%}
+    </div>
+    <div class="lvm__tabs" role="tablist">
+      {%- for block in section.blocks -%}
+        <button type="button" class="lvm__tab" role="tab" id="lvm-tab-{{ block.id }}" aria-controls="lvm-panel-{{ block.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" {{ block.shopify_attributes }}>
+          {%- case block.settings.icon -%}
+            {%- when 'sun' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
+            {%- when 'cloud' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M9 2.5v1M3.5 8h1M5.1 4.1l.7.7M12.9 4.1l-.7.7"/><path d="M7 19h10a3.5 3.5 0 0 0 0-7 5 5 0 0 0-9.6 1.6A2.7 2.7 0 0 0 7 19z"/></svg>
+            {%- else -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+          {%- endcase -%}
+          <span>{{ block.settings.label | escape }}</span>
+        </button>
+      {%- endfor -%}
+    </div>
+    {%- for block in section.blocks -%}
+      <div class="lvm__panel" role="tabpanel" id="lvm-panel-{{ block.id }}" aria-labelledby="lvm-tab-{{ block.id }}"{% unless forloop.first %} hidden{% endunless %}>
+        {%- if block.settings.intro != blank -%}<p class="lvm__intro">{{ block.settings.intro | escape }}</p>{%- endif -%}
+        {%- for product in block.settings.products -%}
+          <div class="lvm__card">
+            <a class="lvm__img" href="{{ product.url }}">
+              {%- if product.featured_image -%}{{ product.featured_image | image_url: width: 500 | image_tag: loading: 'lazy', alt: product.title }}{%- else -%}{{ 'product-1' | placeholder_svg_tag }}{%- endif -%}
+            </a>
+            <div>
+              <a class="lvm__name" href="{{ product.url }}">{{ product.title | escape }}</a>
+              <div class="lvm__price">{% if product.price_varies %}Vanaf {% endif %}{{ product.price | money }}</div>
+              {%- render 'lovaire-buy', product: product -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+<script>
+  (function () {
+    var root = document.querySelector('.lvm-{{ sid }}');
+    if (!root) return;
+    var tabs = root.querySelectorAll('.lvm__tab');
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          var p = root.querySelector('#' + t.getAttribute('aria-controls'));
+          if (p) p.hidden = !on;
+        });
+      });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Lovaire momenten",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Label", "default": "ELK MOMENT" },
+    { "type": "text", "id": "heading", "label": "Kop", "default": "Jouw dag met Lovaire" },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#ffffff" },
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 56 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "default": 80 }
+  ],
+  "blocks": [
+    { "type": "moment", "name": "Moment", "settings": [
+      { "type": "text", "id": "label", "label": "Tab", "default": "Ochtend" },
+      { "type": "select", "id": "icon", "label": "Icoon", "default": "sun", "options": [
+        { "value": "sun", "label": "Zon" }, { "value": "cloud", "label": "Zon met wolk" }, { "value": "moon", "label": "Maan" } ] },
+      { "type": "text", "id": "intro", "label": "Korte tekst" },
+      { "type": "product_list", "id": "products", "label": "Producten", "limit": 4 }
+    ] }
+  ],
+  "max_blocks": 3,
+  "presets": [{ "name": "Lovaire momenten" }]
+}
+{% endschema %}

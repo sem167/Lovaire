@@ -22,197 +22,6 @@
         "height": 85
       }
     },
-    "collections": {
-      "type": "collection-list",
-      "name": "Shop per categorie",
-      "block_order": [
-        "title"
-      ],
-      "blocks": {
-        "title": {
-          "type": "group",
-          "settings": {
-            "content_direction": "column",
-            "gap": 8,
-            "horizontal_alignment_flex_direction_column": "center",
-            "width": "fill",
-            "width_mobile": "fill",
-            "inherit_color_scheme": true
-          },
-          "blocks": {
-            "h": {
-              "type": "text",
-              "settings": {
-                "text": "<h2>Waar ben je naar op zoek?</h2>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "center",
-                "type_preset": "h2",
-                "font": "var(--font-heading--family)",
-                "color": "var(--color-foreground-heading)",
-                "wrap": "pretty"
-              },
-              "blocks": {}
-            },
-            "eyebrow": {
-              "type": "text",
-              "settings": {
-                "text": "<p>ONTDEK</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "center",
-                "type_preset": "h6",
-                "font": "var(--font-body--family)",
-                "color": "var(--color-primary)",
-                "wrap": "pretty"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "eyebrow",
-            "h"
-          ]
-        },
-        "static-collection-card": {
-          "type": "_collection-card",
-          "static": true,
-          "settings": {
-            "placement": "below_image",
-            "horizontal_alignment": "center",
-            "vertical_alignment": "flex-end",
-            "collection_card_gap": 12,
-            "inherit_color_scheme": true,
-            "border": "none",
-            "border_radius": 0
-          },
-          "blocks": {
-            "collection-card-image": {
-              "type": "_collection-card-image",
-              "static": true,
-              "settings": {
-                "image_ratio": "square",
-                "border": "none",
-                "border_radius": 100
-              },
-              "blocks": {}
-            },
-            "ctitle": {
-              "type": "collection-title",
-              "settings": {
-                "alignment": "center",
-                "type_preset": "h5",
-                "color": "var(--color-foreground-heading)"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "ctitle"
-          ]
-        }
-      },
-      "settings": {
-        "collection_list": [
-          "make-up",
-          "huid-producten",
-          "haarverzorging",
-          "beauty-tools",
-          "shapewear"
-        ],
-        "layout_type": "grid",
-        "carousel_on_mobile": true,
-        "columns": 5,
-        "mobile_columns": "2",
-        "mobile_card_size": "60cqw",
-        "columns_gap": 16,
-        "rows_gap": 16,
-        "max_collections": 5,
-        "icons_style": "arrow",
-        "icons_shape": "none",
-        "section_width": "page-width",
-        "gap": 24,
-        "color_scheme": "scheme-1",
-        "padding-block-start": 24,
-        "padding-block-end": 80
-      }
-    },
-    "story": {
-      "type": "section",
-      "name": "Over Lovaire",
-      "blocks": {
-        "eyebrow": {
-          "type": "text",
-          "settings": {
-            "text": "<p>OVER LOVAIRE</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "h6",
-            "font": "var(--font-body--family)",
-            "color": "var(--color-primary)",
-            "wrap": "pretty"
-          },
-          "blocks": {}
-        },
-        "heading": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Voor elke vrouw die zich mooi wil voelen</h2>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "center",
-            "type_preset": "h2",
-            "font": "var(--font-heading--family)",
-            "color": "var(--color-foreground-heading)",
-            "wrap": "pretty"
-          },
-          "blocks": {}
-        },
-        "body": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Zie jij ook steeds die virale beautyproducten voorbijkomen op TikTok en Instagram? Bij Lovaire brengen we ze samen: zorgvuldig geselecteerde essentials voor je make-up, huid en haar. Zodat jij elke dag met een glimlach in de spiegel kijkt.</p>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "center",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "color": "var(--color-foreground)",
-            "wrap": "pretty"
-          },
-          "blocks": {}
-        },
-        "cta": {
-          "type": "button",
-          "settings": {
-            "label": "Lees ons verhaal",
-            "link": "shopify://pages/over-ons",
-            "style_class": "button-secondary",
-            "width": "fit-content",
-            "width_mobile": "fit-content"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "eyebrow",
-        "heading",
-        "body",
-        "cta"
-      ],
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "section_width": "page-width",
-        "gap": 20,
-        "color_scheme": "scheme-1",
-        "padding-block-start": 88,
-        "padding-block-end": 88
-      }
-    },
     "reviews": {
       "type": "lovaire-reviews",
       "blocks": {
@@ -438,7 +247,7 @@
       "type": "lovaire-favorieten",
       "settings": {
         "eyebrow": "ONZE FAVORIETEN",
-        "heading": "Shop de Lovaire favorieten",
+        "heading": "Shop de favorieten",
         "products": [
           "lashlift-waterproof-mascara",
           "zelfkleurende-foundation-spf15",
@@ -448,11 +257,12 @@
           "lovaire-support-bh"
         ],
         "columns": 3,
-        "button_label": "Shop alles →",
+        "button_label": "Bekijk alles",
         "button_link": "shopify://collections/all",
-        "background": "#ffffff",
-        "padding_top": 80,
-        "padding_bottom": 72
+        "background": "#f6e9e1",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "tab_label": "Alle producten"
       }
     },
     "belofte": {
@@ -498,21 +308,104 @@
         "b4"
       ],
       "settings": {
-        "eyebrow": "ONZE BELOFTE",
-        "heading": "Zorgeloos shoppen bij Lovaire",
-        "show_payment": true,
-        "background": "#f6e7de",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "eyebrow": "",
+        "heading": "",
+        "show_payment": false,
+        "background": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "layout": "list"
+      }
+    },
+    "categories": {
+      "type": "lovaire-categories",
+      "settings": {
+        "eyebrow": "ONTDEK",
+        "heading": "Waar ben je naar op zoek?",
+        "collections": [
+          "make-up",
+          "huid-producten",
+          "haarverzorging",
+          "beauty-tools",
+          "shapewear"
+        ],
+        "background": "#ffffff",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "statement": {
+      "type": "lovaire-statement",
+      "settings": {
+        "eyebrow": "LOVAIRE",
+        "text": "<p>Make-up, huid en haar. Voor elk moment van <em>jouw dag</em>.</p>",
+        "show_line": true,
+        "background": "#ffffff",
+        "padding_top": 96,
+        "padding_bottom": 72
+      }
+    },
+    "momenten": {
+      "type": "lovaire-momenten",
+      "blocks": {
+        "m1": {
+          "type": "moment",
+          "settings": {
+            "label": "Ochtend",
+            "icon": "sun",
+            "intro": "Een frisse, stralende start van je dag.",
+            "products": [
+              "zelfkleurende-foundation-spf15",
+              "lashlift-waterproof-mascara"
+            ]
+          }
+        },
+        "m2": {
+          "type": "moment",
+          "settings": {
+            "label": "Overdag",
+            "icon": "cloud",
+            "intro": "Comfortabel en verzorgd de hele dag door.",
+            "products": [
+              "lovaire-support-bh",
+              "self-tanner-tanning-lotion"
+            ]
+          }
+        },
+        "m3": {
+          "type": "moment",
+          "settings": {
+            "label": "Avond",
+            "icon": "moon",
+            "intro": "Even tijd voor jezelf.",
+            "products": [
+              "lovaire-hairboost-shampoo",
+              "elektrische-spray-massage-borstel-lovaire"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "m1",
+        "m2",
+        "m3"
+      ],
+      "settings": {
+        "eyebrow": "ELK MOMENT",
+        "heading": "Jouw dag met Lovaire",
+        "background": "#ffffff",
+        "padding_top": 24,
+        "padding_bottom": 88
       }
     }
   },
   "order": [
     "hero",
-    "favorieten",
-    "collections",
     "belofte",
-    "story",
+    "categories",
+    "favorieten",
+    "statement",
+    "momenten",
     "reviews",
     "faq"
   ]

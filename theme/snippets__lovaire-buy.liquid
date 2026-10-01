@@ -1,0 +1,12 @@
+{%- comment -%} Knop onder een productkaart: direct in winkelwagen (1 variant) of naar opties {%- endcomment -%}
+{%- if product.available == false -%}
+  <span class="lv-buy lv-buy--off">Uitverkocht</span>
+{%- elsif product.has_only_default_variant -%}
+  <form action="{{ routes.cart_add_url }}" method="post" class="lv-buy-form">
+    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+    <input type="hidden" name="quantity" value="1">
+    <button type="submit" class="lv-buy">In winkelwagen</button>
+  </form>
+{%- else -%}
+  <a href="{{ product.url }}" class="lv-buy">Kies opties</a>
+{%- endif -%}

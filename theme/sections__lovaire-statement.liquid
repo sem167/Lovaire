@@ -1,0 +1,29 @@
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+{% style %}
+  .lvs-{{ sid }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 22px {{ section.settings.padding_bottom }}px; text-align: center; }
+  .lvs-{{ sid }} .lvs__eyebrow { font-family: var(--font-body--family); font-size: 13px; letter-spacing: .32em; text-transform: uppercase; color: #8b6b4a; margin: 0 0 26px; }
+  .lvs-{{ sid }} .lvs__text { font-family: var(--font-heading--family); font-weight: 400; font-size: clamp(30px, 4.6vw, 54px); line-height: 1.15; letter-spacing: -.015em; color: #111; max-width: 18ch; margin: 0 auto; }
+  .lvs-{{ sid }} .lvs__text em { font-style: italic; color: #8b6b4a; }
+  .lvs-{{ sid }} .lvs__line { width: 1px; height: 72px; margin: 40px auto 0; background: linear-gradient(#b39472, rgba(179,148,114,0)); transform-origin: top; animation: lvsGrow-{{ sid }} 2.4s ease-in-out infinite; }
+  @keyframes lvsGrow-{{ sid }} { 0% { transform: scaleY(0); opacity: 1; } 70% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .lvs-{{ sid }} .lvs__line { animation: none; } }
+{% endstyle %}
+<section class="lvs-{{ sid }}">
+  {%- if section.settings.eyebrow != blank -%}<p class="lvs__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+  <h2 class="lvs__text">{{ section.settings.text | remove: '<p>' | remove: '</p>' }}</h2>
+  {%- if section.settings.show_line -%}<div class="lvs__line" aria-hidden="true"></div>{%- endif -%}
+</section>
+{% schema %}
+{
+  "name": "Lovaire statement",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Label", "default": "LOVAIRE" },
+    { "type": "richtext", "id": "text", "label": "Statement (cursief = accentkleur)", "default": "<p>Make-up, huid en haar. Voor elk moment van <em>jouw dag</em>.</p>" },
+    { "type": "checkbox", "id": "show_line", "label": "Gouden lijn tonen", "default": true },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#ffffff" },
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 140, "step": 4, "default": 96 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 140, "step": 4, "default": 80 }
+  ],
+  "presets": [{ "name": "Lovaire statement" }]
+}
+{% endschema %}

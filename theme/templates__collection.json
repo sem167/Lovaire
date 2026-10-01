@@ -59,9 +59,9 @@
         "vertical_alignment_flex_direction_column": "center",
         "section_width": "page-width",
         "gap": 12,
-        "color_scheme": "scheme-4",
-        "padding-block-start": 56,
-        "padding-block-end": 56
+        "color_scheme": "scheme-5",
+        "padding-block-start": 48,
+        "padding-block-end": 8
       }
     },
     "main": {
@@ -91,8 +91,8 @@
             "card-gallery": {
               "type": "_product-card-gallery",
               "settings": {
-                "image_ratio": "portrait",
-                "border_radius": 20
+                "image_ratio": "square",
+                "border_radius": 0
               },
               "blocks": {}
             },
@@ -152,64 +152,80 @@
         "padding-block-end": 56
       }
     },
-    "usps": {
-      "type": "_blocks",
-      "name": "Voordelen",
+    "nav": {
+      "type": "lovaire-categories",
+      "settings": {
+        "eyebrow": "",
+        "heading": "",
+        "collections": [
+          "make-up",
+          "huid-producten",
+          "haarverzorging",
+          "beauty-tools",
+          "shapewear"
+        ],
+        "background": "#f6e7de",
+        "padding_top": 16,
+        "padding_bottom": 40
+      }
+    },
+    "belofte": {
+      "type": "lovaire-belofte",
       "blocks": {
-        "usp": {
-          "type": "ai_gen_block_1e9e953",
+        "b1": {
+          "type": "item",
           "settings": {
-            "desktop_width_percent": 100,
-            "background_color": "#ffffff",
-            "padding_top": 28,
-            "padding_bottom": 28,
-            "padding_horizontal": 16,
-            "padding_top_mobile": 20,
-            "padding_bottom_mobile": 20,
-            "padding_horizontal_mobile": 12,
-            "section_spacing": 20,
-            "show_payment_icons": true,
-            "payment_bg_color": "#ffffff",
-            "payment_border_color": "#ddd2c3",
-            "payment_border_radius": 6,
-            "columns_desktop": "3",
-            "columns_mobile": "3",
-            "show_feature_1": true,
-            "feature_1_title": "Gratis verzending",
-            "feature_1_text": "Op elke bestelling",
-            "show_feature_2": true,
-            "feature_2_title": "Veilig betalen",
-            "feature_2_text": "iDEAL · Klarna",
-            "show_feature_3": true,
-            "feature_3_title": "Persoonlijke service",
-            "feature_3_text": "Ma–vr 09:00–17:00",
-            "icon_size": 28,
-            "icon_color": "#8b6b4a",
-            "title_font_weight": "700",
-            "title_color": "#111111",
-            "text_color": "#5a5a5a"
-          },
-          "blocks": {}
+            "icon": "truck",
+            "title": "Gratis verzending",
+            "text": "Op elke bestelling, zonder minimumbedrag."
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "icon": "lock",
+            "title": "Veilig betalen",
+            "text": "Met iDEAL, Klarna en meer via een beveiligde checkout."
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "icon": "package",
+            "title": "Track & trace",
+            "text": "Volg je pakketje vanaf het moment van verzending."
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "icon": "chat",
+            "title": "Persoonlijke service",
+            "text": "Ma–vr van 09:00 tot 17:00 staan we voor je klaar."
+          }
         }
       },
       "block_order": [
-        "usp"
+        "b1",
+        "b2",
+        "b3",
+        "b4"
       ],
       "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "section_width": "page-width",
-        "color_scheme": "scheme-1",
-        "padding-block-start": 16,
-        "padding-block-end": 16
+        "eyebrow": "",
+        "heading": "",
+        "show_payment": true,
+        "background": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "layout": "list"
       }
     }
   },
   "order": [
     "header",
+    "nav",
     "main",
-    "usps"
+    "belofte"
   ]
 }
