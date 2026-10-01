@@ -1,0 +1,71 @@
+{% style %}
+  .lv-fav-{{ section.id }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
+  .lv-fav-{{ section.id }} .lv-fav__inner { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+  .lv-fav-{{ section.id }} .lv-fav__head { text-align: center; margin-bottom: 36px; }
+  .lv-fav-{{ section.id }} .lv-fav__eyebrow { font-family: var(--font-body--family); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: #8b6b4a; margin: 0 0 10px; }
+  .lv-fav-{{ section.id }} .lv-fav__title { font-family: var(--font-heading--family); font-weight: 400; font-size: clamp(26px, 3.2vw, 38px); color: #111; margin: 0; letter-spacing: -.01em; }
+  .lv-fav-{{ section.id }} .lv-fav__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; }
+  @media (min-width: 750px) { .lv-fav-{{ section.id }} .lv-fav__grid { grid-template-columns: repeat({{ section.settings.columns }}, minmax(0, 1fr)); gap: 36px 24px; } }
+  .lv-fav-{{ section.id }} .lv-card { display: flex; flex-direction: column; text-decoration: none; color: #111; }
+  .lv-fav-{{ section.id }} .lv-card__media { position: relative; aspect-ratio: 1; border-radius: 18px; overflow: hidden; background: #f8f5f0; }
+  .lv-fav-{{ section.id }} .lv-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+  .lv-fav-{{ section.id }} .lv-card:hover .lv-card__media img { transform: scale(1.04); }
+  .lv-fav-{{ section.id }} .lv-card__badge { position: absolute; top: 12px; left: 12px; background: #8b6b4a; color: #fff; font-family: var(--font-body--family); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; padding: 6px 10px; border-radius: 4px; }
+  .lv-fav-{{ section.id }} .lv-card__title { font-family: var(--font-body--family); font-size: 15px; line-height: 1.35; margin: 14px 0 6px; }
+  .lv-fav-{{ section.id }} .lv-card__price { font-family: var(--font-body--family); font-size: 14px; display: flex; gap: 8px; align-items: baseline; }
+  .lv-fav-{{ section.id }} .lv-card__compare { color: #8a8a8a; text-decoration: line-through; }
+  .lv-fav-{{ section.id }} .lv-fav__cta { text-align: center; margin-top: 44px; }
+  .lv-fav-{{ section.id }} .lv-fav__btn { display: inline-block; background: #111; color: #fff; text-decoration: none; font-family: var(--font-body--family); font-size: 13px; letter-spacing: .16em; text-transform: uppercase; padding: 16px 34px; transition: background .2s; }
+  .lv-fav-{{ section.id }} .lv-fav__btn:hover { background: #333; }
+{% endstyle %}
+
+<div class="lv-fav-{{ section.id }}">
+  <div class="lv-fav__inner">
+    <div class="lv-fav__head">
+      {%- if section.settings.eyebrow != blank -%}<p class="lv-fav__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      {%- if section.settings.heading != blank -%}<h2 class="lv-fav__title">{{ section.settings.heading | escape }}</h2>{%- endif -%}
+    </div>
+    <div class="lv-fav__grid">
+      {%- for product in section.settings.products -%}
+        <a class="lv-card" href="{{ product.url }}">
+          <div class="lv-card__media">
+            {%- if product.featured_image -%}
+              {{ product.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', alt: product.title, sizes: '(min-width: 750px) 25vw, 50vw' }}
+            {%- else -%}
+              {{ 'product-1' | placeholder_svg_tag }}
+            {%- endif -%}
+            {%- if product.compare_at_price > product.price -%}<span class="lv-card__badge">Sale</span>{%- endif -%}
+          </div>
+          <p class="lv-card__title">{{ product.title | escape }}</p>
+          <div class="lv-card__price">
+            <span>{% if product.price_varies %}Vanaf {% endif %}{{ product.price | money }}</span>
+            {%- if product.compare_at_price > product.price -%}<span class="lv-card__compare">{{ product.compare_at_price | money }}</span>{%- endif -%}
+          </div>
+        </a>
+      {%- else -%}
+        <p>Kies producten in de thema-editor.</p>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.button_label != blank -%}
+      <div class="lv-fav__cta"><a class="lv-fav__btn" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }}</a></div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Lovaire favorieten",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Label", "default": "ONZE FAVORIETEN" },
+    { "type": "text", "id": "heading", "label": "Kop", "default": "Shop de favorieten" },
+    { "type": "product_list", "id": "products", "label": "Producten", "limit": 12 },
+    { "type": "range", "id": "columns", "label": "Kolommen (desktop)", "min": 2, "max": 4, "step": 1, "default": 4 },
+    { "type": "text", "id": "button_label", "label": "Knoptekst", "default": "Shop alles →" },
+    { "type": "url", "id": "button_link", "label": "Knoplink" },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#ffffff" },
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 64 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "default": 64 }
+  ],
+  "presets": [{ "name": "Lovaire favorieten" }]
+}
+{% endschema %}

@@ -57,3 +57,23 @@ for n in ["templates__product.json", "templates__collection.json", "templates__l
             if s.get("type") == "_blocks": s["blocks"]["usp"]["settings"]["icon_color"] = "#8b6b4a"
     save(n, d)
 print("ok", idx["order"])
+
+# --- Lyvelle-opbouw: hero → voordelen → favorieten → categorie-rondjes → belofte → verhaal → reviews → FAQ
+idx = load("templates__index.json")
+S = idx["sections"]
+S["favorieten"] = {"type": "lovaire-favorieten", "settings": {
+    "eyebrow": "ONZE FAVORIETEN", "heading": "Shop de Lovaire favorieten",
+    "products": S["bestsellers"]["blocks"]["list"]["settings"]["selected_products"],
+    "columns": 3, "button_label": "Shop alles →", "button_link": "shopify://collections/all",
+    "background": "#ffffff", "padding_top": 64, "padding_bottom": 64}}
+for k in ["bestsellers", "marquee", "spotlight_head", "spotlight"]:
+    S.pop(k, None)
+card = S["collections"]["blocks"]["static-collection-card"]
+card["settings"]["border_radius"] = 0
+card["blocks"]["collection-card-image"]["settings"].update({"image_ratio": "square", "border_radius": 100})
+card["blocks"]["ctitle"]["settings"]["type_preset"] = "h5"
+S["collections"]["settings"]["color_scheme"] = "scheme-1"
+S["trust"]["settings"]["padding-block-start"] = S["trust"]["settings"]["padding-block-end"] = 8
+idx["order"] = ["hero", "trust", "favorieten", "collections", "steps", "story", "reviews", "faq"]
+save("templates__index.json", idx)
+print("lyvelle-opbouw", idx["order"])

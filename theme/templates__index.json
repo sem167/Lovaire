@@ -129,54 +129,8 @@
         "vertical_alignment_flex_direction_column": "center",
         "section_width": "page-width",
         "color_scheme": "scheme-1",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
-    "bestsellers": {
-      "type": "_blocks",
-      "name": "Bestsellers",
-      "blocks": {
-        "list": {
-          "type": "ai_gen_block_c52cb49",
-          "settings": {
-            "collection": "",
-            "selected_products": [
-              "lashlift-waterproof-mascara",
-              "zelfkleurende-foundation-spf15",
-              "self-tanner-tanning-lotion",
-              "lovaire-hairboost-shampoo",
-              "elektrische-spray-massage-borstel-lovaire",
-              "lovaire-support-bh"
-            ],
-            "heading": "De Lovaire favorieten",
-            "link_label": "Bekijk alles",
-            "desktop_width_percent": 100,
-            "heading_size": 34,
-            "image_radius": 20,
-            "background_color": "#ffffff",
-            "heading_color": "#111111",
-            "text_color": "#111111",
-            "link_color": "#8b6b4a",
-            "badge_color": "#8b6b4a",
-            "compare_color": "#6f6f6f",
-            "placeholder_color": "#f1e0d4"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "list"
-      ],
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "section_width": "page-width",
-        "color_scheme": "scheme-1",
-        "padding-block-start": 56,
-        "padding-block-end": 24
+        "padding-block-start": 8,
+        "padding-block-end": 8
       }
     },
     "collections": {
@@ -241,7 +195,7 @@
             "collection_card_gap": 12,
             "inherit_color_scheme": true,
             "border": "none",
-            "border_radius": 20
+            "border_radius": 0
           },
           "blocks": {
             "collection-card-image": {
@@ -250,7 +204,7 @@
               "settings": {
                 "image_ratio": "square",
                 "border": "none",
-                "border_radius": 20
+                "border_radius": 100
               },
               "blocks": {}
             },
@@ -258,7 +212,7 @@
               "type": "collection-title",
               "settings": {
                 "alignment": "center",
-                "type_preset": "h4",
+                "type_preset": "h5",
                 "color": "var(--color-foreground-heading)"
               },
               "blocks": {}
@@ -911,295 +865,34 @@
         "padding-block-end": 72
       }
     },
-    "marquee": {
-      "type": "marquee",
-      "name": "Bewegende tekst",
-      "blocks": {
-        "m0": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Lovaire</p>",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "0.875rem",
-            "line_height": "tight",
-            "letter_spacing": "loose",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          },
-          "blocks": {}
-        },
-        "m1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>✦</p>",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "0.875rem",
-            "line_height": "tight",
-            "letter_spacing": "loose",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          },
-          "blocks": {}
-        },
-        "m2": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Jouw glow</p>",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "0.875rem",
-            "line_height": "tight",
-            "letter_spacing": "loose",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          },
-          "blocks": {}
-        },
-        "m3": {
-          "type": "text",
-          "settings": {
-            "text": "<p>✦</p>",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "0.875rem",
-            "line_height": "tight",
-            "letter_spacing": "loose",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          },
-          "blocks": {}
-        },
-        "m4": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Selfcare</p>",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "0.875rem",
-            "line_height": "tight",
-            "letter_spacing": "loose",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          },
-          "blocks": {}
-        },
-        "m5": {
-          "type": "text",
-          "settings": {
-            "text": "<p>✦</p>",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "0.875rem",
-            "line_height": "tight",
-            "letter_spacing": "loose",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          },
-          "blocks": {}
-        },
-        "m6": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Altijd gratis verzending</p>",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "0.875rem",
-            "line_height": "tight",
-            "letter_spacing": "loose",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          },
-          "blocks": {}
-        },
-        "m7": {
-          "type": "text",
-          "settings": {
-            "text": "<p>✦</p>",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "0.875rem",
-            "line_height": "tight",
-            "letter_spacing": "loose",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          },
-          "blocks": {}
-        },
-        "m8": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Voel je mooi</p>",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "0.875rem",
-            "line_height": "tight",
-            "letter_spacing": "loose",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          },
-          "blocks": {}
-        },
-        "m9": {
-          "type": "text",
-          "settings": {
-            "text": "<p>✦</p>",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "0.875rem",
-            "line_height": "tight",
-            "letter_spacing": "loose",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "m0",
-        "m1",
-        "m2",
-        "m3",
-        "m4",
-        "m5",
-        "m6",
-        "m7",
-        "m8",
-        "m9"
-      ],
+    "favorieten": {
+      "type": "lovaire-favorieten",
       "settings": {
-        "movement_direction": "reverse",
-        "color_scheme": "scheme-5",
-        "padding-block-start": 12,
-        "padding-block-end": 12,
-        "gap_between_elements": 28
-      }
-    },
-    "spotlight_head": {
-      "type": "section",
-      "name": "Spotlight-kop",
-      "blocks": {
-        "eyebrow": {
-          "type": "text",
-          "settings": {
-            "text": "<p>LOVAIRE SPOTLIGHT</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "h6",
-            "font": "var(--font-body--family)",
-            "color": "var(--color-primary)",
-            "wrap": "pretty"
-          },
-          "blocks": {}
-        },
-        "h": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Wimpers die de hele dag blijven stralen</h2>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "center",
-            "type_preset": "h2",
-            "font": "var(--font-heading--family)",
-            "color": "var(--color-foreground-heading)",
-            "wrap": "pretty"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "eyebrow",
-        "h"
-      ],
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "section_width": "page-width",
-        "gap": 12,
-        "color_scheme": "scheme-5",
-        "padding-block-start": 64,
-        "padding-block-end": 24
-      }
-    },
-    "spotlight": {
-      "type": "featured-product",
-      "name": "Spotlight",
-      "blocks": {
-        "media": {
-          "type": "_media-without-appearance",
-          "static": true,
-          "settings": {},
-          "blocks": {}
-        },
-        "featured-product": {
-          "type": "_featured-product",
-          "static": true,
-          "settings": {},
-          "blocks": {
-            "featured-product-title": {
-              "type": "product-title",
-              "static": true,
-              "settings": {
-                "type_preset": "h3",
-                "width": "100%"
-              },
-              "blocks": {}
-            },
-            "featured-product-price": {
-              "type": "_featured-product-price",
-              "static": true,
-              "settings": {},
-              "blocks": {}
-            },
-            "featured-product-gallery": {
-              "type": "_featured-product-gallery",
-              "static": true,
-              "settings": {},
-              "blocks": {}
-            },
-            "featured-product-swatches": {
-              "type": "swatches",
-              "static": true,
-              "settings": {
-                "hide_padding": true
-              },
-              "blocks": {}
-            }
-          }
-        }
-      },
-      "settings": {
-        "product": "lashlift-waterproof-mascara",
-        "layout": "media-left",
-        "color_scheme": "scheme-5",
-        "padding-block-start": 0,
-        "padding-block-end": 64
+        "eyebrow": "ONZE FAVORIETEN",
+        "heading": "Shop de Lovaire favorieten",
+        "products": [
+          "lashlift-waterproof-mascara",
+          "zelfkleurende-foundation-spf15",
+          "self-tanner-tanning-lotion",
+          "lovaire-hairboost-shampoo",
+          "elektrische-spray-massage-borstel-lovaire",
+          "lovaire-support-bh"
+        ],
+        "columns": 3,
+        "button_label": "Shop alles →",
+        "button_link": "shopify://collections/all",
+        "background": "#ffffff",
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     }
   },
   "order": [
     "hero",
-    "marquee",
     "trust",
+    "favorieten",
     "collections",
-    "bestsellers",
     "steps",
-    "spotlight_head",
-    "spotlight",
     "story",
     "reviews",
     "faq"

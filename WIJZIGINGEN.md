@@ -115,3 +115,4 @@ Alleen de stijl van de voorbeeldsite is overgenomen, niet het logo of de teksten
 - Collectieblok "Waar ben je naar op zoek?" en leveringsblok "Zorgeloos shoppen bij Lovaire".
 - Afgeronde productkaarten. Bewust GEEN nep-uitverkoopbadges en GEEN "30 dagen garantie" (Lovaire hanteert 14 dagen).
 - Producttemplate ook gekopieerd naar product.support-bh-2/tanning-oil/foundation/kam.
+- Homepage-opbouw zoals het voorbeeld: hero → voordelen → "ONZE FAVORIETEN" (nieuwe sectie `lovaire-favorieten`: afgeronde productkaarten, 3 kolommen, zwarte "Shop alles →"-knop) → "ONTDEK" categorie-rondjes → "ONZE BELOFTE" → verhaal → reviews → FAQ. Tekstband en spotlight verwijderd voor een rustiger geheel.
