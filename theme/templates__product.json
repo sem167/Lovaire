@@ -282,11 +282,17 @@
                 "pay",
                 "help"
               ]
+            },
+            "rating": {
+              "type": "lovaire-rating",
+              "settings": {},
+              "blocks": {}
             }
           },
           "block_order": [
             "vendor",
             "title",
+            "rating",
             "price",
             "variants",
             "buy",

@@ -22,60 +22,6 @@
         "height": 85
       }
     },
-    "trust": {
-      "type": "_blocks",
-      "name": "Voordelen",
-      "blocks": {
-        "usp": {
-          "type": "ai_gen_block_1e9e953",
-          "settings": {
-            "desktop_width_percent": 100,
-            "background_color": "#ffffff",
-            "padding_top": 28,
-            "padding_bottom": 28,
-            "padding_horizontal": 16,
-            "padding_top_mobile": 20,
-            "padding_bottom_mobile": 20,
-            "padding_horizontal_mobile": 12,
-            "section_spacing": 20,
-            "show_payment_icons": true,
-            "payment_bg_color": "#ffffff",
-            "payment_border_color": "#ddd2c3",
-            "payment_border_radius": 6,
-            "columns_desktop": "3",
-            "columns_mobile": "3",
-            "show_feature_1": true,
-            "feature_1_title": "Gratis verzending",
-            "feature_1_text": "Op elke bestelling",
-            "show_feature_2": true,
-            "feature_2_title": "Veilig betalen",
-            "feature_2_text": "iDEAL · Klarna",
-            "show_feature_3": true,
-            "feature_3_title": "Persoonlijke service",
-            "feature_3_text": "Ma–vr 09:00–17:00",
-            "icon_size": 28,
-            "icon_color": "#8b6b4a",
-            "title_font_weight": "700",
-            "title_color": "#111111",
-            "text_color": "#5a5a5a"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "usp"
-      ],
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "section_width": "page-width",
-        "color_scheme": "scheme-1",
-        "padding-block-start": 8,
-        "padding-block-end": 8
-      }
-    },
     "collections": {
       "type": "collection-list",
       "name": "Shop per categorie",
@@ -187,8 +133,8 @@
         "section_width": "page-width",
         "gap": 24,
         "color_scheme": "scheme-1",
-        "padding-block-start": 48,
-        "padding-block-end": 56
+        "padding-block-start": 24,
+        "padding-block-end": 80
       }
     },
     "story": {
@@ -263,8 +209,8 @@
         "section_width": "page-width",
         "gap": 20,
         "color_scheme": "scheme-1",
-        "padding-block-start": 80,
-        "padding-block-end": 80
+        "padding-block-start": 88,
+        "padding-block-end": 88
       }
     },
     "reviews": {
@@ -484,262 +430,8 @@
         "section_width": "page-width",
         "gap": 32,
         "color_scheme": "scheme-1",
-        "padding-block-start": 72,
-        "padding-block-end": 72
-      }
-    },
-    "steps": {
-      "type": "section",
-      "name": "Zo werkt bestellen",
-      "blocks": {
-        "heading": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Zorgeloos shoppen bij Lovaire</h2>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "h2",
-            "font": "var(--font-heading--family)",
-            "color": "var(--color-foreground-heading)",
-            "wrap": "pretty"
-          },
-          "blocks": {}
-        },
-        "row": {
-          "type": "group",
-          "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": true,
-            "gap": 32,
-            "width": "fill",
-            "width_mobile": "fill",
-            "inherit_color_scheme": true
-          },
-          "blocks": {
-            "s1": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "gap": 8,
-                "horizontal_alignment_flex_direction_column": "center",
-                "width": "fill",
-                "width_mobile": "fill",
-                "inherit_color_scheme": true,
-                "padding-block-start": 8,
-                "padding-block-end": 8
-              },
-              "blocks": {
-                "n": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>01</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "center",
-                    "type_preset": "h2",
-                    "font": "var(--font-heading--family)",
-                    "color": "var(--color-primary)",
-                    "wrap": "pretty"
-                  },
-                  "blocks": {}
-                },
-                "t": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Bestel veilig</h3>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "center",
-                    "type_preset": "h4",
-                    "font": "var(--font-body--family)",
-                    "color": "var(--color-foreground)",
-                    "wrap": "pretty"
-                  },
-                  "blocks": {}
-                },
-                "b": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Betaal vertrouwd met iDEAL of Klarna via de beveiligde checkout.</p>",
-                    "width": "fit-content",
-                    "max_width": "narrow",
-                    "alignment": "center",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "color": "var(--color-foreground)",
-                    "wrap": "pretty"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "n",
-                "t",
-                "b"
-              ]
-            },
-            "s2": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "gap": 8,
-                "horizontal_alignment_flex_direction_column": "center",
-                "width": "fill",
-                "width_mobile": "fill",
-                "inherit_color_scheme": true,
-                "padding-block-start": 8,
-                "padding-block-end": 8
-              },
-              "blocks": {
-                "n": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>02</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "center",
-                    "type_preset": "h2",
-                    "font": "var(--font-heading--family)",
-                    "color": "var(--color-primary)",
-                    "wrap": "pretty"
-                  },
-                  "blocks": {}
-                },
-                "t": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Gratis verzonden</h3>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "center",
-                    "type_preset": "h4",
-                    "font": "var(--font-body--family)",
-                    "color": "var(--color-foreground)",
-                    "wrap": "pretty"
-                  },
-                  "blocks": {}
-                },
-                "b": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Zorgvuldig verpakt en verzonden, met track &amp; trace in je mail.</p>",
-                    "width": "fit-content",
-                    "max_width": "narrow",
-                    "alignment": "center",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "color": "var(--color-foreground)",
-                    "wrap": "pretty"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "n",
-                "t",
-                "b"
-              ]
-            },
-            "s3": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "gap": 8,
-                "horizontal_alignment_flex_direction_column": "center",
-                "width": "fill",
-                "width_mobile": "fill",
-                "inherit_color_scheme": true,
-                "padding-block-start": 8,
-                "padding-block-end": 8
-              },
-              "blocks": {
-                "n": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>03</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "center",
-                    "type_preset": "h2",
-                    "font": "var(--font-heading--family)",
-                    "color": "var(--color-primary)",
-                    "wrap": "pretty"
-                  },
-                  "blocks": {}
-                },
-                "t": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Persoonlijke hulp</h3>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "center",
-                    "type_preset": "h4",
-                    "font": "var(--font-body--family)",
-                    "color": "var(--color-foreground)",
-                    "wrap": "pretty"
-                  },
-                  "blocks": {}
-                },
-                "b": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Een vraag of probleem? Mail ons, we reageren op werkdagen tussen 09:00 en 17:00.</p>",
-                    "width": "fit-content",
-                    "max_width": "narrow",
-                    "alignment": "center",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "color": "var(--color-foreground)",
-                    "wrap": "pretty"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "n",
-                "t",
-                "b"
-              ]
-            }
-          },
-          "block_order": [
-            "s1",
-            "s2",
-            "s3"
-          ]
-        },
-        "eyebrow": {
-          "type": "text",
-          "settings": {
-            "text": "<p>ONZE BELOFTE</p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "h6",
-            "font": "var(--font-body--family)",
-            "color": "var(--color-primary)",
-            "wrap": "pretty"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "eyebrow",
-        "heading",
-        "row"
-      ],
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "section_width": "page-width",
-        "gap": 40,
-        "color_scheme": "scheme-4",
-        "padding-block-start": 72,
-        "padding-block-end": 72
+        "padding-block-start": 80,
+        "padding-block-end": 80
       }
     },
     "favorieten": {
@@ -759,17 +451,67 @@
         "button_label": "Shop alles →",
         "button_link": "shopify://collections/all",
         "background": "#ffffff",
-        "padding_top": 64,
-        "padding_bottom": 64
+        "padding_top": 80,
+        "padding_bottom": 72
+      }
+    },
+    "belofte": {
+      "type": "lovaire-belofte",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "title": "Gratis verzending",
+            "text": "Op elke bestelling, zonder minimumbedrag."
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "icon": "lock",
+            "title": "Veilig betalen",
+            "text": "Met iDEAL, Klarna en meer via een beveiligde checkout."
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "icon": "package",
+            "title": "Track & trace",
+            "text": "Volg je pakketje vanaf het moment van verzending."
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "icon": "chat",
+            "title": "Persoonlijke service",
+            "text": "Ma–vr van 09:00 tot 17:00 staan we voor je klaar."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "eyebrow": "ONZE BELOFTE",
+        "heading": "Zorgeloos shoppen bij Lovaire",
+        "show_payment": true,
+        "background": "#f6e7de",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     }
   },
   "order": [
     "hero",
-    "trust",
     "favorieten",
     "collections",
-    "steps",
+    "belofte",
     "story",
     "reviews",
     "faq"

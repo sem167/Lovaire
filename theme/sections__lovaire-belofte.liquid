@@ -1,0 +1,78 @@
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+{% style %}
+  .lvb-{{ sid }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
+  .lvb-{{ sid }} .lvb__inner { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .lvb-{{ sid }} .lvb__head { text-align: center; margin-bottom: 40px; }
+  .lvb-{{ sid }} .lvb__eyebrow { font-family: var(--font-body--family); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: #8b6b4a; margin: 0 0 10px; }
+  .lvb-{{ sid }} .lvb__title { font-family: var(--font-heading--family); font-weight: 400; font-size: clamp(26px, 3.2vw, 38px); color: #111; margin: 0; }
+  .lvb-{{ sid }} .lvb__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  @media (min-width: 900px) { .lvb-{{ sid }} .lvb__grid { grid-template-columns: repeat({{ section.blocks.size | at_least: 1 }}, minmax(0, 1fr)); gap: 20px; } }
+  .lvb-{{ sid }} .lvb__card { background: #fff; border-radius: 20px; padding: 28px 20px; text-align: center; transition: transform .35s ease, box-shadow .35s ease; }
+  .lvb-{{ sid }} .lvb__card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(60,40,20,.08); }
+  .lvb-{{ sid }} .lvb__icon { width: 54px; height: 54px; margin: 0 auto 16px; border-radius: 50%; background: #f8f1ec; display: grid; place-items: center; color: #8b6b4a; }
+  .lvb-{{ sid }} .lvb__icon svg { width: 24px; height: 24px; }
+  .lvb-{{ sid }} .lvb__card h3 { font-family: var(--font-body--family); font-size: 15px; font-weight: 600; color: #111; margin: 0 0 6px; }
+  .lvb-{{ sid }} .lvb__card p { font-family: var(--font-body--family); font-size: 13px; line-height: 1.55; color: #5a5a5a; margin: 0; }
+  .lvb-{{ sid }} .lvb__pay { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin-top: 34px; }
+  .lvb-{{ sid }} .lvb__pay svg { height: 26px; width: auto; }
+  .lvb-{{ sid }} .lvb__paylabel { width: 100%; text-align: center; font-family: var(--font-body--family); font-size: 12px; color: #8a8a8a; margin-bottom: 4px; }
+{% endstyle %}
+
+<section class="lvb-{{ sid }}">
+  <div class="lvb__inner">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank -%}
+      <div class="lvb__head">
+        {%- if section.settings.eyebrow != blank -%}<p class="lvb__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+        {%- if section.settings.heading != blank -%}<h2 class="lvb__title">{{ section.settings.heading | escape }}</h2>{%- endif -%}
+      </div>
+    {%- endif -%}
+    <div class="lvb__grid">
+      {%- for block in section.blocks -%}
+        <div class="lvb__card" {{ block.shopify_attributes }}>
+          <div class="lvb__icon" aria-hidden="true">
+            {%- case block.settings.icon -%}
+              {%- when 'truck' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3z"/><path d="M14 9h4l3 3v3h-7"/><circle cx="7" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/></svg>
+              {%- when 'lock' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1.2"/></svg>
+              {%- when 'package' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>
+              {%- when 'chat' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg>
+              {%- else -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+            {%- endcase -%}
+          </div>
+          <h3>{{ block.settings.title | escape }}</h3>
+          {%- if block.settings.text != blank -%}<p>{{ block.settings.text | escape }}</p>{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.show_payment -%}
+      <div class="lvb__pay">
+        <span class="lvb__paylabel">Veilig betalen met</span>
+        {%- for type in shop.enabled_payment_types -%}{{ type | payment_type_svg_tag }}{%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lovaire belofte",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Label", "default": "ONZE BELOFTE" },
+    { "type": "text", "id": "heading", "label": "Kop", "default": "Zorgeloos shoppen bij Lovaire" },
+    { "type": "checkbox", "id": "show_payment", "label": "Betaaliconen tonen", "default": true },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f6e7de" },
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 72 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "default": 72 }
+  ],
+  "blocks": [
+    { "type": "item", "name": "Voordeel", "settings": [
+      { "type": "select", "id": "icon", "label": "Icoon", "default": "star", "options": [
+        { "value": "truck", "label": "Vrachtwagen" }, { "value": "lock", "label": "Slot" }, { "value": "package", "label": "Pakket" },
+        { "value": "chat", "label": "Chat" }, { "value": "star", "label": "Ster" } ] },
+      { "type": "text", "id": "title", "label": "Titel" },
+      { "type": "text", "id": "text", "label": "Tekst" }
+    ] }
+  ],
+  "max_blocks": 4,
+  "presets": [{ "name": "Lovaire belofte" }]
+}
+{% endschema %}

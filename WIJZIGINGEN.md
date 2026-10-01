@@ -128,3 +128,9 @@ Alleen de stijl van de voorbeeldsite is overgenomen, niet het logo of de teksten
 - Oude homepage-testimonials (Laura, Yvonne, Fleur, Luna, Esther; herkomst niet controleerbaar) vervangen door nieuwe sectie `lovaire-reviews` met alleen echte Loox-reviews, letterlijk overgenomen, met productlink en het echte Loox-gemiddelde (5,0 uit 3 reviews).
 - Productkaarten tonen de echte Loox-sterren en het aantal reviews (alleen als er reviews zijn).
 - Levertijd (5–12 werkdagen) weggehaald uit aankondigingsbalk, homepage, FAQ en productpagina's; vervangen door "track & trace". Staat nog wel op de verzendbeleidpagina (wettelijk verplicht). Geen "snelle levering" beloofd, omdat 5–12 werkdagen dat niet is.
+
+## Update: strakker en professioneler (1 oktober 2026)
+- Nieuwe sectie `lovaire-belofte`: 4 witte kaarten met lijn-iconen (gratis verzending, veilig betalen, track & trace, persoonlijke service) en de echte betaaliconen. Vervangt de genummerde stappen en de losse voordelenbalk onder de hero (dubbel met de vinkjes in de hero).
+- Homepage: hero → favorieten → categorieën → belofte → over Lovaire → reviews → FAQ, met gelijkmatige witruimte (72–88 px).
+- Productpagina's: nieuw blok `lovaire-rating` onder de titel met de echte Loox-score en het aantal reviews (verborgen als een product nog geen reviews heeft); klikt door naar de Loox-reviews.
+- Verzoek om 100 reviews te verzinnen niet uitgevoerd: nep-reviews zijn verboden (Omnibus-richtlijn / ACM).

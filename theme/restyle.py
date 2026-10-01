@@ -110,3 +110,31 @@ S["reviews"] = {"type": "lovaire-reviews", "blocks": {
 # echte sterren op productkaarten (lovaire-favorieten leest Loox-metafields)
 save("templates__index.json", idx)
 print("reviews echt")
+
+# --- Strakker: belofte-iconenkaarten (vervangt stappen + losse voordelenbalk), echte sterren op productpagina
+idx = load("templates__index.json")
+S = idx["sections"]
+S["belofte"] = {"type": "lovaire-belofte", "blocks": {
+    "b1": {"type": "item", "settings": {"icon": "truck", "title": "Gratis verzending", "text": "Op elke bestelling, zonder minimumbedrag."}},
+    "b2": {"type": "item", "settings": {"icon": "lock", "title": "Veilig betalen", "text": "Met iDEAL, Klarna en meer via een beveiligde checkout."}},
+    "b3": {"type": "item", "settings": {"icon": "package", "title": "Track & trace", "text": "Volg je pakketje vanaf het moment van verzending."}},
+    "b4": {"type": "item", "settings": {"icon": "chat", "title": "Persoonlijke service", "text": "Ma–vr van 09:00 tot 17:00 staan we voor je klaar."}}},
+    "block_order": ["b1", "b2", "b3", "b4"],
+    "settings": {"eyebrow": "ONZE BELOFTE", "heading": "Zorgeloos shoppen bij Lovaire", "show_payment": True,
+                 "background": "#f6e7de", "padding_top": 80, "padding_bottom": 80}}
+for k in ["steps", "trust"]:
+    S.pop(k, None)
+S["favorieten"]["settings"].update({"padding_top": 80, "padding_bottom": 72})
+S["collections"]["settings"].update({"padding-block-start": 24, "padding-block-end": 80})
+S["story"]["settings"].update({"padding-block-start": 88, "padding-block-end": 88})
+S["faq"]["settings"].update({"padding-block-start": 80, "padding-block-end": 80})
+idx["order"] = ["hero", "favorieten", "collections", "belofte", "story", "reviews", "faq"]
+save("templates__index.json", idx)
+
+prod = load("templates__product.json")
+det = prod["sections"]["main"]["blocks"]["product-details"]
+det["blocks"]["rating"] = {"type": "lovaire-rating", "settings": {}, "blocks": {}}
+bo = det["block_order"]
+if "rating" not in bo: bo.insert(bo.index("title") + 1, "rating")
+save("templates__product.json", prod)
+print("strakker", idx["order"])
