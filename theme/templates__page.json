@@ -1,0 +1,103 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h1",
+            "font": "var(--font-heading--family)",
+            "color": "var(--color-foreground-heading)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "settings": {
+        "gap": 40,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 56,
+        "padding-block-end": 72
+      }
+    },
+    "help": {
+      "type": "section",
+      "name": "Hulp nodig",
+      "blocks": {
+        "h": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Nog vragen? Wij helpen je graag</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h3",
+            "font": "var(--font-heading--family)",
+            "color": "var(--color-foreground-heading)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "p": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ons team reageert op werkdagen tussen 09:00 en 17:00.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "color": "var(--color-foreground)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "b": {
+          "type": "button",
+          "settings": {
+            "label": "Neem contact op",
+            "link": "shopify://pages/contact",
+            "style_class": "button-secondary",
+            "width": "fit-content",
+            "width_mobile": "fit-content"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "h",
+        "p",
+        "b"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "section_width": "page-width",
+        "gap": 16,
+        "color_scheme": "scheme-5",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    }
+  },
+  "order": [
+    "main",
+    "help"
+  ]
+}

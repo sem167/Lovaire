@@ -52,3 +52,10 @@ Bronbestanden: `theme/build.py` genereert de vier aangepaste themabestanden in `
   - Daaronder de voordelenbalk en "Misschien vind je dit ook mooi".
   - De oude productspecifieke blokken met claims als "Duizenden vrouwen…" en de shampoo-content die ook op de mascara stond, zijn verwijderd.
 - Homepage: nieuw blok "Zorgeloos bestellen" (3 stappen: bestel veilig → wij verzenden → niet tevreden).
+
+## Update: alle pagina's in nieuwe stijl (1 oktober 2026)
+`theme/build_pages.py`:
+- **Collectiepagina's:** nude kopblok met titel + collectiebeschrijving, horizontale filters, afgeronde productkaarten, voordelenbalk onderaan.
+- **Alle collecties:** Nederlandse kop ("Alle collecties" i.p.v. "Collections"), kapot kleurenschema gerepareerd, voordelenbalk.
+- **Gewone pagina's** (Over ons, verzend- en retourbeleid…): sierlijke kop + blok "Nog vragen? Wij helpen je graag".
+- **Contactpagina:** "Hoe kunnen we je helpen?", drie infoblokken (e-mail, openingstijden, bestelling volgen), formulier met knop "Verstuur bericht" i.p.v. "Submit".

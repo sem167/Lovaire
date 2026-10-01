@@ -1,0 +1,167 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection-list",
+      "name": "Alle collecties",
+      "blocks": {
+        "head": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "gap": 8,
+            "horizontal_alignment_flex_direction_column": "center",
+            "width": "fill",
+            "width_mobile": "fill",
+            "inherit_color_scheme": true
+          },
+          "blocks": {
+            "t": {
+              "type": "text",
+              "settings": {
+                "text": "<h1>Alle collecties</h1>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "h1",
+                "font": "var(--font-heading--family)",
+                "color": "var(--color-foreground-heading)",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            },
+            "p": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Ontdek onze beauty essentials per categorie.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "color": "var(--color-foreground)",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "t",
+            "p"
+          ]
+        },
+        "static-collection-card": {
+          "type": "_collection-card",
+          "static": true,
+          "settings": {
+            "placement": "below_image",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-end",
+            "collection_card_gap": 12,
+            "inherit_color_scheme": true,
+            "border": "none",
+            "border_radius": 16
+          },
+          "blocks": {
+            "collection-card-image": {
+              "type": "_collection-card-image",
+              "static": true,
+              "settings": {
+                "image_ratio": "portrait",
+                "border": "none",
+                "border_radius": 16
+              },
+              "blocks": {}
+            },
+            "ctitle": {
+              "type": "collection-title",
+              "settings": {
+                "alignment": "center",
+                "type_preset": "h4",
+                "color": "var(--color-foreground-heading)"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "ctitle"
+          ]
+        }
+      },
+      "block_order": [
+        "head"
+      ],
+      "settings": {
+        "layout_type": "grid",
+        "carousel_on_mobile": false,
+        "columns": 3,
+        "mobile_columns": "2",
+        "columns_gap": 20,
+        "rows_gap": 28,
+        "max_collections": 12,
+        "section_width": "page-width",
+        "gap": 32,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    },
+    "usps": {
+      "type": "_blocks",
+      "name": "Voordelen",
+      "blocks": {
+        "usp": {
+          "type": "ai_gen_block_1e9e953",
+          "settings": {
+            "desktop_width_percent": 100,
+            "background_color": "#fbf7f4",
+            "padding_top": 28,
+            "padding_bottom": 28,
+            "padding_horizontal": 16,
+            "padding_top_mobile": 20,
+            "padding_bottom_mobile": 20,
+            "padding_horizontal_mobile": 12,
+            "section_spacing": 20,
+            "show_payment_icons": true,
+            "payment_bg_color": "#ffffff",
+            "payment_border_color": "#eadfd8",
+            "payment_border_radius": 6,
+            "columns_desktop": "3",
+            "columns_mobile": "3",
+            "show_feature_1": true,
+            "feature_1_title": "30 dagen retour",
+            "feature_1_text": "Niet goed, geld terug",
+            "show_feature_2": true,
+            "feature_2_title": "Veilig betalen",
+            "feature_2_text": "iDEAL · Klarna",
+            "show_feature_3": true,
+            "feature_3_title": "Persoonlijke service",
+            "feature_3_text": "Ma–vr 09:00–17:00",
+            "icon_size": 28,
+            "icon_color": "#b9818a",
+            "title_font_weight": "500",
+            "title_color": "#3b2a26",
+            "text_color": "#5c4a44"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "usp"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 16,
+        "padding-block-end": 16
+      }
+    }
+  },
+  "order": [
+    "main",
+    "usps"
+  ]
+}
