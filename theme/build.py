@@ -120,8 +120,10 @@ sec_flex = {"content_direction": "column", "vertical_on_mobile": True,
 
 index = {"sections": {
     "hero": {"type": "hero", "name": "Hero", **ordered([
-        ("eyebrow", text("<p>LOVAIRE BEAUTY</p>", preset="h6", align="center", color="var(--color-foreground)")),
-        ("heading", text("<h1>JOUW GLOW, ELKE DAG</h1>", preset="h1", align="center", font="var(--font-heading--family)", color="var(--color-foreground-heading)")),
+        ("wordmark", {"type": "jumbo-text", "settings": {"text": "LOVAIRE", "font": "heading", "alignment": "center",
+                                                         "line_height": "0.8", "letter_spacing": "0.03em", "case": "uppercase",
+                                                         "text_effect": "reveal", "animation_repeat": False}, "blocks": {}}),
+        ("heading", text("<h1>JOUW GLOW, ELKE DAG</h1>", preset="h4", align="center", font="var(--font-heading--family)", color="var(--color-foreground-heading)")),
         ("subtext", text("<p>Beauty essentials die jouw natuurlijke schoonheid laten stralen.</p>", align="center")),
         ("buttons", {"type": "group", "settings": {"content_direction": "row", "vertical_on_mobile": False, "gap": 12,
                                                     "width": "fit-content", "width_mobile": "fit-content", "inherit_color_scheme": True},
@@ -305,8 +307,15 @@ footer_group = {"type": "footer", "name": "Footer", "sections": {
         ("policy_list", {"type": "footer-policy-list", "settings": {"font_size": "0.75rem", "case": "none"}, "blocks": {}}),
         ("social_icons", {"type": "social-links", "settings": {k + "_url": "" for k in ["facebook", "instagram", "youtube", "tiktok", "twitter", "threads", "linkedin", "bluesky", "snapchat", "pinterest", "tumblr", "vimeo", "custom"]}, "blocks": {}}),
     ]), "settings": {"section_width": "page-width", "gap": 24, "divider_thickness": 1,
-                     "color_scheme": "scheme-3", "padding-block-start": 20, "padding-block-end": 20}}},
-    "order": ["newsletter", "footer", "utilities"]}
+                     "color_scheme": "scheme-3", "padding-block-start": 20, "padding-block-end": 20}},
+    "wordmark": {"type": "section", "name": "Lovaire woordmerk", **ordered([
+        ("jumbo", {"type": "jumbo-text", "settings": {"text": "LOVAIRE", "font": "heading", "alignment": "center",
+                                                      "line_height": "0.8", "letter_spacing": "0.03em", "case": "uppercase",
+                                                      "text_effect": "reveal", "animation_repeat": False}, "blocks": {}}),
+    ]), "settings": {**sec_flex, "section_width": "full-width", "gap": 0, "color_scheme": "scheme-3",
+                     "padding-block-start": 8, "padding-block-end": 24}},
+    },
+    "order": ["newsletter", "footer", "utilities", "wordmark"]}
 
 if __name__ == "__main__":
   files = {

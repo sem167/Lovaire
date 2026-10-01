@@ -2,7 +2,7 @@
 import json
 from build import text, button, ordered, faq_row, sec_flex, index, CREAM, BLUSH, NUDE, ROSE, COCOA, COCOA_TEXT, WHITE
 
-TRUST_LINES = ("<p>✓ Altijd gratis verzending<br/>"
+TRUST_LINES = ("<p><strong>DE LOVAIRE BELOFTE</strong><br/>✓ Altijd gratis verzending<br/>"
                "✓ Veilig betalen met iDEAL of Klarna<br/>"
                "✓ Levertijd 5–12 werkdagen, met track &amp; trace</p>")
 
@@ -98,7 +98,7 @@ def step(num, title, body):
                        ("b", text(f"<p>{body}</p>", align="center", max_width="narrow"))])}
 
 index["sections"]["steps"] = {"type": "section", "name": "Zo werkt bestellen", **ordered([
-    ("heading", text("<h2>Zorgeloos bestellen</h2>", preset="h2", align="center", width="100%",
+    ("heading", text("<h2>Zorgeloos bestellen bij Lovaire</h2>", preset="h2", align="center", width="100%",
                      font="var(--font-heading--family)", color="var(--color-foreground-heading)")),
     ("row", {"type": "group", "settings": {"content_direction": "row", "vertical_on_mobile": True, "gap": 32,
                                            "width": "fill", "width_mobile": "fill", "inherit_color_scheme": True},
@@ -133,12 +133,12 @@ def marquee_text(t):
 
 index["sections"]["marquee"] = {"type": "marquee", "name": "Bewegende tekst", **ordered([
     (f"m{i}", marquee_text(t)) for i, t in enumerate(
-        ["Jouw glow", "✦", "Selfcare", "✦", "Altijd gratis verzending", "✦", "Voel je mooi", "✦"])
+        ["Lovaire", "✦", "Jouw glow", "✦", "Selfcare", "✦", "Altijd gratis verzending", "✦", "Voel je mooi", "✦"])
 ]), "settings": {"movement_direction": "reverse", "color_scheme": "scheme-3",
                  "padding-block-start": 18, "padding-block-end": 18, "gap_between_elements": 28}}
 
 index["sections"]["spotlight_head"] = {"type": "section", "name": "Spotlight-kop", **ordered([
-    ("eyebrow", text("<p>SPOTLIGHT</p>", preset="h6", align="center")),
+    ("eyebrow", text("<p>LOVAIRE SPOTLIGHT</p>", preset="h6", align="center")),
     ("h", text("<h2>Wimpers die de hele dag blijven stralen</h2>", preset="h2", align="center", max_width="narrow",
                font="var(--font-heading--family)", color="var(--color-foreground-heading)")),
 ]), "settings": {**sec_flex, "gap": 12, "color_scheme": "scheme-4", "padding-block-start": 64, "padding-block-end": 24}}
@@ -154,12 +154,13 @@ index["sections"]["spotlight"] = {"type": "featured-product", "name": "Spotlight
                  "padding-block-start": 0, "padding-block-end": 64}}
 
 S = index["sections"]
-S["bestsellers"]["blocks"]["list"]["settings"]["heading"] = "Jouw nieuwe favorieten"
-S["reviews"]["settings"]["heading"] = "<p>Geliefd door onze klanten</p>"
+S["bestsellers"]["blocks"]["list"]["settings"]["heading"] = "De Lovaire favorieten"
+S["reviews"]["settings"]["heading"] = "<p>Waarom klanten van Lovaire houden</p>"
 S["story"]["blocks"]["heading"]["settings"]["text"] = "<h2>Voor elke vrouw die zich mooi wil voelen</h2>"
 S["story"]["blocks"]["body"]["settings"]["text"] = ("<p>Zie jij ook steeds die virale beautyproducten voorbijkomen op TikTok en Instagram? "
     "Bij Lovaire brengen we ze samen: zorgvuldig geselecteerde essentials voor je make-up, huid en haar. "
     "Zodat jij elke dag met een glimlach in de spiegel kijkt.</p>")
+S["collections"]["blocks"]["title"]["blocks"]["h"]["settings"]["text"] = "<h2>Shop Lovaire</h2>"
 index["order"] = ["hero", "marquee", "trust", "bestsellers", "collections", "spotlight_head", "spotlight",
                   "steps", "story", "reviews", "faq"]
 json.dump(index, open("templates__index.json", "w"), ensure_ascii=False, indent=2)

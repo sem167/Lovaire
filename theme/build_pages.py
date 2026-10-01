@@ -26,7 +26,7 @@ product_card = {"type": "_product-card", "static": True, "settings": {"product_c
 
 collection = {"sections": {
     "header": {"type": "section", "name": "Collectie-kop", **ordered([
-        ("eyebrow", text("<p>COLLECTIE</p>", preset="h6", align="center")),
+        ("eyebrow", text("<p>LOVAIRE COLLECTIE</p>", preset="h6", align="center")),
         ("title", text("<h1>{{ closest.collection.title }}</h1>", preset="h1", align="center", **H)),
         ("desc", text("{{ closest.collection.description }}", align="center", max_width="narrow")),
     ]), "settings": {**sec_flex, "gap": 12, "color_scheme": "scheme-4", "padding-block-start": 56, "padding-block-end": 56}},

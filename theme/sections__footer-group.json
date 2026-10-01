@@ -279,11 +279,46 @@
         "padding-block-start": 20,
         "padding-block-end": 20
       }
+    },
+    "wordmark": {
+      "type": "section",
+      "name": "Lovaire woordmerk",
+      "blocks": {
+        "jumbo": {
+          "type": "jumbo-text",
+          "settings": {
+            "text": "LOVAIRE",
+            "font": "heading",
+            "alignment": "center",
+            "line_height": "0.8",
+            "letter_spacing": "0.03em",
+            "case": "uppercase",
+            "text_effect": "reveal",
+            "animation_repeat": false
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "jumbo"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "section_width": "full-width",
+        "gap": 0,
+        "color_scheme": "scheme-3",
+        "padding-block-start": 8,
+        "padding-block-end": 24
+      }
     }
   },
   "order": [
     "newsletter",
     "footer",
-    "utilities"
+    "utilities",
+    "wordmark"
   ]
 }

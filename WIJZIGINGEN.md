@@ -101,3 +101,8 @@ Op verzoek volledig omgezet naar een strak beige-zwart ontwerp:
 - Twee foto's naast elkaar vervangen door één brede, strakke foto: "Minimalist Skincare Product Flat Lay" (Pexels 34939732) → `lovaire-hero-breed-2.jpg`.
 - Mobiel: staande foto uit dezelfde neutrale serie (Pexels 34939759) → `lovaire-hero-strak.jpg`.
 - Ongebruikte foto's (vrouw met make-up, "Variety of Makeup Products") verwijderd uit Bestanden.
+
+## Update: meer Lovaire-branding (1 oktober 2026)
+- Hero: groot LOVAIRE-woordmerk (jumbo-tekst met onthul-animatie) boven "Jouw glow, elke dag".
+- Footer: reusachtig LOVAIRE-woordmerk over de volle breedte onderaan elke pagina.
+- Tekstband begint met "LOVAIRE ✦"; koppen "De Lovaire favorieten", "Shop Lovaire", "Lovaire spotlight", "Zorgeloos bestellen bij Lovaire", "Waarom klanten van Lovaire houden"; "Lovaire collectie" op collectiepagina's; "De Lovaire belofte" op productpagina's.

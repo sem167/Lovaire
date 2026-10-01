@@ -4,17 +4,17 @@
       "type": "hero",
       "name": "Hero",
       "blocks": {
-        "eyebrow": {
-          "type": "text",
+        "wordmark": {
+          "type": "jumbo-text",
           "settings": {
-            "text": "<p>LOVAIRE BEAUTY</p>",
-            "width": "fit-content",
-            "max_width": "normal",
+            "text": "LOVAIRE",
+            "font": "heading",
             "alignment": "center",
-            "type_preset": "h6",
-            "font": "var(--font-body--family)",
-            "color": "var(--color-foreground)",
-            "wrap": "pretty"
+            "line_height": "0.8",
+            "letter_spacing": "0.03em",
+            "case": "uppercase",
+            "text_effect": "reveal",
+            "animation_repeat": false
           },
           "blocks": {}
         },
@@ -25,7 +25,7 @@
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
-            "type_preset": "h1",
+            "type_preset": "h4",
             "font": "var(--font-heading--family)",
             "color": "var(--color-foreground-heading)",
             "wrap": "pretty"
@@ -87,7 +87,7 @@
         }
       },
       "block_order": [
-        "eyebrow",
+        "wordmark",
         "heading",
         "subtext",
         "buttons"
@@ -185,7 +185,7 @@
               "elektrische-spray-massage-borstel-lovaire",
               "lovaire-support-bh"
             ],
-            "heading": "Jouw nieuwe favorieten",
+            "heading": "De Lovaire favorieten",
             "link_label": "Bekijk alles",
             "desktop_width_percent": 100,
             "heading_size": 34,
@@ -236,7 +236,7 @@
             "h": {
               "type": "text",
               "settings": {
-                "text": "<h2>Shop per categorie</h2>",
+                "text": "<h2>Shop Lovaire</h2>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
@@ -454,7 +454,7 @@
         "r6"
       ],
       "settings": {
-        "heading": "<p>Geliefd door onze klanten</p>",
+        "heading": "<p>Waarom klanten van Lovaire houden</p>",
         "heading_custom": true,
         "heading_font": "josefin_sans_n4",
         "heading_size": 36,
@@ -685,7 +685,7 @@
         "heading": {
           "type": "text",
           "settings": {
-            "text": "<h2>Zorgeloos bestellen</h2>",
+            "text": "<h2>Zorgeloos bestellen bij Lovaire</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -924,7 +924,7 @@
         "m0": {
           "type": "text",
           "settings": {
-            "text": "<p>Jouw glow</p>",
+            "text": "<p>Lovaire</p>",
             "type_preset": "custom",
             "font": "var(--font-heading--family)",
             "font_size": "var(--font-size--h4)",
@@ -954,7 +954,7 @@
         "m2": {
           "type": "text",
           "settings": {
-            "text": "<p>Selfcare</p>",
+            "text": "<p>Jouw glow</p>",
             "type_preset": "custom",
             "font": "var(--font-heading--family)",
             "font_size": "var(--font-size--h4)",
@@ -984,7 +984,7 @@
         "m4": {
           "type": "text",
           "settings": {
-            "text": "<p>Altijd gratis verzending</p>",
+            "text": "<p>Selfcare</p>",
             "type_preset": "custom",
             "font": "var(--font-heading--family)",
             "font_size": "var(--font-size--h4)",
@@ -1014,7 +1014,7 @@
         "m6": {
           "type": "text",
           "settings": {
-            "text": "<p>Voel je mooi</p>",
+            "text": "<p>Altijd gratis verzending</p>",
             "type_preset": "custom",
             "font": "var(--font-heading--family)",
             "font_size": "var(--font-size--h4)",
@@ -1040,6 +1040,36 @@
             "width": "fit-content"
           },
           "blocks": {}
+        },
+        "m8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Voel je mooi</p>",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_size": "var(--font-size--h4)",
+            "line_height": "tight",
+            "letter_spacing": "loose",
+            "case": "uppercase",
+            "wrap": "nowrap",
+            "width": "fit-content"
+          },
+          "blocks": {}
+        },
+        "m9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>✦</p>",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_size": "var(--font-size--h4)",
+            "line_height": "tight",
+            "letter_spacing": "loose",
+            "case": "uppercase",
+            "wrap": "nowrap",
+            "width": "fit-content"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -1050,7 +1080,9 @@
         "m4",
         "m5",
         "m6",
-        "m7"
+        "m7",
+        "m8",
+        "m9"
       ],
       "settings": {
         "movement_direction": "reverse",
@@ -1067,7 +1099,7 @@
         "eyebrow": {
           "type": "text",
           "settings": {
-            "text": "<p>SPOTLIGHT</p>",
+            "text": "<p>LOVAIRE SPOTLIGHT</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",

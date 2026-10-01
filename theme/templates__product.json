@@ -136,7 +136,7 @@
             "trust": {
               "type": "text",
               "settings": {
-                "text": "<p>✓ Altijd gratis verzending<br/>✓ Veilig betalen met iDEAL of Klarna<br/>✓ Levertijd 5–12 werkdagen, met track &amp; trace</p>",
+                "text": "<p><strong>DE LOVAIRE BELOFTE</strong><br/>✓ Altijd gratis verzending<br/>✓ Veilig betalen met iDEAL of Klarna<br/>✓ Levertijd 5–12 werkdagen, met track &amp; trace</p>",
                 "width": "100%",
                 "alignment": "left",
                 "type_preset": "rte",
