@@ -4,28 +4,28 @@
       "type": "hero",
       "name": "Hero",
       "blocks": {
-        "wordmark": {
-          "type": "jumbo-text",
+        "eyebrow": {
+          "type": "text",
           "settings": {
-            "text": "LOVAIRE",
-            "font": "heading",
-            "alignment": "center",
-            "line_height": "0.8",
-            "letter_spacing": "0.03em",
-            "case": "uppercase",
-            "text_effect": "reveal",
-            "animation_repeat": false
+            "text": "<p>—— LOVAIRE</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h6",
+            "font": "var(--font-body--family)",
+            "color": "var(--color-primary)",
+            "wrap": "pretty"
           },
           "blocks": {}
         },
         "heading": {
           "type": "text",
           "settings": {
-            "text": "<h1>JOUW GLOW, ELKE DAG</h1>",
+            "text": "<h1>Beauty essentials voor jouw glow, elke dag</h1>",
             "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "h4",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "h1",
             "font": "var(--font-heading--family)",
             "color": "var(--color-foreground-heading)",
             "wrap": "pretty"
@@ -35,10 +35,10 @@
         "subtext": {
           "type": "text",
           "settings": {
-            "text": "<p>Beauty essentials die jouw natuurlijke schoonheid laten stralen.</p>",
+            "text": "<p>Make-up, huid- en haarverzorging die je echt gebruikt. Altijd gratis verzending.</p>",
             "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "center",
+            "max_width": "narrow",
+            "alignment": "left",
             "type_preset": "rte",
             "font": "var(--font-body--family)",
             "color": "var(--color-foreground)",
@@ -46,71 +46,35 @@
           },
           "blocks": {}
         },
-        "buttons": {
-          "type": "group",
+        "cta": {
+          "type": "button",
           "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": false,
-            "gap": 12,
+            "label": "Shop nu →",
+            "link": "shopify://collections/all",
+            "style_class": "button",
             "width": "fit-content",
-            "width_mobile": "fit-content",
-            "inherit_color_scheme": true
+            "width_mobile": "fit-content"
           },
-          "blocks": {
-            "btn_shop": {
-              "type": "button",
-              "settings": {
-                "label": "Shop bestsellers",
-                "link": "shopify://collections/all",
-                "style_class": "button",
-                "width": "fit-content",
-                "width_mobile": "fit-content"
-              },
-              "blocks": {}
-            },
-            "btn_coll": {
-              "type": "button",
-              "settings": {
-                "label": "Bekijk collecties",
-                "link": "/collections",
-                "style_class": "button-secondary",
-                "width": "fit-content",
-                "width_mobile": "fit-content"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "btn_shop",
-            "btn_coll"
-          ]
+          "blocks": {}
         }
       },
       "block_order": [
-        "wordmark",
+        "eyebrow",
         "heading",
         "subtext",
-        "buttons"
+        "cta"
       ],
       "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/lovaire-hero-breed-2.jpg",
-        "custom_mobile_media": true,
-        "media_type_1_mobile": "image",
-        "image_1_mobile": "shopify://shop_images/lovaire-hero-strak.jpg",
         "content_direction": "column",
         "vertical_on_mobile": true,
-        "horizontal_alignment_flex_direction_column": "center",
+        "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 20,
-        "section_width": "full-width",
+        "section_width": "page-width",
         "section_height": "custom",
-        "section_height_custom": 80,
-        "color_scheme": "scheme-6",
-        "toggle_overlay": true,
-        "overlay_color": "#00000066",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
+        "section_height_custom": 60,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": false,
         "padding-block-start": 64,
         "padding-block-end": 64
       }
@@ -123,7 +87,7 @@
           "type": "ai_gen_block_1e9e953",
           "settings": {
             "desktop_width_percent": 100,
-            "background_color": "#f5f0e8",
+            "background_color": "#ffffff",
             "padding_top": 28,
             "padding_bottom": 28,
             "padding_horizontal": 16,
@@ -134,7 +98,7 @@
             "show_payment_icons": true,
             "payment_bg_color": "#ffffff",
             "payment_border_color": "#ddd2c3",
-            "payment_border_radius": 0,
+            "payment_border_radius": 6,
             "columns_desktop": "3",
             "columns_mobile": "3",
             "show_feature_1": true,
@@ -147,10 +111,10 @@
             "feature_3_title": "Persoonlijke service",
             "feature_3_text": "Ma–vr 09:00–17:00",
             "icon_size": 28,
-            "icon_color": "#111111",
-            "title_font_weight": "500",
+            "icon_color": "#8b6b4a",
+            "title_font_weight": "700",
             "title_color": "#111111",
-            "text_color": "#3a3a3a"
+            "text_color": "#5a5a5a"
           },
           "blocks": {}
         }
@@ -189,14 +153,14 @@
             "link_label": "Bekijk alles",
             "desktop_width_percent": 100,
             "heading_size": 34,
-            "image_radius": 0,
-            "background_color": "#f5f0e8",
+            "image_radius": 20,
+            "background_color": "#ffffff",
             "heading_color": "#111111",
             "text_color": "#111111",
-            "link_color": "#111111",
-            "badge_color": "#111111",
+            "link_color": "#8b6b4a",
+            "badge_color": "#8b6b4a",
             "compare_color": "#6f6f6f",
-            "placeholder_color": "#e6d9c7"
+            "placeholder_color": "#f1e0d4"
           },
           "blocks": {}
         }
@@ -236,7 +200,7 @@
             "h": {
               "type": "text",
               "settings": {
-                "text": "<h2>Shop Lovaire</h2>",
+                "text": "<h2>Waar ben je naar op zoek?</h2>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
@@ -246,9 +210,24 @@
                 "wrap": "pretty"
               },
               "blocks": {}
+            },
+            "eyebrow": {
+              "type": "text",
+              "settings": {
+                "text": "<p>ONTDEK</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "h6",
+                "font": "var(--font-body--family)",
+                "color": "var(--color-primary)",
+                "wrap": "pretty"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
+            "eyebrow",
             "h"
           ]
         },
@@ -262,16 +241,16 @@
             "collection_card_gap": 12,
             "inherit_color_scheme": true,
             "border": "none",
-            "border_radius": 0
+            "border_radius": 20
           },
           "blocks": {
             "collection-card-image": {
               "type": "_collection-card-image",
               "static": true,
               "settings": {
-                "image_ratio": "portrait",
+                "image_ratio": "square",
                 "border": "none",
-                "border_radius": 0
+                "border_radius": 20
               },
               "blocks": {}
             },
@@ -328,7 +307,7 @@
             "alignment": "center",
             "type_preset": "h6",
             "font": "var(--font-body--family)",
-            "color": "var(--color-foreground)",
+            "color": "var(--color-primary)",
             "wrap": "pretty"
           },
           "blocks": {}
@@ -386,7 +365,7 @@
         "vertical_alignment_flex_direction_column": "center",
         "section_width": "page-width",
         "gap": 20,
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "padding-block-start": 80,
         "padding-block-end": 80
       }
@@ -456,7 +435,7 @@
       "settings": {
         "heading": "<p>Waarom klanten van Lovaire houden</p>",
         "heading_custom": true,
-        "heading_font": "josefin_sans_n4",
+        "heading_font": "montserrat_n7",
         "heading_size": 36,
         "heading_size_mobile": 28,
         "heading_align": "center",
@@ -464,26 +443,26 @@
         "slider_view": 3,
         "slider_view_mobile": 1.2,
         "slider_delay": 4,
-        "card_radius": 0,
+        "card_radius": 20,
         "card_shadow": false,
         "card_content_align": "center",
         "card_content_align_mobile": "center",
         "text_custom": true,
-        "text_font": "jost_n4",
+        "text_font": "montserrat_n4",
         "text_size": 16,
         "text_size_mobile": 15,
         "author_custom": true,
-        "author_font": "jost_n5",
+        "author_font": "montserrat_n6",
         "job_title_custom": true,
-        "job_title_font": "jost_n4",
-        "stars_color": "#111111",
-        "text_color": "#3a3a3a",
+        "job_title_font": "montserrat_n4",
+        "stars_color": "#8b6b4a",
+        "text_color": "#5a5a5a",
         "author_color": "#111111",
         "job_title_color": "#6f6f6f",
         "card_bg_color": "#ffffff",
-        "dots_color": "#111111",
+        "dots_color": "#8b6b4a",
         "heading_color": "#111111",
-        "background_color": "#ede4d8",
+        "background_color": "#f6e7de",
         "padding_top": 72,
         "padding_bottom": 72,
         "content_width": 1200,
@@ -685,7 +664,7 @@
         "heading": {
           "type": "text",
           "settings": {
-            "text": "<h2>Zorgeloos bestellen bij Lovaire</h2>",
+            "text": "<h2>Zorgeloos shoppen bij Lovaire</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -899,9 +878,24 @@
             "s2",
             "s3"
           ]
+        },
+        "eyebrow": {
+          "type": "text",
+          "settings": {
+            "text": "<p>ONZE BELOFTE</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h6",
+            "font": "var(--font-body--family)",
+            "color": "var(--color-primary)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
+        "eyebrow",
         "heading",
         "row"
       ],
@@ -912,7 +906,7 @@
         "vertical_alignment_flex_direction_column": "center",
         "section_width": "page-width",
         "gap": 40,
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-4",
         "padding-block-start": 72,
         "padding-block-end": 72
       }
@@ -926,8 +920,8 @@
           "settings": {
             "text": "<p>Lovaire</p>",
             "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "var(--font-size--h4)",
+            "font": "var(--font-body--family)",
+            "font_size": "0.875rem",
             "line_height": "tight",
             "letter_spacing": "loose",
             "case": "uppercase",
@@ -941,8 +935,8 @@
           "settings": {
             "text": "<p>✦</p>",
             "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "var(--font-size--h4)",
+            "font": "var(--font-body--family)",
+            "font_size": "0.875rem",
             "line_height": "tight",
             "letter_spacing": "loose",
             "case": "uppercase",
@@ -956,8 +950,8 @@
           "settings": {
             "text": "<p>Jouw glow</p>",
             "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "var(--font-size--h4)",
+            "font": "var(--font-body--family)",
+            "font_size": "0.875rem",
             "line_height": "tight",
             "letter_spacing": "loose",
             "case": "uppercase",
@@ -971,8 +965,8 @@
           "settings": {
             "text": "<p>✦</p>",
             "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "var(--font-size--h4)",
+            "font": "var(--font-body--family)",
+            "font_size": "0.875rem",
             "line_height": "tight",
             "letter_spacing": "loose",
             "case": "uppercase",
@@ -986,8 +980,8 @@
           "settings": {
             "text": "<p>Selfcare</p>",
             "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "var(--font-size--h4)",
+            "font": "var(--font-body--family)",
+            "font_size": "0.875rem",
             "line_height": "tight",
             "letter_spacing": "loose",
             "case": "uppercase",
@@ -1001,8 +995,8 @@
           "settings": {
             "text": "<p>✦</p>",
             "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "var(--font-size--h4)",
+            "font": "var(--font-body--family)",
+            "font_size": "0.875rem",
             "line_height": "tight",
             "letter_spacing": "loose",
             "case": "uppercase",
@@ -1016,8 +1010,8 @@
           "settings": {
             "text": "<p>Altijd gratis verzending</p>",
             "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "var(--font-size--h4)",
+            "font": "var(--font-body--family)",
+            "font_size": "0.875rem",
             "line_height": "tight",
             "letter_spacing": "loose",
             "case": "uppercase",
@@ -1031,8 +1025,8 @@
           "settings": {
             "text": "<p>✦</p>",
             "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "var(--font-size--h4)",
+            "font": "var(--font-body--family)",
+            "font_size": "0.875rem",
             "line_height": "tight",
             "letter_spacing": "loose",
             "case": "uppercase",
@@ -1046,8 +1040,8 @@
           "settings": {
             "text": "<p>Voel je mooi</p>",
             "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "var(--font-size--h4)",
+            "font": "var(--font-body--family)",
+            "font_size": "0.875rem",
             "line_height": "tight",
             "letter_spacing": "loose",
             "case": "uppercase",
@@ -1061,8 +1055,8 @@
           "settings": {
             "text": "<p>✦</p>",
             "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "var(--font-size--h4)",
+            "font": "var(--font-body--family)",
+            "font_size": "0.875rem",
             "line_height": "tight",
             "letter_spacing": "loose",
             "case": "uppercase",
@@ -1086,9 +1080,9 @@
       ],
       "settings": {
         "movement_direction": "reverse",
-        "color_scheme": "scheme-3",
-        "padding-block-start": 18,
-        "padding-block-end": 18,
+        "color_scheme": "scheme-5",
+        "padding-block-start": 12,
+        "padding-block-end": 12,
         "gap_between_elements": 28
       }
     },
@@ -1105,7 +1099,7 @@
             "alignment": "center",
             "type_preset": "h6",
             "font": "var(--font-body--family)",
-            "color": "var(--color-foreground)",
+            "color": "var(--color-primary)",
             "wrap": "pretty"
           },
           "blocks": {}
@@ -1136,7 +1130,7 @@
         "vertical_alignment_flex_direction_column": "center",
         "section_width": "page-width",
         "gap": 12,
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-5",
         "padding-block-start": 64,
         "padding-block-end": 24
       }
@@ -1191,7 +1185,7 @@
       "settings": {
         "product": "lashlift-waterproof-mascara",
         "layout": "media-left",
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-5",
         "padding-block-start": 0,
         "padding-block-end": 64
       }
@@ -1201,11 +1195,11 @@
     "hero",
     "marquee",
     "trust",
-    "bestsellers",
     "collections",
+    "bestsellers",
+    "steps",
     "spotlight_head",
     "spotlight",
-    "steps",
     "story",
     "reviews",
     "faq"

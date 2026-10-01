@@ -106,3 +106,12 @@ Op verzoek volledig omgezet naar een strak beige-zwart ontwerp:
 - Hero: groot LOVAIRE-woordmerk (jumbo-tekst met onthul-animatie) boven "Jouw glow, elke dag".
 - Footer: reusachtig LOVAIRE-woordmerk over de volle breedte onderaan elke pagina.
 - Tekstband begint met "LOVAIRE ✦"; koppen "De Lovaire favorieten", "Shop Lovaire", "Lovaire spotlight", "Zorgeloos bestellen bij Lovaire", "Waarom klanten van Lovaire houden"; "Lovaire collectie" op collectiepagina's; "De Lovaire belofte" op productpagina's.
+
+## Update: Lyvelle-stijl (1 oktober 2026)
+Alleen de stijl van de voorbeeldsite is overgenomen, niet het logo of de teksten.
+- Wit met zachte blush/perzik secties, Montserrat-koppen en kleine taupe hoofdletter-labels ("ONTDEK", "ONZE BELOFTE").
+- Zwarte rechthoekige knoppen ("Shop nu →"), blush aankondigingsbalk.
+- Hero links uitgelijnd op blush: "Beauty essentials voor jouw glow, elke dag".
+- Collectieblok "Waar ben je naar op zoek?" en leveringsblok "Zorgeloos shoppen bij Lovaire".
+- Afgeronde productkaarten. Bewust GEEN nep-uitverkoopbadges en GEEN "30 dagen garantie" (Lovaire hanteert 14 dagen).
+- Producttemplate ook gekopieerd naar product.support-bh-2/tanning-oil/foundation/kam.

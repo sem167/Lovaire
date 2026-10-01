@@ -2,9 +2,9 @@
 import json
 
 # Palet
-CREAM, BLUSH, NUDE, ROSE, SAND = "#f5f0e8", "#ede4d8", "#e6d9c7", "#111111", "#d8c8b4"
-HOVER = "#3a3a3a"
-COCOA, COCOA_TEXT, WHITE = "#111111", "#3a3a3a", "#ffffff"
+CREAM, BLUSH, NUDE, ROSE, SAND = "#ffffff", "#f6e7de", "#f1e0d4", "#8b6b4a", "#f8f5f0"
+HOVER = "#333333"
+COCOA, COCOA_TEXT, WHITE = "#111111", "#5a5a5a", "#ffffff"
 
 
 def scheme(bg, heading, text, accent, btn_bg, btn_text, btn_hover_bg, border, sec_bg, sec_text):
@@ -53,10 +53,10 @@ settings_data = {
     "current": {
         "logo": "shopify://shop_images/WhatsApp_Image_2026-09-14_at_11.41.14.jpg",
         "logo_height": 80, "logo_height_mobile": 64,
-        "type_heading_font": "josefin_sans_n4",
-        "type_subheading_font": "jost_n5",
-        "type_body_font": "jost_n4",
-        "type_accent_font": "jost_n5",
+        "type_heading_font": "montserrat_n4",
+        "type_subheading_font": "montserrat_n5",
+        "type_body_font": "montserrat_n4",
+        "type_accent_font": "montserrat_n5",
         "type_size_paragraph": "15",
         "type_size_h2": "40",
         "type_font_h3": "heading", "type_size_h3": "26",
@@ -66,7 +66,7 @@ settings_data = {
         "type_font_h6": "accent", "type_size_h6": "12",
         "type_line_height_h6": "display-normal",
         "type_letter_spacing_h6": "heading-loose", "type_case_h6": "uppercase",
-        "badge_corner_radius": 0,
+        "badge_corner_radius": 4,
         "badge_sale_color_scheme": "scheme-2",
         "badge_sold_out_color_scheme": "scheme-4",
         "badge_font_family": "accent", "badge_text_transform": "uppercase",
@@ -79,7 +79,7 @@ settings_data = {
         "popover_border": "none",
         "currency_code_enabled_product_pages": False,
         "currency_code_enabled_product_cards": False,
-        "variant_swatch_radius": 0, "variant_button_radius": 0,
+        "variant_swatch_radius": 40, "variant_button_radius": 40,
         "variant_button_width": "default-width-buttons",
         "sections": {"password-footer": {"type": "password-footer", "settings": {"color_scheme": ""}}},
         "content_for_index": [],
@@ -138,7 +138,7 @@ index = {"sections": {
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center", "gap": 20,
         "section_width": "full-width", "section_height": "custom", "section_height_custom": 80,
-        "color_scheme": "scheme-6", "toggle_overlay": True, "overlay_color": "#00000066",
+        "color_scheme": "scheme-6", "toggle_overlay": True, "overlay_color": "#00000030",
         "overlay_style": "gradient", "gradient_direction": "to top",
         "padding-block-start": 64, "padding-block-end": 64}},
 
@@ -148,12 +148,12 @@ index = {"sections": {
             "padding_top": 28, "padding_bottom": 28, "padding_horizontal": 16,
             "padding_top_mobile": 20, "padding_bottom_mobile": 20, "padding_horizontal_mobile": 12,
             "section_spacing": 20, "show_payment_icons": True,
-            "payment_bg_color": WHITE, "payment_border_color": "#ddd2c3", "payment_border_radius": 0,
+            "payment_bg_color": WHITE, "payment_border_color": "#ddd2c3", "payment_border_radius": 6,
             "columns_desktop": "3", "columns_mobile": "3",
             "show_feature_1": True, "feature_1_title": "Gratis verzending", "feature_1_text": "Op elke bestelling",
             "show_feature_2": True, "feature_2_title": "Veilig betalen", "feature_2_text": "iDEAL · Klarna",
             "show_feature_3": True, "feature_3_title": "Persoonlijke service", "feature_3_text": "Ma–vr 09:00–17:00",
-            "icon_size": 28, "icon_color": ROSE, "title_font_weight": "500",
+            "icon_size": 28, "icon_color": ROSE, "title_font_weight": "700",
             "title_color": COCOA, "text_color": COCOA_TEXT}, "blocks": {}})]),
         "settings": {**sec_flex, "color_scheme": "scheme-1", "padding-block-start": 0, "padding-block-end": 0}},
 
@@ -164,7 +164,7 @@ index = {"sections": {
                                   "self-tanner-tanning-lotion", "lovaire-hairboost-shampoo",
                                   "elektrische-spray-massage-borstel-lovaire", "lovaire-support-bh"],
             "heading": "Onze bestsellers", "link_label": "Bekijk alles",
-            "desktop_width_percent": 100, "heading_size": 34, "image_radius": 0,
+            "desktop_width_percent": 100, "heading_size": 34, "image_radius": 20,
             "background_color": CREAM, "heading_color": COCOA, "text_color": COCOA,
             "link_color": ROSE, "badge_color": ROSE, "compare_color": "#6f6f6f",
             "placeholder_color": NUDE}, "blocks": {}})]),
@@ -178,10 +178,10 @@ index = {"sections": {
                                         font="var(--font-heading--family)", color="var(--color-foreground-heading)"))])},
         "static-collection-card": {"type": "_collection-card", "static": True, "settings": {
             "placement": "below_image", "horizontal_alignment": "center", "vertical_alignment": "flex-end",
-            "collection_card_gap": 12, "inherit_color_scheme": True, "border": "none", "border_radius": 0},
+            "collection_card_gap": 12, "inherit_color_scheme": True, "border": "none", "border_radius": 20},
             "blocks": {
                 "collection-card-image": {"type": "_collection-card-image", "static": True, "settings": {
-                    "image_ratio": "portrait", "border": "none", "border_radius": 0}, "blocks": {}},
+                    "image_ratio": "portrait", "border": "none", "border_radius": 20}, "blocks": {}},
                 "ctitle": {"type": "collection-title", "settings": {
                     "alignment": "center", "type_preset": "h4", "color": "var(--color-foreground-heading)"}, "blocks": {}}},
             "block_order": ["ctitle"]}},
@@ -208,12 +208,12 @@ index = {"sections": {
         "r5": {"type": "testimonial", "settings": {"stars_count": 4.5, "text": "<p>Lovaire heeft echt een leuke collectie. Ik kom regelmatig terug om rond te kijken en heb tot nu toe alleen maar goede ervaringen gehad. Zeker een aanrader! ✨</p>", "image": "shopify://shop_images/WhatsApp_Image_2026-06-05_at_21.09.03.jpg", "author": "Luna", "job_title": "Maastricht"}},
         "r6": {"type": "testimonial", "settings": {"stars_count": 4.5, "text": "<p>Je merkt meteen dat Lovaire aandacht besteedt aan de hele ervaring. Niet alleen de producten, maar ook de uitstraling van de webshop voelt verzorgd en luxe aan. Alles was duidelijk en ik voelde me echt gewaardeerd als klant.</p>", "image": "shopify://shop_images/WhatsApp_Image_2026-06-05_at_21.16.05.jpg", "author": "Esther", "job_title": "Tilburg"}}},
         "block_order": ["r1", "r2", "r3", "r5", "r6"],
-        "settings": {"heading": "<p>Wat klanten zeggen</p>", "heading_custom": True, "heading_font": "josefin_sans_n4",
+        "settings": {"heading": "<p>Wat klanten zeggen</p>", "heading_custom": True, "heading_font": "montserrat_n7",
                      "heading_size": 36, "heading_size_mobile": 28, "heading_align": "center", "heading_align_mobile": "center",
                      "slider_view": 3, "slider_view_mobile": 1.2, "slider_delay": 4,
-                     "card_radius": 0, "card_shadow": False, "card_content_align": "center", "card_content_align_mobile": "center",
-                     "text_custom": True, "text_font": "jost_n4", "text_size": 16, "text_size_mobile": 15,
-                     "author_custom": True, "author_font": "jost_n5", "job_title_custom": True, "job_title_font": "jost_n4",
+                     "card_radius": 20, "card_shadow": False, "card_content_align": "center", "card_content_align_mobile": "center",
+                     "text_custom": True, "text_font": "montserrat_n4", "text_size": 16, "text_size_mobile": 15,
+                     "author_custom": True, "author_font": "montserrat_n6", "job_title_custom": True, "job_title_font": "montserrat_n4",
                      "stars_color": ROSE, "text_color": COCOA_TEXT, "author_color": COCOA, "job_title_color": "#6f6f6f",
                      "card_bg_color": WHITE, "dots_color": ROSE, "heading_color": COCOA, "background_color": BLUSH,
                      "padding_top": 72, "padding_bottom": 72, "content_width": 1200, "lazy": True}},
@@ -246,7 +246,7 @@ header_group = {"type": "header", "name": "Header", "sections": {
                                                           "font": "var(--font-accent--family)", "font_size": "0.75rem",
                                                           "letter_spacing": "loose", "case": "uppercase"}, "blocks": {}}),
         ]),
-        "settings": {"speed": 5, "section_width": "full-width", "color_scheme": "scheme-announcement-black",
+        "settings": {"speed": 5, "section_width": "full-width", "color_scheme": "scheme-5",
                      "divider_width": 0, "padding-block-start": 10, "padding-block-end": 10}},
     "header_section": {"type": "header", "blocks": {
         "header-logo": {"type": "_header-logo", "static": True, "settings": {"hide_logo_on_home_page": False,
@@ -255,7 +255,7 @@ header_group = {"type": "header", "name": "Header", "sections": {
             "menu": "main-menu", "type_font_primary_size": "var(--font-size--body-md)",
             "menu_font_style": "inverse", "type_font_primary_link": "secondary", "type_case_primary_link": "none",
             "menu_style": "featured_collections", "featured_products_aspect_ratio": "4 / 5",
-            "featured_collections_aspect_ratio": "4 / 5", "image_border_radius": 0, "navigation_bar": False,
+            "featured_collections_aspect_ratio": "4 / 5", "image_border_radius": 16, "navigation_bar": False,
             "drawer_accordion": True, "drawer_accordion_expand_first": True, "drawer_dividers": True}, "blocks": {}}},
         "settings": {"logo_position": "center", "menu_position": "left", "menu_row": "top",
                      "customer_account_menu": "customer-account-main-menu",
@@ -281,7 +281,7 @@ footer_group = {"type": "footer", "name": "Footer", "sections": {
         ("p", text("<p>Als VIP hoor je het als eerste: nieuwe producten, exclusieve acties en beauty tips, rechtstreeks in je inbox.</p>",
                    align="center", max_width="narrow")),
         ("form", {"type": "email-signup", "settings": {"width": "custom", "custom_width": 100, "inherit_color_scheme": True,
-                                                       "border_style": "all", "border_width": 1, "border_radius": 0,
+                                                       "border_style": "all", "border_width": 1, "border_radius": 20,
                                                        "style_class": "button", "display_type": "text", "label": "Word VIP",
                                                        "integrated_button": True}, "blocks": {}}),
         ("small", text("<p>Gratis aanmelden · Uitschrijven kan altijd</p>", preset="h6", align="center")),

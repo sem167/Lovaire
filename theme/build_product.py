@@ -12,8 +12,8 @@ product = {"sections": {
             "media_presentation": "carousel", "media_columns": "one", "image_gap": 8,
             "icons_style": "arrow", "slideshow_controls_style": "thumbnails",
             "slideshow_mobile_controls_style": "dots", "thumbnail_position": "bottom",
-            "thumbnail_width": 64, "thumbnail_radius": 0, "aspect_ratio": "1/1.25",
-            "media_fit": "cover", "media_radius": 0, "zoom": True, "hide_variants": False}, "blocks": {}},
+            "thumbnail_width": 64, "thumbnail_radius": 10, "aspect_ratio": "1/1.25",
+            "media_fit": "cover", "media_radius": 20, "zoom": True, "hide_variants": False}, "blocks": {}},
         "product-details": {"type": "_product-details", "static": True, "settings": {
             "width": "fill", "width_mobile": "fill", "height": "fit", "details_position": "flex-start",
             "gap": 16, "sticky_details_desktop": True, "inherit_color_scheme": True,
@@ -40,7 +40,7 @@ product = {"sections": {
                 ("trust", {"type": "text", "settings": {
                     "text": TRUST_LINES, "width": "100%", "alignment": "left", "type_preset": "rte",
                     "font": "var(--font-body--family)", "color": "var(--color-foreground)", "wrap": "pretty",
-                    "background": True, "background_color": BLUSH, "corner_radius": 0,
+                    "background": True, "background_color": BLUSH, "corner_radius": 16,
                     "padding-block-start": 16, "padding-block-end": 16,
                     "padding-inline-start": 18, "padding-inline-end": 18}, "blocks": {}}),
                 ("description", {"type": "product-description", "settings": {}, "blocks": {}}),
@@ -70,7 +70,7 @@ product = {"sections": {
                         font="var(--font-heading--family)", color="var(--color-foreground-heading)"),
         "static-product-card": {"type": "_product-card", "static": True, "settings": {
             "product_card_gap": 12, "inherit_color_scheme": True}, "blocks": {
-            "gallery": {"type": "_product-card-gallery", "settings": {"image_ratio": "portrait", "border_radius": 0}, "blocks": {}},
+            "gallery": {"type": "_product-card-gallery", "settings": {"image_ratio": "portrait", "border_radius": 20}, "blocks": {}},
             "group": {"type": "_product-card-group", "settings": {"content_direction": "column", "gap": 4,
                                                                  "horizontal_alignment_flex_direction_column": "flex-start",
                                                                  "width": "fill", "width_mobile": "fill", "inherit_color_scheme": True},
@@ -161,6 +161,6 @@ S["story"]["blocks"]["body"]["settings"]["text"] = ("<p>Zie jij ook steeds die v
     "Bij Lovaire brengen we ze samen: zorgvuldig geselecteerde essentials voor je make-up, huid en haar. "
     "Zodat jij elke dag met een glimlach in de spiegel kijkt.</p>")
 S["collections"]["blocks"]["title"]["blocks"]["h"]["settings"]["text"] = "<h2>Shop Lovaire</h2>"
-index["order"] = ["hero", "marquee", "trust", "bestsellers", "collections", "spotlight_head", "spotlight",
-                  "steps", "story", "reviews", "faq"]
+index["order"] = ["hero", "marquee", "trust", "collections", "bestsellers", "steps", "spotlight_head", "spotlight",
+                  "story", "reviews", "faq"]
 json.dump(index, open("templates__index.json", "w"), ensure_ascii=False, indent=2)

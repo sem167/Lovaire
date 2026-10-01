@@ -15,10 +15,10 @@
             "slideshow_mobile_controls_style": "dots",
             "thumbnail_position": "bottom",
             "thumbnail_width": 64,
-            "thumbnail_radius": 0,
+            "thumbnail_radius": 10,
             "aspect_ratio": "1/1.25",
             "media_fit": "cover",
-            "media_radius": 0,
+            "media_radius": 20,
             "zoom": true,
             "hide_variants": false
           },
@@ -50,7 +50,7 @@
                 "alignment": "left",
                 "type_preset": "h6",
                 "font": "var(--font-body--family)",
-                "color": "var(--color-foreground)",
+                "color": "var(--color-primary)",
                 "wrap": "pretty"
               },
               "blocks": {}
@@ -144,8 +144,8 @@
                 "color": "var(--color-foreground)",
                 "wrap": "pretty",
                 "background": true,
-                "background_color": "#ede4d8",
-                "corner_radius": 0,
+                "background_color": "#f6e7de",
+                "corner_radius": 16,
                 "padding-block-start": 16,
                 "padding-block-end": 16,
                 "padding-inline-start": 18,
@@ -317,7 +317,7 @@
           "type": "ai_gen_block_1e9e953",
           "settings": {
             "desktop_width_percent": 100,
-            "background_color": "#f5f0e8",
+            "background_color": "#ffffff",
             "padding_top": 28,
             "padding_bottom": 28,
             "padding_horizontal": 16,
@@ -328,7 +328,7 @@
             "show_payment_icons": true,
             "payment_bg_color": "#ffffff",
             "payment_border_color": "#ddd2c3",
-            "payment_border_radius": 0,
+            "payment_border_radius": 6,
             "columns_desktop": "3",
             "columns_mobile": "3",
             "show_feature_1": true,
@@ -341,10 +341,10 @@
             "feature_3_title": "Persoonlijke service",
             "feature_3_text": "Ma–vr 09:00–17:00",
             "icon_size": 28,
-            "icon_color": "#111111",
-            "title_font_weight": "500",
+            "icon_color": "#8b6b4a",
+            "title_font_weight": "700",
             "title_color": "#111111",
-            "text_color": "#3a3a3a"
+            "text_color": "#5a5a5a"
           },
           "blocks": {}
         }
@@ -393,7 +393,7 @@
               "type": "_product-card-gallery",
               "settings": {
                 "image_ratio": "portrait",
-                "border_radius": 0
+                "border_radius": 20
               },
               "blocks": {}
             },

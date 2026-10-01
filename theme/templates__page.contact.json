@@ -12,7 +12,7 @@
             "alignment": "center",
             "type_preset": "h6",
             "font": "var(--font-body--family)",
-            "color": "var(--color-foreground)",
+            "color": "var(--color-primary)",
             "wrap": "pretty"
           },
           "blocks": {}

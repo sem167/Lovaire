@@ -13,7 +13,7 @@
             "alignment": "center",
             "type_preset": "h6",
             "font": "var(--font-body--family)",
-            "color": "var(--color-foreground)",
+            "color": "var(--color-primary)",
             "wrap": "pretty"
           },
           "blocks": {}
@@ -92,7 +92,7 @@
               "type": "_product-card-gallery",
               "settings": {
                 "image_ratio": "portrait",
-                "border_radius": 0
+                "border_radius": 20
               },
               "blocks": {}
             },
@@ -160,7 +160,7 @@
           "type": "ai_gen_block_1e9e953",
           "settings": {
             "desktop_width_percent": 100,
-            "background_color": "#f5f0e8",
+            "background_color": "#ffffff",
             "padding_top": 28,
             "padding_bottom": 28,
             "padding_horizontal": 16,
@@ -171,7 +171,7 @@
             "show_payment_icons": true,
             "payment_bg_color": "#ffffff",
             "payment_border_color": "#ddd2c3",
-            "payment_border_radius": 0,
+            "payment_border_radius": 6,
             "columns_desktop": "3",
             "columns_mobile": "3",
             "show_feature_1": true,
@@ -184,10 +184,10 @@
             "feature_3_title": "Persoonlijke service",
             "feature_3_text": "Ma–vr 09:00–17:00",
             "icon_size": 28,
-            "icon_color": "#111111",
-            "title_font_weight": "500",
+            "icon_color": "#8b6b4a",
+            "title_font_weight": "700",
             "title_color": "#111111",
-            "text_color": "#3a3a3a"
+            "text_color": "#5a5a5a"
           },
           "blocks": {}
         }
