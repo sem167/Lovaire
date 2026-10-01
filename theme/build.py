@@ -128,11 +128,11 @@ index = {"sections": {
                      **ordered([("btn_shop", button("Shop bestsellers", "shopify://collections/all")),
                                 ("btn_coll", button("Bekijk collecties", "/collections", "button-secondary"))])}),
     ]), "settings": {
-        # Productfoto's van de mascara en foundation naast elkaar; op mobiel alleen de mascara
-        "media_type_1": "image", "image_1": "shopify://shop_images/WhatsApp_Image_2026-07-02_at_07.58.57.jpg",
-        "media_type_2": "image", "image_2": "shopify://shop_images/shopify_product_1600x2000_35fe795d-3c83-452e-8a76-723e0a9a2716.png",
+        # Sfeerfoto (Pexels, Ron Lach, foto 8128684) naast de mascara; op mobiel alleen de sfeerfoto
+        "media_type_1": "image", "image_1": "shopify://shop_images/lovaire-hero-vrouw-make-up.jpg",
+        "media_type_2": "image", "image_2": "shopify://shop_images/WhatsApp_Image_2026-07-02_at_07.58.57.jpg",
         "custom_mobile_media": True, "media_type_1_mobile": "image",
-        "image_1_mobile": "shopify://shop_images/WhatsApp_Image_2026-07-02_at_07.58.57.jpg",
+        "image_1_mobile": "shopify://shop_images/lovaire-hero-vrouw-make-up.jpg",
         "content_direction": "column", "vertical_on_mobile": True,
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center", "gap": 20,
@@ -273,16 +273,18 @@ header_group = {"type": "header", "name": "Header", "sections": {
     "order": ["header_announcements_pbXTDf", "header_section"]}
 
 footer_group = {"type": "footer", "name": "Footer", "sections": {
-    "newsletter": {"type": "section", "name": "Nieuwsbrief", **ordered([
-        ("h", text("<h2>Word een Lovaire insider</h2>", preset="h2", align="center",
+    "newsletter": {"type": "section", "name": "Lovaire VIP", **ordered([
+        ("eyebrow", text("<p>✦ LOVAIRE VIP ✦</p>", preset="h6", align="center")),
+        ("h", text("<h2>Word Lovaire VIP</h2>", preset="h1", align="center",
                    font="var(--font-heading--family)", color="var(--color-foreground-heading)")),
-        ("p", text("<p>Als eerste op de hoogte van nieuwe producten, acties en beauty tips.</p>", align="center")),
+        ("p", text("<p>Als VIP hoor je het als eerste: nieuwe producten, exclusieve acties en beauty tips, rechtstreeks in je inbox.</p>",
+                   align="center", max_width="narrow")),
         ("form", {"type": "email-signup", "settings": {"width": "custom", "custom_width": 100, "inherit_color_scheme": True,
                                                        "border_style": "all", "border_width": 1, "border_radius": 0,
-                                                       "style_class": "button", "display_type": "text", "label": "Aanmelden",
+                                                       "style_class": "button", "display_type": "text", "label": "Word VIP",
                                                        "integrated_button": True}, "blocks": {}}),
-    ]), "settings": {**sec_flex, "gap": 16, 
-                     "color_scheme": "scheme-5", "padding-block-start": 64, "padding-block-end": 64}},
+        ("small", text("<p>Gratis aanmelden · Uitschrijven kan altijd</p>", preset="h6", align="center")),
+    ]), "settings": {**sec_flex, "gap": 16, "color_scheme": "scheme-3", "padding-block-start": 80, "padding-block-end": 56}},
     "footer": {"type": "footer", **ordered([
         ("about", text("<p><strong>Lovaire</strong></p><p>Beauty essentials die jouw natuurlijke schoonheid laten stralen.</p>", max_width="narrow")),
         ("shop", {"type": "menu", "settings": {"menu": "main-menu", "heading": "Shop", "menu_spacing": 10,
@@ -298,7 +300,7 @@ footer_group = {"type": "footer", "name": "Footer", "sections": {
                             ("note", text("<p>Beveiligde checkout via Shopify. Wij zien en bewaren nooit je betaalgegevens.</p>"))])}),
         ("contact", text("<p><strong>KLANTENSERVICE</strong></p><p>Ma–vr: 09:00–17:00<br/>Za: 10:00–14:00<br/>Zo: gesloten</p><p>lovairesupport@gmail.com</p><p>KVK: 42074062<br/>BTW: NL005474481B21</p>")),
     ]), "settings": {"section_width": "page-width", "gap": 40, "color_scheme": "scheme-3",
-                     "padding-block-start": 56, "padding-block-end": 32}},
+                     "padding-block-start": 24, "padding-block-end": 32}},
     "utilities": {"type": "footer-utilities", **ordered([
         ("copyright", {"type": "footer-copyright", "settings": {"show_powered_by": False, "font_size": "0.75rem", "case": "none"}, "blocks": {}}),
         ("policy_list", {"type": "footer-policy-list", "settings": {"font_size": "0.75rem", "case": "none"}, "blocks": {}}),

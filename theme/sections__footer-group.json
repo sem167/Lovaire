@@ -4,16 +4,30 @@
   "sections": {
     "newsletter": {
       "type": "section",
-      "name": "Nieuwsbrief",
+      "name": "Lovaire VIP",
       "blocks": {
-        "h": {
+        "eyebrow": {
           "type": "text",
           "settings": {
-            "text": "<h2>Word een Lovaire insider</h2>",
+            "text": "<p>✦ LOVAIRE VIP ✦</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
-            "type_preset": "h2",
+            "type_preset": "h6",
+            "font": "var(--font-body--family)",
+            "color": "var(--color-foreground)",
+            "wrap": "pretty"
+          },
+          "blocks": {}
+        },
+        "h": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Word Lovaire VIP</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h1",
             "font": "var(--font-heading--family)",
             "color": "var(--color-foreground-heading)",
             "wrap": "pretty"
@@ -23,9 +37,9 @@
         "p": {
           "type": "text",
           "settings": {
-            "text": "<p>Als eerste op de hoogte van nieuwe producten, acties en beauty tips.</p>",
+            "text": "<p>Als VIP hoor je het als eerste: nieuwe producten, exclusieve acties en beauty tips, rechtstreeks in je inbox.</p>",
             "width": "fit-content",
-            "max_width": "normal",
+            "max_width": "narrow",
             "alignment": "center",
             "type_preset": "rte",
             "font": "var(--font-body--family)",
@@ -45,16 +59,32 @@
             "border_radius": 0,
             "style_class": "button",
             "display_type": "text",
-            "label": "Aanmelden",
+            "label": "Word VIP",
             "integrated_button": true
+          },
+          "blocks": {}
+        },
+        "small": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Gratis aanmelden · Uitschrijven kan altijd</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h6",
+            "font": "var(--font-body--family)",
+            "color": "var(--color-foreground)",
+            "wrap": "pretty"
           },
           "blocks": {}
         }
       },
       "block_order": [
+        "eyebrow",
         "h",
         "p",
-        "form"
+        "form",
+        "small"
       ],
       "settings": {
         "content_direction": "column",
@@ -63,9 +93,9 @@
         "vertical_alignment_flex_direction_column": "center",
         "section_width": "page-width",
         "gap": 16,
-        "color_scheme": "scheme-5",
-        "padding-block-start": 64,
-        "padding-block-end": 64
+        "color_scheme": "scheme-3",
+        "padding-block-start": 80,
+        "padding-block-end": 56
       }
     },
     "footer": {
@@ -192,7 +222,7 @@
         "section_width": "page-width",
         "gap": 40,
         "color_scheme": "scheme-3",
-        "padding-block-start": 56,
+        "padding-block-start": 24,
         "padding-block-end": 32
       }
     },

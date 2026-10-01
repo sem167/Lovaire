@@ -92,3 +92,7 @@ Op verzoek volledig omgezet naar een strak beige-zwart ontwerp:
 ## Update: nieuwe hoofdpagina-foto (1 oktober 2026)
 - Hero: productfoto's van LashLift Mascara + Zelfkleurende Foundation naast elkaar (desktop), mascara op mobiel. Vervangt de WhatsApp-foto.
 - iDEAL kan niet via de API worden aangezet: Instellingen → Betalingen. Zolang iDEAL uit staat, kloppen de iDEAL-teksten in het thema niet.
+
+## Update: sfeerfoto + Lovaire VIP (1 oktober 2026)
+- Nieuwe hero-sfeerfoto: "Woman Holding A Makeup Product" door Ron Lach (Pexels, foto 8128684, gratis commercieel te gebruiken), opgeslagen als `lovaire-hero-vrouw-make-up.jpg`. Desktop: naast de mascara-productfoto; mobiel: alleen de sfeerfoto.
+- Nieuwsbrief vervangen door zwart "Lovaire VIP"-blok dat naadloos overloopt in de zwarte footer (knop "Word VIP").
