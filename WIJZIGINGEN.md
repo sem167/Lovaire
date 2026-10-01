@@ -77,3 +77,9 @@ Op verzoek volledig omgezet naar een strak beige-zwart ontwerp:
 - Koppen: Josefin Sans; tekst: Jost.
 - Alle hoeken recht (knoppen, foto's, kaarten, badges, invoervelden).
 - Zwarte aankondigingsbalk en footer; homepage-hero gecentreerd met kop in hoofdletters.
+
+## Update: extra wow voor de vrouwelijke doelgroep (1 oktober 2026)
+- Bewegende tekstband (zwart/beige) direct onder de hero: "Jouw glow ✦ Selfcare ✦ Altijd gratis verzending ✦ Voel je mooi".
+- Spotlight-blok: LashLift Waterproof Mascara groot uitgelicht op beige ("Wimpers die de hele dag blijven stralen").
+- Warmere teksten: "Jouw nieuwe favorieten", "Voor elke vrouw die zich mooi wil voelen", "Geliefd door onze klanten".
+- Homepage-volgorde: hero → tekstband → voordelen → favorieten → categorieën → spotlight → zorgeloos bestellen → over Lovaire → reviews → FAQ.

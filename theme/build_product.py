@@ -121,3 +121,43 @@ json.dump(variables, open("upsert_product.json", "w"), ensure_ascii=False)
 json.dump(product, open("templates__product.json", "w"), ensure_ascii=False, indent=2)
 json.dump(index, open("templates__index.json", "w"), ensure_ascii=False, indent=2)
 print(index["order"], len(json.dumps(variables)))
+
+# --- Extra: bewegende tekstband, spotlight en warmere teksten ---
+def marquee_text(t):
+    return {"type": "text", "settings": {"text": f"<p>{t}</p>", "type_preset": "custom",
+                                         "font": "var(--font-heading--family)", "font_size": "var(--font-size--h4)",
+                                         "line_height": "tight", "letter_spacing": "loose", "case": "uppercase",
+                                         "wrap": "nowrap", "width": "fit-content"}, "blocks": {}}
+
+index["sections"]["marquee"] = {"type": "marquee", "name": "Bewegende tekst", **ordered([
+    (f"m{i}", marquee_text(t)) for i, t in enumerate(
+        ["Jouw glow", "✦", "Selfcare", "✦", "Altijd gratis verzending", "✦", "Voel je mooi", "✦"])
+]), "settings": {"movement_direction": "reverse", "color_scheme": "scheme-3",
+                 "padding-block-start": 18, "padding-block-end": 18, "gap_between_elements": 28}}
+
+index["sections"]["spotlight_head"] = {"type": "section", "name": "Spotlight-kop", **ordered([
+    ("eyebrow", text("<p>SPOTLIGHT</p>", preset="h6", align="center")),
+    ("h", text("<h2>Wimpers die de hele dag blijven stralen</h2>", preset="h2", align="center", max_width="narrow",
+               font="var(--font-heading--family)", color="var(--color-foreground-heading)")),
+]), "settings": {**sec_flex, "gap": 12, "color_scheme": "scheme-4", "padding-block-start": 64, "padding-block-end": 24}}
+
+index["sections"]["spotlight"] = {"type": "featured-product", "name": "Spotlight", "blocks": {
+    "media": {"type": "_media-without-appearance", "static": True, "settings": {}, "blocks": {}},
+    "featured-product": {"type": "_featured-product", "static": True, "settings": {}, "blocks": {
+        "featured-product-title": {"type": "product-title", "static": True, "settings": {"type_preset": "h3", "width": "100%"}, "blocks": {}},
+        "featured-product-price": {"type": "_featured-product-price", "static": True, "settings": {}, "blocks": {}},
+        "featured-product-gallery": {"type": "_featured-product-gallery", "static": True, "settings": {}, "blocks": {}},
+        "featured-product-swatches": {"type": "swatches", "static": True, "settings": {"hide_padding": True}, "blocks": {}}}}},
+    "settings": {"product": "lashlift-waterproof-mascara", "layout": "media-left", "color_scheme": "scheme-4",
+                 "padding-block-start": 0, "padding-block-end": 64}}
+
+S = index["sections"]
+S["bestsellers"]["blocks"]["list"]["settings"]["heading"] = "Jouw nieuwe favorieten"
+S["reviews"]["settings"]["heading"] = "<p>Geliefd door onze klanten</p>"
+S["story"]["blocks"]["heading"]["settings"]["text"] = "<h2>Voor elke vrouw die zich mooi wil voelen</h2>"
+S["story"]["blocks"]["body"]["settings"]["text"] = ("<p>Zie jij ook steeds die virale beautyproducten voorbijkomen op TikTok en Instagram? "
+    "Bij Lovaire brengen we ze samen: zorgvuldig geselecteerde essentials voor je make-up, huid en haar. "
+    "Zodat jij elke dag met een glimlach in de spiegel kijkt.</p>")
+index["order"] = ["hero", "marquee", "trust", "bestsellers", "collections", "spotlight_head", "spotlight",
+                  "steps", "story", "reviews", "faq"]
+json.dump(index, open("templates__index.json", "w"), ensure_ascii=False, indent=2)
