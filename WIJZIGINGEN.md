@@ -88,3 +88,7 @@ Op verzoek volledig omgezet naar een strak beige-zwart ontwerp:
 - Betaal-iconen (automatisch de in Shopify actieve betaalmethodes) direct onder de bestelknop op alle productpagina's.
 - Footer: nieuwe kolom "Veilig betalen" met betaal-iconen en uitleg over de beveiligde checkout.
 - Aankondigingsbalk: derde bericht "Veilig betalen met iDEAL & Klarna".
+
+## Update: nieuwe hoofdpagina-foto (1 oktober 2026)
+- Hero: productfoto's van LashLift Mascara + Zelfkleurende Foundation naast elkaar (desktop), mascara op mobiel. Vervangt de WhatsApp-foto.
+- iDEAL kan niet via de API worden aangezet: Instellingen → Betalingen. Zolang iDEAL uit staat, kloppen de iDEAL-teksten in het thema niet.

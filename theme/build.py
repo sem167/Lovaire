@@ -128,9 +128,11 @@ index = {"sections": {
                      **ordered([("btn_shop", button("Shop bestsellers", "shopify://collections/all")),
                                 ("btn_coll", button("Bekijk collecties", "/collections", "button-secondary"))])}),
     ]), "settings": {
-        "media_type_1": "image", "image_1": "shopify://shop_images/WhatsApp_Image_2026-09-04_at_15.51.01.jpg",
+        # Productfoto's van de mascara en foundation naast elkaar; op mobiel alleen de mascara
+        "media_type_1": "image", "image_1": "shopify://shop_images/WhatsApp_Image_2026-07-02_at_07.58.57.jpg",
+        "media_type_2": "image", "image_2": "shopify://shop_images/shopify_product_1600x2000_35fe795d-3c83-452e-8a76-723e0a9a2716.png",
         "custom_mobile_media": True, "media_type_1_mobile": "image",
-        "image_1_mobile": "shopify://shop_images/WhatsApp_Image_2026-09-11_at_19.34.28.jpg",
+        "image_1_mobile": "shopify://shop_images/WhatsApp_Image_2026-07-02_at_07.58.57.jpg",
         "content_direction": "column", "vertical_on_mobile": True,
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center", "gap": 20,
