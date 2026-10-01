@@ -29,11 +29,24 @@
             "case": "uppercase"
           },
           "blocks": {}
+        },
+        "a3": {
+          "type": "_announcement",
+          "settings": {
+            "text": "Veilig betalen met iDEAL & Klarna",
+            "link": "",
+            "font": "var(--font-accent--family)",
+            "font_size": "0.75rem",
+            "letter_spacing": "loose",
+            "case": "uppercase"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "a1",
-        "a2"
+        "a2",
+        "a3"
       ],
       "settings": {
         "speed": 5,

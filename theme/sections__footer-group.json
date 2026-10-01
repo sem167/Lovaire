@@ -113,6 +113,59 @@
           },
           "blocks": {}
         },
+        "pay": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "gap": 12,
+            "width": "fill",
+            "width_mobile": "fill",
+            "inherit_color_scheme": true
+          },
+          "blocks": {
+            "h": {
+              "type": "text",
+              "settings": {
+                "text": "<p><strong>VEILIG BETALEN</strong></p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "color": "var(--color-foreground)",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            },
+            "icons": {
+              "type": "payment-icons",
+              "settings": {
+                "horizontal_alignment": "flex-start",
+                "gap": 8
+              },
+              "blocks": {}
+            },
+            "note": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Beveiligde checkout via Shopify. Wij zien en bewaren nooit je betaalgegevens.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "color": "var(--color-foreground)",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "h",
+            "icons",
+            "note"
+          ]
+        },
         "contact": {
           "type": "text",
           "settings": {
@@ -132,6 +185,7 @@
         "about",
         "shop",
         "info",
+        "pay",
         "contact"
       ],
       "settings": {

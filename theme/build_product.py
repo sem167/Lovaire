@@ -35,6 +35,8 @@ product = {"sections": {
                     "add-to-cart": {"type": "add-to-cart", "static": True, "settings": {"style_class": "button"}, "blocks": {}},
                     "accelerated-checkout": {"type": "accelerated-checkout", "static": True, "settings": {}, "blocks": {}}},
                     "block_order": []}),
+                ("payicons", {"type": "payment-icons", "settings": {"horizontal_alignment": "center", "gap": 8,
+                                                                    "padding-block-start": 4, "padding-block-end": 4}, "blocks": {}}),
                 ("trust", {"type": "text", "settings": {
                     "text": TRUST_LINES, "width": "100%", "alignment": "left", "type_preset": "rte",
                     "font": "var(--font-body--family)", "color": "var(--color-foreground)", "wrap": "pretty",

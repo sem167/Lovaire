@@ -83,3 +83,8 @@ Op verzoek volledig omgezet naar een strak beige-zwart ontwerp:
 - Spotlight-blok: LashLift Waterproof Mascara groot uitgelicht op beige ("Wimpers die de hele dag blijven stralen").
 - Warmere teksten: "Jouw nieuwe favorieten", "Voor elke vrouw die zich mooi wil voelen", "Geliefd door onze klanten".
 - Homepage-volgorde: hero → tekstband → voordelen → favorieten → categorieën → spotlight → zorgeloos bestellen → over Lovaire → reviews → FAQ.
+
+## Update: betaal-iconen & luxe afwerking (1 oktober 2026)
+- Betaal-iconen (automatisch de in Shopify actieve betaalmethodes) direct onder de bestelknop op alle productpagina's.
+- Footer: nieuwe kolom "Veilig betalen" met betaal-iconen en uitleg over de beveiligde checkout.
+- Aankondigingsbalk: derde bericht "Veilig betalen met iDEAL & Klarna".
