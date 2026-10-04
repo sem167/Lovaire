@@ -162,3 +162,11 @@ Gecontroleerd met een lokale weergave van de eigen secties op 390 px breed (Chro
 - Categorieën: op mobiel 3 + 2 gecentreerd i.p.v. afgesneden scrollrij.
 - Reviewscore: netjes gecentreerd als het over twee regels gaat.
 - Het nieuwe thema is inmiddels gepubliceerd (live), dus deze wijzigingen staan in een kopie: "Lovaire – Nieuw design (mobiel verbeterd)" (208376430931).
+
+## Update: productpagina's vernieuwd + geen snelle checkoutknoppen (4 oktober 2026)
+Alles in het concept-thema "Lovaire – Nieuw design (mobiel verbeterd)" (208376430931); `theme/product_page.py` draaien na translate_en.py.
+- Snelle checkoutknoppen (Shop Pay, Apple Pay, PayPal enz.) weg: eigen versie van `blocks/accelerated-checkout.liquid` die niets toont, plus `show_accelerated_checkout_buttons` uit voor de themawinkelwagen. De Upcart-winkelwagen heeft een eigen instelling hiervoor (in de Upcart-app uitzetten).
+- Nieuw blok `lovaire-product-trust` onder de knop: voorraadregel, kaart "Secure checkout" met de echte betaaliconen en 4 voordeeltegels (gratis verzending, track & trace, veilig betalen, persoonlijke service).
+- Langere productpagina: `lovaire-product-story` (foto's in boogvorm met uitleg), `lovaire-product-howto` (genummerde stappen), `lovaire-product-reviews` (Loox), belofte-kaarten en "You may also like" (huidige product wordt overgeslagen).
+- Teksten per product staan in metavelden (`lovaire.highlight_1/2_title`, `_text`, `how_to`) en zijn gebaseerd op de eigen productbeschrijvingen; aanpasbaar in de admin bij het product.
+- "Shop the favourites" toont nooit het product waar je op dat moment naar kijkt.

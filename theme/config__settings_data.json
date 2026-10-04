@@ -417,6 +417,7 @@
           "selected_variant_hover_border_color": "#333333"
         }
       }
-    }
+    },
+    "show_accelerated_checkout_buttons": false
   }
 }

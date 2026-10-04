@@ -1,0 +1,94 @@
+{%- liquid
+  assign p = closest.product
+  assign v = p.selected_or_first_available_variant
+  assign bid = block.id | replace: '_', '' | downcase
+-%}
+<div class="lpt-{{ bid }}" {{ block.shopify_attributes }}>
+  {%- if block.settings.show_stock and p != blank -%}
+    <p class="lpt__stock{% unless v.available %} lpt__stock--out{% endunless %}">
+      <span class="lpt__dot" aria-hidden="true"></span>
+      {%- if v.available -%}{{ block.settings.stock_text | escape }}{%- else -%}{{ block.settings.soldout_text | escape }}{%- endif -%}
+    </p>
+  {%- endif -%}
+
+  <div class="lpt__pay">
+    <p class="lpt__pay-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      {{ block.settings.pay_label | escape }}
+    </p>
+    <ul class="lpt__icons" role="list">
+      {%- for type in shop.enabled_payment_types -%}<li>{{ type | payment_type_svg_tag: class: 'lpt__icon' }}</li>{%- endfor -%}
+    </ul>
+  </div>
+
+  <ul class="lpt__grid" role="list">
+    {%- for i in (1..4) -%}
+      {%- capture t_key -%}item_{{ i }}_title{%- endcapture -%}
+      {%- capture s_key -%}item_{{ i }}_text{%- endcapture -%}
+      {%- capture i_key -%}item_{{ i }}_icon{%- endcapture -%}
+      {%- assign t = block.settings[t_key] -%}
+      {%- if t != blank -%}
+        <li class="lpt__item">
+          <span class="lpt__ico" aria-hidden="true">
+            {%- case block.settings[i_key] -%}
+              {%- when 'truck' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3z"/><path d="M14 9h4l3 3v3h-7"/><circle cx="7" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/></svg>
+              {%- when 'package' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>
+              {%- when 'chat' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg>
+              {%- when 'lock' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              {%- else -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+            {%- endcase -%}
+          </span>
+          <span><b>{{ t | escape }}</b><small>{{ block.settings[s_key] | escape }}</small></span>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</div>
+
+{% style %}
+  .lpt-{{ bid }} { display: flex; flex-direction: column; gap: 14px; width: 100%; font-family: var(--font-body--family); }
+  .lpt-{{ bid }} .lpt__stock { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 13px; color: #3f6b45; }
+  .lpt-{{ bid }} .lpt__stock--out { color: #8a8a8a; }
+  .lpt-{{ bid }} .lpt__dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 4px rgba(63,107,69,.15); animation: lptPulse-{{ bid }} 2s ease-in-out infinite; }
+  .lpt-{{ bid }} .lpt__stock--out .lpt__dot { animation: none; box-shadow: none; }
+  @keyframes lptPulse-{{ bid }} { 50% { box-shadow: 0 0 0 7px rgba(63,107,69,.05); } }
+  .lpt-{{ bid }} .lpt__pay { border: 1px solid #ece2d8; border-radius: 16px; padding: 14px 16px; background: #fff; }
+  .lpt-{{ bid }} .lpt__pay-label { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0 0 10px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #5a5a5a; }
+  .lpt-{{ bid }} .lpt__pay-label svg { width: 15px; height: 15px; color: #8b6b4a; }
+  .lpt-{{ bid }} .lpt__icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 0; padding: 0; list-style: none; }
+  .lpt-{{ bid }} .lpt__icons li { display: flex; }
+  .lpt-{{ bid }} .lpt__icon { width: 40px; height: 26px; }
+  .lpt-{{ bid }} .lpt__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
+  .lpt-{{ bid }} .lpt__item { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 14px; background: {{ block.settings.tile_color }}; }
+  .lpt-{{ bid }} .lpt__ico { flex: none; width: 36px; height: 36px; border-radius: 50%; background: #fff; display: grid; place-items: center; color: #8b6b4a; }
+  .lpt-{{ bid }} .lpt__ico svg { width: 18px; height: 18px; }
+  .lpt-{{ bid }} .lpt__item b { display: block; font-size: 13px; font-weight: 600; color: #111; line-height: 1.25; }
+  .lpt-{{ bid }} .lpt__item small { display: block; font-size: 12px; color: #6a6a6a; line-height: 1.35; margin-top: 2px; }
+  @media (max-width: 380px) { .lpt-{{ bid }} .lpt__item { flex-direction: column; align-items: flex-start; gap: 8px; } }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Lovaire vertrouwen",
+  "settings": [
+    { "type": "checkbox", "id": "show_stock", "label": "Voorraadregel tonen", "default": true },
+    { "type": "text", "id": "stock_text", "label": "Tekst op voorraad", "default": "In stock – ready to ship" },
+    { "type": "text", "id": "soldout_text", "label": "Tekst uitverkocht", "default": "Currently sold out" },
+    { "type": "text", "id": "pay_label", "label": "Label betaaliconen", "default": "Secure checkout" },
+    { "type": "color", "id": "tile_color", "label": "Kleur tegels", "default": "#f8f1ec" },
+    { "type": "select", "id": "item_1_icon", "label": "Voordeel 1 – icoon", "default": "truck", "options": [{ "value": "truck", "label": "Vrachtwagen" }, { "value": "package", "label": "Pakket" }, { "value": "lock", "label": "Slot" }, { "value": "chat", "label": "Chat" }, { "value": "star", "label": "Ster" }] },
+    { "type": "text", "id": "item_1_title", "label": "Voordeel 1 – titel", "default": "Free shipping" },
+    { "type": "text", "id": "item_1_text", "label": "Voordeel 1 – tekst", "default": "On every order" },
+    { "type": "select", "id": "item_2_icon", "label": "Voordeel 2 – icoon", "default": "package", "options": [{ "value": "truck", "label": "Vrachtwagen" }, { "value": "package", "label": "Pakket" }, { "value": "lock", "label": "Slot" }, { "value": "chat", "label": "Chat" }, { "value": "star", "label": "Ster" }] },
+    { "type": "text", "id": "item_2_title", "label": "Voordeel 2 – titel", "default": "Tracked delivery" },
+    { "type": "text", "id": "item_2_text", "label": "Voordeel 2 – tekst", "default": "Follow your parcel" },
+    { "type": "select", "id": "item_3_icon", "label": "Voordeel 3 – icoon", "default": "lock", "options": [{ "value": "truck", "label": "Vrachtwagen" }, { "value": "package", "label": "Pakket" }, { "value": "lock", "label": "Slot" }, { "value": "chat", "label": "Chat" }, { "value": "star", "label": "Ster" }] },
+    { "type": "text", "id": "item_3_title", "label": "Voordeel 3 – titel", "default": "Secure payment" },
+    { "type": "text", "id": "item_3_text", "label": "Voordeel 3 – tekst", "default": "iDEAL, Klarna & more" },
+    { "type": "select", "id": "item_4_icon", "label": "Voordeel 4 – icoon", "default": "chat", "options": [{ "value": "truck", "label": "Vrachtwagen" }, { "value": "package", "label": "Pakket" }, { "value": "lock", "label": "Slot" }, { "value": "chat", "label": "Chat" }, { "value": "star", "label": "Ster" }] },
+    { "type": "text", "id": "item_4_title", "label": "Voordeel 4 – titel", "default": "Personal service" },
+    { "type": "text", "id": "item_4_text", "label": "Voordeel 4 – tekst", "default": "Mon–Fri 09:00–17:00" }
+  ],
+  "presets": [{ "name": "Lovaire vertrouwen" }]
+}
+{% endschema %}

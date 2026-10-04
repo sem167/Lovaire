@@ -1,0 +1,39 @@
+{%- liquid
+  assign sid = section.id | replace: '_', '' | downcase
+  assign p = closest.product
+  assign n = p.metafields.loox.num_reviews.value | default: p.metafields.loox.num_reviews | plus: 0
+-%}
+{% style %}
+  .lpr-{{ sid }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
+  .lpr-{{ sid }} .lpr__inner { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .lpr-{{ sid }} .lpr__head { text-align: center; margin-bottom: 28px; }
+  .lpr-{{ sid }} .lpr__eyebrow { font-family: var(--font-body--family); font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: #8b6b4a; margin: 0 0 14px; }
+  .lpr-{{ sid }} .lpr__title { font-family: var(--font-heading--family); font-weight: 400; font-size: clamp(28px, 4vw, 40px); color: #111; margin: 0; }
+  .lpr-{{ sid }} .lpr__empty { text-align: center; font-family: var(--font-body--family); font-size: 15px; color: #5a5a5a; margin: 0 auto 8px; max-width: 46ch; line-height: 1.6; }
+{% endstyle %}
+<section class="lpr-{{ sid }}" id="reviews">
+  <div class="lpr__inner">
+    <div class="lpr__head">
+      {%- if section.settings.eyebrow != blank -%}<p class="lpr__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      <h2 class="lpr__title">{{ section.settings.heading | escape }}</h2>
+    </div>
+    {%- if n == 0 and section.settings.empty_text != blank -%}<p class="lpr__empty">{{ section.settings.empty_text | escape }}</p>{%- endif -%}
+    <div id="looxReviews" data-product-id="{{ p.id }}" class="loox-reviews-default"></div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lovaire productreviews",
+  "settings": [
+    { "type": "paragraph", "content": "Toont de echte Loox-reviews van dit product." },
+    { "type": "text", "id": "eyebrow", "label": "Label", "default": "REVIEWS" },
+    { "type": "text", "id": "heading", "label": "Kop", "default": "What customers say" },
+    { "type": "text", "id": "empty_text", "label": "Tekst als er nog geen reviews zijn", "default": "No reviews yet for this product. Tried it? We'd love to hear what you think." },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#ffffff" },
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 64 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "default": 64 }
+  ],
+  "presets": [{ "name": "Lovaire productreviews" }]
+}
+{% endschema %}

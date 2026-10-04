@@ -1,0 +1,12 @@
+{%- comment -%}
+  Lovaire: snelle checkout-knoppen (Shop Pay / Apple Pay / Google Pay) staan bewust uit op de productpagina.
+  Klanten rekenen af via "Add to cart" en de normale checkout. Originele code: zie git-geschiedenis / Horizon.
+{%- endcomment -%}
+<div class="accelerated-checkout-block" ref="acceleratedCheckoutButtonContainer" hidden style="display:none" {{ block.shopify_attributes }}></div>
+
+{% schema %}
+{
+  "name": "t:names.accelerated_checkout",
+  "tag": null
+}
+{% endschema %}

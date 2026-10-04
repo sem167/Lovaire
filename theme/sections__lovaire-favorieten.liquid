@@ -58,7 +58,11 @@
       {%- endif -%}
     </div>
     <div class="lv-fav__grid">
+      {%- assign current_id = closest.product.id -%}
+      {%- assign shown = 0 -%}
       {%- for product in section.settings.products -%}
+        {%- if product.id != current_id and shown < section.settings.max_items -%}
+        {%- assign shown = shown | plus: 1 -%}
         <article class="lv-card">
           <div class="lv-card__visual">
           <a class="lv-card__media" href="{{ product.url }}" aria-label="{{ product.title | escape }}">
@@ -71,7 +75,7 @@
             {%- endif -%}
             {%- if product.compare_at_price > product.price -%}
               <span class="lv-card__tag lv-card__tag--sale">Sale</span>
-            {%- elsif forloop.index <= section.settings.badge_count -%}
+            {%- elsif shown <= section.settings.badge_count -%}
               <span class="lv-card__tag">{{ section.settings.badge_text | escape }}</span>
             {%- endif -%}
           </a>
@@ -88,7 +92,7 @@
           {%- endif -%}
           </div>
           <div class="lv-card__info">
-            <span class="lv-card__no">N° {% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+            <span class="lv-card__no">N° {% if shown < 10 %}0{% endif %}{{ shown }}</span>
             {%- assign lx_n = product.metafields.loox.num_reviews.value | default: product.metafields.loox.num_reviews | plus: 0 -%}
             {%- if lx_n > 0 -%}
               {%- assign lx_r = product.metafields.loox.avg_rating.value | default: product.metafields.loox.avg_rating | times: 1.0 | round: 1 -%}
@@ -101,6 +105,7 @@
             </div>
           </div>
         </article>
+        {%- endif -%}
       {%- else -%}
         <p>Select products in the theme editor.</p>
       {%- endfor -%}
@@ -119,6 +124,7 @@
     { "type": "text", "id": "heading", "label": "Kop", "default": "Shop the" },
     { "type": "text", "id": "heading_italic", "label": "Kop – cursief deel", "default": "favourites" },
     { "type": "product_list", "id": "products", "label": "Producten", "limit": 12 },
+    { "type": "range", "id": "max_items", "label": "Maximaal aantal producten", "min": 2, "max": 12, "step": 1, "default": 12 },
     { "type": "range", "id": "columns", "label": "Kolommen (desktop)", "min": 2, "max": 4, "step": 1, "default": 3 },
     { "type": "text", "id": "badge_text", "label": "Label op de eerste producten", "default": "Favourite" },
     { "type": "range", "id": "badge_count", "label": "Aantal producten met label", "min": 0, "max": 6, "step": 1, "default": 0 },
