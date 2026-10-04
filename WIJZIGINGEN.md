@@ -180,3 +180,7 @@ In concept-thema 208376430931.
 - Voorraad: "Only X left in stock" met balkje toont alleen het échte aantal, en alleen als Shopify de voorraad bijhoudt (staat nu uit bij alle producten, dus nu wordt gewoon "In stock" getoond). Geen verzonnen aantallen (misleidende schaarste is verboden).
 - Uitlegblok zonder eigen productfoto krijgt een sierblok i.p.v. dezelfde foto nogmaals.
 - Nieuwe metavelden per product: `lovaire.benefits`, `lovaire.faq` (vraag :: antwoord) en `lovaire.highlight_3_title/_text`, gebaseerd op de eigen productbeschrijvingen.
+
+## Update: Engelse productafbeeldingen (4 oktober 2026)
+- 14 nieuwe afbeeldingen (map `fotos/`) in Lovaire-stijl, toegevoegd achter de bestaande foto's: mascara 3 (voordelen, gebruik, studio – met vrijstaande packshot), Support Bra 2, Self Tan Mousse 3, Foundation 2, Haarborstel 2, Shampoo 2. Teksten alleen uit de eigen productbeschrijvingen.
+- Bestaande foto's niet verwijderd: welke Nederlandse tekst bevatten kon niet worden gecontroleerd (cdn.shopify.com geblokkeerd in de werkomgeving).
