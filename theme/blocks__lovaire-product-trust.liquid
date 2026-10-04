@@ -5,10 +5,20 @@
 -%}
 <div class="lpt-{{ bid }}" {{ block.shopify_attributes }}>
   {%- if block.settings.show_stock and p != blank -%}
-    <p class="lpt__stock{% unless v.available %} lpt__stock--out{% endunless %}">
+    {%- liquid
+        assign low = false
+        if v.available and v.inventory_management == 'shopify' and v.inventory_quantity > 0 and v.inventory_quantity <= block.settings.low_threshold
+          assign low = true
+        endif
+      -%}
+    <p class="lpt__stock{% unless v.available %} lpt__stock--out{% endunless %}{% if low %} lpt__stock--low{% endif %}">
       <span class="lpt__dot" aria-hidden="true"></span>
-      {%- if v.available -%}{{ block.settings.stock_text | escape }}{%- else -%}{{ block.settings.soldout_text | escape }}{%- endif -%}
+      {%- if low -%}{{ block.settings.low_text | replace: '[count]', v.inventory_quantity | escape }}{%- elsif v.available -%}{{ block.settings.stock_text | escape }}{%- else -%}{{ block.settings.soldout_text | escape }}{%- endif -%}
     </p>
+    {%- if low -%}
+      {%- assign pct = v.inventory_quantity | times: 100 | divided_by: block.settings.low_threshold -%}
+      <div class="lpt__bar" aria-hidden="true"><span style="width: {{ pct }}%"></span></div>
+    {%- endif -%}
   {%- endif -%}
 
   <div class="lpt__pay">
@@ -50,6 +60,10 @@
   .lpt-{{ bid }} .lpt__stock { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 13px; color: #3f6b45; }
   .lpt-{{ bid }} .lpt__stock--out { color: #8a8a8a; }
   .lpt-{{ bid }} .lpt__dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 4px rgba(63,107,69,.15); animation: lptPulse-{{ bid }} 2s ease-in-out infinite; }
+  .lpt-{{ bid }} .lpt__stock--low { color: #a5562c; font-weight: 600; }
+  .lpt-{{ bid }} .lpt__stock--low .lpt__dot { box-shadow: 0 0 0 4px rgba(165,86,44,.15); }
+  .lpt-{{ bid }} .lpt__bar { height: 4px; border-radius: 4px; background: #efe4d9; overflow: hidden; margin-top: -6px; }
+  .lpt-{{ bid }} .lpt__bar span { display: block; height: 100%; min-width: 8%; background: linear-gradient(90deg, #a5562c, #d18b5c); border-radius: 4px; }
   .lpt-{{ bid }} .lpt__stock--out .lpt__dot { animation: none; box-shadow: none; }
   @keyframes lptPulse-{{ bid }} { 50% { box-shadow: 0 0 0 7px rgba(63,107,69,.05); } }
   .lpt-{{ bid }} .lpt__pay { border: 1px solid #ece2d8; border-radius: 16px; padding: 14px 16px; background: #fff; }
@@ -73,6 +87,8 @@
   "settings": [
     { "type": "checkbox", "id": "show_stock", "label": "Voorraadregel tonen", "default": true },
     { "type": "text", "id": "stock_text", "label": "Tekst op voorraad", "default": "In stock – ready to ship" },
+    { "type": "text", "id": "low_text", "label": "Tekst bij weinig voorraad ([count] = echt aantal)", "default": "Only [count] left in stock – order soon" },
+    { "type": "range", "id": "low_threshold", "label": "Toon 'nog maar X' vanaf (alleen als voorraad bijgehouden wordt)", "min": 2, "max": 30, "step": 1, "default": 10 },
     { "type": "text", "id": "soldout_text", "label": "Tekst uitverkocht", "default": "Currently sold out" },
     { "type": "text", "id": "pay_label", "label": "Label betaaliconen", "default": "Secure checkout" },
     { "type": "color", "id": "tile_color", "label": "Kleur tegels", "default": "#f8f1ec" },

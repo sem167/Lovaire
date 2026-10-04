@@ -1,0 +1,127 @@
+{%- liquid
+  assign sid = section.id | replace: '_', '' | downcase
+  assign p = closest.product
+  assign v = p.selected_or_first_available_variant
+  assign n = p.metafields.loox.num_reviews.value | default: p.metafields.loox.num_reviews | plus: 0
+  assign r = p.metafields.loox.avg_rating.value | default: p.metafields.loox.avg_rating | times: 1.0 | round: 1
+  assign img = p.featured_image
+  assign mode = 'options'
+  if p.has_only_default_variant
+    assign mode = 'add'
+  endif
+  assign label = section.settings.add_label
+-%}
+{% style %}
+  .lpc-{{ sid }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px; }
+  .lpc-{{ sid }} .lpc__card { max-width: 980px; margin: 0 auto; background: #fff; border-radius: 28px; overflow: hidden; display: grid; box-shadow: 0 30px 60px -40px rgba(80,50,20,.35); }
+  @media (min-width: 760px) { .lpc-{{ sid }} .lpc__card { grid-template-columns: 1fr 1fr; } }
+  .lpc-{{ sid }} .lpc__media { position: relative; aspect-ratio: 1; background: #efe4d9; }
+  .lpc-{{ sid }} .lpc__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .lpc-{{ sid }} .lpc__body { padding: 32px 26px 34px; display: flex; flex-direction: column; justify-content: center; gap: 14px; text-align: center; }
+  @media (min-width: 760px) { .lpc-{{ sid }} .lpc__body { padding: 48px; text-align: left; } }
+  .lpc-{{ sid }} .lpc__eyebrow { font-family: var(--font-body--family); font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: #8b6b4a; margin: 0; }
+  .lpc-{{ sid }} .lpc__title { font-family: var(--font-heading--family); font-weight: 400; font-size: clamp(26px, 3.4vw, 36px); line-height: 1.15; color: #111; margin: 0; }
+  .lpc-{{ sid }} .lpc__rating { font-family: var(--font-body--family); font-size: 13px; color: #5a5a5a; margin: 0; }
+  .lpc-{{ sid }} .lpc__rating span { color: #8b6b4a; letter-spacing: 2px; }
+  .lpc-{{ sid }} .lpc__price { font-family: var(--font-body--family); font-size: 22px; font-weight: 600; color: #111; margin: 0; }
+  .lpc-{{ sid }} .lpc__price s { font-size: 15px; font-weight: 400; color: #8a8a8a; margin-left: 8px; }
+  .lpc-{{ sid }} .lpc__btn { appearance: none; border: 0; cursor: pointer; width: 100%; padding: 18px 24px; border-radius: 999px; background: #111; color: #fff; font-family: var(--font-body--family); font-size: 14px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; transition: background .2s; }
+  .lpc-{{ sid }} .lpc__btn:hover { background: #8b6b4a; }
+  .lpc-{{ sid }} .lpc__perks { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: center; font-family: var(--font-body--family); font-size: 12px; color: #5a5a5a; }
+  @media (min-width: 760px) { .lpc-{{ sid }} .lpc__perks { justify-content: flex-start; } }
+  .lpc-{{ sid }} .lpc__perks li::before { content: "✓ "; color: #8b6b4a; font-weight: 700; }
+
+  .lpc-bar-{{ sid }} { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: rgba(255,255,255,.96); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid #efe4d9; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); transform: translateY(110%); transition: transform .35s ease; }
+  .lpc-bar-{{ sid }}.is-on { transform: none; }
+  .lpc-bar-{{ sid }} .lpc-bar__in { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 12px; }
+  .lpc-bar-{{ sid }} .lpc-bar__img { flex: none; width: 46px; height: 46px; border-radius: 12px; overflow: hidden; background: #efe4d9; }
+  .lpc-bar-{{ sid }} .lpc-bar__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .lpc-bar-{{ sid }} .lpc-bar__info { flex: 1; min-width: 0; font-family: var(--font-body--family); }
+  .lpc-bar-{{ sid }} .lpc-bar__t { display: block; font-size: 13px; font-weight: 600; color: #111; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .lpc-bar-{{ sid }} .lpc-bar__p { display: block; font-size: 13px; color: #5a5a5a; }
+  .lpc-bar-{{ sid }} .lpc__btn { appearance: none; border: 0; cursor: pointer; border-radius: 999px; background: #111; color: #fff; font-family: var(--font-body--family); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; width: auto; flex: none; padding: 14px 22px; font-size: 12px; }
+  @media (max-width: 359px) { .lpc-bar-{{ sid }} .lpc-bar__img { display: none; } }
+{% endstyle %}
+
+<section class="lpc-{{ sid }}">
+  <div class="lpc__card">
+    <div class="lpc__media">{%- if img -%}{{ img | image_url: width: 1000 | image_tag: loading: 'lazy', alt: p.title, sizes: '(min-width: 760px) 490px, 100vw' }}{%- endif -%}</div>
+    <div class="lpc__body">
+      {%- if section.settings.eyebrow != blank -%}<p class="lpc__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      <h2 class="lpc__title">{{ p.title | escape }}</h2>
+      {%- if n > 0 -%}<p class="lpc__rating"><span aria-hidden="true">★★★★★</span> {{ r }} · {{ n }} {% if n == 1 %}review{% else %}reviews{% endif %}</p>{%- endif -%}
+      <p class="lpc__price">{{ v.price | money }}{%- if v.compare_at_price > v.price -%}<s>{{ v.compare_at_price | money }}</s>{%- endif -%}</p>
+      {%- if p.available -%}
+        <button type="button" class="lpc__btn" data-lv-buy="{{ mode }}">{{ label | escape }}</button>
+      {%- else -%}
+        <button type="button" class="lpc__btn" disabled>Sold out</button>
+      {%- endif -%}
+      <ul class="lpc__perks" role="list">
+        {%- if section.settings.perk_1 != blank -%}<li>{{ section.settings.perk_1 | escape }}</li>{%- endif -%}
+        {%- if section.settings.perk_2 != blank -%}<li>{{ section.settings.perk_2 | escape }}</li>{%- endif -%}
+        {%- if section.settings.perk_3 != blank -%}<li>{{ section.settings.perk_3 | escape }}</li>{%- endif -%}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{%- if section.settings.sticky and p.available -%}
+<div class="lpc-bar-{{ sid }}" data-lv-bar aria-hidden="true">
+  <div class="lpc-bar__in">
+    <div class="lpc-bar__img">{%- if img -%}{{ img | image_url: width: 120 | image_tag: loading: 'lazy', alt: '' }}{%- endif -%}</div>
+    <div class="lpc-bar__info"><span class="lpc-bar__t">{{ p.title | escape }}</span><span class="lpc-bar__p">{{ v.price | money }}</span></div>
+    <button type="button" class="lpc__btn" data-lv-buy="{{ mode }}" tabindex="-1">{{ label | escape }}</button>
+  </div>
+</div>
+{%- endif -%}
+
+<script>
+  (function () {
+    var main = function () { return document.querySelector('[data-testid="standalone-add-to-cart"]'); };
+    var picker = function () { return document.querySelector('variant-picker, .variant-picker'); };
+    document.querySelectorAll('[data-lv-buy]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var m = main();
+        var chosen = /[?&]variant=/.test(location.search);
+        if (btn.dataset.lvBuy === 'add' || chosen) {
+          if (m && !m.disabled) { m.click(); return; }
+        }
+        var target = picker() || m;
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    });
+    var bar = document.querySelector('[data-lv-bar]');
+    if (bar) {
+      var ticking = false;
+      var update = function () {
+        ticking = false;
+        var m = main();
+        var on = !!m && m.getBoundingClientRect().bottom < 0;
+        bar.classList.toggle('is-on', on);
+        bar.setAttribute('aria-hidden', on ? 'false' : 'true');
+        bar.querySelector('button').tabIndex = on ? 0 : -1;
+      };
+      window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+      update();
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Lovaire koopblok",
+  "settings": [
+    { "type": "paragraph", "content": "Afsluitend koopblok onderaan de productpagina + vaste koopbalk onderin het scherm zodra de gewone knop uit beeld is. Bij producten met opties scrolt de knop naar de keuze, tenzij er al een optie gekozen is." },
+    { "type": "text", "id": "eyebrow", "label": "Label", "default": "READY WHEN YOU ARE" },
+    { "type": "text", "id": "add_label", "label": "Knoptekst", "default": "Add to cart" },
+    { "type": "text", "id": "perk_1", "label": "Voordeel 1", "default": "Free shipping" },
+    { "type": "text", "id": "perk_2", "label": "Voordeel 2", "default": "14-day returns" },
+    { "type": "text", "id": "perk_3", "label": "Voordeel 3", "default": "Secure checkout" },
+    { "type": "checkbox", "id": "sticky", "label": "Vaste koopbalk onderin tonen", "default": true },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f4ece4" },
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 64 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 140, "step": 4, "default": 96 }
+  ],
+  "presets": [{ "name": "Lovaire koopblok" }]
+}
+{% endschema %}

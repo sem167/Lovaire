@@ -283,7 +283,7 @@
         "equal_columns": true,
         "limit_details_width": true,
         "gap": 48,
-        "enable_sticky_add_to_cart": true,
+        "enable_sticky_add_to_cart": false,
         "color_scheme": "scheme-1",
         "padding-block-start": 32,
         "padding-block-end": 48
@@ -353,38 +353,29 @@
         "layout": "cards"
       }
     },
-    "more": {
-      "type": "lovaire-favorieten",
+    "benefits": {
+      "type": "lovaire-product-benefits",
+      "settings": {}
+    },
+    "faq": {
+      "type": "lovaire-product-faq",
       "settings": {
-        "eyebrow": "DISCOVER MORE",
-        "heading": "You may also",
-        "products": [
-          "lashlift-waterproof-mascara",
-          "zelfkleurende-foundation-spf15",
-          "self-tanner-tanning-lotion",
-          "lovaire-hairboost-shampoo",
-          "elektrische-spray-massage-borstel-lovaire",
-          "lovaire-support-bh"
-        ],
-        "columns": 4,
-        "button_label": "Shop all",
-        "button_link": "shopify://collections/all",
-        "background": "#f4ece4",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "heading_italic": "like",
-        "badge_text": "Favourite",
-        "badge_count": 0,
-        "max_items": 4
+        "background": "#ffffff"
       }
+    },
+    "cta": {
+      "type": "lovaire-product-cta",
+      "settings": {}
     }
   },
   "order": [
     "main",
+    "benefits",
     "story",
     "howto",
     "reviews",
     "belofte",
-    "more"
+    "faq",
+    "cta"
   ]
 }

@@ -1,5 +1,5 @@
 """Langere, rijkere productpagina's: vertrouwensblok onder de knop, productverhaal, gebruik, reviews, belofte en
-'You may also like'. Draai als laatste (na translate_en.py)."""
+een afsluitend koopblok met vaste koopbalk (geen links naar andere producten). Draai als laatste (na translate_en.py)."""
 import json
 load = lambda f: json.load(open(f))
 def save(f, d): json.dump(d, open(f, "w"), ensure_ascii=False, indent=2)
@@ -18,16 +18,19 @@ idx = load("templates__index.json")
 belofte = json.loads(json.dumps(idx["sections"]["belofte"]))
 belofte["settings"].update({"layout": "cards", "eyebrow": "OUR PROMISE", "heading": "Worry-free shopping at Lovaire",
                             "show_payment": False, "background": "#f6e7de", "padding_top": 72, "padding_bottom": 72})
-fav = json.loads(json.dumps(idx["sections"]["favorieten"]))
-fav["settings"].update({"eyebrow": "DISCOVER MORE", "heading": "You may also", "heading_italic": "like",
-                        "columns": 4, "max_items": 4, "background": "#f4ece4"})
 S.pop("usps", None); S.pop("recommendations", None)
 S["story"] = {"type": "lovaire-product-story", "settings": {}}
 S["howto"] = {"type": "lovaire-product-howto", "settings": {}}
 S["reviews"] = {"type": "lovaire-product-reviews", "settings": {}}
 S["belofte"] = belofte
-S["more"] = fav
-prod["order"] = ["main", "story", "howto", "reviews", "belofte", "more"]
+# Geen 'You may also like' meer: bezoekers blijven bij dit product
+S.pop("more", None)
+S["benefits"] = {"type": "lovaire-product-benefits", "settings": {}}
+S["faq"] = {"type": "lovaire-product-faq", "settings": {"background": "#ffffff"}}
+S["cta"] = {"type": "lovaire-product-cta", "settings": {}}
+# Eigen koopbalk (in lovaire-product-cta) vervangt die van Horizon
+S["main"]["settings"]["enable_sticky_add_to_cart"] = False
+prod["order"] = ["main", "benefits", "story", "howto", "reviews", "belofte", "faq", "cta"]
 save("templates__product.json", prod)
 
 st = load("config__settings_data.json")

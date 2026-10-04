@@ -1,0 +1,65 @@
+{%- liquid
+  assign sid = section.id | replace: '_', '' | downcase
+  assign p = closest.product
+  assign raw = p.metafields.lovaire.faq.value | default: ''
+  assign lines = raw | newline_to_br | split: '<br />'
+-%}
+{% style %}
+  .lpf-{{ sid }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
+  .lpf-{{ sid }} .lpf__inner { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  .lpf-{{ sid }} .lpf__head { text-align: center; margin-bottom: 28px; }
+  .lpf-{{ sid }} .lpf__eyebrow { font-family: var(--font-body--family); font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: #8b6b4a; margin: 0 0 12px; }
+  .lpf-{{ sid }} .lpf__title { font-family: var(--font-heading--family); font-weight: 400; font-size: clamp(28px, 4vw, 40px); color: #111; margin: 0; }
+  .lpf-{{ sid }} .lpf__title em { font-style: italic; color: #8b6b4a; }
+  .lpf-{{ sid }} details { background: #fff; border-radius: 16px; margin-bottom: 10px; border: 1px solid #efe4d9; }
+  .lpf-{{ sid }} summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 20px; font-family: var(--font-body--family); font-size: 15px; font-weight: 600; color: #111; }
+  .lpf-{{ sid }} summary::-webkit-details-marker { display: none; }
+  .lpf-{{ sid }} summary::after { content: "+"; flex: none; width: 28px; height: 28px; border-radius: 50%; background: #f4ece4; color: #8b6b4a; display: grid; place-items: center; font-size: 18px; font-weight: 400; transition: transform .25s; }
+  .lpf-{{ sid }} details[open] summary::after { transform: rotate(45deg); }
+  .lpf-{{ sid }} .lpf__a { padding: 0 20px 18px; font-family: var(--font-body--family); font-size: 14px; line-height: 1.7; color: #5a5a5a; }
+  .lpf-{{ sid }} .lpf__a a { color: #8b6b4a; }
+{% endstyle %}
+<section class="lpf-{{ sid }}">
+  <div class="lpf__inner">
+    <div class="lpf__head">
+      {%- if section.settings.eyebrow != blank -%}<p class="lpf__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      <h2 class="lpf__title">{{ section.settings.heading | escape }} <em>{{ section.settings.heading_italic | escape }}</em></h2>
+    </div>
+    {%- for line in lines -%}
+      {%- assign parts = line | strip | split: '::' -%}
+      {%- if parts.size > 1 -%}
+        <details><summary>{{ parts[0] | strip | escape }}</summary><div class="lpf__a">{{ parts[1] | strip | escape }}</div></details>
+      {%- endif -%}
+    {%- endfor -%}
+    {%- for i in (1..4) -%}
+      {%- capture qk -%}q{{ i }}{%- endcapture -%}{%- capture ak -%}a{{ i }}{%- endcapture -%}
+      {%- if section.settings[qk] != blank -%}
+        <details><summary>{{ section.settings[qk] | escape }}</summary><div class="lpf__a">{{ section.settings[ak] }}</div></details>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lovaire product-FAQ",
+  "settings": [
+    { "type": "paragraph", "content": "Productvragen komen uit het metaveld lovaire.faq (per regel: vraag :: antwoord). Daaronder de algemene vragen hieronder." },
+    { "type": "text", "id": "eyebrow", "label": "Label", "default": "GOOD TO KNOW" },
+    { "type": "text", "id": "heading", "label": "Kop", "default": "Frequently asked" },
+    { "type": "text", "id": "heading_italic", "label": "Kop – cursief", "default": "questions" },
+    { "type": "text", "id": "q1", "label": "Vraag 1", "default": "Is shipping free?" },
+    { "type": "richtext", "id": "a1", "label": "Antwoord 1", "default": "<p>Yes, every order is shipped free of charge. You'll receive an email with a tracking link as soon as your order is on its way.</p>" },
+    { "type": "text", "id": "q2", "label": "Vraag 2", "default": "Can I return my order?" },
+    { "type": "richtext", "id": "a2", "label": "Antwoord 2", "default": "<p>You can return your order within 14 days of receiving it. Separate conditions apply to hygiene products.</p>" },
+    { "type": "text", "id": "q3", "label": "Vraag 3", "default": "How can I pay?" },
+    { "type": "richtext", "id": "a3", "label": "Antwoord 3", "default": "<p>You pay through Shopify's secure checkout, with options including iDEAL and Klarna.</p>" },
+    { "type": "text", "id": "q4", "label": "Vraag 4", "default": "I have another question" },
+    { "type": "richtext", "id": "a4", "label": "Antwoord 4", "default": "<p>We're happy to help. Send us a message via the contact page and we'll get back to you as soon as possible.</p>" },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f8f1ec" },
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 72 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "default": 72 }
+  ],
+  "presets": [{ "name": "Lovaire product-FAQ" }]
+}
+{% endschema %}

@@ -170,3 +170,13 @@ Alles in het concept-thema "Lovaire – Nieuw design (mobiel verbeterd)" (208376
 - Langere productpagina: `lovaire-product-story` (foto's in boogvorm met uitleg), `lovaire-product-howto` (genummerde stappen), `lovaire-product-reviews` (Loox), belofte-kaarten en "You may also like" (huidige product wordt overgeslagen).
 - Teksten per product staan in metavelden (`lovaire.highlight_1/2_title`, `_text`, `how_to`) en zijn gebaseerd op de eigen productbeschrijvingen; aanpasbaar in de admin bij het product.
 - "Shop the favourites" toont nooit het product waar je op dat moment naar kijkt.
+
+## Update: productpagina's langer en meer gericht op kopen (4 oktober 2026)
+In concept-thema 208376430931.
+- Volgorde: product → "Everything it does for you" (voordelenlijst) → uitleg met foto's (nu 3 blokken) → gebruik → reviews → belofte → FAQ → afsluitend koopblok.
+- "You may also like" verwijderd: geen links meer naar andere producten op de productpagina.
+- Vaste koopbalk onderin (foto, naam, prijs, knop) zodra de gewone knop uit beeld is; vervangt de sticky balk van Horizon. Bij producten met opties (BH) scrolt de knop naar maat/kleur als er nog niets gekozen is.
+- Afsluitend koopblok met echte Loox-score, prijs, knop en "Free shipping · 14-day returns · Secure checkout".
+- Voorraad: "Only X left in stock" met balkje toont alleen het échte aantal, en alleen als Shopify de voorraad bijhoudt (staat nu uit bij alle producten, dus nu wordt gewoon "In stock" getoond). Geen verzonnen aantallen (misleidende schaarste is verboden).
+- Uitlegblok zonder eigen productfoto krijgt een sierblok i.p.v. dezelfde foto nogmaals.
+- Nieuwe metavelden per product: `lovaire.benefits`, `lovaire.faq` (vraag :: antwoord) en `lovaire.highlight_3_title/_text`, gebaseerd op de eigen productbeschrijvingen.

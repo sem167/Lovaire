@@ -21,6 +21,9 @@
   @media (min-width: 800px) { .lps-{{ sid }} .lps__media { width: 100%; } }
   .lps-{{ sid }} .lps__row:nth-child(even) .lps__media { border-radius: 20px 20px 999px 999px; }
   .lps-{{ sid }} .lps__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .lps-{{ sid }} .lps__media--deco { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: radial-gradient(circle at 30% 25%, #fbf3ec 0, #f1e0d4 55%, #e6cdb8 100%); }
+  .lps-{{ sid }} .lps__media--deco span { font-family: var(--font-heading--family); font-style: italic; font-size: clamp(80px, 12vw, 140px); line-height: 1; color: #fff; text-shadow: 0 10px 30px rgba(139,107,74,.25); }
+  .lps-{{ sid }} .lps__media--deco small { font-family: var(--font-body--family); font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: #8b6b4a; padding: 0 20px; text-align: center; }
   .lps-{{ sid }} .lps__text { text-align: center; }
   @media (min-width: 800px) { .lps-{{ sid }} .lps__text { text-align: left; } }
   .lps-{{ sid }} .lps__no { display: block; font-family: var(--font-heading--family); font-style: italic; font-size: 14px; color: #a8896a; margin-bottom: 10px; }
@@ -30,7 +33,7 @@
 {% endstyle %}
 
 {%- assign has_any = false -%}
-{%- if mf.highlight_1_title.value != blank or mf.highlight_2_title.value != blank -%}{%- assign has_any = true -%}{%- endif -%}
+{%- if mf.highlight_1_title.value != blank or mf.highlight_2_title.value != blank or mf.highlight_3_title.value != blank -%}{%- assign has_any = true -%}{%- endif -%}
 {%- if has_any -%}
 <section class="lps-{{ sid }}">
   <div class="lps__inner">
@@ -47,9 +50,13 @@
       {%- assign tlen = t | size -%}
       {%- if t != blank and tlen > 0 -%}
         {%- assign n = n | plus: 1 -%}
-        {%- assign img = p.images[i] | default: p.featured_image -%}
+        {%- assign img = p.images[i] -%}
         <div class="lps__row">
-          <div class="lps__media">{%- if img -%}{{ img | image_url: width: 1000 | image_tag: loading: 'lazy', alt: t, sizes: '(min-width: 800px) 40vw, 90vw' }}{%- endif -%}</div>
+          {%- if img -%}
+          <div class="lps__media">{{ img | image_url: width: 1000 | image_tag: loading: 'lazy', alt: t, sizes: '(min-width: 800px) 40vw, 90vw' }}</div>
+          {%- else -%}
+          <div class="lps__media lps__media--deco" aria-hidden="true"><span>0{{ n }}</span><small>{{ p.title | escape }}</small></div>
+          {%- endif -%}
           <div class="lps__text">
             <span class="lps__no">N° 0{{ n }}</span>
             <h3>{{ t | escape }}</h3>
@@ -66,7 +73,7 @@
 {
   "name": "Lovaire productverhaal",
   "settings": [
-    { "type": "paragraph", "content": "Teksten komen uit de product-metafields lovaire.highlight_1_title / _text (t/m 3). Foto's: de 2e en 3e productfoto." },
+    { "type": "paragraph", "content": "Teksten komen uit de product-metafields lovaire.highlight_1_title / _text (t/m 3). Foto's: de 2e, 3e en 4e productfoto (zonder foto: sierblok)." },
     { "type": "text", "id": "eyebrow", "label": "Label", "default": "WHY YOU'LL LOVE IT" },
     { "type": "text", "id": "heading", "label": "Kop", "default": "Made for your" },
     { "type": "text", "id": "heading_italic", "label": "Kop – cursief", "default": "everyday glow" },
