@@ -1,110 +1,132 @@
 {%- assign sid = section.id | replace: '_', '' | downcase -%}
 {% style %}
   .lv-fav-{{ sid }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
-  .lv-fav-{{ sid }} .lv-fav__inner { max-width: 1240px; margin: 0 auto; }
-  .lv-fav-{{ sid }} .lv-fav__head { padding: 0 20px; margin-bottom: 28px; }
-  .lv-fav-{{ sid }} .lv-fav__eyebrow { font-family: var(--font-body--family); font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: #8b6b4a; margin: 0 0 14px; }
-  .lv-fav-{{ sid }} .lv-fav__title { font-family: var(--font-heading--family); font-weight: 400; font-size: clamp(30px, 4vw, 42px); color: #111; margin: 0; letter-spacing: -.01em; }
-  .lv-fav-{{ sid }} .lv-fav__tab { display: inline-block; margin-top: 30px; padding-bottom: 12px; border-bottom: 2px solid #b39472; font-family: var(--font-body--family); font-size: 13px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: #111; text-decoration: none; }
-  .lv-fav-{{ sid }} .lv-fav__track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 20px 6px; scrollbar-width: none; }
-  .lv-fav-{{ sid }} .lv-fav__track::-webkit-scrollbar { display: none; }
-  .lv-fav-{{ sid }} .lv-card { flex: 0 0 78%; scroll-snap-align: start; display: flex; flex-direction: column; }
+  .lv-fav-{{ sid }} .lv-fav__inner { max-width: 1240px; margin: 0 auto; padding: 0 16px; }
+  @media (min-width: 750px) { .lv-fav-{{ sid }} .lv-fav__inner { padding: 0 32px; } }
+  .lv-fav-{{ sid }} .lv-fav__head { text-align: center; margin: 0 auto 40px; max-width: 640px; }
+  .lv-fav-{{ sid }} .lv-fav__eyebrow { display: inline-flex; align-items: center; gap: 12px; font-family: var(--font-body--family); font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: #8b6b4a; margin: 0 0 16px; }
+  .lv-fav-{{ sid }} .lv-fav__eyebrow::before, .lv-fav-{{ sid }} .lv-fav__eyebrow::after { content: ""; width: 28px; height: 1px; background: #cdb8a6; }
+  .lv-fav-{{ sid }} .lv-fav__title { font-family: var(--font-heading--family); font-weight: 400; font-size: clamp(32px, 4.4vw, 48px); line-height: 1.1; color: #111; margin: 0; letter-spacing: -.015em; }
+  .lv-fav-{{ sid }} .lv-fav__title em { font-style: italic; color: #8b6b4a; }
+  .lv-fav-{{ sid }} .lv-fav__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 14px; align-items: start; }
+  .lv-fav-{{ sid }} .lv-card:nth-child(even) { margin-top: 40px; }
   @media (min-width: 750px) {
-    .lv-fav-{{ sid }} .lv-fav__track { display: grid; grid-template-columns: repeat({{ section.settings.columns }}, minmax(0, 1fr)); gap: 32px 24px; overflow: visible; }
-    .lv-fav-{{ sid }} .lv-fav__dots { display: none; }
+    .lv-fav-{{ sid }} .lv-fav__grid { grid-template-columns: repeat({{ section.settings.columns }}, minmax(0, 1fr)); gap: 56px 32px; }
+    .lv-fav-{{ sid }} .lv-card:nth-child(even) { margin-top: 0; }
+    .lv-fav-{{ sid }} .lv-card:nth-child({{ section.settings.columns }}n+2) { margin-top: 64px; }
   }
-  .lv-fav-{{ sid }} .lv-card__media { position: relative; display: block; aspect-ratio: 1; background: #fff; overflow: hidden; }
-  .lv-fav-{{ sid }} .lv-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
-  .lv-fav-{{ sid }} .lv-card:hover .lv-card__media img { transform: scale(1.04); }
-  .lv-fav-{{ sid }} .lv-card__badge { position: absolute; top: 12px; left: 12px; background: #8b6b4a; color: #fff; font-family: var(--font-body--family); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; padding: 6px 10px; }
-  .lv-fav-{{ sid }} .lv-card__rating { display: block; margin-top: 16px; font-family: var(--font-body--family); font-size: 12px; color: #5a5a5a; }
+
+  .lv-fav-{{ sid }} .lv-card { position: relative; display: flex; flex-direction: column; }
+  .lv-fav-{{ sid }} .lv-card__media { position: relative; display: block; aspect-ratio: 3 / 4; border-radius: 999px 999px 18px 18px; overflow: hidden; background: #efe4d9; box-shadow: 0 0 0 1px rgba(139,107,74,.12), 0 20px 40px -24px rgba(60,40,20,.35); }
+  .lv-fav-{{ sid }} .lv-card__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .5s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .lv-fav-{{ sid }} .lv-card__media .lv-card__alt { opacity: 0; }
+  @media (hover: hover) {
+    .lv-fav-{{ sid }} .lv-card:hover .lv-card__media img { transform: scale(1.05); }
+    .lv-fav-{{ sid }} .lv-card:hover .lv-card__alt { opacity: 1; }
+  }
+  .lv-fav-{{ sid }} .lv-card__tag { position: absolute; bottom: 14px; left: 14px; z-index: 2; padding: 6px 12px; border-radius: 99px; background: rgba(255,255,255,.88); backdrop-filter: blur(6px); font-family: var(--font-body--family); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: #111; }
+  .lv-fav-{{ sid }} .lv-card__tag--sale { background: #8b6b4a; color: #fff; }
+
+  .lv-fav-{{ sid }} .lv-card__visual { position: relative; }
+  .lv-fav-{{ sid }} .lv-quick { position: absolute; right: 12px; bottom: 12px; z-index: 3; margin: 0; }
+  .lv-fav-{{ sid }} .lv-quick__btn { width: 44px; height: 44px; border-radius: 50%; border: 0; background: #fff; color: #111; display: grid; place-items: center; cursor: pointer; text-decoration: none; box-shadow: 0 8px 22px rgba(60,40,20,.14); transition: background .25s, color .25s, transform .25s; }
+  .lv-fav-{{ sid }} .lv-quick__btn svg { width: 18px; height: 18px; }
+  .lv-fav-{{ sid }} .lv-quick__btn:hover { background: #111; color: #fff; transform: scale(1.06); }
+  .lv-fav-{{ sid }} .lv-quick__btn[disabled] { opacity: .5; cursor: default; }
+
+  .lv-fav-{{ sid }} .lv-card__info { padding: 18px 4px 0; text-align: center; }
+  .lv-fav-{{ sid }} .lv-card__no { display: block; margin-bottom: 8px; font-family: var(--font-heading--family); font-style: italic; font-size: 13px; letter-spacing: .08em; color: #a8896a; }
+  .lv-fav-{{ sid }} .lv-card__title { display: block; font-family: var(--font-heading--family); font-size: 16px; line-height: 1.3; color: #111; text-decoration: none; margin: 0 0 6px; }
+  @media (min-width: 750px) { .lv-fav-{{ sid }} .lv-card__title { font-size: 18px; } }
+  .lv-fav-{{ sid }} .lv-card__title:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .lv-fav-{{ sid }} .lv-card__rating { display: block; margin-bottom: 6px; font-family: var(--font-body--family); font-size: 12px; color: #5a5a5a; }
   .lv-fav-{{ sid }} .lv-card__rating span { color: #8b6b4a; letter-spacing: 1px; }
-  .lv-fav-{{ sid }} .lv-card__title { display: block; font-family: var(--font-heading--family); font-size: 17px; line-height: 1.3; margin: 16px 0 6px; color: #111; text-decoration: none; }
-  .lv-fav-{{ sid }} .lv-card__rating + .lv-card__title { margin-top: 6px; }
-  .lv-fav-{{ sid }} .lv-card__price { font-family: var(--font-heading--family); font-weight: 600; font-size: 17px; display: flex; gap: 8px; align-items: baseline; margin-bottom: 18px; flex: 1; }
-  .lv-fav-{{ sid }} .lv-card__compare { color: #8a8a8a; font-weight: 400; text-decoration: line-through; font-size: 14px; }
-  .lv-fav-{{ sid }} .lv-buy-form { margin: 0; }
-  .lv-fav-{{ sid }} .lv-buy { display: block; width: 100%; box-sizing: border-box; text-align: center; background: #111; color: #fff; border: 0; cursor: pointer; text-decoration: none; font-family: var(--font-body--family); font-size: 13px; letter-spacing: .22em; text-transform: uppercase; padding: 18px 12px; transition: background .25s; }
-  .lv-fav-{{ sid }} .lv-buy:hover { background: #8b6b4a; }
-  .lv-fav-{{ sid }} .lv-buy--off { background: #d9d0c8; cursor: default; }
-  .lv-fav-{{ sid }} .lv-fav__dots { display: flex; justify-content: center; gap: 8px; margin-top: 26px; }
-  .lv-fav-{{ sid }} .lv-fav__dots i { width: 7px; height: 7px; border-radius: 99px; background: #d6c8bc; transition: all .3s; }
-  .lv-fav-{{ sid }} .lv-fav__dots i.is-active { width: 24px; background: #111; }
-  .lv-fav-{{ sid }} .lv-fav__cta { text-align: center; margin-top: 40px; padding: 0 20px; }
-  .lv-fav-{{ sid }} .lv-fav__all { display: inline-block; color: #111; font-family: var(--font-body--family); font-size: 13px; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid #111; padding-bottom: 4px; }
+  .lv-fav-{{ sid }} .lv-card__price { font-family: var(--font-body--family); font-size: 14px; color: #5a5a5a; display: flex; justify-content: center; gap: 8px; }
+  .lv-fav-{{ sid }} .lv-card__compare { color: #a39a92; text-decoration: line-through; }
+
+  .lv-fav-{{ sid }} .lv-fav__cta { text-align: center; margin-top: 48px; }
+  .lv-fav-{{ sid }} .lv-fav__all { display: inline-flex; align-items: center; gap: 10px; padding: 16px 34px; border: 1px solid #111; border-radius: 99px; color: #111; font-family: var(--font-body--family); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; transition: background .25s, color .25s; }
+  .lv-fav-{{ sid }} .lv-fav__all:hover { background: #111; color: #fff; }
 {% endstyle %}
 
 <section class="lv-fav-{{ sid }}">
   <div class="lv-fav__inner">
     <div class="lv-fav__head">
       {%- if section.settings.eyebrow != blank -%}<p class="lv-fav__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
-      {%- if section.settings.heading != blank -%}<h2 class="lv-fav__title">{{ section.settings.heading | escape }}</h2>{%- endif -%}
-      {%- if section.settings.tab_label != blank -%}<a class="lv-fav__tab" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.tab_label | escape }}</a>{%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="lv-fav__title">{{ section.settings.heading | escape }}{% if section.settings.heading_italic != blank %} <em>{{ section.settings.heading_italic | escape }}</em>{% endif %}</h2>
+      {%- endif -%}
     </div>
-    <div class="lv-fav__track" data-lv-track>
+    <div class="lv-fav__grid">
       {%- for product in section.settings.products -%}
         <article class="lv-card">
-          <a class="lv-card__media" href="{{ product.url }}">
+          <div class="lv-card__visual">
+          <a class="lv-card__media" href="{{ product.url }}" aria-label="{{ product.title | escape }}">
             {%- if product.featured_image -%}
-              {{ product.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', alt: product.title, sizes: '(min-width: 750px) 30vw, 80vw' }}
+              {{ product.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', alt: product.title, sizes: '(min-width: 750px) 30vw, 50vw' }}
+              {%- assign alt_img = product.images[1] -%}
+              {%- if alt_img -%}{{ alt_img | image_url: width: 900 | image_tag: loading: 'lazy', alt: '', class: 'lv-card__alt', sizes: '(min-width: 750px) 30vw, 50vw' }}{%- endif -%}
             {%- else -%}
               {{ 'product-1' | placeholder_svg_tag }}
             {%- endif -%}
-            {%- if product.compare_at_price > product.price -%}<span class="lv-card__badge">Sale</span>{%- endif -%}
+            {%- if product.compare_at_price > product.price -%}
+              <span class="lv-card__tag lv-card__tag--sale">Sale</span>
+            {%- elsif forloop.index <= section.settings.badge_count -%}
+              <span class="lv-card__tag">{{ section.settings.badge_text | escape }}</span>
+            {%- endif -%}
           </a>
-          {%- assign lx_n = product.metafields.loox.num_reviews.value | default: product.metafields.loox.num_reviews | plus: 0 -%}
-          {%- if lx_n > 0 -%}
-            {%- assign lx_r = product.metafields.loox.avg_rating.value | default: product.metafields.loox.avg_rating | times: 1.0 | round: 1 -%}
-            <span class="lv-card__rating"><span aria-hidden="true">★★★★★</span> {{ lx_r | replace: '.', ',' }} ({{ lx_n }})</span>
+          {%- if product.available == false -%}
+            <div class="lv-quick"><button class="lv-quick__btn" type="button" disabled aria-label="Sold out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+          {%- elsif product.has_only_default_variant -%}
+            <form class="lv-quick" action="{{ routes.cart_add_url }}" method="post">
+              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+              <input type="hidden" name="quantity" value="1">
+              <button class="lv-quick__btn" type="submit" aria-label="Add {{ product.title | escape }} to cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+            </form>
+          {%- else -%}
+            <div class="lv-quick"><a class="lv-quick__btn" href="{{ product.url }}" aria-label="Choose options for {{ product.title | escape }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></a></div>
           {%- endif -%}
-          <a class="lv-card__title" href="{{ product.url }}">{{ product.title | escape }}</a>
-          <div class="lv-card__price">
-            <span>{% if product.price_varies %}Vanaf {% endif %}{{ product.price | money }}</span>
-            {%- if product.compare_at_price > product.price -%}<span class="lv-card__compare">{{ product.compare_at_price | money }}</span>{%- endif -%}
           </div>
-          {%- render 'lovaire-buy', product: product -%}
+          <div class="lv-card__info">
+            <span class="lv-card__no">N° {% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+            {%- assign lx_n = product.metafields.loox.num_reviews.value | default: product.metafields.loox.num_reviews | plus: 0 -%}
+            {%- if lx_n > 0 -%}
+              {%- assign lx_r = product.metafields.loox.avg_rating.value | default: product.metafields.loox.avg_rating | times: 1.0 | round: 1 -%}
+              <span class="lv-card__rating"><span aria-hidden="true">★★★★★</span> {{ lx_r }} ({{ lx_n }})</span>
+            {%- endif -%}
+            <a class="lv-card__title" href="{{ product.url }}">{{ product.title | escape }}</a>
+            <div class="lv-card__price">
+              <span>{% if product.price_varies %}From {% endif %}{{ product.price | money }}</span>
+              {%- if product.compare_at_price > product.price -%}<span class="lv-card__compare">{{ product.compare_at_price | money }}</span>{%- endif -%}
+            </div>
+          </div>
         </article>
       {%- else -%}
-        <p style="padding:0 20px">Kies producten in de thema-editor.</p>
+        <p>Select products in the theme editor.</p>
       {%- endfor -%}
     </div>
-    {%- if section.settings.products.size > 1 -%}
-      <div class="lv-fav__dots" aria-hidden="true">{%- for p in section.settings.products -%}<i{% if forloop.first %} class="is-active"{% endif %}></i>{%- endfor -%}</div>
-    {%- endif -%}
     {%- if section.settings.button_label != blank -%}
-      <div class="lv-fav__cta"><a class="lv-fav__all" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }}</a></div>
+      <div class="lv-fav__cta"><a class="lv-fav__all" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }} <span aria-hidden="true">→</span></a></div>
     {%- endif -%}
   </div>
 </section>
-
-<script>
-  (function () {
-    var root = document.querySelector('.lv-fav-{{ sid }}');
-    if (!root) return;
-    var track = root.querySelector('[data-lv-track]'), dots = root.querySelectorAll('.lv-fav__dots i');
-    if (!track || !dots.length) return;
-    track.addEventListener('scroll', function () {
-      var cards = track.children, w = cards[0] ? cards[0].getBoundingClientRect().width + 16 : 1;
-      var i = Math.min(dots.length - 1, Math.round(track.scrollLeft / w));
-      dots.forEach(function (d, n) { d.classList.toggle('is-active', n === i); });
-    }, { passive: true });
-  })();
-</script>
 
 {% schema %}
 {
   "name": "Lovaire favorieten",
   "settings": [
-    { "type": "text", "id": "eyebrow", "label": "Label", "default": "ONZE FAVORIETEN" },
-    { "type": "text", "id": "heading", "label": "Kop", "default": "Shop de favorieten" },
-    { "type": "text", "id": "tab_label", "label": "Tab-tekst", "default": "Alle producten" },
+    { "type": "text", "id": "eyebrow", "label": "Label", "default": "OUR FAVOURITES" },
+    { "type": "text", "id": "heading", "label": "Kop", "default": "Shop the" },
+    { "type": "text", "id": "heading_italic", "label": "Kop – cursief deel", "default": "favourites" },
     { "type": "product_list", "id": "products", "label": "Producten", "limit": 12 },
     { "type": "range", "id": "columns", "label": "Kolommen (desktop)", "min": 2, "max": 4, "step": 1, "default": 3 },
-    { "type": "text", "id": "button_label", "label": "Link onderaan", "default": "Bekijk alles" },
+    { "type": "text", "id": "badge_text", "label": "Label op de eerste producten", "default": "Favourite" },
+    { "type": "range", "id": "badge_count", "label": "Aantal producten met label", "min": 0, "max": 6, "step": 1, "default": 0 },
+    { "type": "text", "id": "button_label", "label": "Knop onderaan", "default": "Shop all" },
     { "type": "url", "id": "button_link", "label": "Link" },
-    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f6e9e1" },
-    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 72 },
-    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "default": 72 }
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f4ece4" },
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "default": 80 }
   ],
   "presets": [{ "name": "Lovaire favorieten" }]
 }

@@ -36,12 +36,12 @@
     },
     "help": {
       "type": "section",
-      "name": "Hulp nodig",
+      "name": "Need help",
       "blocks": {
         "h": {
           "type": "text",
           "settings": {
-            "text": "<h2>Nog vragen? Wij helpen je graag</h2>",
+            "text": "<h2>Questions? We're happy to help</h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
@@ -55,7 +55,7 @@
         "p": {
           "type": "text",
           "settings": {
-            "text": "<p>Ons team reageert op werkdagen tussen 09:00 en 17:00.</p>",
+            "text": "<p>Our team replies on weekdays between 09:00 and 17:00.</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
@@ -69,7 +69,7 @@
         "b": {
           "type": "button",
           "settings": {
-            "label": "Neem contact op",
+            "label": "Contact us",
             "link": "shopify://pages/contact",
             "style_class": "button-secondary",
             "width": "fit-content",

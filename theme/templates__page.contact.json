@@ -6,7 +6,7 @@
         "eyebrow": {
           "type": "text",
           "settings": {
-            "text": "<p>KLANTENSERVICE</p>",
+            "text": "<p>CUSTOMER SERVICE</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -20,7 +20,7 @@
         "title": {
           "type": "text",
           "settings": {
-            "text": "<h1>Hoe kunnen we je helpen?</h1>",
+            "text": "<h1>How can we help?</h1>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -61,7 +61,7 @@
     },
     "info": {
       "type": "section",
-      "name": "Contactgegevens",
+      "name": "Contact details",
       "blocks": {
         "row": {
           "type": "group",
@@ -133,7 +133,7 @@
                 "t": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>Openingstijden</h3>",
+                    "text": "<h3>Opening hours</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -147,7 +147,7 @@
                 "b": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Ma–vr: 09:00–17:00<br/>Za: 10:00–14:00<br/>Zo: gesloten</p>",
+                    "text": "<p>Mon–Fri: 09:00–17:00<br/>Sat: 10:00–14:00<br/>Sun: closed</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -178,7 +178,7 @@
                 "t": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>Bestelling volgen</h3>",
+                    "text": "<h3>Track your order</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -192,7 +192,7 @@
                 "b": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Gebruik de track &amp; trace-link in je verzendmail.</p>",
+                    "text": "<p>Use the tracking link in your shipping confirmation email.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -234,12 +234,12 @@
     },
     "form": {
       "type": "section",
-      "name": "Contactformulier",
+      "name": "Contact form",
       "blocks": {
         "h": {
           "type": "text",
           "settings": {
-            "text": "<h2>Stuur ons een bericht</h2>",
+            "text": "<h2>Send us a message</h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
@@ -264,7 +264,7 @@
               "type": "contact-form-submit-button",
               "static": true,
               "settings": {
-                "label": "Verstuur bericht",
+                "label": "Send message",
                 "style_class": "button",
                 "width": "fit-content",
                 "width_mobile": "fill"

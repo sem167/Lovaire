@@ -23,7 +23,7 @@
         "h": {
           "type": "text",
           "settings": {
-            "text": "<h2>Word Lovaire VIP</h2>",
+            "text": "<h2>Become a Lovaire VIP</h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
@@ -37,7 +37,7 @@
         "p": {
           "type": "text",
           "settings": {
-            "text": "<p>Als VIP hoor je het als eerste: nieuwe producten, exclusieve acties en beauty tips, rechtstreeks in je inbox.</p>",
+            "text": "<p>VIPs hear it first: new products, exclusive offers and beauty tips, straight to your inbox.</p>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "center",
@@ -59,7 +59,7 @@
             "border_radius": 20,
             "style_class": "button",
             "display_type": "text",
-            "label": "Word VIP",
+            "label": "Join now",
             "integrated_button": true
           },
           "blocks": {}
@@ -67,7 +67,7 @@
         "small": {
           "type": "text",
           "settings": {
-            "text": "<p>Gratis aanmelden · Uitschrijven kan altijd</p>",
+            "text": "<p>Free to join · Unsubscribe anytime</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
@@ -104,7 +104,7 @@
         "about": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Lovaire</strong></p><p>Beauty essentials die jouw natuurlijke schoonheid laten stralen.</p>",
+            "text": "<p><strong>Lovaire</strong></p><p>Beauty essentials that let your natural beauty shine.</p>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -133,7 +133,7 @@
           "type": "menu",
           "settings": {
             "menu": "informatie",
-            "heading": "Informatie",
+            "heading": "Information",
             "menu_spacing": 10,
             "show_as_accordion": true,
             "accordion_icon": "plus",
@@ -156,7 +156,7 @@
             "h": {
               "type": "text",
               "settings": {
-                "text": "<p><strong>VEILIG BETALEN</strong></p>",
+                "text": "<p><strong>SECURE PAYMENT</strong></p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -178,7 +178,7 @@
             "note": {
               "type": "text",
               "settings": {
-                "text": "<p>Beveiligde checkout via Shopify. Wij zien en bewaren nooit je betaalgegevens.</p>",
+                "text": "<p>Secure checkout powered by Shopify. We never see or store your payment details.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -199,7 +199,7 @@
         "contact": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>KLANTENSERVICE</strong></p><p>Ma–vr: 09:00–17:00<br/>Za: 10:00–14:00<br/>Zo: gesloten</p><p>lovairesupport@gmail.com</p><p>KVK: 42074062<br/>BTW: NL005474481B21</p>",
+            "text": "<p><strong>CUSTOMER SERVICE</strong></p><p>Mon–Fri: 09:00–17:00<br/>Sat: 10:00–14:00<br/>Sun: closed</p><p>lovairesupport@gmail.com</p><p>Chamber of Commerce (KVK): 42074062<br/>VAT: NL005474481B21</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -282,7 +282,7 @@
     },
     "wordmark": {
       "type": "section",
-      "name": "Lovaire woordmerk",
+      "name": "Lovaire wordmark",
       "blocks": {
         "jumbo": {
           "type": "jumbo-text",

@@ -6,7 +6,7 @@
   {%- assign r = p.metafields.loox.avg_rating.value | default: p.metafields.loox.avg_rating | times: 1.0 | round: 1 -%}
   <a href="#looxReviews" class="lovaire-rating" {{ block.shopify_attributes }} style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-family:var(--font-body--family);font-size:13px;color:#5a5a5a;">
     <span aria-hidden="true" style="color:#8b6b4a;letter-spacing:2px;font-size:15px;">★★★★★</span>
-    <span><strong style="color:#111;">{{ r | replace: '.', ',' }}</strong> · {{ n }} {% if n == 1 %}review{% else %}reviews{% endif %}</span>
+    <span><strong style="color:#111;">{{ r }}</strong> · {{ n }} {% if n == 1 %}review{% else %}reviews{% endif %}</span>
   </a>
 {%- endif -%}
 

@@ -53,7 +53,7 @@
     </div>
     {%- if section.settings.show_payment -%}
       <div class="lvb__pay">
-        <span class="lvb__paylabel">Veilig betalen met</span>
+        <span class="lvb__paylabel">Secure payment with</span>
         {%- for type in shop.enabled_payment_types -%}{{ type | payment_type_svg_tag }}{%- endfor -%}
       </div>
     {%- endif -%}
@@ -64,8 +64,8 @@
 {
   "name": "Lovaire belofte",
   "settings": [
-    { "type": "text", "id": "eyebrow", "label": "Label", "default": "ONZE BELOFTE" },
-    { "type": "text", "id": "heading", "label": "Kop", "default": "Zorgeloos shoppen bij Lovaire" },
+    { "type": "text", "id": "eyebrow", "label": "Label", "default": "OUR PROMISE" },
+    { "type": "text", "id": "heading", "label": "Kop", "default": "Worry-free shopping at Lovaire" },
     { "type": "select", "id": "layout", "label": "Weergave", "default": "cards", "options": [ { "value": "cards", "label": "Kaarten" }, { "value": "list", "label": "Compacte lijst" } ] },
     { "type": "checkbox", "id": "show_payment", "label": "Betaaliconen tonen", "default": true },
     { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f6e7de" },

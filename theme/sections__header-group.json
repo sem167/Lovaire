@@ -9,7 +9,7 @@
         "a1": {
           "type": "_announcement",
           "settings": {
-            "text": "Altijd gratis verzending",
+            "text": "Always free shipping",
             "link": "shopify://pages/bestellingen-en-levering",
             "font": "var(--font-accent--family)",
             "font_size": "0.75rem",
@@ -21,7 +21,7 @@
         "a2": {
           "type": "_announcement",
           "settings": {
-            "text": "Elke bestelling met track & trace",
+            "text": "Every order with tracking",
             "link": "shopify://pages/verzendbeleid",
             "font": "var(--font-accent--family)",
             "font_size": "0.75rem",
@@ -33,7 +33,7 @@
         "a3": {
           "type": "_announcement",
           "settings": {
-            "text": "Veilig betalen met iDEAL & Klarna",
+            "text": "Secure checkout with iDEAL & Klarna",
             "link": "",
             "font": "var(--font-accent--family)",
             "font_size": "0.75rem",

@@ -144,3 +144,13 @@ Op basis van 4 mobiele screenshots van lyvelle.nl (alleen vormgeving overgenomen
 - Homepage: hero → voordelen → categorieën → favorieten → statement → momenten → reviews → FAQ.
 - Collectiepagina's: blush kop met categorie-rondjes als navigatie, vierkante productfoto's, compacte voordelen met betaaliconen. "Alle collecties"-pagina vernieuwd.
 - Niet overgenomen: "30 dagen garantie" (Lovaire: 14 dagen) en de verwachte leverdatum (op verzoek levertijd niet tonen).
+
+## Update: hele store in het Engels + nieuwe favorieten (4 oktober 2026)
+Backup van alle Nederlandse teksten (producten, collecties, pagina's, menu's): `backup/2026-10-04-nl-voor-engels.json`.
+- Thema: alle teksten Engels via `theme/translate_en.py` (draai na restyle.py); knoppen "Add to cart / Choose options / Sold out", "From", reviewlabels. Klantreview vertaald en gemarkeerd als "Quotes translated from Dutch".
+- Producten: titels, beschrijvingen, producttype en SEO in het Engels (Support BH → Support Bra, Zelfkleurende Foundation → Colour-Adapting Foundation, Haarborstel → Hair Brush). BH-opties: Colour (Black/White/Bronze/Beige) en Cup size; kleurlabels aangepast in de gekoppelde kleur-metaobjecten.
+- Collecties: Huidverzorging → Skincare, Haarverzorging → Hair care, plus beschrijvingen en SEO.
+- Pagina's: About us, Orders & delivery, Returns & exchanges, Hygiene products policy, Shipping policy, Privacy policy en (nog ongepubliceerd) Terms & conditions; inhoud getrouw vertaald. Handles/URL's ongewijzigd.
+- Menu's: Main menu, Information, Footer menu en klantaccountmenu in het Engels.
+- Niet aangepast: Shopify-privacybeleid onder Instellingen → Beleid (opnieuw genereren in het Engels), en de winkeltaal (nl) — kan alleen in de admin.
+- "Shop the favourites" opnieuw ontworpen: latte-achtergrond, boogvormige foto's, verspringende kolommen, N° 01-nummering, tweede foto bij hover, ronde "+"-knop om direct toe te voegen.

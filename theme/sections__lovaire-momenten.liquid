@@ -54,7 +54,7 @@
             </a>
             <div>
               <a class="lvm__name" href="{{ product.url }}">{{ product.title | escape }}</a>
-              <div class="lvm__price">{% if product.price_varies %}Vanaf {% endif %}{{ product.price | money }}</div>
+              <div class="lvm__price">{% if product.price_varies %}From {% endif %}{{ product.price | money }}</div>
               {%- render 'lovaire-buy', product: product -%}
             </div>
           </div>
@@ -86,15 +86,15 @@
 {
   "name": "Lovaire momenten",
   "settings": [
-    { "type": "text", "id": "eyebrow", "label": "Label", "default": "ELK MOMENT" },
-    { "type": "text", "id": "heading", "label": "Kop", "default": "Jouw dag met Lovaire" },
+    { "type": "text", "id": "eyebrow", "label": "Label", "default": "EVERY MOMENT" },
+    { "type": "text", "id": "heading", "label": "Kop", "default": "Your day with Lovaire" },
     { "type": "color", "id": "background", "label": "Achtergrond", "default": "#ffffff" },
     { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 56 },
     { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "default": 80 }
   ],
   "blocks": [
     { "type": "moment", "name": "Moment", "settings": [
-      { "type": "text", "id": "label", "label": "Tab", "default": "Ochtend" },
+      { "type": "text", "id": "label", "label": "Tab", "default": "Morning" },
       { "type": "select", "id": "icon", "label": "Icoon", "default": "sun", "options": [
         { "value": "sun", "label": "Zon" }, { "value": "cloud", "label": "Zon met wolk" }, { "value": "moon", "label": "Maan" } ] },
       { "type": "text", "id": "intro", "label": "Korte tekst" },

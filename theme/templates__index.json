@@ -6,17 +6,17 @@
         "image": "shopify://shop_images/lovaire-hero-glow.jpg",
         "focal": "center 25%",
         "eyebrow": "Lovaire beauty",
-        "title": "<p>Voel je mooi, <em>elke dag</em></p>",
-        "text": "Make-up, huid- en haarverzorging die je echt gebruikt. Zorgvuldig geselecteerd en altijd gratis verzonden.",
-        "button_label": "Shop nu",
+        "title": "<p>Feel beautiful, <em>every day</em></p>",
+        "text": "Make-up, skin and hair care you'll actually use. Carefully selected and always shipped for free.",
+        "button_label": "Shop now",
         "button_link": "shopify://collections/all",
-        "button2_label": "Ontdek collecties",
+        "button2_label": "Explore collections",
         "button2_link": "/collections",
-        "trust_1": "Gratis verzending",
-        "trust_2": "Veilig betalen met iDEAL",
-        "trust_3": "Persoonlijke service",
-        "badge_title": "Altijd gratis verzending",
-        "badge_text": "Met track & trace in je mail",
+        "trust_1": "Free shipping",
+        "trust_2": "Secure checkout with iDEAL",
+        "trust_3": "Personal service",
+        "badge_title": "Always free shipping",
+        "badge_text": "With tracking sent to your inbox",
         "seal_text": "LOVAIRE · BEAUTY · ESSENTIALS · ",
         "background": "#f6e7de",
         "height": 85
@@ -28,7 +28,7 @@
         "tiffany": {
           "type": "review",
           "settings": {
-            "text": "Ongelofelijk wat dit product doet. Ik ben 50 plus, door dit product zie je mijn rimpels oprecht minder. Heel natuurlijk en de kleur past zich inderdaad aan je eigen huidskleur. Heel erg tevreden.",
+            "text": "Incredible what this product does. I'm over 50, and with this product my wrinkles honestly show less. Very natural, and the colour really does adapt to your own skin tone. Very happy.",
             "name": "Tiffany T.",
             "rating": 5,
             "product": "zelfkleurende-foundation-spf15"
@@ -39,8 +39,8 @@
         "tiffany"
       ],
       "settings": {
-        "eyebrow": "ECHTE REVIEWS",
-        "heading": "Wat klanten zeggen",
+        "eyebrow": "REAL REVIEWS",
+        "heading": "What customers say",
         "products": [
           "lashlift-waterproof-mascara",
           "zelfkleurende-foundation-spf15",
@@ -49,7 +49,7 @@
           "elektrische-spray-massage-borstel-lovaire",
           "lovaire-support-bh"
         ],
-        "note": "Reviews worden na een bestelling verzameld via Loox en ongewijzigd getoond.",
+        "note": "Reviews are collected via Loox after purchase. Quotes translated from Dutch.",
         "background": "#f6e7de",
         "padding_top": 72,
         "padding_bottom": 72
@@ -57,12 +57,12 @@
     },
     "faq": {
       "type": "section",
-      "name": "Veelgestelde vragen",
+      "name": "Frequently asked questions",
       "blocks": {
         "heading": {
           "type": "text",
           "settings": {
-            "text": "<h2>Veelgestelde vragen</h2>",
+            "text": "<h2>Frequently asked questions</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -85,7 +85,7 @@
             "q1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Wanneer ontvang ik mijn bestelling?",
+                "heading": "When will I receive my order?",
                 "open_by_default": false,
                 "icon": "none"
               },
@@ -93,7 +93,7 @@
                 "q1_t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Zodra je bestelling is verzonden, ontvang je een e-mail met je track & trace, zodat je precies kunt volgen waar je pakketje is. Alle details vind je in ons <a href=\"/pages/verzendbeleid\">verzendbeleid</a>.</p>",
+                    "text": "<p>As soon as your order ships, you'll receive an email with your tracking link, so you can follow your parcel every step of the way. You'll find all the details in our <a href=\"/pages/verzendbeleid\">shipping policy</a>.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -112,7 +112,7 @@
             "q2": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Wat zijn de verzendkosten?",
+                "heading": "How much is shipping?",
                 "open_by_default": false,
                 "icon": "none"
               },
@@ -120,7 +120,7 @@
                 "q2_t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Niets: bij Lovaire is verzending altijd gratis.</p>",
+                    "text": "<p>Nothing: shipping is always free at Lovaire.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -139,7 +139,7 @@
             "q3": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Kan ik mijn bestelling retourneren?",
+                "heading": "Can I return my order?",
                 "open_by_default": false,
                 "icon": "none"
               },
@@ -147,7 +147,7 @@
                 "q3_t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Je kunt je bestelling tot 14 dagen na ontvangst retourneren. Voor hygiënische producten, zoals cosmetica en ondergoed, gelden aparte voorwaarden. Lees alles op <a href=\"/pages/bestellingen-en-levering-1\">Ruilen en retourneren</a>.</p>",
+                    "text": "<p>You can return your order within 14 days of receiving it. Separate conditions apply to hygiene products such as cosmetics and underwear. Read everything on our <a href=\"/pages/bestellingen-en-levering-1\">returns and exchanges</a> page.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -166,7 +166,7 @@
             "q4": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Waar worden jullie producten gemaakt?",
+                "heading": "Where are your products made?",
                 "open_by_default": false,
                 "icon": "none"
               },
@@ -174,7 +174,7 @@
                 "q4_t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Onze producten worden zowel lokaal als wereldwijd geproduceerd. We selecteren onze productiepartners zorgvuldig, zodat je kwaliteit krijgt voor een eerlijke prijs.</p>",
+                    "text": "<p>Our products are made both locally and around the world. We choose our production partners carefully, so you get quality at a fair price.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -193,7 +193,7 @@
             "q5": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Ik heb een vraag, hoe bereik ik jullie?",
+                "heading": "I have a question, how can I reach you?",
                 "open_by_default": false,
                 "icon": "none"
               },
@@ -201,7 +201,7 @@
                 "q5_t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Stuur ons een bericht via de <a href=\"/pages/contact\">contactpagina</a>. We reageren op werkdagen tussen 09:00 en 17:00.</p>",
+                    "text": "<p>Send us a message via our <a href=\"/pages/contact\">contact page</a>. We reply on weekdays between 09:00 and 17:00.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -246,8 +246,8 @@
     "favorieten": {
       "type": "lovaire-favorieten",
       "settings": {
-        "eyebrow": "ONZE FAVORIETEN",
-        "heading": "Shop de favorieten",
+        "eyebrow": "OUR FAVOURITES",
+        "heading": "Shop the",
         "products": [
           "lashlift-waterproof-mascara",
           "zelfkleurende-foundation-spf15",
@@ -257,12 +257,14 @@
           "lovaire-support-bh"
         ],
         "columns": 3,
-        "button_label": "Bekijk alles",
+        "button_label": "Shop all",
         "button_link": "shopify://collections/all",
-        "background": "#f6e9e1",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "tab_label": "Alle producten"
+        "background": "#f4ece4",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "heading_italic": "favourites",
+        "badge_text": "Favourite",
+        "badge_count": 0
       }
     },
     "belofte": {
@@ -272,32 +274,32 @@
           "type": "item",
           "settings": {
             "icon": "truck",
-            "title": "Gratis verzending",
-            "text": "Op elke bestelling, zonder minimumbedrag."
+            "title": "Free shipping",
+            "text": "On every order, no minimum spend."
           }
         },
         "b2": {
           "type": "item",
           "settings": {
             "icon": "lock",
-            "title": "Veilig betalen",
-            "text": "Met iDEAL, Klarna en meer via een beveiligde checkout."
+            "title": "Secure payment",
+            "text": "iDEAL, Klarna and more via a secure checkout."
           }
         },
         "b3": {
           "type": "item",
           "settings": {
             "icon": "package",
-            "title": "Track & trace",
-            "text": "Volg je pakketje vanaf het moment van verzending."
+            "title": "Order tracking",
+            "text": "Follow your parcel from the moment it ships."
           }
         },
         "b4": {
           "type": "item",
           "settings": {
             "icon": "chat",
-            "title": "Persoonlijke service",
-            "text": "Ma–vr van 09:00 tot 17:00 staan we voor je klaar."
+            "title": "Personal service",
+            "text": "We're here for you Mon–Fri, 09:00–17:00."
           }
         }
       },
@@ -320,8 +322,8 @@
     "categories": {
       "type": "lovaire-categories",
       "settings": {
-        "eyebrow": "ONTDEK",
-        "heading": "Waar ben je naar op zoek?",
+        "eyebrow": "DISCOVER",
+        "heading": "What are you looking for?",
         "collections": [
           "make-up",
           "huid-producten",
@@ -338,7 +340,7 @@
       "type": "lovaire-statement",
       "settings": {
         "eyebrow": "LOVAIRE",
-        "text": "<p>Make-up, huid en haar. Voor elk moment van <em>jouw dag</em>.</p>",
+        "text": "<p>Make-up, skin and hair. For every moment of <em>your day</em>.</p>",
         "show_line": true,
         "background": "#ffffff",
         "padding_top": 96,
@@ -351,9 +353,9 @@
         "m1": {
           "type": "moment",
           "settings": {
-            "label": "Ochtend",
+            "label": "Morning",
             "icon": "sun",
-            "intro": "Een frisse, stralende start van je dag.",
+            "intro": "A fresh, radiant start to your day.",
             "products": [
               "zelfkleurende-foundation-spf15",
               "lashlift-waterproof-mascara"
@@ -363,9 +365,9 @@
         "m2": {
           "type": "moment",
           "settings": {
-            "label": "Overdag",
+            "label": "Daytime",
             "icon": "cloud",
-            "intro": "Comfortabel en verzorgd de hele dag door.",
+            "intro": "Comfortable and polished all day long.",
             "products": [
               "lovaire-support-bh",
               "self-tanner-tanning-lotion"
@@ -375,9 +377,9 @@
         "m3": {
           "type": "moment",
           "settings": {
-            "label": "Avond",
+            "label": "Evening",
             "icon": "moon",
-            "intro": "Even tijd voor jezelf.",
+            "intro": "A moment just for you.",
             "products": [
               "lovaire-hairboost-shampoo",
               "elektrische-spray-massage-borstel-lovaire"
@@ -391,8 +393,8 @@
         "m3"
       ],
       "settings": {
-        "eyebrow": "ELK MOMENT",
-        "heading": "Jouw dag met Lovaire",
+        "eyebrow": "EVERY MOMENT",
+        "heading": "Your day with Lovaire",
         "background": "#ffffff",
         "padding_top": 24,
         "padding_bottom": 88

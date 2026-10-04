@@ -136,7 +136,7 @@
             "trust": {
               "type": "text",
               "settings": {
-                "text": "<p><strong>DE LOVAIRE BELOFTE</strong><br/>✓ Altijd gratis verzending<br/>✓ Veilig betalen met iDEAL of Klarna<br/>✓ Verzonden met track &amp; trace</p>",
+                "text": "<p><strong>THE LOVAIRE PROMISE</strong><br/>✓ Always free shipping<br/>✓ Secure checkout with iDEAL or Klarna<br/>✓ Shipped with tracking</p>",
                 "width": "100%",
                 "alignment": "left",
                 "type_preset": "rte",
@@ -170,7 +170,7 @@
                 "ship": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Verzending & levering",
+                    "heading": "Shipping & delivery",
                     "open_by_default": false,
                     "icon": "none"
                   },
@@ -178,7 +178,7 @@
                     "ship_t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Je ontvangt een e-mail met track &amp; trace zodra je bestelling onderweg is. Meer info: <a href=\"/pages/verzendbeleid\">verzendbeleid</a>.</p>",
+                        "text": "<p>You'll receive an email with a tracking link as soon as your order is on its way. More info: <a href=\"/pages/verzendbeleid\">shipping policy</a>.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -197,7 +197,7 @@
                 "ret": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Retourneren",
+                    "heading": "Returns",
                     "open_by_default": false,
                     "icon": "none"
                   },
@@ -205,7 +205,7 @@
                     "ret_t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Je kunt je bestelling tot 14 dagen na ontvangst retourneren. Voor hygiënische producten, zoals cosmetica en ondergoed, gelden aparte voorwaarden: zie <a href=\"/pages/ruilen-en-retourneren\">hygiënische producten</a>. Alle stappen vind je op <a href=\"/pages/bestellingen-en-levering-1\">Ruilen en retourneren</a>.</p>",
+                        "text": "<p>You can return your order within 14 days of receiving it. Separate conditions apply to hygiene products such as cosmetics and underwear: see <a href=\"/pages/ruilen-en-retourneren\">hygiene products</a>. You'll find every step on our <a href=\"/pages/bestellingen-en-levering-1\">returns and exchanges</a> page.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -224,7 +224,7 @@
                 "pay": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Veilig betalen",
+                    "heading": "Secure payment",
                     "open_by_default": false,
                     "icon": "none"
                   },
@@ -232,7 +232,7 @@
                     "pay_t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Je betaalt via de beveiligde checkout van Shopify, met o.a. iDEAL en Klarna. Wij zien en bewaren nooit je betaalgegevens.</p>",
+                        "text": "<p>You pay through Shopify's secure checkout, with options including iDEAL and Klarna. We never see or store your payment details.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -251,7 +251,7 @@
                 "help": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Vragen? Wij helpen je graag",
+                    "heading": "Questions? We're happy to help",
                     "open_by_default": false,
                     "icon": "none"
                   },
@@ -259,7 +259,7 @@
                     "help_t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Mail ons via de <a href=\"/pages/contact\">contactpagina</a>. We reageren op werkdagen tussen 09:00 en 17:00.</p>",
+                        "text": "<p>Email us via our <a href=\"/pages/contact\">contact page</a>. We reply on weekdays between 09:00 and 17:00.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -317,7 +317,7 @@
     },
     "usps": {
       "type": "_blocks",
-      "name": "Voordelen",
+      "name": "Benefits",
       "blocks": {
         "usp": {
           "type": "ai_gen_block_1e9e953",
@@ -338,14 +338,14 @@
             "columns_desktop": "3",
             "columns_mobile": "3",
             "show_feature_1": true,
-            "feature_1_title": "Gratis verzending",
-            "feature_1_text": "Op elke bestelling",
+            "feature_1_title": "Free shipping",
+            "feature_1_text": "On every order",
             "show_feature_2": true,
-            "feature_2_title": "Veilig betalen",
+            "feature_2_title": "Secure payment",
             "feature_2_text": "iDEAL · Klarna",
             "show_feature_3": true,
-            "feature_3_title": "Persoonlijke service",
-            "feature_3_text": "Ma–vr 09:00–17:00",
+            "feature_3_title": "Personal service",
+            "feature_3_text": "Mon–Fri 09:00–17:00",
             "icon_size": 28,
             "icon_color": "#8b6b4a",
             "title_font_weight": "700",
@@ -371,12 +371,12 @@
     },
     "recommendations": {
       "type": "product-recommendations",
-      "name": "Aanbevolen",
+      "name": "Recommended",
       "blocks": {
         "heading": {
           "type": "text",
           "settings": {
-            "text": "<h2>Misschien vind je dit ook mooi</h2>",
+            "text": "<h2>You may also like</h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",

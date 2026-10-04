@@ -1,0 +1,505 @@
+{
+  "products": [
+    {
+      "id": "gid://shopify/Product/10621035086163",
+      "handle": "lashlift-waterproof-mascara",
+      "title": "LashLift Waterproof Mascara",
+      "productType": "Mascara",
+      "tags": [
+        "make-up",
+        "ogen",
+        "waterproof"
+      ],
+      "descriptionHtml": "<p>Geef je wimpers een prachtige lift, intens volume en extra lengte met de Lovaire LashLift Waterproof Mascara. ✨</p>\n<h3>Waarom je hem gaat willen</h3>\n<ul>\n<li>Diepzwarte, waterproof formule</li>\n<li>Blijft de hele dag zitten zonder uit te lopen of te klonteren</li>\n<li>Flexibel siliconen borsteltje dat iedere wimper bereikt</li>\n<li>Volle, gesepareerde en langdurige oogopslag</li>\n</ul>",
+      "seo": {
+        "title": "LashLift Waterproof Mascara | Lovaire",
+        "description": "Lift, volume en lengte die de hele dag blijft zitten. Diepzwarte, waterproof mascara die niet uitloopt of klontert. Bestel bij Lovaire."
+      },
+      "options": [
+        {
+          "id": "gid://shopify/ProductOption/13469352132947",
+          "name": "Title",
+          "optionValues": [
+            {
+              "id": "gid://shopify/ProductOptionValue/8200315765075",
+              "name": "Default Title"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10622559945043",
+      "handle": "lovaire-support-bh",
+      "title": "Support BH",
+      "productType": "BH",
+      "tags": [
+        "comfort",
+        "lingerie",
+        "shapewear"
+      ],
+      "descriptionHtml": "<h3>Ultiem comfort en ondersteuning – de hele dag door</h3>\n<p>Zeg vaarwel tegen knellende beugels, afzakkende bandjes en ongemakkelijke BH's. De Lovaire Support BH is ontworpen om je natuurlijke vormen prachtig te ondersteunen, terwijl je geniet van ongeëvenaard comfort van 's ochtends vroeg tot 's avonds laat.</p>\n<h3>Waarom je hem gaat willen</h3>\n<ul>\n<li>Geen knellende beugels</li>\n<li>Bandjes die blijven zitten</li>\n<li>Ondersteunt je natuurlijke vormen</li>\n<li>Comfortabel van 's ochtends tot 's avonds</li>\n</ul>\n<p>Kies hierboven je kleur en cupmaat.</p>",
+      "seo": {
+        "title": "Support BH zonder beugel | Lovaire",
+        "description": "Comfortabele support BH zonder knellende beugels of afzakkende bandjes. Ondersteunt je natuurlijke vormen van 's ochtends tot 's avonds."
+      },
+      "options": [
+        {
+          "id": "gid://shopify/ProductOption/13405582328147",
+          "name": "Kleur",
+          "optionValues": [
+            {
+              "id": "gid://shopify/ProductOptionValue/7992243978579",
+              "name": "Beige"
+            },
+            {
+              "id": "gid://shopify/ProductOptionValue/7992244044115",
+              "name": "Zwart"
+            },
+            {
+              "id": "gid://shopify/ProductOptionValue/7992244011347",
+              "name": "Wit"
+            },
+            {
+              "id": "gid://shopify/ProductOptionValue/7992244076883",
+              "name": "Brons"
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/ProductOption/13412472258899",
+          "name": "Cupmaat",
+          "optionValues": [
+            {
+              "id": "gid://shopify/ProductOptionValue/8012545458515",
+              "name": "B"
+            },
+            {
+              "id": "gid://shopify/ProductOptionValue/8012545491283",
+              "name": "C"
+            },
+            {
+              "id": "gid://shopify/ProductOptionValue/8012545524051",
+              "name": "D"
+            },
+            {
+              "id": "gid://shopify/ProductOptionValue/8012545556819",
+              "name": "E"
+            },
+            {
+              "id": "gid://shopify/ProductOptionValue/8012545589587",
+              "name": "F"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10623189975379",
+      "handle": "self-tanner-tanning-lotion",
+      "title": "Self Tan Mousse",
+      "productType": "Zelfbruiner",
+      "tags": [
+        "gezicht",
+        "huidverzorging",
+        "lichaam",
+        "zelfbruiner"
+      ],
+      "descriptionHtml": "<p>De Lovaire Self Tan Mousse geeft je huid binnen enkele uren een natuurlijke bruine teint – zonder zon of zonnebank. Geschikt voor gezicht en lichaam.</p>\n<h3>Waarom je hem gaat willen</h3>\n<ul>\n<li>Geen oranje ondertoon</li>\n<li>Geen strepen of vlekken</li>\n<li>Sneldrogende, hydraterende formule</li>\n<li>Geschikt voor alle huidtypen</li>\n</ul>\n<h3>Zo gebruik je hem</h3>\n<ol>\n<li>Exfolieer je huid 24 uur van tevoren.</li>\n<li>Breng een kleine hoeveelheid aan met een tanning mitt.</li>\n<li>Verdeel gelijkmatig met ronddraaiende bewegingen.</li>\n<li>Laat volledig drogen voordat je kleding aantrekt.</li>\n<li>Laat het product 4–8 uur ontwikkelen.</li>\n</ol>\n<h3>Resultaat</h3>\n<ul>\n<li>Gelijkmatige kleurontwikkeling</li>\n<li>Houdt gemiddeld 5 tot 7 dagen</li>\n<li>Vervaagt geleidelijk</li>\n</ul>\n<h3>Veelgestelde vragen</h3>\n<p><strong>Word ik oranje?</strong><br>Nee, de formule is ontwikkeld voor een natuurlijke bruine teint zonder sterke oranje ondertoon.</p>\n<p><strong>Hoe lang blijft de kleur zichtbaar?</strong><br>Gemiddeld 5 tot 7 dagen, afhankelijk van je huidtype en verzorging.</p>\n<p><strong>Is het geschikt voor een gevoelige huid?</strong><br>De formule is geschikt voor de meeste huidtypen.</p>",
+      "seo": {
+        "title": "Self Tan Mousse – zelfbruiner voor gezicht & lichaam | Lovaire",
+        "description": "Binnen enkele uren een natuurlijke bruine teint zonder zon of zonnebank. Geen oranje ondertoon, geen strepen, houdt tot 7 dagen."
+      },
+      "options": [
+        {
+          "id": "gid://shopify/ProductOption/13401796673875",
+          "name": "Title",
+          "optionValues": [
+            {
+              "id": "gid://shopify/ProductOptionValue/7978858250579",
+              "name": "Default Title"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10626062057811",
+      "handle": "zelfkleurende-foundation-spf15",
+      "title": "Zelfkleurende Foundation SPF15",
+      "productType": "Foundation",
+      "tags": [
+        "gezicht",
+        "make-up",
+        "spf"
+      ],
+      "descriptionHtml": "<p>Eén foundation die zich automatisch aanpast aan jouw huidskleur. Binnen enkele seconden krijg je een stralende, verzorgde uitstraling – zonder zwaar make-up effect.</p>\n<h3>Waarom je hem gaat willen</h3>\n<ul>\n<li>Past zich automatisch aan jouw huidskleur aan</li>\n<li>Natuurlijke, egale finish</li>\n<li>Hydraterende en lichte formule</li>\n<li>SPF15 bescherming tegen de zon</li>\n<li>Geschikt voor dagelijks gebruik</li>\n</ul>\n<h3>Zo gebruik je hem</h3>\n<p>Breng een kleine hoeveelheid aan op een schone, gehydrateerde huid. Verdeel gelijkmatig over gezicht en hals met je vingers, een spons of een kwast.</p>\n<p><strong>Inhoud:</strong> 30 ml</p>",
+      "seo": {
+        "title": "Zelfkleurende Foundation SPF15 | Lovaire",
+        "description": "Foundation die zich automatisch aanpast aan jouw huidskleur. Natuurlijke, egale finish, hydraterend en met SPF15. 30 ml."
+      },
+      "options": [
+        {
+          "id": "gid://shopify/ProductOption/13405341122899",
+          "name": "Title",
+          "optionValues": [
+            {
+              "id": "gid://shopify/ProductOptionValue/7991392338259",
+              "name": "Default Title"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10634368057683",
+      "handle": "elektrische-spray-massage-borstel-lovaire",
+      "title": "Spray & Massage Haarborstel",
+      "productType": "Haarborstel",
+      "tags": [
+        "beauty-tools",
+        "haarverzorging"
+      ],
+      "descriptionHtml": "<p>Geef je haar de verzorging die het verdient. Deze borstel combineert een haarborstel met een ultrafijne spray die droog, pluizig en moeilijk doorkambaar haar helpt te hydrateren en te verzachten.</p>\n<h3>Waarom je hem gaat willen</h3>\n<ul>\n<li>Hydrateert en verzorgt het haar</li>\n<li>Ontwart zonder trekken of haarbreuk</li>\n<li>Vermindert pluizig haar</li>\n<li>Geschikt voor alle haartypes</li>\n<li>USB-oplaadbaar en eenvoudig in gebruik</li>\n</ul>\n<p>Voor zacht, glanzend en gezond uitziend haar – elke dag opnieuw. ✨</p>",
+      "seo": {
+        "title": "Spray & Massage Haarborstel | Lovaire",
+        "description": "Haarborstel met ultrafijne spray die droog en pluizig haar hydrateert en ontwart zonder trekken. USB-oplaadbaar."
+      },
+      "options": [
+        {
+          "id": "gid://shopify/ProductOption/13415334543699",
+          "name": "Title",
+          "optionValues": [
+            {
+              "id": "gid://shopify/ProductOptionValue/8020754071891",
+              "name": "Default Title"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10700816679251",
+      "handle": "lovaire-hairboost-shampoo",
+      "title": "HairBoost Shampoo",
+      "productType": "Shampoo",
+      "tags": [
+        "haarverzorging",
+        "hoofdhuid"
+      ],
+      "descriptionHtml": "<p>Last van dunner wordend haar of haaruitval? De Lovaire HairBoost Shampoo verzorgt je hoofdhuid en versterkt het haar vanaf de wortel.</p>\n<h3>Waarom je hem gaat willen</h3>\n<ul>\n<li>Verzorgt de hoofdhuid</li>\n<li>Versterkt het haar vanaf de wortel</li>\n<li>Helpt een gezonde haargroei te stimuleren</li>\n<li>Voller, sterker en zichtbaar gezonder uitziend haar bij regelmatig gebruik</li>\n</ul>",
+      "seo": {
+        "title": "HairBoost Shampoo tegen dunner wordend haar | Lovaire",
+        "description": "Verzorgt de hoofdhuid en versterkt het haar vanaf de wortel. Voor voller, sterker en gezonder uitziend haar bij regelmatig gebruik."
+      },
+      "options": [
+        {
+          "id": "gid://shopify/ProductOption/13492561084755",
+          "name": "Title",
+          "optionValues": [
+            {
+              "id": "gid://shopify/ProductOptionValue/8254551687507",
+              "name": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "collections": [
+    {
+      "id": "gid://shopify/Collection/684161466707",
+      "handle": "make-up",
+      "title": "Make-up",
+      "descriptionHtml": "<p>Make-up die makkelijk werkt en mooi blijft zitten. Voor een natuurlijke, verzorgde look – elke dag.</p>",
+      "seo": {
+        "title": "Make-up | Lovaire",
+        "description": "Ontdek de make-up van Lovaire: waterproof mascara met lift en volume en een zelfkleurende foundation met SPF15."
+      }
+    },
+    {
+      "id": "gid://shopify/Collection/684162679123",
+      "handle": "beauty-tools",
+      "title": "Beauty Tools",
+      "descriptionHtml": "<p>Slimme beauty tools die je dagelijkse routine makkelijker en beter maken.</p>",
+      "seo": {
+        "title": "Beauty Tools | Lovaire",
+        "description": "Slimme beauty tools van Lovaire, zoals de Spray & Massage Haarborstel die je haar hydrateert terwijl je borstelt."
+      }
+    },
+    {
+      "id": "gid://shopify/Collection/684164153683",
+      "handle": "shapewear",
+      "title": "Shapewear",
+      "descriptionHtml": "<p>Comfortabele ondersteuning die je de hele dag vergeet dat je draagt.</p>",
+      "seo": {
+        "title": "Shapewear | Lovaire",
+        "description": "Shapewear van Lovaire: comfortabele support BH zonder knellende beugels, voor ondersteuning van 's ochtends tot 's avonds."
+      }
+    },
+    {
+      "id": "gid://shopify/Collection/684164383059",
+      "handle": "huid-producten",
+      "title": "Huidverzorging",
+      "descriptionHtml": "<p>Verzorging voor een stralende, gezonde huid – van gezicht tot lichaam.</p>",
+      "seo": {
+        "title": "Huidverzorging | Lovaire",
+        "description": "Huidverzorging van Lovaire, zoals de Self Tan Mousse voor een natuurlijke bruine teint zonder zon of zonnebank."
+      }
+    },
+    {
+      "id": "gid://shopify/Collection/700971417939",
+      "handle": "haarverzorging",
+      "title": "Haarverzorging",
+      "descriptionHtml": "<p>Alles voor sterk, zacht en glanzend haar. Van een versterkende shampoo tot slimme tools die je haar verzorgen tijdens het borstelen.</p>",
+      "seo": {
+        "title": "Haarverzorging | Lovaire",
+        "description": "Haarverzorging van Lovaire: de HairBoost Shampoo en de Spray & Massage Haarborstel voor sterk, zacht en glanzend haar."
+      }
+    }
+  ],
+  "pages": [
+    {
+      "id": "gid://shopify/Page/177598955859",
+      "handle": "contact",
+      "title": "Contact",
+      "isPublished": true,
+      "body": ""
+    },
+    {
+      "id": "gid://shopify/Page/177774559571",
+      "handle": "over-ons",
+      "title": "Over ons",
+      "isPublished": true,
+      "body": "<p><strong>Welkom bij Lovaire — waar stijl, selfcare en trendy must-haves samenkomen</strong> </p>\n<p>Zie jij ook steeds die<strong> viral producten</strong> voorbij komen op TikTok en Instagram? Bij<strong> Lovaire</strong> vind je de leukste trendy items die jouw dagelijkse routine nét wat leuker, mooier en makkelijker maken. Van stijlvolle must-haves tot producten die zorgen voor die luxe selfcare-vibe — wij selecteren alleen items waar vrouwen écht blij van worden.</p>\n<p><strong>Lovaire</strong> is ontstaan vanuit een simpele gedachte: jezelf mooi, zelfverzekerd en speciaal voelen hoeft niet duur te zijn. Wij merkten hoe lastig het soms kan zijn om trendy producten van goede kwaliteit te vinden zonder daar te veel voor te betalen. Daarom besloten wij een webshop te creëren waar betaalbaarheid, kwaliteit en uitstraling samenkomen.</p>\n<p>Door samen te werken met <strong>betrouwbare leveranciers</strong> wereldwijd kunnen wij unieke en populaire producten aanbieden tegen eerlijke prijzen. Zo brengen we de nieuwste trends rechtstreeks naar jou, zonder onnodige tussenkosten.</p>\n<p>Bij<strong> Lovaire</strong> draait het niet alleen om producten, maar ook om beleving en vertrouwen. Klanttevredenheid staat bij ons op nummer één en ons team staat 6 dagen per week klaar om jou zo goed mogelijk te helpen. Wij geloven in<strong> goede service</strong>, snelle communicatie en een fijne shopervaring van begin tot eind.</p>\n<p>Heb je vragen, feedback of hulp nodig?<br>Neem gerust contact met ons op via lovairesupport@gmail.com  — wij helpen je met liefde verder </p>\n<p><strong>Ontdek jouw nieuwe favorieten en geef jezelf die glow-up die je verdient met Lovaire</strong>.</p>\n<p>kvk: 42074062</p>"
+    },
+    {
+      "id": "gid://shopify/Page/177774952787",
+      "handle": "bestellingen-en-levering",
+      "title": "Bestellingen en levering",
+      "isPublished": true,
+      "body": "<p><strong> Wanneer ontvang ik mijn bestelling?</strong></p>\n<p>Bij<strong> Lovaire </strong>bedraagt de gemiddelde levertijd 5 tot 12 werkdagen.<br>Wij verzenden onze producten rechtstreeks vanuit onze leveranciers naar jou toe. Dankzij deze werkwijze kunnen wij besparen op opslag- en transportkosten en jou trendy producten aanbieden tegen eerlijke prijzen — mét gratis verzending.</p>\n<p>Wij doen er alles aan om jouw bestelling zo snel mogelijk bij je thuis te bezorgen </p>\n<p>⸻</p>\n<p><strong>Mijn bestelling is vertraagd — wat nu?</strong></p>\n<p>In de meeste gevallen worden bestellingen netjes binnen de verwachte levertijd geleverd. Soms kan er helaas vertraging ontstaan bij de bezorgdienst of tijdens het internationale verzendproces.</p>\n<p>Je kunt jouw bestelling eenvoudig volgen via onze trackingpagina.</p>\n<p>Is jouw bestelling 3 dagen na de verwachte levertijd nog niet aangekomen? Neem dan gerust contact met ons op via <strong>lovairesupport@gmail.com</strong> — wij helpen je graag verder.</p>\n<p>⸻</p>\n<p><strong>Er ontbreken producten in mijn bestelling</strong></p>\n<p>Omdat wij samenwerken met meerdere leveranciers, kunnen producten soms apart van elkaar worden verzonden. Het kan dus voorkomen dat je bestelling in meerdere pakketjes wordt geleverd.</p>\n<p>Ontbrekende artikelen worden meestal binnen 2 tot 3 werkdagen alsnog bezorgd. Onze excuses voor het ongemak </p>\n<p>⸻</p>\n<p><strong>Wat zijn de verzendkosten?</strong></p>\n<p>Goed nieuws: bij<strong> Lovaire </strong>nemen wij alle verzendkosten voor onze rekening.<br>Jouw bestelling wordt dus altijd gratis verzonden </p>\n<p>⸻</p>\n<p><strong>Kan ik mijn bestelling annuleren?</strong></p>\n<p>Ja, dat kan! Neem hiervoor zo snel mogelijk contact met ons op.</p>\n<p>Omdat bestellingen direct worden verwerkt en doorgestuurd naar onze leveranciers, kan het zijn dat jouw bestelling al onderweg is. In dat geval kunnen wij de bestelling helaas niet meer annuleren.</p>\n<p>⸻</p>\n<p>I<strong>k ben niet tevreden met mijn bestelling — kan ik retourneren?</strong></p>\n<p>Natuurlijk. Bij<strong> Lovaire</strong> vinden wij het belangrijk dat jij tevreden bent met jouw aankoop.</p>\n<p>Wil je een product retourneren? Bekijk dan ons Retourbeleid voor alle informatie over retourneren en terugbetalingen.</p>"
+    },
+    {
+      "id": "gid://shopify/Page/177775837523",
+      "handle": "bestellingen-en-levering-1",
+      "title": "Ruilen en retourneren",
+      "isPublished": true,
+      "body": "<p>Bij <strong>Lovaire </strong>willen wij dat je met een goed gevoel shopt. Ben je toch niet helemaal tevreden met je bestelling? Geen zorgen — je kunt jouw bestelling tot 14 dagen na ontvangst retourneren.</p>\n<p>Zodra wij jouw retourzending hebben ontvangen, wordt het aankoopbedrag binnen 5 werkdagen teruggestort op jouw rekening </p>\n<p>Let op: ons warenhuis bevindt zich buiten Europa. Hierdoor zijn de kosten voor het retourneren van de bestelling voor rekening van de klant.</p>\n<p>⸻</p>\n<p><strong>Retourneren in 3 eenvoudige stappen</strong></p>\n<p><strong>Stap 1 </strong>— Vraag een retourformulier aan</p>\n<p>Stuur een e-mail naar l<strong>ovairesupport@gmail.com </strong>om een retourformulier aan te vragen.</p>\n<p>⸻</p>\n<p><strong>Stap 2 </strong>— Verstuur jouw retourzending</p>\n<p>Stuur de producten samen met het volledig ingevulde retourformulier terug naar het retouradres dat op het formulier staat vermeld.</p>\n<p>Wij raden aan om jouw retourzending altijd te voorzien van een Track &amp; Trace-code. Als verzender ben je verantwoordelijk voor de retourzending en zo voorkomen we misverstanden of zoekgeraakte pakketten.</p>\n<p>⸻</p>\n<p><strong>Stap 3</strong> — Ontvang jouw terugbetaling</p>\n<p>Zodra wij jouw retourpakket hebben ontvangen en verwerkt, zorgen wij ervoor dat het aankoopbedrag binnen 5 werkdagen wordt teruggestort op jouw bankrekening.<br></p>"
+    },
+    {
+      "id": "gid://shopify/Page/177776361811",
+      "handle": "ruilen-en-retourneren",
+      "title": "Retour- & Omruilbeleid — Hygiënische Producten",
+      "isPublished": true,
+      "body": "<p>Bij <strong>Lovaire</strong> staan kwaliteit, veiligheid en hygiëne altijd op de eerste plaats. Omdat sommige van onze producten vallen onder persoonlijke verzorging of hygiënische artikelen, hanteren wij voor deze producten een strikt geen-retour- en geen-terugbetalingsbeleid.</p>\n<p>⸻</p>\n<p><strong>Waarom geldt dit beleid?</strong></p>\n<p>Om iedere klant te garanderen dat onze producten altijd 100% nieuw, ongebruikt en hygiënisch veilig zijn, kunnen wij hygiënische producten helaas niet terugnemen zodra deze zijn verzonden.</p>\n<p>Omdat deze artikelen direct in contact komen met het lichaam of de huid, kunnen ze om veiligheids- en hygiëneredenen niet opnieuw worden verkocht of teruggeplaatst in onze voorraad.</p>\n<p>⸻</p>\n<p><strong>Welke producten vallen hieronder?</strong></p>\n<p>Dit beleid geldt voor alle producten die worden beschouwd als hygiënische of persoonlijke verzorgingsproducten, waaronder onder andere:</p>\n<p>* Ondergoed &amp; badmode<br>* Mondmaskers &amp; persoonlijke beschermingsmiddelen<br>* Huidverzorging &amp; cosmetica<br>* Uitwendige verzorgingsproducten<br>* Oorbellen &amp; body jewelry</p>\n<p>⸻</p>\n<p><strong>Beschadigde of verkeerd geleverde artikelen</strong></p>\n<p>Bij<strong> Lovaire</strong> staan wij achter de kwaliteit van onze producten. Mocht jouw bestelling beschadigd aankomen of heb je een verkeerd artikel ontvangen? Dan lossen wij dit natuurlijk graag voor je op </p>\n<p><strong>Belangrijk:</strong></p>\n<p>* Neem binnen 24 tot 48 uur na levering contact met ons op.<br>* Voeg duidelijke foto’s toe van:<br>    * het ontvangen product<br>    * de beschadiging of fout<br>    * de originele verpakking</p>\n<p>Z<strong>onder bewijs kunnen wij de claim helaas niet verwerken.</strong></p>\n<p>⸻</p>\n<p><strong>Tips voor een zorgeloze aankoop</strong></p>\n<p>Omdat hygiënische producten definitief zijn na aankoop, raden wij aan om vóór het bestellen goed te kijken naar:</p>\n<p>* De maattabellen en productinformatie<br>* Materialen, ingrediënten en specificaties<br>* Kleuren, pasvormen en varianten</p>\n<p>Twijfel je ergens over? Neem gerust contact op met ons supportteam via <strong>lovairesupport@gmail.com</strong> — wij helpen je graag verder voordat je bestelt </p>\n<p>⸻</p>\n<p><strong>Let op</strong></p>\n<p>Door een hygiënisch product via <strong>Lovaire</strong> aan te schaffen, ga je akkoord met dit Geen-Retour &amp; Geen-Terugbetalingsbeleid.</p>"
+    },
+    {
+      "id": "gid://shopify/Page/177776820563",
+      "handle": "verzendbeleid",
+      "title": "Verzendbeleid",
+      "isPublished": true,
+      "body": "<p><strong>Wat gebeurt er nadat ik mijn bestelling heb geplaatst?</strong></p>\n<p>Zodra je een bestelling hebt geplaatst bi<strong>j Lovaire</strong>, ontvang je automatisch een bestelbevestiging via het e-mailadres dat je hebt ingevuld.</p>\n<p>Kun je de e-mail niet vinden? Controleer dan ook even je spam- of ongewenste e-mailmap </p>\n<p>Wij verwerken bestellingen zo snel mogelijk. Alle orders worden doorgaans binnen 1 werkdag verwerkt en verzonden.</p>\n<p>⸻</p>\n<p><strong>Verkeerd adres ingevuld?</strong></p>\n<p>Heb je per ongeluk een fout gemaakt in je adresgegevens? Neem dan zo snel mogelijk contact met ons op via <strong>lovairesupport@gmail.com</strong></p>\n<p>Vermeld in het onderwerp van je e-mail duidelijk: DRINGEND — Adreswijziging</p>\n<p>Als jouw bestelling nog niet is verzonden, passen wij het adres graag voor je aan. Is het pakket al onderweg of kan het niet worden bezorgd vanwege een onvolledig adres? Dan kunnen wij hier helaas geen vergoeding voor aanbieden.</p>\n<p>⸻</p>\n<p><strong>Hoe kan ik mijn bestelling volgen?</strong></p>\n<p>Zodra jouw bestelling is verzonden, ontvang je een verzendbevestiging met een Track &amp; Trace-code zodat je jouw pakket eenvoudig kunt volgen.</p>\n<p>Houd er rekening mee dat het soms 2 tot 4 dagen kan duren voordat de trackinginformatie zichtbaar wordt. Bedankt voor je geduld </p>\n<p>⸻</p>\n<p><strong>Gemiddelde levertijden</strong></p>\n<p>Land / Regio    Verzendmethode    Gemiddelde levertijd</p>\n<p><br>Nederland    Standaard-    4–14 werkdagen<br>België    Standaard -   4–14 werkdagen<br>Europa    Standaard -   7–14 werkdagen<br>Rest van de wereld -   Standaard    7–15 werkdagen</p>\n<p><strong>Levertijden zijn gemiddelden en kunnen tijdens drukke periodes iets afwijken.</strong></p>\n<p>⸻</p>\n<p><strong>Van waar wordt mijn pakket verzonden?</strong></p>\n<p>Bij <strong>Lovaire </strong>werken wij samen met internationale logistieke partners en leveranciers. Hierdoor kunnen wij trendy producten aanbieden tegen betaalbare prijzen en wereldwijd leveren.</p>\n<p>Dankzij deze werkwijze besparen wij op opslag- en transportkosten, zodat jij kunt genieten van stijlvolle producten voor een eerlijke prijs. </p>"
+    },
+    {
+      "id": "gid://shopify/Page/177777017171",
+      "handle": "privacybeleid",
+      "title": "Privacybeleid",
+      "isPublished": true,
+      "body": "<p>Dit privacybeleid beschrijft hoe <strong>Lovaire </strong>jouw persoonlijke gegevens verzamelt, gebruikt en beschermt wanneer je onze website bezoekt of een bestelling plaatst via lovaire-shop.nl.</p>\n<p>⸻</p>\n<p><strong>Persoonlijke informatie die wij verzamelen</strong></p>\n<p>Wanneer je onze website bezoekt, verzamelen wij automatisch bepaalde gegevens over jouw apparaat, zoals:</p>\n<p>* Webbrowser type<br>* IP-adres<br>* Tijdzone<br>* Cookies die op jouw apparaat zijn opgeslagen</p>\n<p>Daarnaast verzamelen wij informatie over:</p>\n<p>* Bezochte pagina’s en bekeken producten<br>* Websites of zoekwoorden die jou naar onze site hebben geleid<br>* Hoe je onze website gebruikt en navigeert</p>\n<p>Deze gegevens noemen wij “Apparaatinformatie”.</p>\n<p>Wij verzamelen deze informatie via:</p>\n<p>Cookies – kleine bestanden die op jouw apparaat worden opgeslagen en een anonieme identificatie bevatten.<br>Logbestanden – registreren acties op onze website, zoals IP-adres, browser en bezoektijden.<br>Webbeacons, tags en pixels – technologieën die inzicht geven in het gebruik van onze website.</p>\n<p>Wanneer je een bestelling plaatst of probeert te plaatsen, verzamelen wij daarnaast:</p>\n<p>* Naam<br>* Factuuradres<br>* Verzendadres<br>* Betaalinformatie<br>* E-mailadres<br>* Telefoonnummer</p>\n<p>Deze gegevens noemen wij “Bestelinformatie”.</p>\n<p>Samen vormen deze gegevens jouw Persoonlijke Informatie.</p>\n<p>⸻</p>\n<p><strong>Hoe wij jouw gegevens gebruiken</strong></p>\n<p>Wij gebruiken jouw persoonlijke informatie voor de volgende doeleinden:</p>\n<p>* Het verwerken en leveren van bestellingen<br>* Het afhandelen van betalingen en facturen<br>* Communicatie over je bestelling<br>* Controle op fraude en mogelijke risico’s<br>* Verbetering en optimalisatie van onze website<br>* Marketing en advertenties (indien toegestaan)</p>\n<p>⸻</p>\n<p><strong>Delen van persoonlijke informatie</strong></p>\n<p>Wij delen jouw gegevens alleen met derden die ons helpen onze diensten uit te voeren, zoals:</p>\n<p>* Shopify – voor het hosten van onze webshop<br>* Google Analytics – voor het analyseren van websitegebruik</p>\n<p>Daarnaast kunnen wij gegevens delen wanneer dit wettelijk verplicht is of om onze rechten te beschermen.</p>\n<p>⸻</p>\n<p><strong>Gerichte advertenties</strong></p>\n<p>Wij kunnen jouw gegevens gebruiken om relevante advertenties en aanbiedingen te tonen die aansluiten bij jouw interesses.</p>\n<p>Je kunt meer informatie vinden over gerichte advertenties via de Network Advertising Initiative.</p>\n<p>Wij reageren niet op “Do Not Track”-signalen van browsers.</p>\n<p>⸻</p>\n<p><strong>Jouw rechten (EU)</strong></p>\n<p>Als je in Europa woont, heb je recht op:</p>\n<p>* Inzage in jouw gegevens<br>* Correctie van jouw gegevens<br>* Verwijdering van jouw gegevens</p>\n<p>Wil je gebruik maken van deze rechten? Neem dan contact met ons op via de gegevens hieronder.</p>\n<p>⸻</p>\n<p><strong>Bewaren van gegevens</strong></p>\n<p>Wij bewaren jouw bestelgegevens zolang dat nodig is voor administratieve en wettelijke doeleinden, tenzij je een verzoek indient om deze te verwijderen.</p>\n<p>⸻</p>\n<p><strong>Wijzigingen</strong></p>\n<p>Lovaire kan dit privacybeleid van tijd tot tijd aanpassen. De meest recente versie is altijd beschikbaar op onze website.</p>\n<p>⸻</p>\n<p><strong>Contact</strong></p>\n<p>Voor vragen of verzoeken over privacy kun je contact met ons opnemen via: <strong>lovairesupport@gmail.com</strong></p>"
+    },
+    {
+      "id": "gid://shopify/Page/184109662547",
+      "handle": "algemene-voorwaarden",
+      "title": "Algemene voorwaarden",
+      "isPublished": false,
+      "body": "<p><em>Laatst bijgewerkt: 1 oktober 2026</em></p>\n<h2>1. Wie zijn wij</h2>\n<p>Lovaire<br>Biesveldje 15, 5706 KT Helmond, Nederland<br>E-mail: lovairesupport@gmail.com<br>KVK: 42074062<br>Btw-nummer: NL005474481B21</p>\n<h2>2. Toepasselijkheid</h2>\n<p>Deze voorwaarden gelden voor elk aanbod van Lovaire en voor iedere overeenkomst die via lovaire.nl tot stand komt. Door een bestelling te plaatsen ga je akkoord met deze voorwaarden.</p>\n<h2>3. Aanbod en prijzen</h2>\n<p>Alle prijzen zijn in euro's en inclusief btw. Verzending is gratis, tenzij bij het afrekenen anders wordt vermeld. Kennelijke vergissingen of fouten in het aanbod binden ons niet.</p>\n<h2>4. Bestellen en betalen</h2>\n<p>De overeenkomst komt tot stand zodra je de bestelling hebt afgerond en de orderbevestiging per e-mail hebt ontvangen. Je betaalt via de beveiligde checkout van Shopify, met onder andere iDEAL en Klarna.</p>\n<h2>5. Levering</h2>\n<p>De gemiddelde levertijd is 5 tot 12 werkdagen. Wij werken met leveranciers, ook buiten Europa, die rechtstreeks naar jou verzenden. Een bestelling kan daardoor in meerdere pakketten aankomen. Je ontvangt een track &amp; trace-code zodra je bestelling onderweg is. Het risico van verlies of beschadiging gaat pas op jou over op het moment dat je het pakket ontvangt.</p>\n<h2>6. Herroepingsrecht (bedenktijd)</h2>\n<p>Je hebt het recht om de overeenkomst binnen 14 dagen na ontvangst zonder opgave van reden te ontbinden. Meld dit binnen deze termijn via lovairesupport@gmail.com. Na je melding heb je opnieuw 14 dagen om het product terug te sturen. De kosten van het terugsturen zijn voor jouw rekening.</p>\n<p>Wij betalen het aankoopbedrag binnen 14 dagen na je melding terug, maar wij mogen wachten tot we het product hebben ontvangen of tot je kunt aantonen dat je het hebt teruggestuurd. Behandel het product tijdens de bedenktijd zorgvuldig: pak het alleen uit of gebruik het voor zover nodig om te beoordelen of je het wilt houden.</p>\n<p><strong>Uitzondering:</strong> het herroepingsrecht geldt niet voor verzegelde producten die om redenen van gezondheidsbescherming of hygiëne niet geschikt zijn om te worden teruggezonden en waarvan de verzegeling na levering is verbroken, zoals geopende cosmetica en verzorgingsproducten. Meer informatie vind je op onze pagina <a href=\"/pages/ruilen-en-retourneren\">Retour- &amp; omruilbeleid hygiënische producten</a>.</p>\n<h2>7. Beschadigde of verkeerde producten</h2>\n<p>Is je product beschadigd of heb je een verkeerd artikel ontvangen? Neem dan zo snel mogelijk contact met ons op, bij voorkeur binnen 48 uur na levering, en stuur foto's mee van het product, de schade en de verpakking. Wij zoeken samen met jou naar een passende oplossing. Je wettelijke rechten blijven altijd van toepassing.</p>\n<h2>8. Klachten</h2>\n<p>Heb je een klacht? Mail ons via lovairesupport@gmail.com. Wij reageren binnen 14 dagen. Komen we er samen niet uit, dan kun je je klacht ook indienen via het Europese ODR-platform: <a href=\"https://ec.europa.eu/consumers/odr\">ec.europa.eu/consumers/odr</a>.</p>\n<h2>9. Privacy</h2>\n<p>Wij gaan zorgvuldig om met je persoonsgegevens. Lees hierover meer in ons <a href=\"/pages/privacybeleid\">privacybeleid</a>.</p>\n<h2>10. Toepasselijk recht</h2>\n<p>Op deze voorwaarden en alle overeenkomsten met Lovaire is Nederlands recht van toepassing.</p>"
+    }
+  ],
+  "menus": [
+    {
+      "id": "gid://shopify/Menu/326566379859",
+      "handle": "main-menu",
+      "title": "Hoofdmenu",
+      "items": [
+        {
+          "id": "gid://shopify/MenuItem/798832755027",
+          "title": "Home",
+          "type": "FRONTPAGE",
+          "url": "/",
+          "resourceId": null,
+          "items": []
+        },
+        {
+          "id": "gid://shopify/MenuItem/798832787795",
+          "title": "Collecties",
+          "type": "COLLECTIONS",
+          "url": "/collections",
+          "resourceId": null,
+          "items": [
+            {
+              "id": "gid://shopify/MenuItem/804525965651",
+              "title": "Make-up",
+              "type": "COLLECTION",
+              "url": "/collections/make-up",
+              "resourceId": "gid://shopify/Collection/684161466707"
+            },
+            {
+              "id": "gid://shopify/MenuItem/804525932883",
+              "title": "Huidverzorging",
+              "type": "COLLECTION",
+              "url": "/collections/huid-producten",
+              "resourceId": "gid://shopify/Collection/684164383059"
+            },
+            {
+              "id": "gid://shopify/MenuItem/851664601427",
+              "title": "Haarverzorging",
+              "type": "COLLECTION",
+              "url": "/collections/haarverzorging",
+              "resourceId": "gid://shopify/Collection/700971417939"
+            },
+            {
+              "id": "gid://shopify/MenuItem/804525900115",
+              "title": "Beauty Tools",
+              "type": "COLLECTION",
+              "url": "/collections/beauty-tools",
+              "resourceId": "gid://shopify/Collection/684162679123"
+            },
+            {
+              "id": "gid://shopify/MenuItem/804525998419",
+              "title": "Shapewear",
+              "type": "COLLECTION",
+              "url": "/collections/shapewear",
+              "resourceId": "gid://shopify/Collection/684164153683"
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/MenuItem/798832820563",
+          "title": "Contact",
+          "type": "PAGE",
+          "url": "/pages/contact",
+          "resourceId": "gid://shopify/Page/177598955859",
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/Menu/326566412627",
+      "handle": "footer",
+      "title": "Voettekstmenu",
+      "items": [
+        {
+          "id": "gid://shopify/MenuItem/798832853331",
+          "title": "Zoeken",
+          "type": "SEARCH",
+          "url": "/search",
+          "resourceId": null,
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/Menu/326566445395",
+      "handle": "customer-account-main-menu",
+      "title": "Hoofdmenu klantaccount",
+      "items": [
+        {
+          "id": "gid://shopify/MenuItem/798832886099",
+          "title": "Bestellingen",
+          "type": "CUSTOMER_ACCOUNT_PAGE",
+          "url": "https://account.lovaire.nl/orders",
+          "resourceId": "gid://shopify/CustomerAccountPage/158419321171",
+          "items": []
+        },
+        {
+          "id": "gid://shopify/MenuItem/798832918867",
+          "title": "Profiel",
+          "type": "CUSTOMER_ACCOUNT_PAGE",
+          "url": "https://account.lovaire.nl/profile",
+          "resourceId": "gid://shopify/CustomerAccountPage/158419353939",
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/Menu/326919782739",
+      "handle": "informatie",
+      "title": "Informatie",
+      "items": [
+        {
+          "id": "gid://shopify/MenuItem/799816450387",
+          "title": "Contact",
+          "type": "PAGE",
+          "url": "/pages/contact",
+          "resourceId": "gid://shopify/Page/177598955859",
+          "items": []
+        },
+        {
+          "id": "gid://shopify/MenuItem/799816483155",
+          "title": "Volg je bestelling",
+          "type": "PAGE",
+          "url": "/pages/contact",
+          "resourceId": "gid://shopify/Page/177598955859",
+          "items": []
+        },
+        {
+          "id": "gid://shopify/MenuItem/799817924947",
+          "title": "Over ons",
+          "type": "PAGE",
+          "url": "/pages/over-ons",
+          "resourceId": "gid://shopify/Page/177774559571",
+          "items": []
+        },
+        {
+          "id": "gid://shopify/MenuItem/799817892179",
+          "title": "Bestellingen en levering",
+          "type": "PAGE",
+          "url": "/pages/bestellingen-en-levering",
+          "resourceId": "gid://shopify/Page/177774952787",
+          "items": []
+        },
+        {
+          "id": "gid://shopify/MenuItem/799817990483",
+          "title": "Verzendbeleid",
+          "type": "PAGE",
+          "url": "/pages/verzendbeleid",
+          "resourceId": "gid://shopify/Page/177776820563",
+          "items": []
+        },
+        {
+          "id": "gid://shopify/MenuItem/799817957715",
+          "title": "Ruilen en retourneren",
+          "type": "PAGE",
+          "url": "/pages/bestellingen-en-levering-1",
+          "resourceId": "gid://shopify/Page/177775837523",
+          "items": []
+        },
+        {
+          "id": "gid://shopify/MenuItem/799818023251",
+          "title": "Retourbeleid hygiënische producten",
+          "type": "PAGE",
+          "url": "/pages/ruilen-en-retourneren",
+          "resourceId": "gid://shopify/Page/177776361811",
+          "items": []
+        },
+        {
+          "id": "gid://shopify/MenuItem/799818056019",
+          "title": "Algemene voorwaarden",
+          "type": "PAGE",
+          "url": "/pages/contact",
+          "resourceId": "gid://shopify/Page/177598955859",
+          "items": []
+        },
+        {
+          "id": "gid://shopify/MenuItem/799818088787",
+          "title": "Privacybeleid",
+          "type": "PAGE",
+          "url": "/pages/privacybeleid",
+          "resourceId": "gid://shopify/Page/177777017171",
+          "items": []
+        }
+      ]
+    }
+  ]
+}
