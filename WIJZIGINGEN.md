@@ -154,3 +154,11 @@ Backup van alle Nederlandse teksten (producten, collecties, pagina's, menu's): `
 - Menu's: Main menu, Information, Footer menu en klantaccountmenu in het Engels.
 - Niet aangepast: Shopify-privacybeleid onder Instellingen → Beleid (opnieuw genereren in het Engels), en de winkeltaal (nl) — kan alleen in de admin.
 - "Shop the favourites" opnieuw ontworpen: latte-achtergrond, boogvormige foto's, verspringende kolommen, N° 01-nummering, tweede foto bij hover, ronde "+"-knop om direct toe te voegen.
+
+## Update: telefoonweergave verbeterd (4 oktober 2026)
+Gecontroleerd met een lokale weergave van de eigen secties op 390 px breed (Chromium-screenshots).
+- Hero: compactere tekst, foto in boogvorm, tweede knop als tekstlink, vinkjes gecentreerd op één regel waar het past, embleem kleiner.
+- Voordelenblok: op mobiel icoon boven de tekst, gecentreerd in een 2×2-raster met scheidingslijnen (geen smalle tekstkolommen meer).
+- Categorieën: op mobiel 3 + 2 gecentreerd i.p.v. afgesneden scrollrij.
+- Reviewscore: netjes gecentreerd als het over twee regels gaat.
+- Het nieuwe thema is inmiddels gepubliceerd (live), dus deze wijzigingen staan in een kopie: "Lovaire – Nieuw design (mobiel verbeterd)" (208376430931).

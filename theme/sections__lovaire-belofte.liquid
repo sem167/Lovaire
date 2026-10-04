@@ -23,7 +23,14 @@
   .lvb-{{ sid }}.lvb--list .lvb__icon { margin: 0; flex: none; width: 50px; height: 50px; background: #f6e7de; }
   .lvb-{{ sid }}.lvb--list .lvb__icon svg { width: 22px; height: 22px; }
   .lvb-{{ sid }}.lvb--list .lvb__card h3 { margin: 0 0 3px; }
-  @media (max-width: 899px) { .lvb-{{ sid }}.lvb--list .lvb__card:nth-child(-n+2) { border-bottom: 1px solid #efe4da; } }
+  @media (max-width: 899px) {
+    .lvb-{{ sid }}.lvb--list .lvb__card { flex-direction: column; text-align: center; gap: 10px; padding: 22px 8px; }
+    .lvb-{{ sid }}.lvb--list .lvb__card:nth-child(-n+2) { border-bottom: 1px solid #efe4da; }
+    .lvb-{{ sid }}.lvb--list .lvb__card:nth-child(odd) { border-right: 1px solid #efe4da; }
+    .lvb-{{ sid }}.lvb--list .lvb__icon { width: 44px; height: 44px; }
+    .lvb-{{ sid }}.lvb--list .lvb__card h3 { font-size: 14px; }
+    .lvb-{{ sid }}.lvb--list .lvb__card p { font-size: 12px; line-height: 1.45; }
+  }
 {% endstyle %}
 
 <section class="lvb-{{ sid }} lvb--{{ section.settings.layout }}">
