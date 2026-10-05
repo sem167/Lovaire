@@ -285,11 +285,17 @@
     },
     "story": {
       "type": "lovaire-product-story",
-      "settings": {}
+      "settings": {
+        "blend_top": "#fbf8f5",
+        "blend_bottom": "#f9f5f1"
+      }
     },
     "howto": {
       "type": "lovaire-product-howto",
-      "settings": {}
+      "settings": {
+        "blend_top": "#f9f5f1",
+        "blend_bottom": "#f5e9e1"
+      }
     },
     "belofte": {
       "type": "lovaire-belofte",
@@ -340,22 +346,31 @@
         "background": "#f6e7de",
         "padding_top": 72,
         "padding_bottom": 72,
-        "layout": "cards"
+        "layout": "cards",
+        "blend_top": "#f5e9e1",
+        "blend_bottom": "#faf3ee"
       }
     },
     "benefits": {
       "type": "lovaire-product-benefits",
-      "settings": {}
+      "settings": {
+        "blend_top": "#ffffff",
+        "blend_bottom": "#fbf8f5"
+      }
     },
     "faq": {
       "type": "lovaire-product-faq",
       "settings": {
-        "background": "#ffffff"
+        "background": "#ffffff",
+        "blend_top": "#faf3ee",
+        "blend_bottom": "#f9f5f1"
       }
     },
     "cta": {
       "type": "lovaire-product-cta",
-      "settings": {}
+      "settings": {
+        "blend_top": "#f9f5f1"
+      }
     }
   },
   "order": [

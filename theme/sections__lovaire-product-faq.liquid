@@ -5,7 +5,7 @@
   assign lines = raw | newline_to_br | split: '<br />'
 -%}
 {% style %}
-  .lpf-{{ sid }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
+  .lpf-{{ sid }} { background: {% render 'lovaire-bg', bg: section.settings.background, top: section.settings.blend_top, bottom: section.settings.blend_bottom %}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
   .lpf-{{ sid }} .lpf__inner { max-width: 760px; margin: 0 auto; padding: 0 20px; }
   .lpf-{{ sid }} .lpf__head { text-align: center; margin-bottom: 28px; }
   .lpf-{{ sid }} .lpf__eyebrow { font-family: var(--font-body--family); font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: #8b6b4a; margin: 0 0 12px; }
@@ -56,6 +56,8 @@
     { "type": "richtext", "id": "a3", "label": "Antwoord 3", "default": "<p>You pay through Shopify's secure checkout, with options including iDEAL and Klarna.</p>" },
     { "type": "text", "id": "q4", "label": "Vraag 4", "default": "I have another question" },
     { "type": "richtext", "id": "a4", "label": "Antwoord 4", "default": "<p>We're happy to help. Send us a message via the contact page and we'll get back to you as soon as possible.</p>" },
+    { "type": "color", "id": "blend_top", "label": "Overloop boven (automatisch)" },
+    { "type": "color", "id": "blend_bottom", "label": "Overloop onder (automatisch)" },
     { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f8f1ec" },
     { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 72 },
     { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "default": 72 }

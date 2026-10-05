@@ -1,6 +1,6 @@
 {%- assign sid = section.id | replace: '_', '' | downcase -%}
 {% style %}
-  .lv-fav-{{ sid }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
+  .lv-fav-{{ sid }} { background: {% render 'lovaire-bg', bg: section.settings.background, top: section.settings.blend_top, bottom: section.settings.blend_bottom %}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
   .lv-fav-{{ sid }} .lv-fav__inner { max-width: 1240px; margin: 0 auto; padding: 0 16px; }
   @media (min-width: 750px) { .lv-fav-{{ sid }} .lv-fav__inner { padding: 0 32px; } }
   .lv-fav-{{ sid }} .lv-fav__head { text-align: center; margin: 0 auto 40px; max-width: 640px; }
@@ -131,6 +131,8 @@
     { "type": "range", "id": "badge_count", "label": "Aantal producten met label", "min": 0, "max": 6, "step": 1, "default": 0 },
     { "type": "text", "id": "button_label", "label": "Knop onderaan", "default": "Shop all" },
     { "type": "url", "id": "button_link", "label": "Link" },
+    { "type": "color", "id": "blend_top", "label": "Overloop boven (automatisch)" },
+    { "type": "color", "id": "blend_bottom", "label": "Overloop onder (automatisch)" },
     { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f4ece4" },
     { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 80 },
     { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "default": 80 }

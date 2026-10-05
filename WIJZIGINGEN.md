@@ -190,3 +190,10 @@ In nieuw concept-thema "Lovaire – zonder reviews" (208439312723), kopie van he
 - Homepage: reviewsectie weg. Productpagina: reviewsectie en sterren onder de titel weg.
 - Sterren in productkaarten ("Shop the favourites") en score in het koopblok uit via nieuwe instelling "Reviewsterren tonen" / "Reviewscore tonen" (standaard uit) – later met één vinkje weer aan te zetten.
 - Loox zelf en de bestaande echte reviews zijn niet verwijderd.
+
+## Update: zachte overgangen tussen secties (5 oktober 2026)
+In concept-thema "Lovaire – zonder reviews" (208439312723).
+- Nieuwe snippet `lovaire-bg`: elke eigen sectie loopt boven en onder met een verloop over in de kleur van de buursectie (geen harde kleurgrens meer). Hero loopt onderaan zacht over.
+- `theme/blend.py` (draai als allerlaatste) rekent per pagina de overloopkleuren uit; tussen twee eigen secties wordt de mengkleur gebruikt. De zwarte footer wordt bewust niet gemengd.
+- Scheidingslijnen in het voordelenblok vervagen nu naar de randen; de harde lijnen boven en onder dat blok zijn weg.
+- Pipeline: build.py → build_product.py → build_pages.py → restyle.py → translate_en.py → product_page.py → hide_reviews.py → blend.py

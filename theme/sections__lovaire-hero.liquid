@@ -1,6 +1,9 @@
 {%- assign sid = section.id | replace: '_', '' | downcase -%}
 {% style %}
   .lvh-{{ sid }} { position: relative; background: linear-gradient(165deg, {{ section.settings.background }} 0%, #fbf4ef 100%); overflow: hidden; }
+  {%- if section.settings.blend_bottom != blank -%}
+  .lvh-{{ sid }}::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 110px; background: linear-gradient(180deg, transparent, {{ section.settings.blend_bottom }}); pointer-events: none; z-index: 2; }
+  {%- endif -%}
   .lvh-{{ sid }} .lvh__grid { display: grid; grid-template-columns: 1fr; min-height: 0; }
   @media (min-width: 900px) { .lvh-{{ sid }} .lvh__grid { grid-template-columns: 1.05fr 1fr; min-height: {{ section.settings.height }}vh; } }
 
@@ -132,6 +135,7 @@
     { "type": "text", "id": "badge_title", "label": "Zwevend label – titel" },
     { "type": "text", "id": "badge_text", "label": "Zwevend label – tekst" },
     { "type": "text", "id": "seal_text", "label": "Draaiend embleem – tekst" },
+    { "type": "color", "id": "blend_bottom", "label": "Overloop onder (automatisch)" },
     { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f6e7de" },
     { "type": "range", "id": "height", "label": "Hoogte (desktop)", "min": 60, "max": 100, "step": 5, "unit": "vh", "default": 85 }
   ],

@@ -1,0 +1,7 @@
+{%- comment -%} Achtergrond met zachte overloop naar de buursecties. bg = eigen kleur, top/bottom = overloopkleur (leeg = geen overloop) {%- endcomment -%}
+{%- liquid
+  assign t = top | default: bg
+  assign b = bottom | default: bg
+  assign f = 'min(140px, 30%)'
+-%}
+linear-gradient(180deg, {{ t }} 0, {{ bg }} {{ f }}, {{ bg }} calc(100% - {{ f }}), {{ b }} 100%)

@@ -19,7 +19,8 @@
         "badge_text": "With tracking sent to your inbox",
         "seal_text": "LOVAIRE · BEAUTY · ESSENTIALS · ",
         "background": "#f6e7de",
-        "height": 85
+        "height": 85,
+        "blend_bottom": "#fdf9f7"
       }
     },
     "faq": {
@@ -231,7 +232,9 @@
         "padding_bottom": 80,
         "heading_italic": "favourites",
         "badge_text": "Favourite",
-        "badge_count": 0
+        "badge_count": 0,
+        "blend_top": "#f9f5f1",
+        "blend_bottom": "#f9f5f1"
       }
     },
     "belofte": {
@@ -283,7 +286,8 @@
         "background": "#ffffff",
         "padding_top": 0,
         "padding_bottom": 0,
-        "layout": "list"
+        "layout": "list",
+        "blend_top": "#fdf9f7"
       }
     },
     "categories": {
@@ -300,7 +304,8 @@
         ],
         "background": "#ffffff",
         "padding_top": 64,
-        "padding_bottom": 64
+        "padding_bottom": 64,
+        "blend_bottom": "#f9f5f1"
       }
     },
     "statement": {
@@ -311,7 +316,8 @@
         "show_line": true,
         "background": "#ffffff",
         "padding_top": 96,
-        "padding_bottom": 72
+        "padding_bottom": 72,
+        "blend_top": "#f9f5f1"
       }
     },
     "momenten": {

@@ -166,7 +166,8 @@
         ],
         "background": "#f6e7de",
         "padding_top": 16,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "blend_bottom": "#ffffff"
       }
     },
     "belofte": {

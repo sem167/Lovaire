@@ -12,7 +12,7 @@
   assign label = section.settings.add_label
 -%}
 {% style %}
-  .lpc-{{ sid }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px; }
+  .lpc-{{ sid }} { background: {% render 'lovaire-bg', bg: section.settings.background, top: section.settings.blend_top, bottom: section.settings.blend_bottom %}; padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px; }
   .lpc-{{ sid }} .lpc__card { max-width: 980px; margin: 0 auto; background: #fff; border-radius: 28px; overflow: hidden; display: grid; box-shadow: 0 30px 60px -40px rgba(80,50,20,.35); }
   @media (min-width: 760px) { .lpc-{{ sid }} .lpc__card { grid-template-columns: 1fr 1fr; } }
   .lpc-{{ sid }} .lpc__media { position: relative; aspect-ratio: 1; background: #efe4d9; }
@@ -119,6 +119,8 @@
     { "type": "text", "id": "perk_3", "label": "Voordeel 3", "default": "Secure checkout" },
     { "type": "checkbox", "id": "show_rating", "label": "Reviewscore tonen", "default": false },
     { "type": "checkbox", "id": "sticky", "label": "Vaste koopbalk onderin tonen", "default": true },
+    { "type": "color", "id": "blend_top", "label": "Overloop boven (automatisch)" },
+    { "type": "color", "id": "blend_bottom", "label": "Overloop onder (automatisch)" },
     { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f4ece4" },
     { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 64 },
     { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 140, "step": 4, "default": 96 }

@@ -1,6 +1,6 @@
 {%- assign sid = section.id | replace: '_', '' | downcase -%}
 {% style %}
-  .lvb-{{ sid }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
+  .lvb-{{ sid }} { background: {% render 'lovaire-bg', bg: section.settings.background, top: section.settings.blend_top, bottom: section.settings.blend_bottom %}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
   .lvb-{{ sid }} .lvb__inner { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
   .lvb-{{ sid }} .lvb__head { text-align: center; margin-bottom: 40px; }
   .lvb-{{ sid }} .lvb__eyebrow { font-family: var(--font-body--family); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: #8b6b4a; margin: 0 0 10px; }
@@ -16,7 +16,7 @@
   .lvb-{{ sid }} .lvb__pay { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin-top: 34px; }
   .lvb-{{ sid }} .lvb__pay svg { height: 26px; width: auto; }
   .lvb-{{ sid }} .lvb__paylabel { width: 100%; text-align: center; font-family: var(--font-body--family); font-size: 12px; color: #8a8a8a; margin-bottom: 4px; }
-  .lvb-{{ sid }}.lvb--list { border-top: 1px solid #efe4da; border-bottom: 1px solid #efe4da; }
+  .lvb-{{ sid }}.lvb--list { border: 0; }
   .lvb-{{ sid }}.lvb--list .lvb__grid { gap: 0; }
   .lvb-{{ sid }}.lvb--list .lvb__card { display: flex; align-items: center; gap: 14px; text-align: left; background: transparent; border-radius: 0; padding: 20px 6px; }
   .lvb-{{ sid }}.lvb--list .lvb__card:hover { transform: none; box-shadow: none; }
@@ -25,8 +25,9 @@
   .lvb-{{ sid }}.lvb--list .lvb__card h3 { margin: 0 0 3px; }
   @media (max-width: 899px) {
     .lvb-{{ sid }}.lvb--list .lvb__card { flex-direction: column; text-align: center; gap: 10px; padding: 22px 8px; }
-    .lvb-{{ sid }}.lvb--list .lvb__card:nth-child(-n+2) { border-bottom: 1px solid #efe4da; }
-    .lvb-{{ sid }}.lvb--list .lvb__card:nth-child(odd) { border-right: 1px solid #efe4da; }
+    .lvb-{{ sid }}.lvb--list .lvb__grid { position: relative; }
+    .lvb-{{ sid }}.lvb--list .lvb__grid::before { content: ""; position: absolute; left: 6%; right: 6%; top: 50%; height: 1px; background: linear-gradient(90deg, transparent, #e6d6c6, transparent); pointer-events: none; }
+    .lvb-{{ sid }}.lvb--list .lvb__grid::after { content: ""; position: absolute; top: 6%; bottom: 6%; left: 50%; width: 1px; background: linear-gradient(180deg, transparent, #e6d6c6, transparent); pointer-events: none; }
     .lvb-{{ sid }}.lvb--list .lvb__icon { width: 44px; height: 44px; }
     .lvb-{{ sid }}.lvb--list .lvb__card h3 { font-size: 14px; }
     .lvb-{{ sid }}.lvb--list .lvb__card p { font-size: 12px; line-height: 1.45; }
@@ -75,6 +76,8 @@
     { "type": "text", "id": "heading", "label": "Kop", "default": "Worry-free shopping at Lovaire" },
     { "type": "select", "id": "layout", "label": "Weergave", "default": "cards", "options": [ { "value": "cards", "label": "Kaarten" }, { "value": "list", "label": "Compacte lijst" } ] },
     { "type": "checkbox", "id": "show_payment", "label": "Betaaliconen tonen", "default": true },
+    { "type": "color", "id": "blend_top", "label": "Overloop boven (automatisch)" },
+    { "type": "color", "id": "blend_bottom", "label": "Overloop onder (automatisch)" },
     { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f6e7de" },
     { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 72 },
     { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "default": 72 }

@@ -13,7 +13,7 @@
 {%- if total > 0 -%}{%- assign avg = weighted | divided_by: total | round: 1 -%}{%- endif -%}
 
 {% style %}
-  .lvr-{{ sid }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
+  .lvr-{{ sid }} { background: {% render 'lovaire-bg', bg: section.settings.background, top: section.settings.blend_top, bottom: section.settings.blend_bottom %}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
   .lvr-{{ sid }} .lvr__inner { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
   .lvr-{{ sid }} .lvr__head { text-align: center; margin-bottom: 44px; }
   .lvr-{{ sid }} .lvr__eyebrow { font-family: var(--font-body--family); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: #8b6b4a; margin: 0 0 10px; }
@@ -76,6 +76,8 @@
     { "type": "text", "id": "heading", "label": "Kop", "default": "What customers say" },
     { "type": "product_list", "id": "products", "label": "Producten voor het gemiddelde (Loox)", "limit": 20 },
     { "type": "text", "id": "note", "label": "Kleine tekst onder de reviews" },
+    { "type": "color", "id": "blend_top", "label": "Overloop boven (automatisch)" },
+    { "type": "color", "id": "blend_bottom", "label": "Overloop onder (automatisch)" },
     { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f6e7de" },
     { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 72 },
     { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "default": 72 }
