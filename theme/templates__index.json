@@ -22,39 +22,6 @@
         "height": 85
       }
     },
-    "reviews": {
-      "type": "lovaire-reviews",
-      "blocks": {
-        "tiffany": {
-          "type": "review",
-          "settings": {
-            "text": "Incredible what this product does. I'm over 50, and with this product my wrinkles honestly show less. Very natural, and the colour really does adapt to your own skin tone. Very happy.",
-            "name": "Tiffany T.",
-            "rating": 5,
-            "product": "zelfkleurende-foundation-spf15"
-          }
-        }
-      },
-      "block_order": [
-        "tiffany"
-      ],
-      "settings": {
-        "eyebrow": "REAL REVIEWS",
-        "heading": "What customers say",
-        "products": [
-          "lashlift-waterproof-mascara",
-          "zelfkleurende-foundation-spf15",
-          "self-tanner-tanning-lotion",
-          "lovaire-hairboost-shampoo",
-          "elektrische-spray-massage-borstel-lovaire",
-          "lovaire-support-bh"
-        ],
-        "note": "Reviews are collected via Loox after purchase. Quotes translated from Dutch.",
-        "background": "#f6e7de",
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
     "faq": {
       "type": "section",
       "name": "Frequently asked questions",
@@ -408,7 +375,6 @@
     "favorieten",
     "statement",
     "momenten",
-    "reviews",
     "faq"
   ]
 }

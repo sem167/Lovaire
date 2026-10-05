@@ -184,3 +184,9 @@ In concept-thema 208376430931.
 ## Update: Engelse productafbeeldingen (4 oktober 2026)
 - 14 nieuwe afbeeldingen (map `fotos/`) in Lovaire-stijl, toegevoegd achter de bestaande foto's: mascara 3 (voordelen, gebruik, studio – met vrijstaande packshot), Support Bra 2, Self Tan Mousse 3, Foundation 2, Haarborstel 2, Shampoo 2. Teksten alleen uit de eigen productbeschrijvingen.
 - Bestaande foto's niet verwijderd: welke Nederlandse tekst bevatten kon niet worden gecontroleerd (cdn.shopify.com geblokkeerd in de werkomgeving).
+
+## Update: reviews (voorlopig) niet tonen (5 oktober 2026)
+In nieuw concept-thema "Lovaire – zonder reviews" (208439312723), kopie van het live thema. `theme/hide_reviews.py` draaien na product_page.py.
+- Homepage: reviewsectie weg. Productpagina: reviewsectie en sterren onder de titel weg.
+- Sterren in productkaarten ("Shop the favourites") en score in het koopblok uit via nieuwe instelling "Reviewsterren tonen" / "Reviewscore tonen" (standaard uit) – later met één vinkje weer aan te zetten.
+- Loox zelf en de bestaande echte reviews zijn niet verwijderd.

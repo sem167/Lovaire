@@ -94,7 +94,7 @@
           <div class="lv-card__info">
             <span class="lv-card__no">N° {% if shown < 10 %}0{% endif %}{{ shown }}</span>
             {%- assign lx_n = product.metafields.loox.num_reviews.value | default: product.metafields.loox.num_reviews | plus: 0 -%}
-            {%- if lx_n > 0 -%}
+            {%- if lx_n > 0 and section.settings.show_rating -%}
               {%- assign lx_r = product.metafields.loox.avg_rating.value | default: product.metafields.loox.avg_rating | times: 1.0 | round: 1 -%}
               <span class="lv-card__rating"><span aria-hidden="true">★★★★★</span> {{ lx_r }} ({{ lx_n }})</span>
             {%- endif -%}
@@ -127,6 +127,7 @@
     { "type": "range", "id": "max_items", "label": "Maximaal aantal producten", "min": 2, "max": 12, "step": 1, "default": 12 },
     { "type": "range", "id": "columns", "label": "Kolommen (desktop)", "min": 2, "max": 4, "step": 1, "default": 3 },
     { "type": "text", "id": "badge_text", "label": "Label op de eerste producten", "default": "Favourite" },
+    { "type": "checkbox", "id": "show_rating", "label": "Reviewsterren tonen", "default": false },
     { "type": "range", "id": "badge_count", "label": "Aantal producten met label", "min": 0, "max": 6, "step": 1, "default": 0 },
     { "type": "text", "id": "button_label", "label": "Knop onderaan", "default": "Shop all" },
     { "type": "url", "id": "button_link", "label": "Link" },

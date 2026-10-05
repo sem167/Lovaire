@@ -253,11 +253,6 @@
                 "help"
               ]
             },
-            "rating": {
-              "type": "lovaire-rating",
-              "settings": {},
-              "blocks": {}
-            },
             "lovaire_trust": {
               "type": "lovaire-product-trust",
               "settings": {},
@@ -267,7 +262,6 @@
           "block_order": [
             "vendor",
             "title",
-            "rating",
             "price",
             "variants",
             "buy",
@@ -295,10 +289,6 @@
     },
     "howto": {
       "type": "lovaire-product-howto",
-      "settings": {}
-    },
-    "reviews": {
-      "type": "lovaire-product-reviews",
       "settings": {}
     },
     "belofte": {
@@ -373,7 +363,6 @@
     "benefits",
     "story",
     "howto",
-    "reviews",
     "belofte",
     "faq",
     "cta"

@@ -49,7 +49,7 @@
     <div class="lpc__body">
       {%- if section.settings.eyebrow != blank -%}<p class="lpc__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
       <h2 class="lpc__title">{{ p.title | escape }}</h2>
-      {%- if n > 0 -%}<p class="lpc__rating"><span aria-hidden="true">★★★★★</span> {{ r }} · {{ n }} {% if n == 1 %}review{% else %}reviews{% endif %}</p>{%- endif -%}
+      {%- if n > 0 and section.settings.show_rating -%}<p class="lpc__rating"><span aria-hidden="true">★★★★★</span> {{ r }} · {{ n }} {% if n == 1 %}review{% else %}reviews{% endif %}</p>{%- endif -%}
       <p class="lpc__price">{{ v.price | money }}{%- if v.compare_at_price > v.price -%}<s>{{ v.compare_at_price | money }}</s>{%- endif -%}</p>
       {%- if p.available -%}
         <button type="button" class="lpc__btn" data-lv-buy="{{ mode }}">{{ label | escape }}</button>
@@ -117,6 +117,7 @@
     { "type": "text", "id": "perk_1", "label": "Voordeel 1", "default": "Free shipping" },
     { "type": "text", "id": "perk_2", "label": "Voordeel 2", "default": "14-day returns" },
     { "type": "text", "id": "perk_3", "label": "Voordeel 3", "default": "Secure checkout" },
+    { "type": "checkbox", "id": "show_rating", "label": "Reviewscore tonen", "default": false },
     { "type": "checkbox", "id": "sticky", "label": "Vaste koopbalk onderin tonen", "default": true },
     { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f4ece4" },
     { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 64 },
