@@ -219,11 +219,21 @@
         "background": "#ffffff",
         "padding_top": 0,
         "padding_bottom": 40,
-        "layout": "list"
+        "layout": "list",
+        "blend_bottom": "#f6e7de"
+      }
+    },
+    "fade_0": {
+      "type": "lovaire-fade",
+      "settings": {
+        "from": "#ffffff",
+        "to": "#f6e7de",
+        "height": 70
       }
     }
   },
   "order": [
+    "fade_0",
     "header",
     "nav",
     "main",

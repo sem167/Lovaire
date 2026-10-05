@@ -1,0 +1,18 @@
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+{% style %}
+  .lvf-{{ sid }} { height: {{ section.settings.height }}px; background: linear-gradient(180deg, {{ section.settings.from }}, {{ section.settings.to }}); }
+{% endstyle %}
+<div class="lvf-{{ sid }}" aria-hidden="true"></div>
+
+{% schema %}
+{
+  "name": "Lovaire overloop",
+  "settings": [
+    { "type": "paragraph", "content": "Zachte kleurovergang tussen twee secties (bijvoorbeeld naar de footer)." },
+    { "type": "color", "id": "from", "label": "Van kleur", "default": "#ffffff" },
+    { "type": "color", "id": "to", "label": "Naar kleur", "default": "#f6e7de" },
+    { "type": "range", "id": "height", "label": "Hoogte", "min": 40, "max": 240, "step": 10, "default": 140 }
+  ],
+  "presets": [{ "name": "Lovaire overloop" }]
+}
+{% endschema %}

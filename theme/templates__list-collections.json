@@ -15,6 +15,7 @@
         "background": "#f6e7de",
         "padding_top": 64,
         "padding_bottom": 64,
+        "blend_top": "#ffffff",
         "blend_bottom": "#f5e9e1"
       }
     },
@@ -94,7 +95,8 @@
         "padding_top": 0,
         "padding_bottom": 40,
         "layout": "list",
-        "blend_top": "#f9f5f1"
+        "blend_top": "#f9f5f1",
+        "blend_bottom": "#f6e7de"
       }
     }
   },

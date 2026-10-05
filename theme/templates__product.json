@@ -369,7 +369,8 @@
     "cta": {
       "type": "lovaire-product-cta",
       "settings": {
-        "blend_top": "#f9f5f1"
+        "blend_top": "#f9f5f1",
+        "blend_bottom": "#f6e7de"
       }
     }
   },

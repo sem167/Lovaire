@@ -197,3 +197,7 @@ In concept-thema "Lovaire – zonder reviews" (208439312723).
 - `theme/blend.py` (draai als allerlaatste) rekent per pagina de overloopkleuren uit; tussen twee eigen secties wordt de mengkleur gebruikt. De zwarte footer wordt bewust niet gemengd.
 - Scheidingslijnen in het voordelenblok vervagen nu naar de randen; de harde lijnen boven en onder dat blok zijn weg.
 - Pipeline: build.py → build_product.py → build_pages.py → restyle.py → translate_en.py → product_page.py → hide_reviews.py → blend.py
+- Aanvulling: menu zonder rand-/scheidingslijn, aankondigingsbalk wit (zelfde kleur als menu), hero loopt bovenaan zacht over vanuit het witte menu.
+- Footer van zwart naar zachte blush (scheme-5) zonder scheidingslijn; de pagina loopt er met een verloop in over.
+- Nieuwe sectie `lovaire-fade`: blend.py zet die automatisch tussen twee Horizon-secties met verschillende kleur (ook richting header/footer), op alle pagina's.
+- FAQ op de homepage zonder lijntjes tussen de vragen.

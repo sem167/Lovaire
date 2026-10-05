@@ -20,6 +20,7 @@
         "seal_text": "LOVAIRE · BEAUTY · ESSENTIALS · ",
         "background": "#f6e7de",
         "height": 85,
+        "blend_top": "#ffffff",
         "blend_bottom": "#fdf9f7"
       }
     },
@@ -45,7 +46,7 @@
           "type": "accordion",
           "settings": {
             "icon": "plus",
-            "dividers": true,
+            "dividers": false,
             "type_preset": "h5",
             "inherit_color_scheme": true
           },
@@ -372,6 +373,14 @@
         "padding_top": 24,
         "padding_bottom": 88
       }
+    },
+    "fade_7": {
+      "type": "lovaire-fade",
+      "settings": {
+        "from": "#ffffff",
+        "to": "#f6e7de",
+        "height": 120
+      }
     }
   },
   "order": [
@@ -381,6 +390,7 @@
     "favorieten",
     "statement",
     "momenten",
-    "faq"
+    "faq",
+    "fade_7"
   ]
 }

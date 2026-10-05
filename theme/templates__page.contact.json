@@ -290,11 +290,38 @@
         "padding-block-start": 24,
         "padding-block-end": 72
       }
+    },
+    "fade_0": {
+      "type": "lovaire-fade",
+      "settings": {
+        "from": "#ffffff",
+        "to": "#f1e0d4",
+        "height": 70
+      }
+    },
+    "fade_2": {
+      "type": "lovaire-fade",
+      "settings": {
+        "from": "#f1e0d4",
+        "to": "#ffffff",
+        "height": 120
+      }
+    },
+    "fade_5": {
+      "type": "lovaire-fade",
+      "settings": {
+        "from": "#ffffff",
+        "to": "#f6e7de",
+        "height": 120
+      }
     }
   },
   "order": [
+    "fade_0",
     "main",
+    "fade_2",
     "info",
-    "form"
+    "form",
+    "fade_5"
   ]
 }
