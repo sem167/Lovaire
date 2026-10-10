@@ -61,17 +61,20 @@
     "campaign_banner": {
       "type": "lvs-campaign",
       "settings": {
+        "image": "shopify://shop_images/lovaire-cosy-season-banner.jpg",
         "focal": "right center",
         "eyebrow": "The knit edit",
         "title": "Cosy season",
-        "title_size": 96,
+        "title_size": 80,
         "button_label": "Shop the edit",
         "button_link": "shopify://collections/fashion-knitwear",
-        "position": "center",
+        "button_style": "light",
+        "position": "left",
         "text_color": "#ffffff",
-        "overlay": 30,
-        "height": 70,
-        "height_mobile": 60
+        "overlay_color": "#000000",
+        "overlay": 60,
+        "height": 80,
+        "height_mobile": 65
       }
     },
     "row_knit": {
