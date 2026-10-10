@@ -69,19 +69,18 @@
     "campaign_hero": {
       "type": "lvs-campaign",
       "settings": {
-        "image": "shopify://shop_images/lovaire-home-banner-desktop.jpg",
-        "image_mobile": "shopify://shop_images/lovaire-home-banner-mobile.jpg",
+        "image": "shopify://shop_images/lovaire-new-season.jpg",
         "focal": "center 25%",
         "eyebrow": "Autumn / Winter 2026",
         "title": "New season",
-        "title_size": 120,
+        "title_size": 136,
         "button_label": "Shop new in",
         "button_link": "shopify://collections/fashion-new-in",
-        "button_style": "dark",
-        "position": "left",
-        "text_color": "#111111",
-        "overlay_color": "#f5efe7",
-        "overlay": 85,
+        "button_style": "light",
+        "position": "bottom",
+        "text_color": "#ffffff",
+        "overlay_color": "#111111",
+        "overlay": 45,
         "height": 90,
         "height_mobile": 80
       }
@@ -151,18 +150,18 @@
     "campaign_banner": {
       "type": "lvs-campaign",
       "settings": {
-        "image": "shopify://shop_images/lovaire-cosy-season-banner.jpg",
-        "focal": "right center",
+        "image": "shopify://shop_images/lovaire-knit-edit.jpg",
+        "focal": "top",
         "eyebrow": "Scandinavian essentials",
         "title": "The knit edit",
-        "title_size": 80,
+        "title_size": 72,
         "button_label": "Shop knitwear",
         "button_link": "shopify://collections/fashion-knitwear",
-        "button_style": "light",
+        "button_style": "dark",
         "position": "left",
-        "text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay": 60,
+        "text_color": "#111111",
+        "overlay_color": "#f5efe7",
+        "overlay": 80,
         "height": 80,
         "height_mobile": 65
       }
