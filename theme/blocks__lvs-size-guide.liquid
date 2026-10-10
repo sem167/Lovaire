@@ -1,0 +1,99 @@
+{%- comment -%}
+  Maatgids naast de maatkeuze. Per product aanpasbaar via metavelden:
+  lovaire.fit (bv. "Fits true to size"), lovaire.model_info (bv. "Model is 172 cm and wears size S"),
+  lovaire.size_chart (regels "Maat | Borst | Taille | Heup", eerste regel = kop).
+  Zonder eigen tabel wordt de algemene maattabel getoond, duidelijk als algemene richtlijn.
+{%- endcomment -%}
+{%- assign bid = block.id | replace: '_', '' | downcase -%}
+{%- assign p = closest.product -%}
+{%- assign fit = p.metafields.lovaire.fit.value | default: p.metafields.lovaire.fit -%}
+{%- assign model = p.metafields.lovaire.model_info.value | default: p.metafields.lovaire.model_info -%}
+{%- assign chart = p.metafields.lovaire.size_chart.value | default: p.metafields.lovaire.size_chart -%}
+{%- if chart == blank -%}
+  {%- assign chart = block.settings.default_chart -%}
+  {%- assign is_general = true -%}
+{%- endif -%}
+{% style %}
+  .lsg-{{ bid }} { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; font-family: var(--font-body--family); font-size: 13px; color: #111; }
+  .lsg-{{ bid }} .lsg__fit { color: rgba(17,17,17,.65); }
+  .lsg-{{ bid }} .lsg__open { border: 0; background: none; padding: 0; font: inherit; color: #111; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+  .lsg-{{ bid }} .lsg__model { flex-basis: 100%; color: rgba(17,17,17,.65); }
+  .lsg-{{ bid }}-dlg { border: 0; padding: 0; margin: 0 0 0 auto; height: 100%; max-height: 100%; width: min(480px, 100%); max-width: 100%; background: #fff; color: #111; font-family: var(--font-body--family); }
+  .lsg-{{ bid }}-dlg::backdrop { background: rgba(17,17,17,.45); }
+  .lsg-{{ bid }}-dlg[open] { animation: lsgIn-{{ bid }} .35s cubic-bezier(.2,.7,.2,1) both; }
+  .lsg-{{ bid }}-dlg .lsg__inner { padding: 28px 24px 40px; }
+  .lsg-{{ bid }}-dlg .lsg__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+  .lsg-{{ bid }}-dlg h2 { margin: 0; font-size: 16px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #111; }
+  .lsg-{{ bid }}-dlg .lsg__x { border: 0; background: none; font-size: 26px; line-height: 1; cursor: pointer; color: #111; padding: 4px 8px; }
+  .lsg-{{ bid }}-dlg table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 0 0 14px; }
+  .lsg-{{ bid }}-dlg th, .lsg-{{ bid }}-dlg td { text-align: left; padding: 11px 8px; border-bottom: 1px solid rgba(17,17,17,.15); }
+  .lsg-{{ bid }}-dlg th { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; background: #f5efe7; }
+  .lsg-{{ bid }}-dlg p { font-size: 13px; line-height: 1.6; color: rgba(17,17,17,.65); margin: 0 0 12px; }
+  .lsg-{{ bid }}-dlg h3 { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; margin: 26px 0 10px; color: #111; }
+  .lsg-{{ bid }}-dlg ol { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.7; color: rgba(17,17,17,.65); }
+  @keyframes lsgIn-{{ bid }} { from { transform: translateX(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+{% endstyle %}
+
+<div class="lsg-{{ bid }}" {{ block.shopify_attributes }}>
+  <span class="lsg__fit">{{ fit | default: block.settings.fit_default | escape }}</span>
+  <button type="button" class="lsg__open" data-lsg-open="{{ bid }}">
+    <svg width="18" height="10" viewBox="0 0 18 10" fill="none" aria-hidden="true"><rect x=".5" y=".5" width="17" height="9" stroke="currentColor"/><path d="M4 1v3M7 1v5M10 1v3M13 1v5" stroke="currentColor"/></svg>
+    {{ block.settings.label | escape }}
+  </button>
+  {%- if model != blank -%}<span class="lsg__model">{{ model | escape }}</span>{%- endif -%}
+</div>
+
+<dialog class="lsg-{{ bid }}-dlg" id="lsg-{{ bid }}" aria-labelledby="lsg-title-{{ bid }}">
+  <div class="lsg__inner">
+    <div class="lsg__head">
+      <h2 id="lsg-title-{{ bid }}">{{ block.settings.label | escape }}</h2>
+      <button type="button" class="lsg__x" data-lsg-close aria-label="Close">×</button>
+    </div>
+    {%- assign rows = chart | newline_to_br | split: '<br />' -%}
+    <table>
+      {%- for row in rows -%}
+        {%- assign r = row | strip -%}
+        {%- if r == blank -%}{%- continue -%}{%- endif -%}
+        {%- assign cells = r | split: '|' -%}
+        <tr>
+          {%- for c in cells -%}
+            {%- if forloop.parentloop.first -%}<th>{{ c | strip | escape }}</th>{%- else -%}<td>{{ c | strip | escape }}</td>{%- endif -%}
+          {%- endfor -%}
+        </tr>
+      {%- endfor -%}
+    </table>
+    {%- if is_general -%}<p>{{ block.settings.general_note | escape }}</p>{%- endif -%}
+    <p>{{ block.settings.between_note | escape }}</p>
+    <h3>How to measure</h3>
+    <ol>
+      <li><strong>Bust:</strong> around the fullest part of your chest.</li>
+      <li><strong>Waist:</strong> around the narrowest part of your waist.</li>
+      <li><strong>Hips:</strong> around the fullest part of your hips.</li>
+    </ol>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var dlg = document.getElementById('lsg-{{ bid }}');
+  if (!dlg || dlg.dataset.ready) return; dlg.dataset.ready = '1';
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('[data-lsg-open="{{ bid }}"]')) { dlg.showModal(); }
+    else if (e.target.closest('#lsg-{{ bid }} [data-lsg-close]') || e.target === dlg) { dlg.close(); }
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Lovaire maatgids",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Linktekst", "default": "Size guide" },
+    { "type": "text", "id": "fit_default", "label": "Pasvorm (standaard, per product via metaveld lovaire.fit)", "default": "Fits true to size" },
+    { "type": "textarea", "id": "default_chart", "label": "Algemene maattabel (Maat | Borst | Taille | Heup)", "default": "Size | Bust (cm) | Waist (cm) | Hips (cm)\nXS (34) | 80–84 | 62–66 | 88–92\nS (36) | 84–88 | 66–70 | 92–96\nM (38) | 88–92 | 70–74 | 96–100\nL (40) | 92–96 | 74–78 | 100–104\nXL (42) | 96–100 | 78–82 | 104–108" },
+    { "type": "text", "id": "general_note", "label": "Tekst bij algemene tabel", "default": "This is our general size guide. Check the product description for the exact measurements of this item." },
+    { "type": "text", "id": "between_note", "label": "Tekst bij twijfel", "default": "In between sizes? Choose the larger size for a relaxed fit, or send us a message and we'll help you choose." }
+  ],
+  "presets": [{ "name": "Lovaire maatgids" }]
+}
+{% endschema %}
