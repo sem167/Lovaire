@@ -1,0 +1,172 @@
+{%- comment -%} Welkomstcadeau: drie omgedraaide kaarten (5/10/15%, willekeurig verdeeld). Kies een kaart, vul je e-mail in en krijg de code. {%- endcomment -%}
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+{% style %}
+  .lvw-{{ sid }} { position: fixed; inset: 0; z-index: 1000; display: none; align-items: center; justify-content: center; padding: 16px; background: rgba(17,17,17,.45); font-family: var(--font-body--family); color: #111; }
+  .lvw-{{ sid }}.is-open { display: flex; animation: lvwFade-{{ sid }} .35s ease both; }
+  .lvw-{{ sid }} .lvw__box { position: relative; width: 100%; max-width: 640px; max-height: calc(100vh - 32px); overflow: auto; background: #fff; padding: 44px 28px 28px; text-align: center; animation: lvwUp-{{ sid }} .5s cubic-bezier(.2,.7,.2,1) both; }
+  @media (min-width: 750px) { .lvw-{{ sid }} .lvw__box { padding: 52px 56px 36px; } }
+  .lvw-{{ sid }} .lvw__close { position: absolute; top: 12px; right: 12px; width: 40px; height: 40px; border: 0; background: none; font-size: 26px; line-height: 1; cursor: pointer; color: #111; }
+  .lvw-{{ sid }} .lvw__eyebrow { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; margin: 0 0 12px; }
+  .lvw-{{ sid }} .lvw__title { font-family: var(--font-heading--family); font-weight: 400; font-size: clamp(30px, 6vw, 46px); line-height: 1.05; margin: 0 0 10px; color: #111; }
+  .lvw-{{ sid }} .lvw__text { font-size: 15px; line-height: 1.55; color: rgba(17,17,17,.65); margin: 0 auto 26px; max-width: 40ch; min-height: 3.1em; }
+  .lvw-{{ sid }} .lvw__cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 0 0 26px; perspective: 900px; }
+  @media (min-width: 750px) { .lvw-{{ sid }} .lvw__cards { gap: 18px; } }
+  .lvw-{{ sid }} .lvw__card { position: relative; aspect-ratio: 3 / 4; border: 0; padding: 0; background: none; cursor: pointer; transform-style: preserve-3d; transition: transform .8s cubic-bezier(.2,.7,.2,1), opacity .5s ease, translate .3s ease; animation: lvwDeal-{{ sid }} .6s cubic-bezier(.2,.7,.2,1) backwards; }
+  .lvw-{{ sid }} .lvw__card:nth-child(2) { animation-delay: .12s; }
+  .lvw-{{ sid }} .lvw__card:nth-child(3) { animation-delay: .24s; }
+  .lvw-{{ sid }} .lvw__cards:not(.is-picked) .lvw__card:hover { translate: 0 -8px; }
+  .lvw-{{ sid }} .lvw__card.is-flipped { transform: rotateY(180deg); }
+  .lvw-{{ sid }} .lvw__card.is-chosen { translate: 0 -10px; }
+  .lvw-{{ sid }} .lvw__cards.is-picked .lvw__card:not(.is-chosen) { cursor: default; }
+  .lvw-{{ sid }} .lvw__cards.is-picked .lvw__card:not(.is-chosen) .lvw__face { opacity: .5; transition: opacity .5s ease; }
+  .lvw-{{ sid }} .lvw__face { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+  .lvw-{{ sid }} .lvw__back { background: #f5efe7; box-shadow: inset 0 0 0 7px #f5efe7, inset 0 0 0 8px rgba(17,17,17,.15); }
+  .lvw-{{ sid }} .lvw__mono { font-family: var(--font-heading--family); font-size: clamp(28px, 6vw, 44px); letter-spacing: .04em; color: #111; }
+  .lvw-{{ sid }} .lvw__num { position: absolute; bottom: 14px; font-size: 10px; letter-spacing: .2em; color: rgba(17,17,17,.65); }
+  .lvw-{{ sid }} .lvw__front { transform: rotateY(180deg); background: #fff; box-shadow: inset 0 0 0 1px #111; padding: 10px; }
+  .lvw-{{ sid }} .lvw__card.is-chosen .lvw__front { background: #111; color: #fff; }
+  .lvw-{{ sid }} .lvw__small { font-size: 9px; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 8px; }
+  .lvw-{{ sid }} .lvw__pct { font-family: var(--font-heading--family); font-size: clamp(30px, 7vw, 48px); line-height: 1; }
+  .lvw-{{ sid }} .lvw__off { font-size: 12px; margin-top: 6px; }
+  .lvw-{{ sid }} .lvw__form { display: none; }
+  .lvw-{{ sid }}.is-picked .lvw__form { display: block; animation: lvwUp-{{ sid }} .5s .5s cubic-bezier(.2,.7,.2,1) both; }
+  .lvw-{{ sid }} .lvw__field { display: flex; flex-wrap: wrap; gap: 10px; }
+  .lvw-{{ sid }} .lvw__field input { flex: 1 1 220px; min-width: 0; border: 0; border-bottom: 1px solid #111; padding: 14px 4px; font: inherit; font-size: 15px; background: transparent; color: #111; outline: none; }
+  .lvw-{{ sid }} .lvw__btn { flex: 1 1 160px; border: 0; background: #111; color: #fff; font-family: inherit; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; padding: 17px 24px; cursor: pointer; transition: background .25s; }
+  .lvw-{{ sid }} .lvw__btn:hover { background: rgba(17,17,17,.85); }
+  .lvw-{{ sid }} .lvw__legal { font-size: 11px; line-height: 1.5; color: rgba(17,17,17,.65); margin: 14px 0 0; }
+  .lvw-{{ sid }} .lvw__code { display: none; }
+  .lvw-{{ sid }}.is-done .lvw__form, .lvw-{{ sid }}.is-done .lvw__cards { display: none; }
+  .lvw-{{ sid }}.is-done .lvw__code { display: block; animation: lvwUp-{{ sid }} .5s cubic-bezier(.2,.7,.2,1) both; }
+  .lvw-{{ sid }} .lvw__codebox { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 6px auto 16px; padding: 18px; background: #f5efe7; font-size: 22px; letter-spacing: .2em; font-weight: 600; max-width: 360px; }
+  .lvw-{{ sid }} .lvw__copy { border: 1px solid #111; background: none; font: inherit; font-size: 11px; letter-spacing: .14em; font-weight: 400; text-transform: uppercase; padding: 8px 12px; cursor: pointer; color: #111; }
+  .lvw-{{ sid }} .lvw__err { color: #111; font-size: 13px; margin: 10px 0 0; }
+  @keyframes lvwFade-{{ sid }} { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes lvwUp-{{ sid }} { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  @keyframes lvwDeal-{{ sid }} { from { opacity: 0; transform: translateY(40px) rotate(-6deg); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .lvw-{{ sid }} *, .lvw-{{ sid }} { animation: none !important; transition: none !important; } }
+{% endstyle %}
+
+{%- if section.settings.enabled -%}
+<div class="lvw-{{ sid }}" id="lvw-{{ sid }}" role="dialog" aria-modal="true" aria-labelledby="lvw-title-{{ sid }}"
+  data-delay="{{ section.settings.delay }}"
+  data-offers='[{"p":{{ section.settings.pct_1 }},"c":"{{ section.settings.code_1 | escape }}"},{"p":{{ section.settings.pct_2 }},"c":"{{ section.settings.code_2 | escape }}"},{"p":{{ section.settings.pct_3 }},"c":"{{ section.settings.code_3 | escape }}"}]'>
+  <div class="lvw__box">
+    <button type="button" class="lvw__close" aria-label="Close">×</button>
+    <p class="lvw__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+    <h2 class="lvw__title" id="lvw-title-{{ sid }}">{{ section.settings.title | escape }}</h2>
+    <p class="lvw__text" data-text>{{ section.settings.text | escape }}</p>
+
+    <div class="lvw__cards" data-cards>
+      {%- for i in (1..3) -%}
+        <button type="button" class="lvw__card" data-card="{{ forloop.index0 }}" aria-label="Card {{ i }}">
+          <span class="lvw__face lvw__back"><span class="lvw__mono">L</span><span class="lvw__num">0{{ i }}</span></span>
+          <span class="lvw__face lvw__front"><span class="lvw__small">Your offer</span><span class="lvw__pct" data-pct></span><span class="lvw__off">off your order</span></span>
+        </button>
+      {%- endfor -%}
+    </div>
+
+    {%- form 'customer', class: 'lvw__form', data-form: '' -%}
+      <input type="hidden" name="contact[tags]" value="newsletter,welcome-gift">
+      <div class="lvw__field">
+        <label for="lvw-email-{{ sid }}" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Email</label>
+        <input id="lvw-email-{{ sid }}" type="email" name="contact[email]" required autocomplete="email" placeholder="{{ section.settings.placeholder | escape }}">
+        <button type="submit" class="lvw__btn">{{ section.settings.button | escape }}</button>
+      </div>
+      {%- if form.posted_successfully? -%}<span data-posted hidden></span>{%- endif -%}
+      {%- if form.errors -%}<p class="lvw__err">{{ form.errors | default_errors }}</p><span data-error hidden></span>{%- endif -%}
+      <p class="lvw__legal">{{ section.settings.legal | escape }}</p>
+    {%- endform -%}
+
+    <div class="lvw__code" data-code-wrap>
+      <div class="lvw__codebox"><span data-code></span><button type="button" class="lvw__copy" data-copy>Copy</button></div>
+      <p class="lvw__legal">{{ section.settings.code_text | escape }}</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('lvw-{{ sid }}');
+  if (!root) return;
+  var KEY = 'lv_welcome_v1';
+  var store = { get: function () { try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return null; } },
+                set: function (v) { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch (e) {} } };
+  var offers = JSON.parse(root.dataset.offers);
+  var state = store.get() || {};
+  var cards = root.querySelectorAll('[data-card]');
+  var text = root.querySelector('[data-text]');
+
+  function open() { root.classList.add('is-open'); document.documentElement.style.overflow = 'hidden'; }
+  function close() { root.classList.remove('is-open'); document.documentElement.style.overflow = ''; state.closed = Date.now(); store.set(state); }
+  function showCode() {
+    var o = offers[state.pick];
+    root.querySelector('[data-code]').textContent = o.c;
+    text.textContent = 'Your ' + o.p + '% code is ready. Use it at checkout.';
+    root.classList.add('is-done');
+  }
+
+  // Willekeurige verdeling, één keer per bezoeker
+  if (!state.order) {
+    state.order = [0, 1, 2];
+    for (var i = 2; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = state.order[i]; state.order[i] = state.order[j]; state.order[j] = t; }
+    store.set(state);
+  }
+  cards.forEach(function (card, idx) { card.querySelector('[data-pct]').textContent = offers[state.order[idx]].p + '%'; });
+
+  cards.forEach(function (card, idx) {
+    card.addEventListener('click', function () {
+      if (root.querySelector('[data-cards]').classList.contains('is-picked')) return;
+      state.pick = state.order[idx]; store.set(state);
+      root.querySelector('[data-cards]').classList.add('is-picked');
+      card.classList.add('is-chosen', 'is-flipped');
+      setTimeout(function () { cards.forEach(function (c) { c.classList.add('is-flipped'); }); }, 900);
+      text.textContent = 'You picked: ' + offers[state.pick].p + '% off your order. Enter your email to get your code.';
+      root.classList.add('is-picked');
+    });
+  });
+
+  root.querySelector('.lvw__close').addEventListener('click', close);
+  root.addEventListener('click', function (e) { if (e.target === root) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && root.classList.contains('is-open')) close(); });
+  root.querySelector('[data-copy]').addEventListener('click', function () {
+    var code = root.querySelector('[data-code]').textContent;
+    if (navigator.clipboard) navigator.clipboard.writeText(code);
+    this.textContent = 'Copied';
+  });
+
+  // Na het versturen herlaadt Shopify de pagina: toon dan de code
+  if (root.querySelector('[data-posted]') && state.pick != null) { state.done = true; store.set(state); showCode(); open(); return; }
+  if (root.querySelector('[data-error]') && state.pick != null) { root.classList.add('is-picked'); open(); return; }
+  if (state.done || state.closed) return;
+  if (window.Shopify && window.Shopify.designMode) return;
+  setTimeout(open, (parseInt(root.dataset.delay, 10) || 4) * 1000);
+})();
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Lovaire welkomstcadeau",
+  "settings": [
+    { "type": "checkbox", "id": "enabled", "label": "Pop-up tonen", "default": true },
+    { "type": "range", "id": "delay", "label": "Tonen na", "min": 1, "max": 30, "step": 1, "unit": "s", "default": 4 },
+    { "type": "text", "id": "eyebrow", "label": "Klein label", "default": "Welcome gift" },
+    { "type": "text", "id": "title", "label": "Titel", "default": "Pick your card" },
+    { "type": "text", "id": "text", "label": "Tekst", "default": "One of these cards hides your welcome offer. Pick one to reveal it." },
+    { "type": "header", "content": "Kaarten (worden willekeurig verdeeld)" },
+    { "type": "number", "id": "pct_1", "label": "Kaart 1: korting %", "default": 5 },
+    { "type": "text", "id": "code_1", "label": "Kaart 1: kortingscode", "default": "WELCOME5" },
+    { "type": "number", "id": "pct_2", "label": "Kaart 2: korting %", "default": 10 },
+    { "type": "text", "id": "code_2", "label": "Kaart 2: kortingscode", "default": "WELCOME10" },
+    { "type": "number", "id": "pct_3", "label": "Kaart 3: korting %", "default": 15 },
+    { "type": "text", "id": "code_3", "label": "Kaart 3: kortingscode", "default": "WELCOME15" },
+    { "type": "header", "content": "Formulier" },
+    { "type": "text", "id": "placeholder", "label": "Placeholder", "default": "Your email address" },
+    { "type": "text", "id": "button", "label": "Knop", "default": "Get my code" },
+    { "type": "text", "id": "legal", "label": "Kleine tekst", "default": "By entering your email you agree to receive marketing emails from Lovaire. You can unsubscribe at any time." },
+    { "type": "text", "id": "code_text", "label": "Tekst onder de code", "default": "Valid once on your first order. Enter the code at checkout." }
+  ],
+  "presets": [{ "name": "Lovaire welkomstcadeau" }]
+}
+{% endschema %}
