@@ -1,0 +1,179 @@
+{
+  "sections": {
+    "pills": {
+      "type": "lvs-pills",
+      "blocks": {
+        "p1": { "type": "pill", "settings": { "label": "Loungewear", "link": "shopify://collections/fashion-loungewear" } },
+        "p2": { "type": "pill", "settings": { "label": "New in", "link": "/collections/all?sort_by=created-descending" } },
+        "p3": { "type": "pill", "settings": { "label": "Matching sets", "link": "shopify://collections/fashion-sets" } },
+        "p4": { "type": "pill", "settings": { "label": "Knitwear", "link": "shopify://collections/fashion-knitwear" } },
+        "p5": { "type": "pill", "settings": { "label": "Basics", "link": "shopify://collections/fashion-basics" } },
+        "p6": { "type": "pill", "settings": { "label": "Shop all", "link": "/collections/all" } }
+      },
+      "block_order": ["p1", "p2", "p3", "p4", "p5", "p6"],
+      "settings": { "first_active": true }
+    },
+    "campaign_hero": {
+      "type": "lvs-campaign",
+      "settings": {
+        "image": "shopify://shop_images/lovaire-home-banner-desktop.jpg",
+        "image_mobile": "shopify://shop_images/lovaire-home-banner-mobile.jpg",
+        "focal": "center 25%",
+        "eyebrow": "The cosy collection",
+        "title": "Loungewear",
+        "title_size": 120,
+        "button_label": "Shop now",
+        "button_link": "shopify://collections/fashion-loungewear",
+        "button_style": "dark",
+        "position": "left",
+        "text_color": "#111111",
+        "overlay_color": "#f5efe7",
+        "overlay": 85,
+        "height": 90,
+        "height_mobile": 80
+      }
+    },
+    "row_new": {
+      "type": "lvs-product-row",
+      "settings": {
+        "heading": "New in: this week's faves",
+        "collection": "fashion-loungewear",
+        "limit": 8,
+        "link_label": "Shop all",
+        "link": "",
+        "badge_text": "New",
+        "background": "#ffffff",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "looks": {
+      "type": "lvs-looks",
+      "blocks": {
+        "l1": { "type": "look", "settings": { "collection": "fashion-loungewear", "label": "Loungewear", "cta": "Shop now" } },
+        "l2": { "type": "look", "settings": { "collection": "fashion-sets", "label": "Sets", "cta": "Shop now" } },
+        "l3": { "type": "look", "settings": { "collection": "fashion-knitwear", "label": "Knitwear", "cta": "Shop now" } },
+        "l4": { "type": "look", "settings": { "collection": "fashion-basics", "label": "Basics", "cta": "Shop now" } }
+      },
+      "block_order": ["l1", "l2", "l3", "l4"],
+      "settings": { "small_text": "shop the look", "padding_top": 0, "padding_bottom": 4 }
+    },
+    "campaign_banner": {
+      "type": "lvs-campaign",
+      "settings": {
+        "focal": "right center",
+        "eyebrow": "The knit edit",
+        "title": "Cosy season",
+        "title_size": 96,
+        "button_label": "Shop the edit",
+        "button_link": "shopify://collections/fashion-knitwear",
+        "position": "center",
+        "text_color": "#ffffff",
+        "overlay": 30,
+        "height": 70,
+        "height_mobile": 60
+      }
+    },
+    "row_knit": {
+      "type": "lvs-product-row",
+      "settings": {
+        "heading": "Trending: knitwear",
+        "collection": "fashion-knitwear",
+        "limit": 8,
+        "link_label": "Shop all",
+        "link": "",
+        "badge_text": "New",
+        "background": "#ffffff",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "newsletter": {
+      "type": "lvs-newsletter",
+      "settings": {
+        "heading": "Join the Lovaire list",
+        "text": "Be the first to know about new drops and exclusive deals.",
+        "placeholder": "your@email.com",
+        "button": "Sign up",
+        "success": "Thanks! You're on the list.",
+        "background": "#111111",
+        "text_color": "#ffffff",
+        "padding": 64
+      }
+    },
+    "faq": {
+      "type": "section",
+      "name": "Frequently asked questions",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": { "text": "<h2>Frequently asked questions</h2>", "width": "100%", "max_width": "normal", "alignment": "center", "type_preset": "h2", "font": "var(--font-heading--family)", "color": "var(--color-foreground-heading)", "wrap": "pretty" },
+          "blocks": {}
+        },
+        "acc": {
+          "type": "accordion",
+          "settings": { "icon": "plus", "dividers": false, "type_preset": "h5", "inherit_color_scheme": true },
+          "blocks": {
+            "q0": { "type": "_accordion-row", "settings": { "heading": "Which size should I choose?", "open_by_default": false, "icon": "none" }, "blocks": { "q0_t": { "type": "text", "settings": { "text": "<p>Every product page has a size chart in centimetres. Measure a favourite piece you already own and compare. In doubt between two sizes? Choose the larger one, or send us a message and we'll help you pick.</p>", "width": "100%", "max_width": "normal", "alignment": "left", "type_preset": "rte", "font": "var(--font-body--family)", "color": "var(--color-foreground)", "wrap": "pretty" }, "blocks": {} } }, "block_order": ["q0_t"] },
+            "q1": { "type": "_accordion-row", "settings": { "heading": "When will I receive my order?", "open_by_default": false, "icon": "none" }, "blocks": { "q1_t": { "type": "text", "settings": { "text": "<p>As soon as your order ships, you'll receive an email with your tracking link, so you can follow your parcel every step of the way. You'll find all the details in our <a href=\"/pages/verzendbeleid\">shipping policy</a>.</p>", "width": "100%", "max_width": "normal", "alignment": "left", "type_preset": "rte", "font": "var(--font-body--family)", "color": "var(--color-foreground)", "wrap": "pretty" }, "blocks": {} } }, "block_order": ["q1_t"] },
+            "q2": { "type": "_accordion-row", "settings": { "heading": "How much is shipping?", "open_by_default": false, "icon": "none" }, "blocks": { "q2_t": { "type": "text", "settings": { "text": "<p>Nothing: shipping is always free at Lovaire.</p>", "width": "100%", "max_width": "normal", "alignment": "left", "type_preset": "rte", "font": "var(--font-body--family)", "color": "var(--color-foreground)", "wrap": "pretty" }, "blocks": {} } }, "block_order": ["q2_t"] },
+            "q3": { "type": "_accordion-row", "settings": { "heading": "Can I return my order?", "open_by_default": false, "icon": "none" }, "blocks": { "q3_t": { "type": "text", "settings": { "text": "<p>Yes. Clothing can be returned within 14 days of receiving it, unworn and with tags attached. Separate conditions apply to underwear, swimwear and hygiene products. Read everything on our <a href=\"/pages/bestellingen-en-levering-1\">returns and exchanges</a> page.</p>", "width": "100%", "max_width": "normal", "alignment": "left", "type_preset": "rte", "font": "var(--font-body--family)", "color": "var(--color-foreground)", "wrap": "pretty" }, "blocks": {} } }, "block_order": ["q3_t"] },
+            "q4": { "type": "_accordion-row", "settings": { "heading": "Where are your products made?", "open_by_default": false, "icon": "none" }, "blocks": { "q4_t": { "type": "text", "settings": { "text": "<p>Our products are made both locally and around the world. We choose our production partners carefully, so you get quality at a fair price.</p>", "width": "100%", "max_width": "normal", "alignment": "left", "type_preset": "rte", "font": "var(--font-body--family)", "color": "var(--color-foreground)", "wrap": "pretty" }, "blocks": {} } }, "block_order": ["q4_t"] },
+            "q5": { "type": "_accordion-row", "settings": { "heading": "I have a question, how can I reach you?", "open_by_default": false, "icon": "none" }, "blocks": { "q5_t": { "type": "text", "settings": { "text": "<p>Send us a message via our <a href=\"/pages/contact\">contact page</a>. We reply on weekdays between 09:00 and 17:00.</p>", "width": "100%", "max_width": "normal", "alignment": "left", "type_preset": "rte", "font": "var(--font-body--family)", "color": "var(--color-foreground)", "wrap": "pretty" }, "blocks": {} } }, "block_order": ["q5_t"] }
+          },
+          "block_order": ["q0", "q1", "q2", "q3", "q4", "q5"]
+        }
+      },
+      "block_order": ["heading", "acc"],
+      "settings": { "content_direction": "column", "vertical_on_mobile": true, "horizontal_alignment_flex_direction_column": "center", "vertical_alignment_flex_direction_column": "center", "section_width": "page-width", "gap": 32, "color_scheme": "scheme-1", "padding-block-start": 80, "padding-block-end": 80 }
+    },
+    "hero": {
+      "type": "lovaire-hero",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/photo-1759229874681-39fb36b01e32.jpg",
+        "focal": "center 40%",
+        "eyebrow": "The new Lovaire",
+        "title": "<p>Effortless style, <em>every day</em></p>",
+        "text": "Cosy loungewear, matching sets and soft knits you'll want to live in. Carefully selected and always shipped for free.",
+        "button_label": "Shop the collection",
+        "button_link": "shopify://collections/fashion-loungewear",
+        "button2_label": "Explore collections",
+        "button2_link": "/collections",
+        "trust_1": "Free shipping",
+        "trust_2": "Secure checkout with iDEAL",
+        "trust_3": "14-day returns",
+        "badge_title": "Always free shipping",
+        "badge_text": "With tracking sent to your inbox",
+        "seal_text": "LOVAIRE · FASHION · ESSENTIALS · ",
+        "background": "#f6e7de",
+        "height": 85,
+        "blend_top": "#ffffff",
+        "blend_bottom": "#fdf9f7"
+      }
+    },
+    "belofte": {
+      "type": "lovaire-belofte",
+      "disabled": true,
+      "blocks": {
+        "b1": { "type": "item", "settings": { "icon": "truck", "title": "Free shipping", "text": "On every order, no minimum spend." } },
+        "b2": { "type": "item", "settings": { "icon": "lock", "title": "Secure payment", "text": "iDEAL, Klarna and more via a secure checkout." } },
+        "b3": { "type": "item", "settings": { "icon": "package", "title": "14-day returns", "text": "Wrong size? Return it within 14 days." } },
+        "b4": { "type": "item", "settings": { "icon": "chat", "title": "Personal service", "text": "Size advice Mon–Fri, 09:00–17:00." } }
+      },
+      "block_order": ["b1", "b2", "b3", "b4"],
+      "settings": { "eyebrow": "", "heading": "", "show_payment": false, "background": "#ffffff", "padding_top": 0, "padding_bottom": 0, "layout": "list", "blend_top": "#fdf9f7" }
+    },
+    "categories": {
+      "type": "lovaire-categories",
+      "disabled": true,
+      "settings": { "eyebrow": "DISCOVER", "heading": "What are you looking for?", "collections": ["fashion-loungewear", "fashion-sets", "fashion-knitwear", "fashion-basics"], "background": "#ffffff", "padding_top": 64, "padding_bottom": 64, "blend_bottom": "#f9f5f1" }
+    },
+    "statement": {
+      "type": "lovaire-statement",
+      "disabled": true,
+      "settings": { "eyebrow": "LOVAIRE", "text": "<p>Soft fabrics, easy fits. Made for <em>real life</em>.</p>", "show_line": true, "background": "#ffffff", "padding_top": 96, "padding_bottom": 72, "blend_top": "#f9f5f1" }
+    }
+  },
+  "order": ["pills", "campaign_hero", "row_new", "looks", "campaign_banner", "row_knit", "newsletter", "faq", "hero", "belofte", "categories", "statement"]
+}

@@ -1,0 +1,82 @@
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+{%- assign img_d = section.settings.image -%}
+{%- assign img_m = section.settings.image_mobile | default: section.settings.image -%}
+{%- if section.index == 1 or section.index == 2 -%}{%- assign lazy = 'eager' -%}{%- else -%}{%- assign lazy = 'lazy' -%}{%- endif -%}
+{%- assign oc = section.settings.overlay_color | default: '#000000' -%}
+{%- assign ov = section.settings.overlay | divided_by: 100.0 -%}
+{%- assign oc_0 = oc | color_modify: 'alpha', 0 -%}
+{%- assign oc_1 = oc | color_modify: 'alpha', ov -%}
+{% style %}
+  .lvc-{{ sid }} { position: relative; overflow: hidden; background: #d9cbbb; height: {{ section.settings.height_mobile }}svh; min-height: 420px; }
+  @media (min-width: 750px) { .lvc-{{ sid }} { height: {{ section.settings.height }}vh; min-height: 480px; } }
+  .lvc-{{ sid }} .lvc__img { position: absolute; inset: 0; }
+  .lvc-{{ sid }} .lvc__img img, .lvc-{{ sid }} .lvc__img svg { width: 100%; height: 100%; object-fit: cover; object-position: {{ section.settings.focal }}; }
+  .lvc-{{ sid }} .lvc__img--d { display: none; }
+  @media (min-width: 750px) { .lvc-{{ sid }} .lvc__img--m { display: none; } .lvc-{{ sid }} .lvc__img--d { display: block; } }
+  .lvc-{{ sid }}::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, {{ oc_0 }} 40%, {{ oc_1 }} 100%); pointer-events: none; z-index: 1; }
+  .lvc-{{ sid }} .lvc__content { position: absolute; z-index: 3; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: {% if section.settings.position == 'center' %}center{% else %}flex-end{% endif %}; text-align: center; color: {{ section.settings.text_color }}; padding: 0 20px 52px; pointer-events: none; }
+  @media (min-width: 750px) { .lvc-{{ sid }} .lvc__content { padding-bottom: 72px; } }
+  {%- if section.settings.position == 'left' %}
+  @media (min-width: 750px) {
+    .lvc-{{ sid }}::after { background: linear-gradient(90deg, {{ oc_1 }} 0%, {{ oc_0 }} 55%); }
+    .lvc-{{ sid }} .lvc__content { align-items: flex-start; justify-content: center; text-align: left; padding: 0 0 0 max(48px, calc((100vw - 1240px) / 2 + 24px)); }
+    .lvc-{{ sid }} .lvc__title { font-size: clamp(44px, 6.5vw, {{ section.settings.title_size }}px); }
+  }
+  {%- endif %}
+  .lvc-{{ sid }} .lvc__eyebrow { font-family: var(--font-body--family); font-size: 12px; letter-spacing: .3em; text-transform: uppercase; margin: 0 0 14px; }
+  .lvc-{{ sid }} .lvc__title { font-family: var(--font-body--family); font-weight: 700; text-transform: uppercase; letter-spacing: .03em; line-height: .95; font-size: clamp(44px, 9vw, {{ section.settings.title_size }}px); margin: 0 0 24px; color: inherit; }
+  .lvc-{{ sid }} .lvc__btn { pointer-events: auto; display: inline-block; background: #fff; color: #111; font-family: var(--font-body--family); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; padding: 16px 40px; transition: background .25s, color .25s; }
+  .lvc-{{ sid }} .lvc__btn:hover { background: #111; color: #fff; }
+  {%- if section.settings.button_style == 'dark' %}
+  .lvc-{{ sid }} .lvc__btn { background: #111; color: #fff; }
+  .lvc-{{ sid }} .lvc__btn:hover { background: #8b6b4a; color: #fff; }
+  {%- endif %}
+  .lvc-{{ sid }} .lvc__link { position: absolute; inset: 0; z-index: 2; }
+{% endstyle %}
+<section class="lvc-{{ sid }}">
+  <div class="lvc__img lvc__img--m">
+    {%- if img_m != blank -%}
+      {{ img_m | image_url: width: 1600 | image_tag: loading: lazy, widths: '600, 900, 1200, 1600', sizes: '100vw', alt: img_m.alt }}
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag }}
+    {%- endif -%}
+  </div>
+  <div class="lvc__img lvc__img--d">
+    {%- if img_d != blank -%}
+      {{ img_d | image_url: width: 3000 | image_tag: loading: lazy, widths: '1200, 1600, 2000, 2600, 3000', sizes: '100vw', alt: img_d.alt }}
+    {%- else -%}
+      {{ 'lifestyle-2' | placeholder_svg_tag }}
+    {%- endif -%}
+  </div>
+  {%- if section.settings.button_link != blank -%}<a class="lvc__link" href="{{ section.settings.button_link }}" aria-label="{{ section.settings.title | escape }}" tabindex="-1"></a>{%- endif -%}
+  <div class="lvc__content">
+    {%- if section.settings.eyebrow != blank -%}<p class="lvc__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    {%- if section.settings.title != blank -%}<h2 class="lvc__title">{{ section.settings.title | escape }}</h2>{%- endif -%}
+    {%- if section.settings.button_label != blank -%}<a class="lvc__btn" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }}</a>{%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lovaire campagne",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Foto (desktop)" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Foto (mobiel, optioneel)" },
+    { "type": "select", "id": "focal", "label": "Focus van de foto", "default": "center", "options": [
+      { "value": "center", "label": "Midden" }, { "value": "center 25%", "label": "Iets boven" }, { "value": "top", "label": "Boven" }, { "value": "left center", "label": "Links" }, { "value": "right center", "label": "Rechts" } ] },
+    { "type": "text", "id": "eyebrow", "label": "Klein label" },
+    { "type": "text", "id": "title", "label": "Groot woord", "default": "Knitwear" },
+    { "type": "range", "id": "title_size", "label": "Max. tekstgrootte", "min": 48, "max": 160, "step": 4, "unit": "px", "default": 128 },
+    { "type": "text", "id": "button_label", "label": "Knop", "default": "Shop now" },
+    { "type": "url", "id": "button_link", "label": "Link" },
+    { "type": "select", "id": "button_style", "label": "Knopkleur", "default": "light", "options": [ { "value": "light", "label": "Wit" }, { "value": "dark", "label": "Zwart" } ] },
+    { "type": "select", "id": "position", "label": "Tekstpositie", "default": "bottom", "options": [ { "value": "bottom", "label": "Onder" }, { "value": "center", "label": "Midden" }, { "value": "left", "label": "Links (desktop), onder (mobiel)" } ] },
+    { "type": "color", "id": "text_color", "label": "Tekstkleur", "default": "#ffffff" },
+    { "type": "color", "id": "overlay_color", "label": "Kleur van de overloop", "default": "#000000" },
+    { "type": "range", "id": "overlay", "label": "Sterkte van de overloop", "min": 0, "max": 90, "step": 5, "unit": "%", "default": 35 },
+    { "type": "range", "id": "height", "label": "Hoogte desktop", "min": 50, "max": 100, "step": 5, "unit": "vh", "default": 90 },
+    { "type": "range", "id": "height_mobile", "label": "Hoogte mobiel", "min": 50, "max": 100, "step": 5, "unit": "%", "default": 80 }
+  ],
+  "presets": [{ "name": "Lovaire campagne" }]
+}
+{% endschema %}
