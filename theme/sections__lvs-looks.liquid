@@ -1,0 +1,56 @@
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+{% style %}
+  .lvl-{{ sid }} { background: #fff; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; font-family: var(--font-body--family); }
+  .lvl-{{ sid }} .lvl__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
+  @media (min-width: 750px) { .lvl-{{ sid }} .lvl__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  .lvl-{{ sid }} .lvl__tile { position: relative; aspect-ratio: 3 / 4; overflow: hidden; display: block; color: #fff; text-decoration: none; background: #c9b9a6; }
+  .lvl-{{ sid }} .lvl__tile img, .lvl-{{ sid }} .lvl__tile svg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+  @media (hover: hover) { .lvl-{{ sid }} .lvl__tile:hover img { transform: scale(1.04); } }
+  .lvl-{{ sid }} .lvl__tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,.42) 100%); }
+  .lvl-{{ sid }} .lvl__label { position: absolute; z-index: 2; left: 0; right: 0; bottom: 22px; text-align: center; padding: 0 10px; }
+  .lvl-{{ sid }} .lvl__small { display: block; font-size: 12px; letter-spacing: .06em; margin-bottom: 4px; }
+  .lvl-{{ sid }} .lvl__big { display: block; font-size: clamp(15px, 1.8vw, 22px); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+  .lvl-{{ sid }} .lvl__cta { display: inline-block; margin-top: 10px; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; border-bottom: 1px solid #fff; padding-bottom: 2px; }
+{% endstyle %}
+<section class="lvl-{{ sid }}">
+  <div class="lvl__grid">
+    {%- for block in section.blocks -%}
+      {%- assign c = block.settings.collection -%}
+      {%- assign img = block.settings.image | default: c.featured_image -%}
+      <a class="lvl__tile" href="{% if block.settings.link != blank %}{{ block.settings.link }}{% elsif c != blank %}{{ c.url }}{% else %}{{ routes.all_products_collection_url }}{% endif %}" {{ block.shopify_attributes }}>
+        {%- if img != blank -%}
+          {{ img | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '400, 600, 800, 1000', sizes: '(min-width: 750px) 25vw, 50vw', alt: '' }}
+        {%- else -%}
+          {{ 'collection-apparel-' | append: forloop.index | placeholder_svg_tag }}
+        {%- endif -%}
+        <span class="lvl__label">
+          {%- if section.settings.small_text != blank -%}<span class="lvl__small">{{ section.settings.small_text | escape }}</span>{%- endif -%}
+          <span class="lvl__big">{{ block.settings.label | default: c.title | escape }}</span>
+          {%- if block.settings.cta != blank -%}<span class="lvl__cta">{{ block.settings.cta | escape }}</span>{%- endif -%}
+        </span>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lovaire shop the look",
+  "max_blocks": 8,
+  "settings": [
+    { "type": "text", "id": "small_text", "label": "Kleine tekst boven elke tegel", "default": "shop the look" },
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 4 }
+  ],
+  "blocks": [
+    { "type": "look", "name": "Tegel", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Foto (leeg = collectiefoto)" },
+      { "type": "collection", "id": "collection", "label": "Collectie" },
+      { "type": "text", "id": "label", "label": "Titel (leeg = collectienaam)" },
+      { "type": "text", "id": "cta", "label": "Knoptekst", "default": "Shop now" },
+      { "type": "url", "id": "link", "label": "Link (leeg = collectie)" }
+    ] }
+  ],
+  "presets": [{ "name": "Lovaire shop the look" }]
+}
+{% endschema %}

@@ -1,1 +1,5 @@
 __pycache__/
+theme/out/
+theme/up.txt
+theme/upsert.json
+theme/files.txt

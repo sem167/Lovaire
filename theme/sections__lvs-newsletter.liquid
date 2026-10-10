@@ -1,0 +1,46 @@
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+{% style %}
+  .lvn-{{ sid }} { background: {{ section.settings.background }}; color: {{ section.settings.text_color }}; text-align: center; padding: {{ section.settings.padding }}px 20px; font-family: var(--font-body--family); }
+  .lvn-{{ sid }} .lvn__title { font-family: var(--font-body--family); font-size: clamp(18px, 2.2vw, 26px); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 8px; color: inherit; }
+  .lvn-{{ sid }} .lvn__text { font-size: 14px; opacity: .75; margin: 0 0 22px; }
+  .lvn-{{ sid }} .lvn__field { display: flex; max-width: 460px; margin: 0 auto; border: 1px solid {{ section.settings.text_color }}; }
+  .lvn-{{ sid }} .lvn__field input { flex: 1; min-width: 0; background: transparent; border: 0; color: inherit; font: inherit; font-size: 14px; padding: 14px 16px; outline: none; }
+  .lvn-{{ sid }} .lvn__field input::placeholder { color: inherit; opacity: .55; }
+  .lvn-{{ sid }} .lvn__field button { flex: none; background: {{ section.settings.text_color }}; color: {{ section.settings.background }}; border: 0; font-family: inherit; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; padding: 0 24px; cursor: pointer; }
+  .lvn-{{ sid }} .lvn__msg { font-size: 14px; margin: 14px 0 0; }
+  .lvn-{{ sid }} .lvn__sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+{% endstyle %}
+<section class="lvn-{{ sid }}">
+  {%- if section.settings.heading != blank -%}<h2 class="lvn__title">{{ section.settings.heading | escape }}</h2>{%- endif -%}
+  {%- if section.settings.text != blank -%}<p class="lvn__text">{{ section.settings.text | escape }}</p>{%- endif -%}
+  {%- form 'customer', class: 'lvn__form' -%}
+    <input type="hidden" name="contact[tags]" value="newsletter">
+    {%- if form.posted_successfully? -%}
+      <p class="lvn__msg">{{ section.settings.success | escape }}</p>
+    {%- else -%}
+      <div class="lvn__field">
+        <label class="lvn__sr" for="lvn-email-{{ sid }}">E-mail</label>
+        <input id="lvn-email-{{ sid }}" type="email" name="contact[email]" required autocomplete="email" placeholder="{{ section.settings.placeholder | escape }}">
+        <button type="submit">{{ section.settings.button | escape }}</button>
+      </div>
+      {%- if form.errors -%}<p class="lvn__msg">{{ form.errors | default_errors }}</p>{%- endif -%}
+    {%- endif -%}
+  {%- endform -%}
+</section>
+
+{% schema %}
+{
+  "name": "Lovaire nieuwsbrief",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Titel", "default": "Join the Lovaire list" },
+    { "type": "text", "id": "text", "label": "Tekst", "default": "Be the first to know about new drops and exclusive deals." },
+    { "type": "text", "id": "placeholder", "label": "Placeholder", "default": "your@email.com" },
+    { "type": "text", "id": "button", "label": "Knop", "default": "Sign up" },
+    { "type": "text", "id": "success", "label": "Bedankt-melding", "default": "Thanks! You're on the list." },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#111111" },
+    { "type": "color", "id": "text_color", "label": "Tekstkleur", "default": "#ffffff" },
+    { "type": "range", "id": "padding", "label": "Ruimte", "min": 24, "max": 120, "step": 4, "unit": "px", "default": 64 }
+  ],
+  "presets": [{ "name": "Lovaire nieuwsbrief" }]
+}
+{% endschema %}

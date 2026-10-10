@@ -1,0 +1,91 @@
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+{%- assign coll = section.settings.collection -%}
+{% style %}
+  .lvr-{{ sid }} { background: {{ section.settings.background }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; font-family: var(--font-body--family); }
+  .lvr-{{ sid }} .lvr__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 0 20px; margin: 0 auto 18px; max-width: 1440px; }
+  .lvr-{{ sid }} .lvr__title { font-family: var(--font-body--family); font-size: clamp(15px, 1.6vw, 20px); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin: 0; color: #111; }
+  .lvr-{{ sid }} .lvr__all { flex: none; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #111; text-underline-offset: 4px; }
+  .lvr-{{ sid }} .lvr__track { display: grid; grid-auto-flow: column; grid-auto-columns: 44%; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 0 20px; scroll-padding: 0 20px; max-width: 1440px; margin: 0 auto; }
+  .lvr-{{ sid }} .lvr__track::-webkit-scrollbar { display: none; }
+  @media (min-width: 900px) {
+    .lvr-{{ sid }} .lvr__head, .lvr-{{ sid }} .lvr__track { padding: 0 40px; scroll-padding: 0 40px; }
+    .lvr-{{ sid }} .lvr__track { grid-auto-columns: calc((100% - 42px) / 4); gap: 14px; }
+  }
+  .lvr-{{ sid }} .lvr__card { scroll-snap-align: start; text-decoration: none; color: #111; display: block; }
+  .lvr-{{ sid }} .lvr__media { position: relative; aspect-ratio: 3 / 4; background: #efe9e2; overflow: hidden; margin-bottom: 10px; }
+  .lvr-{{ sid }} .lvr__media img, .lvr-{{ sid }} .lvr__media svg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .45s ease; }
+  .lvr-{{ sid }} .lvr__media img + img { opacity: 0; }
+  @media (hover: hover) { .lvr-{{ sid }} .lvr__card:hover .lvr__media img + img { opacity: 1; } }
+  .lvr-{{ sid }} .lvr__badge { position: absolute; top: 10px; left: 10px; z-index: 2; background: #111; color: #fff; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; padding: 4px 8px; }
+  .lvr-{{ sid }} .lvr__name { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 3px; line-height: 1.35; }
+  .lvr-{{ sid }} .lvr__sub { font-size: 13px; color: #6b6b6b; margin: 0 0 4px; }
+  .lvr-{{ sid }} .lvr__price { font-size: 13px; margin: 0; }
+  .lvr-{{ sid }} .lvr__price s { color: #999; margin-right: 6px; }
+  .lvr-{{ sid }} .lvr__price .sale { color: #b3261e; }
+{% endstyle %}
+<section class="lvr-{{ sid }}">
+  <div class="lvr__head">
+    <h2 class="lvr__title">{{ section.settings.heading | escape }}</h2>
+    {%- if section.settings.link_label != blank -%}
+      <a class="lvr__all" href="{% if section.settings.link != blank %}{{ section.settings.link }}{% elsif coll != blank %}{{ coll.url }}{% else %}{{ routes.all_products_collection_url }}{% endif %}">{{ section.settings.link_label | escape }}</a>
+    {%- endif -%}
+  </div>
+  <div class="lvr__track">
+    {%- if coll != blank and coll.products_count > 0 -%}
+      {%- for product in coll.products limit: section.settings.limit -%}
+        {%- assign img_alt = product.featured_media.alt | default: product.title -%}
+        <a class="lvr__card" href="{{ product.url }}">
+          <div class="lvr__media">
+            {%- if product.compare_at_price > product.price -%}
+              <span class="lvr__badge">Sale</span>
+            {%- elsif product.tags contains 'new' or product.tags contains 'New' -%}
+              <span class="lvr__badge">{{ section.settings.badge_text | escape }}</span>
+            {%- endif -%}
+            {%- if product.featured_media -%}
+              {{ product.featured_media | image_url: width: 900 | image_tag: loading: 'lazy', widths: '360, 540, 720, 900', sizes: '(min-width: 900px) 25vw, 45vw', alt: img_alt }}
+            {%- endif -%}
+            {%- if product.media.size > 1 -%}
+              {{ product.media[1] | image_url: width: 900 | image_tag: loading: 'lazy', widths: '360, 540, 720, 900', sizes: '(min-width: 900px) 25vw, 45vw', alt: '' }}
+            {%- endif -%}
+          </div>
+          <p class="lvr__name">{{ product.title | escape }}</p>
+          {%- if product.type != blank -%}<p class="lvr__sub">{{ product.type | escape }}</p>{%- endif -%}
+          <p class="lvr__price">
+            {%- if product.compare_at_price > product.price -%}
+              <s>{{ product.compare_at_price | money }}</s><span class="sale">{{ product.price | money }}</span>
+            {%- else -%}
+              {%- if product.price_varies -%}From {% endif -%}{{ product.price | money }}
+            {%- endif -%}
+          </p>
+        </a>
+      {%- endfor -%}
+    {%- else -%}
+      {%- for i in (1..4) -%}
+        <div class="lvr__card">
+          <div class="lvr__media">{{ 'product-apparel-' | append: i | placeholder_svg_tag }}</div>
+          <p class="lvr__name">Product name · colour</p>
+          <p class="lvr__sub">Product type</p>
+          <p class="lvr__price">€ 49,99</p>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lovaire productrij",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Titel", "default": "New in: this week's faves" },
+    { "type": "collection", "id": "collection", "label": "Collectie" },
+    { "type": "range", "id": "limit", "label": "Aantal producten", "min": 4, "max": 16, "step": 1, "default": 8 },
+    { "type": "text", "id": "link_label", "label": "Linktekst", "default": "Shop all" },
+    { "type": "url", "id": "link", "label": "Link (leeg = collectie)" },
+    { "type": "text", "id": "badge_text", "label": "Label voor producten met tag 'new'", "default": "New" },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#ffffff" },
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 48 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 48 }
+  ],
+  "presets": [{ "name": "Lovaire productrij" }]
+}
+{% endschema %}

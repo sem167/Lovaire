@@ -1,0 +1,32 @@
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+{% style %}
+  .lvp-{{ sid }} { background: #fff; padding: 14px 0; border-bottom: 1px solid #eee; }
+  .lvp-{{ sid }} .lvp__row { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 0 20px; max-width: 1440px; margin: 0 auto; }
+  .lvp-{{ sid }} .lvp__row::-webkit-scrollbar { display: none; }
+  .lvp-{{ sid }} a { flex: none; font-family: var(--font-body--family); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; color: #111; border: 1px solid #111; padding: 9px 18px; transition: background .2s, color .2s; }
+  .lvp-{{ sid }} a:hover, .lvp-{{ sid }} a.is-active { background: #111; color: #fff; }
+  @media (min-width: 900px) { .lvp-{{ sid }} .lvp__row { justify-content: center; padding: 0 40px; } }
+{% endstyle %}
+<nav class="lvp-{{ sid }}" aria-label="Categories">
+  <div class="lvp__row">
+    {%- for block in section.blocks -%}
+      <a href="{{ block.settings.link | default: routes.all_products_collection_url }}" class="{% if forloop.first and section.settings.first_active %}is-active{% endif %}" {{ block.shopify_attributes }}>{{ block.settings.label | escape }}</a>
+    {%- endfor -%}
+  </div>
+</nav>
+
+{% schema %}
+{
+  "name": "Lovaire categoriebalk",
+  "settings": [
+    { "type": "checkbox", "id": "first_active", "label": "Eerste pill zwart", "default": true }
+  ],
+  "blocks": [
+    { "type": "pill", "name": "Pill", "settings": [
+      { "type": "text", "id": "label", "label": "Tekst", "default": "New in" },
+      { "type": "url", "id": "link", "label": "Link" }
+    ] }
+  ],
+  "presets": [{ "name": "Lovaire categoriebalk" }]
+}
+{% endschema %}
