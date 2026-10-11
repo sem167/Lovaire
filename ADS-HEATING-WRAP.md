@@ -3,8 +3,9 @@
 Product: https://lovaire.nl/products/period-heating-wrap · € 49,95 · 2 stuks € 84,95
 Doelgroep: vrouwen 18–40, NL + BE, brede targeting. Start € 30–50/dag, 3–5 video's in één advertentieset.
 
-**Regels (Meta + wet):** geen medische claims ("geneest", "stopt pijn", "vervangt pijnstillers", "binnen X minuten pijnvrij").
-Wel: "zachte warmte", "voor je mindere dagen", "handsfree", "blijft zitten". Geen nep-reviews of verzonnen kortingen.
+**Kernboodschap:** "helpt menstruatiekrampen te verminderen" met zachte warmte.
+**Niet gebruiken:** "geneest", "stopt de pijn", "direct pijnvrij", "vervangt pijnstillers" – niet te onderbouwen en grootste kans op afkeuring/boete. Geen nep-reviews of verzonnen kortingen.
+**Wordt een advertentie afgekeurd?** Gebruik dan in die advertentie "zachte warmte voor je mindere dagen"; de productpagina mag blijven zoals hij is.
 
 ---
 
@@ -34,8 +35,8 @@ Wel: "zachte warmte", "voor je mindere dagen", "handsfree", "blijft zitten". Gee
 
 ## Advertentieteksten (primaire tekst)
 
-**A.** Die dagen van de maand? Maak ze een stukje fijner. 🤍
-De Lovaire Heating Wrap geeft zachte, handsfree warmte op je buik of onderrug. Warm in seconden, blijft de hele avond warm – geen kruik meer vullen.
+**A.** Last van menstruatiekrampen? 🤍
+De Lovaire Heating Wrap helpt krampen te verminderen met zachte, handsfree warmte op je buik of onderrug. Warm in seconden, blijft de hele avond warm – geen kruik meer vullen.
 👉 Gratis verzending · Veilig betalen met iDEAL
 
 **B.** Je kruik is koud, je deken schuift weg en je wilt gewoon even liggen.
@@ -43,7 +44,7 @@ Klittenband om, knopje aan, klaar. Zachte warmte die blijft zitten – op de ban
 
 **C.** Bestel er 2 en bespaar € 14,95 – één voor thuis, één voor je werk (of voor je beste vriendin). 💌
 
-**Koppen:** "Zachte warmte voor je mindere dagen" · "Nooit meer een koude kruik" · "1 voor jou, 1 voor haar"
+**Koppen:** "Helpt menstruatiekrampen te verminderen" · "Zachte warmte voor je mindere dagen" · "Nooit meer een koude kruik" · "1 voor jou, 1 voor haar"
 
 ## Wat je meet (na 3–4 dagen)
 - Kosten per aankoop **onder je break-even** (verkoopprijs – inkoop – verzending – kosten) → budget +20% per 2–3 dagen
