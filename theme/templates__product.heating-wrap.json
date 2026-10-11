@@ -1,0 +1,416 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-information",
+      "blocks": {
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
+          "settings": {
+            "media_presentation": "carousel",
+            "media_columns": "one",
+            "image_gap": 8,
+            "icons_style": "arrow",
+            "slideshow_controls_style": "thumbnails",
+            "slideshow_mobile_controls_style": "dots",
+            "thumbnail_position": "bottom",
+            "thumbnail_width": 64,
+            "thumbnail_radius": 10,
+            "aspect_ratio": "1/1.25",
+            "media_fit": "cover",
+            "media_radius": 20,
+            "zoom": true,
+            "hide_variants": false
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "width": "fill",
+            "width_mobile": "fill",
+            "height": "fit",
+            "details_position": "flex-start",
+            "gap": 16,
+            "sticky_details_desktop": true,
+            "inherit_color_scheme": true,
+            "padding-block-start": 16,
+            "padding-block-end": 16,
+            "padding-inline-start": 12,
+            "padding-inline-end": 12
+          },
+          "blocks": {
+            "vendor": {
+              "type": "text",
+              "settings": {
+                "text": "<p>LOVAIRE</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h6",
+                "font": "var(--font-body--family)",
+                "color": "var(--color-primary)",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            },
+            "title": {
+              "type": "text",
+              "settings": {
+                "text": "<h1>{{ closest.product.title }}</h1>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h2",
+                "font": "var(--font-heading--family)",
+                "color": "var(--color-foreground-heading)",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": true,
+                "show_tax_info": true,
+                "type_preset": "h4",
+                "width": "100%",
+                "alignment": "left"
+              },
+              "blocks": {}
+            },
+            "variants": {
+              "type": "variant-picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": true,
+                "alignment": "left",
+                "padding-block-start": 4,
+                "padding-block-end": 4
+              },
+              "blocks": {}
+            },
+            "buy": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": true,
+                "show_pickup_availability": false,
+                "gift_card_form": true
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "description": {
+              "type": "product-description",
+              "settings": {},
+              "blocks": {}
+            },
+            "info": {
+              "type": "accordion",
+              "settings": {
+                "icon": "plus",
+                "dividers": true,
+                "type_preset": "h6",
+                "inherit_color_scheme": true
+              },
+              "blocks": {
+                "ship": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Shipping & delivery",
+                    "open_by_default": false,
+                    "icon": "none"
+                  },
+                  "blocks": {
+                    "ship_t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>You'll receive an email with a tracking link as soon as your order is on its way. More info: <a href=\"/pages/verzendbeleid\">shipping policy</a>.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "color": "var(--color-foreground)",
+                        "wrap": "pretty"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "ship_t"
+                  ]
+                },
+                "ret": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Returns",
+                    "open_by_default": false,
+                    "icon": "none"
+                  },
+                  "blocks": {
+                    "ret_t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>You can return your order within 14 days of receiving it. Separate conditions apply to hygiene products such as cosmetics and underwear: see <a href=\"/pages/ruilen-en-retourneren\">hygiene products</a>. You'll find every step on our <a href=\"/pages/bestellingen-en-levering-1\">returns and exchanges</a> page.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "color": "var(--color-foreground)",
+                        "wrap": "pretty"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "ret_t"
+                  ]
+                },
+                "pay": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Secure payment",
+                    "open_by_default": false,
+                    "icon": "none"
+                  },
+                  "blocks": {
+                    "pay_t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>You pay through Shopify's secure checkout, with options including iDEAL and Klarna. We never see or store your payment details.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "color": "var(--color-foreground)",
+                        "wrap": "pretty"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "pay_t"
+                  ]
+                },
+                "help": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Questions? We're happy to help",
+                    "open_by_default": false,
+                    "icon": "none"
+                  },
+                  "blocks": {
+                    "help_t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Email us via our <a href=\"/pages/contact\">contact page</a>. We reply on weekdays between 09:00 and 17:00.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "color": "var(--color-foreground)",
+                        "wrap": "pretty"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "help_t"
+                  ]
+                }
+              },
+              "block_order": [
+                "ship",
+                "ret",
+                "pay",
+                "help"
+              ]
+            },
+            "lovaire_trust": {
+              "type": "lovaire-product-trust",
+              "settings": {},
+              "blocks": {}
+            },
+            "hook": {
+              "type": "text",
+              "settings": {
+                "text": "<p><strong>✓ Helps reduce period cramps</strong><br>✓ Warm in seconds, stays warm all evening<br>✓ Hands-free – the strap stays put on your belly or back</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "color": "var(--color-foreground)",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            },
+            "gift": {
+              "type": "text",
+              "settings": {
+                "text": "<p>🎁 <strong>December tip:</strong> take 2 – one for you, one to gift – and save €14,95.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "color": "var(--color-foreground)",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "vendor",
+            "title",
+            "price",
+            "hook",
+            "variants",
+            "gift",
+            "buy",
+            "lovaire_trust",
+            "description",
+            "info"
+          ]
+        }
+      },
+      "settings": {
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "equal_columns": true,
+        "limit_details_width": true,
+        "gap": 48,
+        "enable_sticky_add_to_cart": true,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 32,
+        "padding-block-end": 48
+      }
+    },
+    "story": {
+      "type": "lovaire-product-story",
+      "settings": {
+        "blend_top": "#fbf8f5",
+        "blend_bottom": "#f9f5f1"
+      }
+    },
+    "howto": {
+      "type": "lovaire-product-howto",
+      "settings": {
+        "blend_top": "#f9f5f1",
+        "blend_bottom": "#f5e9e1"
+      }
+    },
+    "belofte": {
+      "type": "lovaire-belofte",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "title": "Free shipping",
+            "text": "On every order, no minimum spend."
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "icon": "lock",
+            "title": "Secure payment",
+            "text": "iDEAL, Klarna and more via a secure checkout."
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "icon": "package",
+            "title": "Order tracking",
+            "text": "Follow your parcel from the moment it ships."
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "icon": "chat",
+            "title": "Personal service",
+            "text": "We're here for you Mon–Fri, 09:00–17:00."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "eyebrow": "OUR PROMISE",
+        "heading": "Worry-free shopping at Lovaire",
+        "show_payment": false,
+        "background": "#f6e7de",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "layout": "cards",
+        "blend_top": "#f5e9e1",
+        "blend_bottom": "#faf3ee"
+      }
+    },
+    "benefits": {
+      "type": "lovaire-product-benefits",
+      "settings": {
+        "blend_top": "#ffffff",
+        "blend_bottom": "#fbf8f5"
+      }
+    },
+    "faq": {
+      "type": "lovaire-product-faq",
+      "settings": {
+        "background": "#ffffff",
+        "blend_top": "#faf3ee",
+        "blend_bottom": "#f9f5f1"
+      }
+    },
+    "cta": {
+      "type": "lovaire-product-cta",
+      "settings": {
+        "blend_top": "#f9f5f1",
+        "blend_bottom": "#f6e7de"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "benefits",
+    "story",
+    "howto",
+    "belofte",
+    "faq",
+    "cta"
+  ]
+}
