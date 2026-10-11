@@ -1,0 +1,152 @@
+{%- comment -%}
+  Aanmeld-popup: e-mail achterlaten = 5% korting. Opent na X seconden, bij 40% scrollen of bij
+  verlaten van de pagina (desktop). Na aanmelden toont hij de code en een knop die de korting
+  direct toepast via /discount/CODE. Eén keer per bezoeker (localStorage), daarna een klein tabje.
+{%- endcomment -%}
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+{%- assign img = section.settings.image | default: product.featured_image -%}
+{%- assign back = request.path | default: '/' -%}
+{% style %}
+  .lsp-{{ sid }} { position: fixed; inset: 0; z-index: 2147483000; display: none; align-items: center; justify-content: center; padding: 16px; background: rgba(17,17,17,.5); font-family: var(--font-body--family); color: #111; }
+  .lsp-{{ sid }} *, .lsp-{{ sid }} *::before { box-sizing: border-box; }
+  .lsp-{{ sid }}.is-open { display: flex; animation: lspFade-{{ sid }} .3s ease both; }
+  .lsp-{{ sid }} .lsp__box { position: relative; display: grid; grid-template-columns: 1fr 1fr; width: min(760px, 100%); max-height: calc(100vh - 32px); overflow: auto; background: #fbf8f5; border-radius: 22px; box-shadow: 0 30px 80px rgba(17,17,17,.25); animation: lspUp-{{ sid }} .45s cubic-bezier(.2,.7,.2,1) both; }
+  .lsp-{{ sid }} .lsp__img { position: relative; min-height: 100%; background: #f6e7de; }
+  .lsp-{{ sid }} .lsp__img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .lsp-{{ sid }} .lsp__body { padding: 44px 36px 32px; display: flex; flex-direction: column; justify-content: center; }
+  .lsp-{{ sid }} .lsp__x { position: absolute; top: 12px; right: 12px; z-index: 2; width: 36px; height: 36px; border: 0; border-radius: 50%; background: rgba(255,255,255,.9); font-size: 22px; line-height: 1; cursor: pointer; color: #111; }
+  .lsp-{{ sid }} .lsp__eyebrow { margin: 0 0 10px; font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: #b5776a; font-weight: 600; }
+  .lsp-{{ sid }} .lsp__pct { margin: 0; font-family: var(--font-heading--family); font-size: 64px; line-height: 1; font-weight: 700; color: #111; }
+  .lsp-{{ sid }} .lsp__title { margin: 6px 0 12px; font-family: var(--font-heading--family); font-size: 24px; line-height: 1.2; color: #111; }
+  .lsp-{{ sid }} .lsp__text { margin: 0 0 20px; font-size: 14px; line-height: 1.55; color: rgba(17,17,17,.7); }
+  .lsp-{{ sid }} .lsp__field { display: flex; flex-direction: column; gap: 10px; }
+  .lsp-{{ sid }} input[type=email] { width: 100%; border: 1px solid #e3d6ca; border-radius: 999px; background: #fff; padding: 15px 20px; font: inherit; font-size: 15px; color: #111; }
+  .lsp-{{ sid }} input[type=email]:focus { outline: 2px solid #b5776a; outline-offset: 1px; }
+  .lsp-{{ sid }} .lsp__btn { display: block; width: 100%; border: 0; border-radius: 999px; background: #111; color: #fff; padding: 16px 20px; font: inherit; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; text-align: center; text-decoration: none; cursor: pointer; transition: background .2s; }
+  .lsp-{{ sid }} .lsp__btn:hover { background: #8b6b4a; }
+  .lsp-{{ sid }} .lsp__no { margin-top: 12px; border: 0; background: none; font: inherit; font-size: 12px; color: rgba(17,17,17,.55); text-decoration: underline; cursor: pointer; }
+  .lsp-{{ sid }} .lsp__legal { margin: 14px 0 0; font-size: 11px; line-height: 1.5; color: rgba(17,17,17,.5); }
+  .lsp-{{ sid }} .lsp__err { margin: 0 0 10px; font-size: 13px; color: #a5562c; }
+  .lsp-{{ sid }} .lsp__done { display: none; }
+  .lsp-{{ sid }}.is-done .lsp__done { display: block; }
+  .lsp-{{ sid }}.is-done .lsp__form, .lsp-{{ sid }}.is-done .lsp__intro { display: none; }
+  .lsp-{{ sid }} .lsp__code { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0 0 14px; padding: 12px 12px 12px 20px; border: 1.5px dashed #b5776a; border-radius: 14px; background: #fff; font-size: 20px; font-weight: 700; letter-spacing: .12em; }
+  .lsp-{{ sid }} .lsp__copy { border: 1px solid #111; border-radius: 999px; background: none; padding: 7px 14px; font: inherit; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; cursor: pointer; color: #111; }
+  .lsp-tab-{{ sid }} { position: fixed; left: 0; top: 50%; z-index: 2147482999; display: none; transform: translateY(-50%); border: 0; border-radius: 0 12px 12px 0; background: #111; color: #fff; padding: 14px 9px; font-family: var(--font-body--family); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; writing-mode: vertical-rl; rotate: 180deg; cursor: pointer; box-shadow: 0 6px 20px rgba(17,17,17,.2); }
+  .lsp-tab-{{ sid }}.is-on { display: block; }
+  @media (max-width: 640px) {
+    .lsp-{{ sid }} { align-items: flex-end; padding: 0; }
+    .lsp-{{ sid }} .lsp__box { grid-template-columns: 1fr; border-radius: 22px 22px 0 0; max-height: 92vh; animation-name: lspSheet-{{ sid }}; }
+    .lsp-{{ sid }} .lsp__img { height: 190px; min-height: 0; }
+    .lsp-{{ sid }} .lsp__body { padding: 26px 22px 28px; }
+    .lsp-{{ sid }} .lsp__pct { font-size: 52px; }
+    .lsp-{{ sid }} .lsp__title { font-size: 21px; }
+  }
+  @keyframes lspFade-{{ sid }} { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes lspUp-{{ sid }} { from { opacity: 0; transform: translateY(24px) scale(.98); } to { opacity: 1; transform: none; } }
+  @keyframes lspSheet-{{ sid }} { from { transform: translateY(100%); } to { transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .lsp-{{ sid }}, .lsp-{{ sid }} .lsp__box { animation: none !important; } }
+{% endstyle %}
+
+<div class="lsp-{{ sid }}" id="lsp-{{ sid }}" role="dialog" aria-modal="true" aria-labelledby="lsp-t-{{ sid }}" data-delay="{{ section.settings.delay }}" data-code="{{ section.settings.code | escape }}">
+  <div class="lsp__box">
+    <button type="button" class="lsp__x" data-close aria-label="Close">×</button>
+    <div class="lsp__img">
+      {%- if img != blank -%}{{ img | image_url: width: 900 | image_tag: loading: 'lazy', alt: img.alt, sizes: '(max-width: 640px) 100vw, 380px' }}{%- endif -%}
+    </div>
+    <div class="lsp__body">
+      <div class="lsp__intro">
+        <p class="lsp__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        <p class="lsp__pct">{{ section.settings.pct }}% off</p>
+        <h2 class="lsp__title" id="lsp-t-{{ sid }}">{{ section.settings.title | escape }}</h2>
+        <p class="lsp__text">{{ section.settings.text | escape }}</p>
+      </div>
+
+      {%- form 'customer', class: 'lsp__form' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter,popup-5">
+        {%- if form.posted_successfully? -%}<span data-posted hidden></span>{%- endif -%}
+        {%- if form.errors -%}<p class="lsp__err" data-error>{{ form.errors | default_errors }}</p>{%- endif -%}
+        <div class="lsp__field">
+          <label for="lsp-e-{{ sid }}" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Email</label>
+          <input id="lsp-e-{{ sid }}" type="email" name="contact[email]" required autocomplete="email" placeholder="{{ section.settings.placeholder | escape }}">
+          <button type="submit" class="lsp__btn">{{ section.settings.button | escape }}</button>
+        </div>
+        <button type="button" class="lsp__no" data-close>{{ section.settings.no_thanks | escape }}</button>
+        <p class="lsp__legal">{{ section.settings.legal | escape }}</p>
+      {%- endform -%}
+
+      <div class="lsp__done">
+        <p class="lsp__eyebrow">{{ section.settings.done_eyebrow | escape }}</p>
+        <h2 class="lsp__title">{{ section.settings.done_title | escape }}</h2>
+        <div class="lsp__code"><span>{{ section.settings.code | escape }}</span><button type="button" class="lsp__copy" data-copy>Copy</button></div>
+        <a class="lsp__btn" href="/discount/{{ section.settings.code | url_encode }}?redirect={{ back | url_encode }}">{{ section.settings.apply_button | escape }}</a>
+        <p class="lsp__legal">{{ section.settings.done_text | escape }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<button type="button" class="lsp-tab-{{ sid }}" id="lsp-tab-{{ sid }}">🎁 {{ section.settings.pct }}% off</button>
+
+<script>
+(function () {
+  var root = document.getElementById('lsp-{{ sid }}'), tab = document.getElementById('lsp-tab-{{ sid }}');
+  if (!root || root.dataset.ready) return; root.dataset.ready = '1';
+  var KEY = 'lv_popup5_v1';
+  var get = function () { try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { return {}; } };
+  var set = function (v) { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch (e) {} };
+  var state = get(), shown = false;
+
+  function open() { if (root.classList.contains('is-open')) return; shown = true; root.classList.add('is-open'); tab.classList.remove('is-on'); document.documentElement.style.overflow = 'hidden'; }
+  function close() { root.classList.remove('is-open'); document.documentElement.style.overflow = ''; if (!state.done) { state.closed = Date.now(); set(state); tab.classList.add('is-on'); } }
+
+  root.querySelectorAll('[data-close]').forEach(function (b) { b.addEventListener('click', close); });
+  root.addEventListener('click', function (e) { if (e.target === root) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && root.classList.contains('is-open')) close(); });
+  tab.addEventListener('click', open);
+  root.querySelector('[data-copy]').addEventListener('click', function () {
+    if (navigator.clipboard) navigator.clipboard.writeText(root.dataset.code);
+    this.textContent = 'Copied';
+  });
+
+  // Na versturen herlaadt Shopify de pagina: toon dan de code
+  if (root.querySelector('[data-posted]') && state.sent) { state.done = true; set(state); root.classList.add('is-done'); open(); return; }
+  if (root.querySelector('[data-error]') && state.sent) { open(); return; }
+  root.querySelector('form').addEventListener('submit', function () { state.sent = true; set(state); });
+  if (state.done) return;
+  if (state.closed) { tab.classList.add('is-on'); return; }
+  if (window.Shopify && window.Shopify.designMode) return;
+
+  setTimeout(function () { if (!shown) open(); }, (parseInt(root.dataset.delay, 10) || 8) * 1000);
+  window.addEventListener('scroll', function onS() {
+    var h = document.documentElement.scrollHeight - innerHeight;
+    if (h > 0 && scrollY / h > 0.4) { removeEventListener('scroll', onS); if (!shown) open(); }
+  }, { passive: true });
+  document.addEventListener('mouseout', function onL(e) {
+    if (!e.relatedTarget && e.clientY <= 0) { document.removeEventListener('mouseout', onL); if (!shown) open(); }
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Lovaire aanmeld-popup",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Afbeelding (leeg = productfoto)" },
+    { "type": "range", "id": "pct", "label": "Korting %", "min": 5, "max": 30, "step": 5, "default": 5 },
+    { "type": "text", "id": "code", "label": "Kortingscode (moet bestaan in Kortingen)", "default": "LOVAIRE5" },
+    { "type": "range", "id": "delay", "label": "Openen na (seconden)", "min": 3, "max": 30, "step": 1, "default": 8 },
+    { "type": "text", "id": "eyebrow", "label": "Bovenregel", "default": "Welcome gift" },
+    { "type": "text", "id": "title", "label": "Titel", "default": "your first order" },
+    { "type": "text", "id": "text", "label": "Tekst", "default": "Sign up and get 5% off your Period Heating Wrap – plus tips for calmer period days." },
+    { "type": "text", "id": "placeholder", "label": "Placeholder", "default": "Your email address" },
+    { "type": "text", "id": "button", "label": "Knop", "default": "Get my 5% off" },
+    { "type": "text", "id": "no_thanks", "label": "Nee-link", "default": "No thanks" },
+    { "type": "text", "id": "legal", "label": "Kleine tekst", "default": "One-time use. You can unsubscribe at any time." },
+    { "type": "text", "id": "done_eyebrow", "label": "Na aanmelden – bovenregel", "default": "You're in 🤍" },
+    { "type": "text", "id": "done_title", "label": "Na aanmelden – titel", "default": "Here's your 5% code" },
+    { "type": "text", "id": "apply_button", "label": "Na aanmelden – knop", "default": "Apply code & shop" },
+    { "type": "text", "id": "done_text", "label": "Na aanmelden – tekst", "default": "The button adds your code automatically. You can also enter it at checkout." }
+  ],
+  "presets": [{ "name": "Lovaire aanmeld-popup" }]
+}
+{% endschema %}
