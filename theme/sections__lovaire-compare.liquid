@@ -1,0 +1,88 @@
+{%- comment -%}
+  Vergelijkingstabel: product tegen alternatieven. Regels in de vorm "Kenmerk | ja | nee | ja" (ja/nee per kolom).
+{%- endcomment -%}
+{%- liquid
+  assign sid = section.id | replace: '_', '' | downcase
+  assign rows = section.settings.rows | newline_to_br | split: '<br />'
+-%}
+{% style %}
+  .lpc-{{ sid }} { background: {% render 'lovaire-bg', bg: section.settings.background, top: section.settings.blend_top, bottom: section.settings.blend_bottom %}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
+  .lpc-{{ sid }} .lpc__inner { max-width: 820px; margin: 0 auto; padding: 0 16px; text-align: center; }
+  .lpc-{{ sid }} .lpc__eyebrow { font-family: var(--font-body--family); font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: #8b6b4a; margin: 0 0 14px; }
+  .lpc-{{ sid }} .lpc__title { font-family: var(--font-heading--family); font-weight: 400; font-size: clamp(28px, 4vw, 40px); color: #111; margin: 0 0 32px; }
+  .lpc-{{ sid }} .lpc__title em { font-style: italic; color: #8b6b4a; }
+  .lpc-{{ sid }} table { width: 100%; border-collapse: separate; border-spacing: 0; font-family: var(--font-body--family); background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(17,17,17,.06); }
+  .lpc-{{ sid }} th, .lpc-{{ sid }} td { padding: 15px 10px; border-bottom: 1px solid #f0e6dd; text-align: center; vertical-align: middle; }
+  .lpc-{{ sid }} tr:last-child td { border-bottom: 0; }
+  .lpc-{{ sid }} th { font-size: 12px; font-weight: 600; letter-spacing: .04em; color: #6a6a6a; line-height: 1.3; }
+  .lpc-{{ sid }} td:first-child, .lpc-{{ sid }} th:first-child { text-align: left; padding-left: 20px; font-size: 14px; color: #111; }
+  .lpc-{{ sid }} .lpc__us { background: #f8f1ec; color: #111; }
+  .lpc-{{ sid }} th.lpc__us { font-size: 13px; font-weight: 700; color: #111; }
+  .lpc-{{ sid }} .lpc__y, .lpc-{{ sid }} .lpc__n { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; font-size: 14px; font-weight: 700; }
+  .lpc-{{ sid }} .lpc__y { background: #111; color: #fff; }
+  .lpc-{{ sid }} .lpc__n { background: #f3ebe4; color: #b5776a; }
+  .lpc-{{ sid }} .lpc__cta { display: inline-block; margin-top: 28px; background: #111; color: #fff; border-radius: 999px; padding: 16px 40px; font-family: var(--font-body--family); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .lpc-{{ sid }} .lpc__cta:hover { background: #8b6b4a; }
+  @media (max-width: 560px) {
+    .lpc-{{ sid }} th, .lpc-{{ sid }} td { padding: 13px 4px; }
+    .lpc-{{ sid }} th { font-size: 11px; }
+    .lpc-{{ sid }} td:first-child, .lpc-{{ sid }} th:first-child { padding-left: 14px; font-size: 13px; }
+  }
+{% endstyle %}
+<section class="lpc-{{ sid }}">
+  <div class="lpc__inner">
+    {%- if section.settings.eyebrow != blank -%}<p class="lpc__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    <h2 class="lpc__title">{{ section.settings.heading | escape }} <em>{{ section.settings.heading_italic | escape }}</em></h2>
+    <table>
+      <thead><tr>
+        <th scope="col"></th>
+        <th scope="col" class="lpc__us">{{ section.settings.col_1 | escape }}</th>
+        <th scope="col">{{ section.settings.col_2 | escape }}</th>
+        <th scope="col">{{ section.settings.col_3 | escape }}</th>
+      </tr></thead>
+      <tbody>
+        {%- for row in rows -%}
+          {%- assign r = row | strip -%}
+          {%- if r == blank -%}{%- continue -%}{%- endif -%}
+          {%- assign cells = r | split: '|' -%}
+          <tr>
+            {%- for c in cells -%}
+              {%- assign v = c | strip | downcase -%}
+              {%- if forloop.first -%}<td>{{ c | strip | escape }}</td>
+              {%- else -%}
+                <td{% if forloop.index == 2 %} class="lpc__us"{% endif %}>
+                  {%- if v == 'ja' or v == 'yes' -%}<span class="lpc__y" aria-label="Yes">✓</span>{%- else -%}<span class="lpc__n" aria-label="No">✕</span>{%- endif -%}
+                </td>
+              {%- endif -%}
+            {%- endfor -%}
+          </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+    {%- if section.settings.button != blank -%}
+      <a class="lpc__cta" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">{{ section.settings.button | escape }}</a>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lovaire vergelijking",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Label", "default": "WHY THE WRAP" },
+    { "type": "text", "id": "heading", "label": "Kop", "default": "Made for" },
+    { "type": "text", "id": "heading_italic", "label": "Kop – cursief", "default": "your cramp days" },
+    { "type": "text", "id": "col_1", "label": "Kolom 1 (jouw product)", "default": "Lovaire Wrap" },
+    { "type": "text", "id": "col_2", "label": "Kolom 2", "default": "Hot water bottle" },
+    { "type": "text", "id": "col_3", "label": "Kolom 3", "default": "Heat patches" },
+    { "type": "textarea", "id": "rows", "label": "Regels (Kenmerk | ja/nee | ja/nee | ja/nee)", "default": "Helps reduce period cramps | ja | ja | ja\nWarm in seconds | ja | nee | nee\nStays warm all evening | ja | nee | ja\nHands-free, stays in place | ja | nee | ja\nAdjustable heat | ja | nee | nee\nReusable every month | ja | ja | nee" },
+    { "type": "text", "id": "button", "label": "Knop (leeg = geen knop)", "default": "Get your wrap" },
+    { "type": "color", "id": "blend_top", "label": "Overloop boven (automatisch)" },
+    { "type": "color", "id": "blend_bottom", "label": "Overloop onder (automatisch)" },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#fbf8f5" },
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "default": 72 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "default": 72 }
+  ],
+  "presets": [{ "name": "Lovaire vergelijking" }]
+}
+{% endschema %}

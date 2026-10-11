@@ -406,11 +406,19 @@
     "popup": {
       "type": "lovaire-signup-popup",
       "settings": {}
+    },
+    "compare": {
+      "type": "lovaire-compare",
+      "settings": {
+        "blend_top": "#fbf8f5",
+        "blend_bottom": "#fbf8f5"
+      }
     }
   },
   "order": [
     "main",
     "benefits",
+    "compare",
     "story",
     "howto",
     "belofte",
