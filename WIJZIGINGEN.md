@@ -218,3 +218,4 @@ In nieuw concept-thema "Lovaire – Nederlands (oogcrème vernieuwd)" (209001021
 - Fout weggehaald: "Gratis verzending vanaf €29,99" – verzending is altijd gratis (NL/BE, geen minimum).
 - Teksten als metavelden op het product (`theme/oogcreme_metafields.json`), alleen op basis van de eigen productbeschrijving; FAQ aangevuld met inhoud (15 g) en het 2-potjes-voordeel.
 - De oude sectie `lovaire-oogcreme-landing` blijft in het thema staan maar wordt niet meer gebruikt.
+- Foto's met tekst erin (voor/direct, textuur) werden in de boogvorm afgesneden. `lovaire-product-story` heeft nu de instelling "Fotovorm": Boog (standaard, ongewijzigd voor andere producten) of Hele foto. Voor de oogcrème staat hij op Hele foto: volledige foto met afgeronde hoeken, niets bijgesneden.
