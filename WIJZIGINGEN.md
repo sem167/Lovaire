@@ -209,3 +209,12 @@ Product "Dr.Melaxin Calcium Dark Spot Cover Oogcrème 15g" (template `product.oo
 - Product toegevoegd aan de collecties Huidverzorging en Make-up.
 - Gecontroleerd: beide varianten (1 en 2 potjes) zijn bestelbaar; voorraad wordt niet bijgehouden, dus "0 op voorraad" blokkeert niets. "Bespaar €19,95" klopt (2 × €34,95 = €69,90 → €49,95).
 - Nog open: de 3 videovakken en FAQ-vraag 5 in de landingssectie zijn leeg (worden dan niet getoond). Het live thema kan niet via de koppeling worden aangepast; themawijzigingen via de thema-editor of een kopie.
+
+## Update: oogcrème-pagina in Lovaire-opbouw (12 oktober 2026)
+In nieuw concept-thema "Lovaire – Nederlands (oogcrème vernieuwd)" (209001021779), kopie van het live thema. Na controle publiceren.
+- `templates/product.oogcreme.json` opnieuw opgebouwd met `theme/build_oogcreme.py`: zelfde opbouw en stijl als de andere productpagina's (zwarte knoppen, taupe labels, zachte overgangen) i.p.v. de losse wijnrode landingssectie.
+- Volgorde: product → voordelen → uitleg met foto's (voor/direct, textuur) → vergelijking (oogcrème vs. concealer vs. gewone oogcrème) → gebruik in 3 stappen → belofte → FAQ → afsluitend koopblok + vaste koopbalk onderin.
+- Emoji-regels boven de koopknop weg; de pagina is nu gelijk aan de andere producten.
+- Fout weggehaald: "Gratis verzending vanaf €29,99" – verzending is altijd gratis (NL/BE, geen minimum).
+- Teksten als metavelden op het product (`theme/oogcreme_metafields.json`), alleen op basis van de eigen productbeschrijving; FAQ aangevuld met inhoud (15 g) en het 2-potjes-voordeel.
+- De oude sectie `lovaire-oogcreme-landing` blijft in het thema staan maar wordt niet meer gebruikt.
