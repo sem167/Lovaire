@@ -218,3 +218,4 @@ In nieuw concept-thema "Lovaire – oogcrème Lyvelle-stijl" (209002824019), kop
 - Op de oogcrème-pagina staat de sectie direct onder het koopblok, met de kop "Zie de Calcium Oogcrème zelf in actie 💕".
 - De video's kies je in de thema-editor uit Inhoud → Bestanden. Zonder gekozen video's blijft de sectie onzichtbaar voor bezoekers.
 - Script: `theme/oogcreme_videos.py`.
+- Video 1 en 2 ingesteld op de twee geüploade video's (7629350726313053471 en 7647742984905166093, beide 720×1280, ±1 minuut).
