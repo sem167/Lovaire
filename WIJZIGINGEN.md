@@ -211,3 +211,10 @@ In nieuw concept-thema "Lovaire – oogcrème Lyvelle-stijl" (209002824019), kop
 - Niet overgenomen: "Excellent | 100+ reviews" (zoveel reviews zijn er niet, en reviews staan uit).
 - "1+1 gratis / 2+2 gratis" moet je instellen in Kaching Bundles (app is actief). Dan rekent de korting in de winkelwagen ook echt goed.
 - Script: `theme/oogcreme_lyvelle.py` (werkt op `theme/templates__product.oogcreme.json`).
+
+## Update: twee video's op de oogcrème-pagina (12 oktober 2026)
+"Lovaire – oogcrème Lyvelle-stijl" (209002824019) is inmiddels live. Daarom staan deze wijzigingen in een nieuwe kopie: "Lovaire – oogcrème + video's" (209003086163).
+- Nieuwe sectie `lovaire-video-duo` (`theme/sections__lovaire-video-duo.liquid`): vette kop en twee staande video's (9:16) naast elkaar, ook op mobiel. De video's spelen automatisch, zonder geluid en herhalend.
+- Op de oogcrème-pagina staat de sectie direct onder het koopblok, met de kop "Zie de Calcium Oogcrème zelf in actie 💕".
+- De video's kies je in de thema-editor uit Inhoud → Bestanden. Zonder gekozen video's blijft de sectie onzichtbaar voor bezoekers.
+- Script: `theme/oogcreme_videos.py`.

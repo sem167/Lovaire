@@ -401,10 +401,20 @@
         "blend_top": "#f9f5f1",
         "blend_bottom": "#f6e7de"
       }
+    },
+    "videos": {
+      "type": "lovaire-video-duo",
+      "settings": {
+        "heading": "Zie de Calcium Oogcrème zelf in actie 💕",
+        "background": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 48
+      }
     }
   },
   "order": [
     "main",
+    "videos",
     "benefits",
     "story",
     "compare",
