@@ -1,0 +1,67 @@
+{%- comment -%}
+  Lyvelle-stijl voor de productpagina: ondertitel + voordeel-balkjes met emoji, en (optioneel) vette titel,
+  grote prijs en een grote gekleurde winkelwagenknop voor de hele productsectie.
+{%- endcomment -%}
+{%- assign bid = block.id | replace: '_', '' | downcase -%}
+<div class="lpi-{{ bid }}" {{ block.shopify_attributes }}>
+  {%- if block.settings.subtitle != blank -%}
+    <p class="lpi__sub">{{ block.settings.subtitle | escape }}</p>
+  {%- endif -%}
+  <ul class="lpi__pills" role="list">
+    {%- for i in (1..4) -%}
+      {%- capture t_key -%}pill_{{ i }}_text{%- endcapture -%}
+      {%- capture e_key -%}pill_{{ i }}_emoji{%- endcapture -%}
+      {%- if block.settings[t_key] != blank -%}
+        <li class="lpi__pill">
+          {%- if block.settings[e_key] != blank -%}<span class="lpi__emoji" aria-hidden="true">{{ block.settings[e_key] | escape }}</span>{%- endif -%}
+          <span>{{ block.settings[t_key] | escape }}</span>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</div>
+
+{% style %}
+  .lpi-{{ bid }} { display: flex; flex-direction: column; gap: 16px; width: 100%; font-family: var(--font-body--family); }
+  .lpi-{{ bid }} .lpi__sub { margin: -6px 0 2px; font-size: 17px; line-height: 1.4; color: #6a6a6a; letter-spacing: .02em; }
+  .lpi-{{ bid }} .lpi__pills { display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; list-style: none; }
+  .lpi-{{ bid }} .lpi__pill { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border: 1px solid #e3e3e3;
+    border-radius: 10px; background: #fff; font-size: 15px; font-weight: 700; line-height: 1.3; color: #111; }
+  .lpi-{{ bid }} .lpi__emoji { flex: none; width: 22px; text-align: center; font-size: 17px; line-height: 1; }
+
+  {%- if block.settings.restyle_section -%}
+    {%- assign s = '#shopify-section-' | append: section.id -%}
+    {{ s }} .product-details h1 { font-family: var(--font-body--family); font-weight: 700; font-size: clamp(28px, 6.4vw, 38px);
+      line-height: 1.15; letter-spacing: -.005em; color: #111; }
+    {{ s }} product-price { font-size: clamp(28px, 6vw, 34px); font-weight: 700; color: #111; }
+    {{ s }} product-price .tax-note, {{ s }} product-price .installments { font-size: 14px; font-weight: 400; color: #6a6a6a; }
+    {{ s }} .add-to-cart-button { min-height: 62px; border-radius: 10px; border-color: {{ block.settings.button_color }};
+      background: {{ block.settings.button_color }}; color: #111; font-size: 17px; font-weight: 700;
+      letter-spacing: .06em; text-transform: uppercase; box-shadow: 0 6px 16px -8px {{ block.settings.button_color }}; }
+    {{ s }} .add-to-cart-button:hover:not([disabled]) { background: {{ block.settings.button_hover_color }};
+      border-color: {{ block.settings.button_hover_color }}; color: #111; }
+    {{ s }} .add-to-cart-button .add-to-cart-icon { width: 22px; height: 22px; }
+  {%- endif -%}
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Lovaire intro",
+  "settings": [
+    { "type": "text", "id": "subtitle", "label": "Ondertitel", "default": "Oogcrème | Koreaanse formule" },
+    { "type": "text", "id": "pill_1_emoji", "label": "Balkje 1 – emoji", "default": "🇰🇷" },
+    { "type": "text", "id": "pill_1_text", "label": "Balkje 1 – tekst", "default": "Het K-beauty geheim voor stralende ogen" },
+    { "type": "text", "id": "pill_2_emoji", "label": "Balkje 2 – emoji", "default": "👁️" },
+    { "type": "text", "id": "pill_2_text", "label": "Balkje 2 – tekst" },
+    { "type": "text", "id": "pill_3_emoji", "label": "Balkje 3 – emoji", "default": "💧" },
+    { "type": "text", "id": "pill_3_text", "label": "Balkje 3 – tekst" },
+    { "type": "text", "id": "pill_4_emoji", "label": "Balkje 4 – emoji" },
+    { "type": "text", "id": "pill_4_text", "label": "Balkje 4 – tekst" },
+    { "type": "header", "content": "Stijl van de hele productsectie" },
+    { "type": "checkbox", "id": "restyle_section", "label": "Vette titel, grote prijs en grote gekleurde knop", "default": true },
+    { "type": "color", "id": "button_color", "label": "Kleur winkelwagenknop", "default": "#6ab04c" },
+    { "type": "color", "id": "button_hover_color", "label": "Kleur winkelwagenknop (hover)", "default": "#5c9d40" }
+  ],
+  "presets": [{ "name": "Lovaire intro" }]
+}
+{% endschema %}

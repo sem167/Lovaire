@@ -201,3 +201,13 @@ In concept-thema "Lovaire – zonder reviews" (208439312723).
 - Footer van zwart naar zachte blush (scheme-5) zonder scheidingslijn; de pagina loopt er met een verloop in over.
 - Nieuwe sectie `lovaire-fade`: blend.py zet die automatisch tussen twee Horizon-secties met verschillende kleur (ook richting header/footer), op alle pagina's.
 - FAQ op de homepage zonder lijntjes tussen de vragen.
+
+## Update: oogcrème-pagina in Lyvelle-stijl (12 oktober 2026)
+In nieuw concept-thema "Lovaire – oogcrème Lyvelle-stijl" (209002824019), kopie van het live thema "Lovaire – Nederlands (oogcrème vernieuwd)". Alleen het sjabloon `product.oogcreme` is aangepast.
+- Nieuw blok `lovaire-pdp-intro` (`theme/blocks__lovaire-pdp-intro.liquid`): ondertitel "Oogcrème | Korean Dark Spot Formula" en drie omrande voordeel-balkjes met emoji direct onder de titel. Alle teksten zijn aan te passen in de thema-editor.
+- Hetzelfde blok maakt de titel vet en groot, de prijs groot en de winkelwagenknop groot en groen (#6ab04c), met het winkelwagen-icoon. De kleur is in te stellen en de stijl met één vinkje uit te zetten.
+- Het LOVAIRE-label boven de titel is weg.
+- Balkjes alleen met claims uit de eigen productinfo ("camoufleert donkere kringen", "calcium, niacinamide & collageen"). "Wallen verdwijnen" is niet overgenomen: de crème camoufleert, ze laat wallen niet verdwijnen.
+- Niet overgenomen: "Excellent | 100+ reviews" (zoveel reviews zijn er niet, en reviews staan uit).
+- "1+1 gratis / 2+2 gratis" moet je instellen in Kaching Bundles (app is actief). Dan rekent de korting in de winkelwagen ook echt goed.
+- Script: `theme/oogcreme_lyvelle.py` (werkt op `theme/templates__product.oogcreme.json`).
