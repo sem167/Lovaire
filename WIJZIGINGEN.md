@@ -201,3 +201,11 @@ In concept-thema "Lovaire – zonder reviews" (208439312723).
 - Footer van zwart naar zachte blush (scheme-5) zonder scheidingslijn; de pagina loopt er met een verloop in over.
 - Nieuwe sectie `lovaire-fade`: blend.py zet die automatisch tussen twee Horizon-secties met verschillende kleur (ook richting header/footer), op alle pagina's.
 - FAQ op de homepage zonder lijntjes tussen de vragen.
+
+## Update: Dr.Melaxin oogcrème-pagina afgewerkt (12 oktober 2026)
+Product "Dr.Melaxin Calcium Dark Spot Cover Oogcrème 15g" (template `product.oogcreme` met sectie `lovaire-oogcreme-landing` in het live thema "Lovaire – Nederlands").
+- Alt-teksten toegevoegd aan alle 4 productfoto's (hero, voor/direct, textuur, packshot).
+- SEO-titel en -omschrijving ingevuld.
+- Product toegevoegd aan de collecties Huidverzorging en Make-up.
+- Gecontroleerd: beide varianten (1 en 2 potjes) zijn bestelbaar; voorraad wordt niet bijgehouden, dus "0 op voorraad" blokkeert niets. "Bespaar €19,95" klopt (2 × €34,95 = €69,90 → €49,95).
+- Nog open: de 3 videovakken en FAQ-vraag 5 in de landingssectie zijn leeg (worden dan niet getoond). Het live thema kan niet via de koppeling worden aangepast; themawijzigingen via de thema-editor of een kopie.
