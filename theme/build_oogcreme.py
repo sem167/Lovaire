@@ -13,7 +13,7 @@ S = {
     "benefits": {"type": "lovaire-product-benefits", "settings": {
         "eyebrow": "DE ESSENTIALS", "heading": "Alles wat het", "heading_italic": "voor je ogen doet"}},
     "story": {"type": "lovaire-product-story", "settings": {
-        "eyebrow": "K-BEAUTY OOGVERZORGING", "heading": "Wakker ogen, ook als je", "heading_italic": "dat niet bent", "media_shape": "natural"}},
+        "eyebrow": "K-BEAUTY OOGVERZORGING", "heading": "Altijd mooie,", "heading_italic": "strakke ogen", "media_shape": "natural"}},
     "compare": {"type": "lovaire-compare", "settings": {
         "eyebrow": "WAAROM DEZE OOGCRÈME", "heading": "Camouflage én verzorging", "heading_italic": "in één potje",
         "col_1": "Calcium Oogcrème", "col_2": "Concealer", "col_3": "Gewone oogcrème",
