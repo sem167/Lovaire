@@ -1,35 +1,43 @@
 {%- comment -%}
-  Korte tekst (kop + alinea) met direct daaronder een grote foto, bijvoorbeeld een voor-en-na-foto.
-  Zelfde vette kopstijl als de video-sectie, zodat ze naadloos op elkaar aansluiten.
+  Verhaalblok zoals op lovelia.dk: vette gecentreerde kop, korte gecentreerde tekst met vetgedrukte accenten,
+  en (optioneel) direct daaronder een foto over de volle breedte. Meerdere van deze blokken achter elkaar
+  vormen het verhaal van de productpagina.
 {%- endcomment -%}
-<div class="lts-{{ section.id }}">
-  <div class="lts__inner">
-    {%- if section.settings.heading != blank -%}<h2 class="lts__h">{{ section.settings.heading | escape }}</h2>{%- endif -%}
-    {%- if section.settings.text != blank -%}<div class="lts__t">{{ section.settings.text }}</div>{%- endif -%}
-    {%- if section.settings.image != blank -%}
-      <figure class="lts__fig">
-        {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 760px) 720px, 100vw', alt: section.settings.image.alt }}
-        {%- if section.settings.caption != blank -%}<figcaption>{{ section.settings.caption | escape }}</figcaption>{%- endif -%}
-      </figure>
-    {%- elsif request.design_mode -%}
-      <div class="lts__empty">Kies een foto in de thema-editor</div>
-    {%- endif -%}
-  </div>
+{%- assign img = section.settings.image -%}
+<div class="lts-{{ section.id }}{% if section.settings.full_bleed %} lts--bleed{% endif %}">
+  {%- if section.settings.heading != blank or section.settings.text != blank -%}
+    <div class="lts__inner">
+      {%- if section.settings.heading != blank -%}<h2 class="lts__h">{{ section.settings.heading | escape }}</h2>{%- endif -%}
+      {%- if section.settings.text != blank -%}<div class="lts__t">{{ section.settings.text }}</div>{%- endif -%}
+    </div>
+  {%- endif -%}
+  {%- if img != blank -%}
+    <figure class="lts__fig">
+      {{ img | image_url: width: 1600 | image_tag: loading: 'lazy', sizes: '(min-width: 760px) 760px, 100vw', alt: img.alt }}
+      {%- if section.settings.caption != blank -%}<figcaption>{{ section.settings.caption | escape }}</figcaption>{%- endif -%}
+    </figure>
+  {%- elsif request.design_mode and section.settings.show_placeholder -%}
+    <div class="lts__empty">Kies een foto in de thema-editor</div>
+  {%- endif -%}
 </div>
 
 {% style %}
   .lts-{{ section.id }} { background: {{ section.settings.background }};
-    padding: {{ section.settings.padding_top }}px 12px {{ section.settings.padding_bottom }}px; }
-  .lts-{{ section.id }} .lts__inner { max-width: 720px; margin: 0 auto; text-align: center; }
-  .lts-{{ section.id }} .lts__h { margin: 0 0 12px; color: #111; font-family: var(--font-body--family); font-weight: 700;
-    font-size: clamp(26px, 6.4vw, 40px); line-height: 1.18; }
-  .lts-{{ section.id }} .lts__t { margin: 0 auto 20px; max-width: 560px; font-family: var(--font-body--family);
-    font-size: 16px; line-height: 1.6; color: #3a3a3a; }
-  .lts-{{ section.id }} .lts__t p { margin: 0 0 8px; }
-  .lts-{{ section.id }} .lts__fig { margin: 0; }
-  .lts-{{ section.id }} .lts__fig img { display: block; width: 100%; height: auto; border-radius: {{ section.settings.radius }}px; }
-  .lts-{{ section.id }} .lts__fig figcaption { margin-top: 8px; font-size: 12px; color: #8a8a8a; }
-  .lts-{{ section.id }} .lts__empty { padding: 60px 16px; border: 1px dashed #d8c8b4; color: #8a8a8a; font-size: 13px; }
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; }
+  .lts-{{ section.id }} .lts__inner { max-width: 640px; margin: 0 auto; padding: 0 20px; text-align: center; }
+  .lts-{{ section.id }} .lts__h { margin: 0 0 18px; color: #111; font-family: var(--font-body--family); font-weight: 700;
+    font-size: clamp(26px, 7vw, 40px); line-height: 1.16; letter-spacing: -.01em; }
+  .lts-{{ section.id }} .lts__t { font-family: var(--font-body--family); font-size: 16px; line-height: 1.75;
+    letter-spacing: .02em; color: #3a3a3a; }
+  .lts-{{ section.id }} .lts__t p { margin: 0 0 14px; }
+  .lts-{{ section.id }} .lts__t strong { color: #111; font-weight: 700; }
+  .lts-{{ section.id }} .lts__fig { margin: 24px auto 0; max-width: 760px; padding: 0 16px; }
+  .lts-{{ section.id }} .lts__fig img { display: block; width: 100%; height: auto; border-radius: 12px; }
+  .lts-{{ section.id }}.lts--bleed .lts__fig { max-width: none; padding: 0; }
+  .lts-{{ section.id }}.lts--bleed .lts__fig img { border-radius: 0; }
+  @media (min-width: 760px) { .lts-{{ section.id }}.lts--bleed .lts__fig { max-width: 900px; } .lts-{{ section.id }}.lts--bleed .lts__fig img { border-radius: 16px; } }
+  .lts-{{ section.id }} .lts__fig figcaption { margin-top: 8px; padding: 0 16px; text-align: center; font-size: 12px; color: #8a8a8a; }
+  .lts-{{ section.id }} .lts__empty { margin: 24px 16px 0; padding: 60px 16px; border: 1px dashed #d8c8b4; color: #8a8a8a; font-size: 13px; text-align: center; }
 {% endstyle %}
 
 {% schema %}
@@ -38,12 +46,13 @@
   "settings": [
     { "type": "text", "id": "heading", "label": "Kop" },
     { "type": "richtext", "id": "text", "label": "Tekst" },
-    { "type": "image_picker", "id": "image", "label": "Foto (bijv. voor & na)" },
+    { "type": "image_picker", "id": "image", "label": "Foto onder de tekst" },
     { "type": "text", "id": "caption", "label": "Onderschrift" },
+    { "type": "checkbox", "id": "full_bleed", "label": "Foto over de volle breedte (mobiel)", "default": true },
+    { "type": "checkbox", "id": "show_placeholder", "label": "Lege fotoplek tonen in de editor", "default": false },
     { "type": "color", "id": "background", "label": "Achtergrond", "default": "#ffffff" },
-    { "type": "range", "id": "radius", "label": "Afgeronde hoeken", "min": 0, "max": 32, "step": 2, "unit": "px", "default": 12 },
-    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 8 },
-    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 48 }
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 40 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 0 }
   ],
   "presets": [{ "name": "Lovaire tekst + foto" }]
 }

@@ -285,113 +285,11 @@
         "padding-block-end": 0
       }
     },
-    "benefits": {
-      "type": "lovaire-product-benefits",
-      "settings": {
-        "eyebrow": "DE ESSENTIALS",
-        "heading": "Alles wat het",
-        "heading_italic": "voor je ogen doet",
-        "blend_top": "#ffffff",
-        "blend_bottom": "#fbf8f5"
-      }
-    },
-    "story": {
-      "type": "lovaire-product-story",
-      "settings": {
-        "eyebrow": "K-BEAUTY OOGVERZORGING",
-        "heading": "Altijd mooie,",
-        "heading_italic": "strakke ogen",
-        "blend_top": "#fbf8f5",
-        "blend_bottom": "#fdfbfa",
-        "media_shape": "natural",
-        "start": 2
-      }
-    },
-    "compare": {
-      "type": "lovaire-compare",
-      "settings": {
-        "eyebrow": "WAAROM DEZE OOGCRÈME",
-        "heading": "Camouflage én verzorging",
-        "heading_italic": "in één potje",
-        "col_1": "Calcium Oogcrème",
-        "col_2": "Concealer",
-        "col_3": "Gewone oogcrème",
-        "rows": "Direct zichtbaar resultaat | ja | ja | nee\nVerzorgt de huid rond je ogen | ja | nee | ja\nKruipt niet in fijne lijntjes | ja | nee | ja\nEén product, één stap | ja | nee | nee",
-        "button": "Bestel je oogcrème",
-        "background": "#fbf8f5",
-        "blend_top": "#fdfbfa",
-        "blend_bottom": "#f7f2ec"
-      }
-    },
-    "howto": {
-      "type": "lovaire-product-howto",
-      "settings": {
-        "eyebrow": "ZO GEBRUIK JE HET",
-        "heading": "30 seconden,",
-        "heading_italic": "elke ochtend",
-        "blend_top": "#f7f2ec",
-        "blend_bottom": "#f5e9e1"
-      }
-    },
-    "belofte": {
-      "type": "lovaire-belofte",
-      "blocks": {
-        "b1": {
-          "type": "item",
-          "settings": {
-            "icon": "truck",
-            "title": "Gratis verzending",
-            "text": "Op elke bestelling, geen minimumbedrag."
-          }
-        },
-        "b2": {
-          "type": "item",
-          "settings": {
-            "icon": "lock",
-            "title": "Veilig betalen",
-            "text": "iDEAL, Klarna en meer via een veilige checkout."
-          }
-        },
-        "b3": {
-          "type": "item",
-          "settings": {
-            "icon": "package",
-            "title": "Bestelling volgen",
-            "text": "Volg je pakket vanaf het moment dat het verzonden wordt."
-          }
-        },
-        "b4": {
-          "type": "item",
-          "settings": {
-            "icon": "chat",
-            "title": "24/7 klantenservice",
-            "text": "Nederlandse klantenservice, dag en nacht bereikbaar."
-          }
-        }
-      },
-      "block_order": [
-        "b1",
-        "b2",
-        "b3",
-        "b4"
-      ],
-      "settings": {
-        "eyebrow": "ONZE BELOFTE",
-        "heading": "Zorgeloos shoppen bij Lovaire",
-        "show_payment": false,
-        "background": "#f6e7de",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "layout": "cards",
-        "blend_top": "#f5e9e1",
-        "blend_bottom": "#faf3ee"
-      }
-    },
     "faq": {
       "type": "lovaire-product-faq",
       "settings": {
         "background": "#ffffff",
-        "blend_top": "#faf3ee",
+        "blend_top": "#ffffff",
         "blend_bottom": "#f9f5f1"
       }
     },
@@ -409,21 +307,72 @@
         "heading": "Zie de Calcium Oogcrème zelf in actie 💕",
         "background": "#ffffff",
         "padding_top": 8,
-        "padding_bottom": 16,
+        "padding_bottom": 8,
         "video_1": "shopify://files/videos/7629350726313053471-Dutch_(Netherlands).mp4",
         "video_2": "shopify://files/videos/7647742984905166093-Dutch_(Netherlands).mp4"
       }
     },
-    "voor_na": {
+    "moe": {
       "type": "lovaire-tekst-foto",
       "settings": {
-        "heading": "Eén laagje, direct verschil",
-        "text": "<p>Dep een klein beetje onder je ogen en klop het zacht in. De beige tint camoufleert donkere kringen meteen, terwijl calcium, niacinamide en collageen de dunne huid rond je ogen verzorgen.</p>",
+        "heading": "Zie je er moe uit, ook als je goed hebt geslapen?",
+        "text": "<p>Je slaapt genoeg. Je drinkt water.</p><p>En toch laten donkere kringen je er <strong>vermoeider uitzien dan je je voelt</strong>.</p><p>De huid rond je ogen is dun en gevoelig. Daardoor vallen schaduwen en verkleuring sneller op.</p><p>De <strong>Calcium Dark Spot Oogcrème</strong> geeft je een <strong>direct frissere blik</strong> – en verzorgt ondertussen je huid.</p>",
         "image": "shopify://shop_images/6-voor-direct.jpg",
         "caption": "Illustratie – resultaten kunnen per persoon verschillen.",
+        "full_bleed": true,
+        "show_placeholder": false,
         "background": "#ffffff",
-        "radius": 12,
-        "padding_top": 8,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "waarom": {
+      "type": "lovaire-tekst-foto",
+      "settings": {
+        "heading": "Waarom een gewone oogcrème vaak niet genoeg is",
+        "text": "<p>De meeste oogcrèmes <strong>verzorgen wel</strong>, maar je ziet in de spiegel niet meteen verschil.</p><p>Een concealer camoufleert wel, maar <strong>verzorgt je huid niet</strong> en kan in fijne lijntjes kruipen.</p><p>Daarom zoeken zoveel vrouwen naar <strong>één product dat allebei doet</strong>.</p>",
+        "image": "shopify://shop_images/3-textuur-swatch.jpg",
+        "full_bleed": true,
+        "show_placeholder": false,
+        "background": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "anders": {
+      "type": "lovaire-tekst-foto",
+      "settings": {
+        "heading": "Wat deze oogcrème anders maakt",
+        "text": "<p>Deze Koreaanse oogcrème combineert <strong>directe camouflage</strong> met <strong>dagelijkse verzorging</strong>.</p><p>• De lichte, beige getinte formule laat je huid <strong>meteen egaler en frisser</strong> ogen</p><p>• <strong>Calcium, niacinamide en collageen</strong> verzorgen de dunne huid rond je ogen</p><p>• Licht en romig, <strong>kruipt niet in fijne lijntjes</strong></p><p>Eén potje. Eén stap. Een frisse blik.</p>",
+        "image": "shopify://shop_images/1-oogcreme-packshot.jpg",
+        "full_bleed": true,
+        "show_placeholder": false,
+        "background": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "gebruik": {
+      "type": "lovaire-tekst-foto",
+      "settings": {
+        "heading": "Zo gebruik je het",
+        "text": "<p><strong>1.</strong> Gebruik het als laatste stap van je huidverzorging.</p><p><strong>2.</strong> Breng een klein beetje aan onder beide ogen.</p><p><strong>3.</strong> Strijk 2 à 4 keer zacht uit en klop licht in met je ringvinger.</p>",
+        "full_bleed": true,
+        "show_placeholder": true,
+        "background": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "slot": {
+      "type": "lovaire-tekst-foto",
+      "settings": {
+        "heading": "Zie er weer uit zoals je je voelt",
+        "text": "<p>Donkere kringen hoeven niet te bepalen hoe jij je voelt.</p><p>Met de <strong>Calcium Dark Spot Oogcrème</strong> kies je voor een frisse, verzorgde blik – licht genoeg voor elke dag.</p><p><strong>Ontdek je frissere blik vandaag nog.</strong></p>",
+        "full_bleed": true,
+        "show_placeholder": false,
+        "background": "#ffffff",
+        "padding_top": 40,
         "padding_bottom": 48
       }
     }
@@ -431,12 +380,11 @@
   "order": [
     "main",
     "videos",
-    "voor_na",
-    "benefits",
-    "story",
-    "compare",
-    "howto",
-    "belofte",
+    "moe",
+    "waarom",
+    "anders",
+    "gebruik",
+    "slot",
     "faq",
     "cta"
   ]

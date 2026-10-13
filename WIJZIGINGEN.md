@@ -249,3 +249,15 @@ Op verzoek: **30 dagen retour op ongeopende producten** (geopende hygiëneproduc
 - Oogcrème: uitklapkopjes compacter (12 px boven/onder, 13 px letter) via `lovaire-pdp-intro`. Geen extra ruimte meer onder het productblok, zodat de video's direct volgen.
 - Oogcrème: nieuwe sectie `lovaire-tekst-foto` direct na de video's: kop "Eén laagje, direct verschil", korte uitleg en de echte voor-en-na-foto (`6-voor-direct.jpg`) met onderschrift "Resultaten kunnen per persoon verschillen". Voorbeeldsite lovelia.dk was vanuit de werkomgeving niet bereikbaar.
 - Dubbeling weg: `lovaire-product-story` heeft een nieuwe instelling "Begin bij punt" (standaard 1). Op de oogcrème-pagina staat die op 2, omdat punt 1 (zelfde kop en 2e productfoto) nu direct na de video's staat. Onderschrift van de voor-en-na-foto is gecorrigeerd naar "Illustratie – …", want de foto zelf is een illustratie.
+
+## Update: oogcrème-pagina opgebouwd zoals lovelia.dk (13 oktober 2026)
+Op basis van screenshots van de concurrent (alleen de opbouw, eigen teksten en foto's). In concept-thema "Lovaire – concept 13 okt".
+- Na de video's volgen vijf verhaalblokken (`lovaire-tekst-foto`: vette gecentreerde kop, korte tekst met vette accenten, foto over de volle breedte op mobiel):
+  1. "Zie je er moe uit, ook als je goed hebt geslapen?" + voor-en-na-illustratie
+  2. "Waarom een gewone oogcrème vaak niet genoeg is" + textuurfoto
+  3. "Wat deze oogcrème anders maakt" + packshot
+  4. "Zo gebruik je het" (3 stappen, fotoplek vrij voor de AI-uitlegfoto)
+  5. "Zie er weer uit zoals je je voelt"
+- Daarna FAQ en het afsluitende koopblok. Verwijderd van deze pagina: voordelenlijst, productverhaal, vergelijkingstabel, losse gebruik-sectie en belofte-kaarten (dubbel met de nieuwe blokken en het vertrouwensblok onder de knop).
+- Niet overgenomen van de concurrent: "zonder te camoufleren" (onze crème camoufleert juist), "Populair bij 8.500+ vrouwen", "morgen verzonden", nep-doorgestreepte prijzen en reviews die er (nog) niet zijn.
+- Script: `theme/oogcreme_verhaal.py`.
