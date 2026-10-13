@@ -253,7 +253,7 @@ Op verzoek: **30 dagen retour op ongeopende producten** (geopende hygiëneproduc
 ## Update: oogcrème-pagina opgebouwd zoals lovelia.dk (13 oktober 2026)
 Op basis van screenshots van de concurrent (alleen de opbouw, eigen teksten en foto's). In concept-thema "Lovaire – concept 13 okt".
 - Na de video's volgen vijf verhaalblokken (`lovaire-tekst-foto`: vette gecentreerde kop, korte tekst met vette accenten, foto over de volle breedte op mobiel):
-  1. "Zie je er moe uit, ook als je goed hebt geslapen?" + voor-en-na-illustratie
+  1. "Zie je er moe uit, ook als je goed hebt geslapen?" + voor-en-na-illustratie (zonder onderschrift; "Illustratie" staat in de foto zelf)
   2. "Waarom een gewone oogcrème vaak niet genoeg is" + textuurfoto
   3. "Wat deze oogcrème anders maakt" + packshot
   4. "Zo gebruik je het" (3 stappen, fotoplek vrij voor de AI-uitlegfoto)
