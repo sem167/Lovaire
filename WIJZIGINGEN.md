@@ -261,3 +261,8 @@ Op basis van screenshots van de concurrent (alleen de opbouw, eigen teksten en f
 - Daarna FAQ en het afsluitende koopblok. Verwijderd van deze pagina: voordelenlijst, productverhaal, vergelijkingstabel, losse gebruik-sectie en belofte-kaarten (dubbel met de nieuwe blokken en het vertrouwensblok onder de knop).
 - Niet overgenomen van de concurrent: "zonder te camoufleren" (onze crème camoufleert juist), "Populair bij 8.500+ vrouwen", "morgen verzonden", nep-doorgestreepte prijzen en reviews die er (nog) niet zijn.
 - Script: `theme/oogcreme_verhaal.py`.
+
+## 13 okt – "Inclusief btw" weg bij de prijs (oogcrème)
+- templates/product.oogcreme.json: prijsblok `show_tax_info` → false.
+- Het concept-thema is inmiddels gepubliceerd (live); schrijven naar het live thema kan niet via de API,
+  dus dit vinkje moet in de thema-editor worden uitgezet (Prijs-blok → "Belastinginformatie tonen").
