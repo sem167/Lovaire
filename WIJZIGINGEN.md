@@ -236,6 +236,6 @@ In hetzelfde concept-thema, nu "Lovaire – kleiner logo + winkelwagen NL" (2090
 - Script: `theme/winkelwagen_nl.py`.
 
 ## Update: zwarte aankondigingsbalk + belangrijkste voordeel onder de titel (13 oktober 2026)
-Zelfde concept-thema (209095164243), nu "Lovaire – concept 13 okt (logo, winkelwagen, balk, oogcrème)".
+Zelfde concept-thema (209095164243), nu "Lovaire – concept 13 okt".
 - Aankondigingsbalk op alle pagina's zwart met witte tekst (`scheme-announcement-black`). Script: `theme/aankondiging_zwart.py`.
 - Oogcrème: de ondertitel onder de titel is nu het belangrijkste voordeel: "Camoufleert donkere kringen direct – voor een frissere, uitgeruste blik" (donkerder en iets vetter). Balkje 2 is daarom "Oogcrème én concealer in één" geworden, zodat er niets dubbel staat.
