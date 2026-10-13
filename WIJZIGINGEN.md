@@ -246,3 +246,4 @@ Op verzoek: **30 dagen retour op ongeopende producten** (geopende hygiëneproduc
 - Oogcrème: de video's staan direct onder het koopblok (ruimte 48+40 px → 8+8 px).
 - Pagina's (direct live, geen thema): "Ruilen & retourneren" (30 dagen, ongeopend), "Ruil- & retourbeleid — Hygiëneproducten" (ongeopend en verzegeld = 30 dagen retour, geopend niet; was "geen retour zodra verzonden"), "Over ons" (24/7 in plaats van 6 dagen per week) en het concept "Algemene voorwaarden" (art. 6: 30 dagen retour naast de wettelijke 14 dagen bedenktijd).
 - Let op: 24/7 is een belofte. Zorg dat er ook 's nachts en in het weekend iemand (of een chat) reageert.
+- Oogcrème: uitklapkopjes compacter (12 px boven/onder, 13 px letter) via `lovaire-pdp-intro`. Geen extra ruimte meer onder het productblok, zodat de video's direct volgen.
