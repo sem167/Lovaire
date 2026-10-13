@@ -266,3 +266,14 @@ Op basis van screenshots van de concurrent (alleen de opbouw, eigen teksten en f
 - templates/product.oogcreme.json: prijsblok `show_tax_info` → false.
 - Het concept-thema is inmiddels gepubliceerd (live); schrijven naar het live thema kan niet via de API.
   Daarom kopie gemaakt: "Lovaire – zonder btw-regel" (209111023955) met deze wijziging. Gebruiker publiceert.
+
+## 13 okt – Winkelwagen-lade in Lovelia-stijl
+Kopie-thema "Lovaire – nieuwe winkelwagen" (209125638483), gemaakt van het live thema "zonder btw-regel".
+Bestanden in `theme/live/` (live versies + wijzigingen via `theme/winkelwagen_lovelia.py`):
+- settings_data: `cart_type` page → drawer (winkelwagen schuift open i.p.v. aparte pagina).
+- header-actions: kop "Je winkelwagen" gecentreerd met grijs kruisje, groene balk "Gratis verzending! (incl. Track & Trace)",
+  "🔒 30 dagen retourrecht" boven de knop, betaal-icoontjes eronder, totaalregel verborgen (staat in de knop).
+- cart-summary: knop "Veilig afrekenen • €totaal" (donker).
+- cart-products: "(Je bespaart €…)" in het groen per product, rand om aantal-kiezer.
+Bewust niet overgenomen: "geld-terug-garantie" (ons beleid = 30 dagen retour, ongeopend), "50.000+ tevreden klanten"
+en "Bestelling gereserveerd voor 10 minuten" (niet waar → misleidend volgens ACM).
