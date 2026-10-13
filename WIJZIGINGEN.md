@@ -277,3 +277,7 @@ Bestanden in `theme/live/` (live versies + wijzigingen via `theme/winkelwagen_lo
 - cart-products: "(Je bespaart €…)" in het groen per product, rand om aantal-kiezer.
 Bewust niet overgenomen: "geld-terug-garantie" (ons beleid = 30 dagen retour, ongeopend), "50.000+ tevreden klanten"
 en "Bestelling gereserveerd voor 10 minuten" (niet waar → misleidend volgens ACM).
+
+## 13 okt – UpCart uit
+Er draaiden twee winkelwagens (eigen lade + app UpCart). Kopie "Lovaire – winkelwagen zonder UpCart" (209140580691):
+UpCart app-embed uitgezet in settings_data. Kaching Bundles en Loox blijven aan.
