@@ -1,0 +1,50 @@
+{%- comment -%}
+  Korte tekst (kop + alinea) met direct daaronder een grote foto, bijvoorbeeld een voor-en-na-foto.
+  Zelfde vette kopstijl als de video-sectie, zodat ze naadloos op elkaar aansluiten.
+{%- endcomment -%}
+<div class="lts-{{ section.id }}">
+  <div class="lts__inner">
+    {%- if section.settings.heading != blank -%}<h2 class="lts__h">{{ section.settings.heading | escape }}</h2>{%- endif -%}
+    {%- if section.settings.text != blank -%}<div class="lts__t">{{ section.settings.text }}</div>{%- endif -%}
+    {%- if section.settings.image != blank -%}
+      <figure class="lts__fig">
+        {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 760px) 720px, 100vw', alt: section.settings.image.alt }}
+        {%- if section.settings.caption != blank -%}<figcaption>{{ section.settings.caption | escape }}</figcaption>{%- endif -%}
+      </figure>
+    {%- elsif request.design_mode -%}
+      <div class="lts__empty">Kies een foto in de thema-editor</div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% style %}
+  .lts-{{ section.id }} { background: {{ section.settings.background }};
+    padding: {{ section.settings.padding_top }}px 12px {{ section.settings.padding_bottom }}px; }
+  .lts-{{ section.id }} .lts__inner { max-width: 720px; margin: 0 auto; text-align: center; }
+  .lts-{{ section.id }} .lts__h { margin: 0 0 12px; color: #111; font-family: var(--font-body--family); font-weight: 700;
+    font-size: clamp(26px, 6.4vw, 40px); line-height: 1.18; }
+  .lts-{{ section.id }} .lts__t { margin: 0 auto 20px; max-width: 560px; font-family: var(--font-body--family);
+    font-size: 16px; line-height: 1.6; color: #3a3a3a; }
+  .lts-{{ section.id }} .lts__t p { margin: 0 0 8px; }
+  .lts-{{ section.id }} .lts__fig { margin: 0; }
+  .lts-{{ section.id }} .lts__fig img { display: block; width: 100%; height: auto; border-radius: {{ section.settings.radius }}px; }
+  .lts-{{ section.id }} .lts__fig figcaption { margin-top: 8px; font-size: 12px; color: #8a8a8a; }
+  .lts-{{ section.id }} .lts__empty { padding: 60px 16px; border: 1px dashed #d8c8b4; color: #8a8a8a; font-size: 13px; }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Lovaire tekst + foto",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Kop" },
+    { "type": "richtext", "id": "text", "label": "Tekst" },
+    { "type": "image_picker", "id": "image", "label": "Foto (bijv. voor & na)" },
+    { "type": "text", "id": "caption", "label": "Onderschrift" },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#ffffff" },
+    { "type": "range", "id": "radius", "label": "Afgeronde hoeken", "min": 0, "max": 32, "step": 2, "unit": "px", "default": 12 },
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 8 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 48 }
+  ],
+  "presets": [{ "name": "Lovaire tekst + foto" }]
+}
+{% endschema %}
