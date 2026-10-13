@@ -219,3 +219,6 @@ In nieuw concept-thema "Lovaire – oogcrème Lyvelle-stijl" (209002824019), kop
 - De video's kies je in de thema-editor uit Inhoud → Bestanden. Zonder gekozen video's blijft de sectie onzichtbaar voor bezoekers.
 - Script: `theme/oogcreme_videos.py`.
 - Video 1 en 2 ingesteld op de twee geüploade video's (7629350726313053471 en 7647742984905166093, beide 720×1280, ±1 minuut).
+
+## Update: kortere producttitel oogcrème (13 oktober 2026)
+- Producttitel "Dr.Melaxin Calcium Dark Spot Cover Oogcrème 15g" → "Calcium Dark Spot Oogcrème" (past beter op een telefoon). De URL blijft hetzelfde. SEO-titel ("Dr.Melaxin getinte oogcrème …"), merk (Dr.Melaxin), beschrijving en foto's zijn ongewijzigd.
