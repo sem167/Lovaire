@@ -264,5 +264,5 @@ Op basis van screenshots van de concurrent (alleen de opbouw, eigen teksten en f
 
 ## 13 okt – "Inclusief btw" weg bij de prijs (oogcrème)
 - templates/product.oogcreme.json: prijsblok `show_tax_info` → false.
-- Het concept-thema is inmiddels gepubliceerd (live); schrijven naar het live thema kan niet via de API,
-  dus dit vinkje moet in de thema-editor worden uitgezet (Prijs-blok → "Belastinginformatie tonen").
+- Het concept-thema is inmiddels gepubliceerd (live); schrijven naar het live thema kan niet via de API.
+  Daarom kopie gemaakt: "Lovaire – zonder btw-regel" (209111023955) met deze wijziging. Gebruiker publiceert.
