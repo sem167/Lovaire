@@ -225,5 +225,5 @@ In nieuw concept-thema "Lovaire – oogcrème Lyvelle-stijl" (209002824019), kop
 
 ## Update: kleiner logo (13 oktober 2026)
 In concept-thema "Lovaire – kleiner logo" (209095164243), een kopie van het live thema "Lovaire – oogcrème + video's". Shopify zit aan het maximum van 20 thema's, dus de ongebruikte kopie "video's met geluidsknop" is hiervoor hergebruikt en hernoemd.
-- Logohoogte op desktop 58 → 44 px, op mobiel 64 → 48 px (`config/settings_data.json`, verder ongewijzigd).
-- Script: `theme/logo_kleiner.py` (bouwt settings_data na; `python3 theme/logo_kleiner.py 44 48`).
+- Logohoogte op desktop 58 → 44 px, op mobiel 64 → 32 px (eerst 48, op verzoek nog kleiner) (`config/settings_data.json`, verder ongewijzigd).
+- Script: `theme/logo_kleiner.py` (bouwt settings_data na; `python3 theme/logo_kleiner.py 44 32`).
