@@ -303,7 +303,8 @@
         "heading_italic": "strakke ogen",
         "blend_top": "#fbf8f5",
         "blend_bottom": "#fdfbfa",
-        "media_shape": "natural"
+        "media_shape": "natural",
+        "start": 2
       }
     },
     "compare": {
@@ -419,7 +420,7 @@
         "heading": "Eén laagje, direct verschil",
         "text": "<p>Dep een klein beetje onder je ogen en klop het zacht in. De beige tint camoufleert donkere kringen meteen, terwijl calcium, niacinamide en collageen de dunne huid rond je ogen verzorgen.</p>",
         "image": "shopify://shop_images/6-voor-direct.jpg",
-        "caption": "Voor en direct na het aanbrengen. Resultaten kunnen per persoon verschillen.",
+        "caption": "Illustratie – resultaten kunnen per persoon verschillen.",
         "background": "#ffffff",
         "radius": 12,
         "padding_top": 8,
