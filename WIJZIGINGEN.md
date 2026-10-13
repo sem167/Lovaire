@@ -234,3 +234,8 @@ In hetzelfde concept-thema, nu "Lovaire – kleiner logo + winkelwagen NL" (2090
 - `templates/cart.json`: titel "Je winkelwagen", vertrouwensblok onder het totaal (veilig betalen, gratis verzending met track & trace, contact) en kop "Maak je routine compleet" boven de aanbevelingen.
 - Let op: de Upcart-app (winkelwagen-schuif) heeft eigen teksten. Die pas je aan in de Upcart-app.
 - Script: `theme/winkelwagen_nl.py`.
+
+## Update: zwarte aankondigingsbalk + belangrijkste voordeel onder de titel (13 oktober 2026)
+Zelfde concept-thema (209095164243), nu "Lovaire – concept 13 okt (logo, winkelwagen, balk, oogcrème)".
+- Aankondigingsbalk op alle pagina's zwart met witte tekst (`scheme-announcement-black`). Script: `theme/aankondiging_zwart.py`.
+- Oogcrème: de ondertitel onder de titel is nu het belangrijkste voordeel: "Camoufleert donkere kringen direct – voor een frissere, uitgeruste blik" (donkerder en iets vetter). Balkje 2 is daarom "Oogcrème én concealer in één" geworden, zodat er niets dubbel staat.
