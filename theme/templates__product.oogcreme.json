@@ -161,7 +161,7 @@
                     "ret_t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Je kunt je bestelling binnen 14 dagen na ontvangst retourneren. Voor hygiëneproducten zoals cosmetica en ondergoed gelden aparte voorwaarden: zie <a href=\"/pages/ruilen-en-retourneren\">hygiëneproducten</a>. Alle stappen vind je op onze pagina <a href=\"/pages/bestellingen-en-levering-1\">ruilen en retourneren</a>.</p>",
+                        "text": "<p>Je kunt ongeopende producten binnen 30 dagen na ontvangst retourneren. Voor hygiëneproducten zoals cosmetica en ondergoed gelden aparte voorwaarden: zie <a href=\"/pages/ruilen-en-retourneren\">hygiëneproducten</a>. Alle stappen vind je op onze pagina <a href=\"/pages/bestellingen-en-levering-1\">ruilen en retourneren</a>.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -215,7 +215,7 @@
                     "help_t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Mail ons via onze <a href=\"/pages/contact\">contactpagina</a>. We reageren op werkdagen tussen 09:00 en 17:00.</p>",
+                        "text": "<p>Mail ons via onze <a href=\"/pages/contact\">contactpagina</a>. Onze Nederlandse klantenservice is 24/7 voor je bereikbaar.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -282,7 +282,7 @@
         "enable_sticky_add_to_cart": false,
         "color_scheme": "scheme-1",
         "padding-block-start": 32,
-        "padding-block-end": 48
+        "padding-block-end": 8
       }
     },
     "benefits": {
@@ -363,8 +363,8 @@
           "type": "item",
           "settings": {
             "icon": "chat",
-            "title": "Persoonlijke service",
-            "text": "We zijn er voor je op ma–vr, 09:00–17:00."
+            "title": "24/7 klantenservice",
+            "text": "Nederlandse klantenservice, dag en nacht bereikbaar."
           }
         }
       },
@@ -407,7 +407,7 @@
       "settings": {
         "heading": "Zie de Calcium Oogcrème zelf in actie 💕",
         "background": "#ffffff",
-        "padding_top": 40,
+        "padding_top": 8,
         "padding_bottom": 48,
         "video_1": "shopify://files/videos/7629350726313053471-Dutch_(Netherlands).mp4",
         "video_2": "shopify://files/videos/7647742984905166093-Dutch_(Netherlands).mp4"

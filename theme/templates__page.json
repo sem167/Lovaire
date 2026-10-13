@@ -41,7 +41,7 @@
         "h": {
           "type": "text",
           "settings": {
-            "text": "<h2>Questions? We're happy to help</h2>",
+            "text": "<h2>Vragen? We helpen je graag</h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
@@ -55,7 +55,7 @@
         "p": {
           "type": "text",
           "settings": {
-            "text": "<p>Our team replies on weekdays between 09:00 and 17:00.</p>",
+            "text": "<p>Onze Nederlandse klantenservice is 24/7 voor je bereikbaar.</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
@@ -69,7 +69,7 @@
         "b": {
           "type": "button",
           "settings": {
-            "label": "Contact us",
+            "label": "Neem contact op",
             "link": "shopify://pages/contact",
             "style_class": "button-secondary",
             "width": "fit-content",

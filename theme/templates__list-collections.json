@@ -3,8 +3,8 @@
     "intro": {
       "type": "lovaire-categories",
       "settings": {
-        "eyebrow": "DISCOVER",
-        "heading": "All collections",
+        "eyebrow": "ONTDEK",
+        "heading": "Alle collecties",
         "collections": [
           "make-up",
           "huid-producten",
@@ -22,8 +22,8 @@
     "favorieten": {
       "type": "lovaire-favorieten",
       "settings": {
-        "eyebrow": "OUR FAVOURITES",
-        "heading": "Popular at",
+        "eyebrow": "ONZE FAVORIETEN",
+        "heading": "Populair bij",
         "products": [
           "lashlift-waterproof-mascara",
           "zelfkleurende-foundation-spf15",
@@ -33,13 +33,13 @@
           "lovaire-support-bh"
         ],
         "columns": 3,
-        "button_label": "Shop all",
+        "button_label": "Bekijk alles",
         "button_link": "shopify://collections/all",
         "background": "#f4ece4",
         "padding_top": 80,
         "padding_bottom": 80,
         "heading_italic": "Lovaire",
-        "badge_text": "Favourite",
+        "badge_text": "Favoriet",
         "badge_count": 0,
         "blend_top": "#f5e9e1",
         "blend_bottom": "#f9f5f1"
@@ -52,32 +52,32 @@
           "type": "item",
           "settings": {
             "icon": "truck",
-            "title": "Free shipping",
-            "text": "On every order, no minimum spend."
+            "title": "Gratis verzending",
+            "text": "Op elke bestelling, geen minimumbedrag."
           }
         },
         "b2": {
           "type": "item",
           "settings": {
             "icon": "lock",
-            "title": "Secure payment",
-            "text": "iDEAL, Klarna and more via a secure checkout."
+            "title": "Veilig betalen",
+            "text": "iDEAL, Klarna en meer via een veilige checkout."
           }
         },
         "b3": {
           "type": "item",
           "settings": {
             "icon": "package",
-            "title": "Order tracking",
-            "text": "Follow your parcel from the moment it ships."
+            "title": "Bestelling volgen",
+            "text": "Volg je pakket vanaf het moment dat het verzonden wordt."
           }
         },
         "b4": {
           "type": "item",
           "settings": {
             "icon": "chat",
-            "title": "Personal service",
-            "text": "We're here for you Mon–Fri, 09:00–17:00."
+            "title": "24/7 klantenservice",
+            "text": "Nederlandse klantenservice, dag en nacht bereikbaar."
           }
         }
       },

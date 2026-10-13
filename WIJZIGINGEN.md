@@ -239,3 +239,10 @@ In hetzelfde concept-thema, nu "Lovaire – kleiner logo + winkelwagen NL" (2090
 Zelfde concept-thema (209095164243), nu "Lovaire – concept 13 okt".
 - Aankondigingsbalk op alle pagina's zwart met witte tekst (`scheme-announcement-black`). Script: `theme/aankondiging_zwart.py`.
 - Oogcrème: de ondertitel onder de titel is nu het belangrijkste voordeel: "Camoufleert donkere kringen direct – voor een frissere, uitgeruste blik" (donkerder en iets vetter). Balkje 2 is daarom "Oogcrème én concealer in één" geworden, zodat er niets dubbel staat.
+
+## Update: 30 dagen retour, 24/7 klantenservice, video's hoger (13 oktober 2026)
+Op verzoek: **30 dagen retour op ongeopende producten** (geopende hygiëneproducten blijven uitgesloten) en **24/7 Nederlandse klantenservice**.
+- Concept-thema "Lovaire – concept 13 okt" (209095164243), 16 bestanden: alle productpagina's (uitklapblok Retourneren/Vragen, belofte-kaart "24/7 klantenservice"), homepage (hero-vinkje, FAQ, belofte), collectiepagina's, contactpagina ("Openingstijden: 24/7 bereikbaar"), standaard paginasjabloon, footer (KLANTENSERVICE), vertrouwensblok onder de knop ("24/7 klantenservice – Nederlands, dag en nacht"), koopblok-voordeel "30 dagen retour" en de FAQ-standaardtekst. Script: `theme/retour30_service247.py`.
+- Oogcrème: de video's staan direct onder het koopblok (ruimte 48+40 px → 8+8 px).
+- Pagina's (direct live, geen thema): "Ruilen & retourneren" (30 dagen, ongeopend), "Ruil- & retourbeleid — Hygiëneproducten" (ongeopend en verzegeld = 30 dagen retour, geopend niet; was "geen retour zodra verzonden"), "Over ons" (24/7 in plaats van 6 dagen per week) en het concept "Algemene voorwaarden" (art. 6: 30 dagen retour naast de wettelijke 14 dagen bedenktijd).
+- Let op: 24/7 is een belofte. Zorg dat er ook 's nachts en in het weekend iemand (of een chat) reageert.

@@ -54,7 +54,7 @@
       {%- if p.available -%}
         <button type="button" class="lpc__btn" data-lv-buy="{{ mode }}">{{ label | escape }}</button>
       {%- else -%}
-        <button type="button" class="lpc__btn" disabled>Sold out</button>
+        <button type="button" class="lpc__btn" disabled>Uitverkocht</button>
       {%- endif -%}
       <ul class="lpc__perks" role="list">
         {%- if section.settings.perk_1 != blank -%}<li>{{ section.settings.perk_1 | escape }}</li>{%- endif -%}
@@ -112,11 +112,11 @@
   "name": "Lovaire koopblok",
   "settings": [
     { "type": "paragraph", "content": "Afsluitend koopblok onderaan de productpagina + vaste koopbalk onderin het scherm zodra de gewone knop uit beeld is. Bij producten met opties scrolt de knop naar de keuze, tenzij er al een optie gekozen is." },
-    { "type": "text", "id": "eyebrow", "label": "Label", "default": "READY WHEN YOU ARE" },
-    { "type": "text", "id": "add_label", "label": "Knoptekst", "default": "Add to cart" },
-    { "type": "text", "id": "perk_1", "label": "Voordeel 1", "default": "Free shipping" },
-    { "type": "text", "id": "perk_2", "label": "Voordeel 2", "default": "14-day returns" },
-    { "type": "text", "id": "perk_3", "label": "Voordeel 3", "default": "Secure checkout" },
+    { "type": "text", "id": "eyebrow", "label": "Label", "default": "KLAAR ALS JIJ HET BENT" },
+    { "type": "text", "id": "add_label", "label": "Knoptekst", "default": "In winkelwagen" },
+    { "type": "text", "id": "perk_1", "label": "Voordeel 1", "default": "Gratis verzending" },
+    { "type": "text", "id": "perk_2", "label": "Voordeel 2", "default": "30 dagen retour" },
+    { "type": "text", "id": "perk_3", "label": "Voordeel 3", "default": "Veilig afrekenen" },
     { "type": "checkbox", "id": "show_rating", "label": "Reviewscore tonen", "default": false },
     { "type": "checkbox", "id": "sticky", "label": "Vaste koopbalk onderin tonen", "default": true },
     { "type": "color", "id": "blend_top", "label": "Overloop boven (automatisch)" },

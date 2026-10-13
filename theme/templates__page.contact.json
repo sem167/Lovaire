@@ -6,7 +6,7 @@
         "eyebrow": {
           "type": "text",
           "settings": {
-            "text": "<p>CUSTOMER SERVICE</p>",
+            "text": "<p>KLANTENSERVICE</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -20,7 +20,7 @@
         "title": {
           "type": "text",
           "settings": {
-            "text": "<h1>How can we help?</h1>",
+            "text": "<h1>Waarmee kunnen we je helpen?</h1>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -133,7 +133,7 @@
                 "t": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>Opening hours</h3>",
+                    "text": "<h3>Openingstijden</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -147,7 +147,7 @@
                 "b": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Mon–Fri: 09:00–17:00<br/>Sat: 10:00–14:00<br/>Sun: closed</p>",
+                    "text": "<p>24/7 bereikbaar<br/>Nederlandstalige klantenservice</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -178,7 +178,7 @@
                 "t": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>Track your order</h3>",
+                    "text": "<h3>Volg je bestelling</h3>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -192,7 +192,7 @@
                 "b": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Use the tracking link in your shipping confirmation email.</p>",
+                    "text": "<p>Gebruik de trackinglink in je verzendbevestiging.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",
@@ -239,7 +239,7 @@
         "h": {
           "type": "text",
           "settings": {
-            "text": "<h2>Send us a message</h2>",
+            "text": "<h2>Stuur ons een bericht</h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
@@ -264,7 +264,7 @@
               "type": "contact-form-submit-button",
               "static": true,
               "settings": {
-                "label": "Send message",
+                "label": "Verstuur bericht",
                 "style_class": "button",
                 "width": "fit-content",
                 "width_mobile": "fill"

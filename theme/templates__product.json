@@ -140,7 +140,7 @@
                 "ship": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Shipping & delivery",
+                    "heading": "Verzending & levering",
                     "open_by_default": false,
                     "icon": "none"
                   },
@@ -148,7 +148,7 @@
                     "ship_t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>You'll receive an email with a tracking link as soon as your order is on its way. More info: <a href=\"/pages/verzendbeleid\">shipping policy</a>.</p>",
+                        "text": "<p>Je ontvangt een e-mail met een track-and-trace-link zodra je bestelling onderweg is. Meer info: <a href=\"/pages/verzendbeleid\">verzendbeleid</a>.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -167,7 +167,7 @@
                 "ret": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Returns",
+                    "heading": "Retourneren",
                     "open_by_default": false,
                     "icon": "none"
                   },
@@ -175,7 +175,7 @@
                     "ret_t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>You can return your order within 14 days of receiving it. Separate conditions apply to hygiene products such as cosmetics and underwear: see <a href=\"/pages/ruilen-en-retourneren\">hygiene products</a>. You'll find every step on our <a href=\"/pages/bestellingen-en-levering-1\">returns and exchanges</a> page.</p>",
+                        "text": "<p>Je kunt ongeopende producten binnen 30 dagen na ontvangst retourneren. Voor hygiëneproducten zoals cosmetica en ondergoed gelden aparte voorwaarden: zie <a href=\"/pages/ruilen-en-retourneren\">hygiëneproducten</a>. Alle stappen vind je op onze pagina <a href=\"/pages/bestellingen-en-levering-1\">ruilen en retourneren</a>.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -194,7 +194,7 @@
                 "pay": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Secure payment",
+                    "heading": "Veilig betalen",
                     "open_by_default": false,
                     "icon": "none"
                   },
@@ -202,7 +202,7 @@
                     "pay_t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>You pay through Shopify's secure checkout, with options including iDEAL and Klarna. We never see or store your payment details.</p>",
+                        "text": "<p>Je betaalt via de beveiligde checkout van Shopify, onder andere met iDEAL en Klarna. Wij zien of bewaren je betaalgegevens nooit.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -221,7 +221,7 @@
                 "help": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Questions? We're happy to help",
+                    "heading": "Vragen? We helpen je graag",
                     "open_by_default": false,
                     "icon": "none"
                   },
@@ -229,7 +229,7 @@
                     "help_t": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Email us via our <a href=\"/pages/contact\">contact page</a>. We reply on weekdays between 09:00 and 17:00.</p>",
+                        "text": "<p>Mail ons via onze <a href=\"/pages/contact\">contactpagina</a>. Onze Nederlandse klantenservice is 24/7 voor je bereikbaar.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -304,32 +304,32 @@
           "type": "item",
           "settings": {
             "icon": "truck",
-            "title": "Free shipping",
-            "text": "On every order, no minimum spend."
+            "title": "Gratis verzending",
+            "text": "Op elke bestelling, geen minimumbedrag."
           }
         },
         "b2": {
           "type": "item",
           "settings": {
             "icon": "lock",
-            "title": "Secure payment",
-            "text": "iDEAL, Klarna and more via a secure checkout."
+            "title": "Veilig betalen",
+            "text": "iDEAL, Klarna en meer via een veilige checkout."
           }
         },
         "b3": {
           "type": "item",
           "settings": {
             "icon": "package",
-            "title": "Order tracking",
-            "text": "Follow your parcel from the moment it ships."
+            "title": "Bestelling volgen",
+            "text": "Volg je pakket vanaf het moment dat het verzonden wordt."
           }
         },
         "b4": {
           "type": "item",
           "settings": {
             "icon": "chat",
-            "title": "Personal service",
-            "text": "We're here for you Mon–Fri, 09:00–17:00."
+            "title": "24/7 klantenservice",
+            "text": "Nederlandse klantenservice, dag en nacht bereikbaar."
           }
         }
       },
@@ -340,8 +340,8 @@
         "b4"
       ],
       "settings": {
-        "eyebrow": "OUR PROMISE",
-        "heading": "Worry-free shopping at Lovaire",
+        "eyebrow": "ONZE BELOFTE",
+        "heading": "Zorgeloos shoppen bij Lovaire",
         "show_payment": false,
         "background": "#f6e7de",
         "padding_top": 72,

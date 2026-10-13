@@ -7,7 +7,7 @@
         "eyebrow": {
           "type": "text",
           "settings": {
-            "text": "<p>LOVAIRE COLLECTION</p>",
+            "text": "<p>LOVAIRE COLLECTIE</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "center",
@@ -177,32 +177,32 @@
           "type": "item",
           "settings": {
             "icon": "truck",
-            "title": "Free shipping",
-            "text": "On every order, no minimum spend."
+            "title": "Gratis verzending",
+            "text": "Op elke bestelling, geen minimumbedrag."
           }
         },
         "b2": {
           "type": "item",
           "settings": {
             "icon": "lock",
-            "title": "Secure payment",
-            "text": "iDEAL, Klarna and more via a secure checkout."
+            "title": "Veilig betalen",
+            "text": "iDEAL, Klarna en meer via een veilige checkout."
           }
         },
         "b3": {
           "type": "item",
           "settings": {
             "icon": "package",
-            "title": "Order tracking",
-            "text": "Follow your parcel from the moment it ships."
+            "title": "Bestelling volgen",
+            "text": "Volg je pakket vanaf het moment dat het verzonden wordt."
           }
         },
         "b4": {
           "type": "item",
           "settings": {
             "icon": "chat",
-            "title": "Personal service",
-            "text": "We're here for you Mon–Fri, 09:00–17:00."
+            "title": "24/7 klantenservice",
+            "text": "Nederlandse klantenservice, dag en nacht bereikbaar."
           }
         }
       },
