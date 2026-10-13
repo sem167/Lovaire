@@ -227,3 +227,10 @@ In nieuw concept-thema "Lovaire – oogcrème Lyvelle-stijl" (209002824019), kop
 In concept-thema "Lovaire – kleiner logo" (209095164243), een kopie van het live thema "Lovaire – oogcrème + video's". Shopify zit aan het maximum van 20 thema's, dus de ongebruikte kopie "video's met geluidsknop" is hiervoor hergebruikt en hernoemd.
 - Logohoogte op desktop 58 → 44 px, op mobiel 64 → 32 px (eerst 48, op verzoek nog kleiner) (`config/settings_data.json`, verder ongewijzigd).
 - Script: `theme/logo_kleiner.py` (bouwt settings_data na; `python3 theme/logo_kleiner.py 44 32`).
+
+## Update: winkelwagen duidelijk Nederlands (13 oktober 2026)
+In hetzelfde concept-thema, nu "Lovaire – kleiner logo + winkelwagen NL" (209095164243).
+- `locales/nl.json` (`theme/locales__nl.json`): "Verzendkosten worden berekend bij de checkout" vervangen door "Altijd gratis verzending" (overal). Fout "1 artikel verwijderd" bij toevoegen → "1 artikel toegevoegd aan je winkelwagen". "Afrekenen" → "Veilig afrekenen", "Geschat totaal" → "Totaal", "Speciale instructies" → "Opmerking bij je bestelling", "Doorgaan met winkelen" → "Verder winkelen", "Recent beoordeeld" → "Recent bekeken", "Uitverkoop" → "Aanbieding", "Inclusief btw." bij prijzen, en duidelijkere foutmeldingen.
+- `templates/cart.json`: titel "Je winkelwagen", vertrouwensblok onder het totaal (veilig betalen, gratis verzending met track & trace, contact) en kop "Maak je routine compleet" boven de aanbevelingen.
+- Let op: de Upcart-app (winkelwagen-schuif) heeft eigen teksten. Die pas je aan in de Upcart-app.
+- Script: `theme/winkelwagen_nl.py`.
