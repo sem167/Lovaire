@@ -357,10 +357,11 @@
         "heading": "Zo gebruik je het",
         "text": "<p><strong>1.</strong> Gebruik het als laatste stap van je huidverzorging.</p><p><strong>2.</strong> Breng een klein beetje aan onder beide ogen.</p><p><strong>3.</strong> Strijk 2 à 4 keer zacht uit en klop licht in met je ringvinger.</p>",
         "full_bleed": true,
-        "show_placeholder": true,
+        "show_placeholder": false,
         "background": "#ffffff",
         "padding_top": 40,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "image": "shopify://shop_images/oogcreme-oog-druppels.jpg"
       }
     },
     "slot": {

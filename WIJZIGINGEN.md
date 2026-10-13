@@ -256,7 +256,7 @@ Op basis van screenshots van de concurrent (alleen de opbouw, eigen teksten en f
   1. "Zie je er moe uit, ook als je goed hebt geslapen?" + voor-en-na-illustratie (zonder onderschrift; "Illustratie" staat in de foto zelf)
   2. "Waarom een gewone oogcrème vaak niet genoeg is" + textuurfoto
   3. "Wat deze oogcrème anders maakt" + packshot
-  4. "Zo gebruik je het" (3 stappen, fotoplek vrij voor de AI-uitlegfoto)
+  4. "Zo gebruik je het" (3 stappen) + eigen foto `oogcreme-oog-druppels.jpg` (aangeleverd door de eigenaar)
   5. "Zie er weer uit zoals je je voelt"
 - Daarna FAQ en het afsluitende koopblok. Verwijderd van deze pagina: voordelenlijst, productverhaal, vergelijkingstabel, losse gebruik-sectie en belofte-kaarten (dubbel met de nieuwe blokken en het vertrouwensblok onder de knop).
 - Niet overgenomen van de concurrent: "zonder te camoufleren" (onze crème camoufleert juist), "Populair bij 8.500+ vrouwen", "morgen verzonden", nep-doorgestreepte prijzen en reviews die er (nog) niet zijn.
