@@ -281,3 +281,12 @@ en "Bestelling gereserveerd voor 10 minuten" (niet waar → misleidend volgens A
 ## 13 okt – UpCart uit
 Er draaiden twee winkelwagens (eigen lade + app UpCart). Kopie "Lovaire – winkelwagen zonder UpCart" (209140580691):
 UpCart app-embed uitgezet in settings_data. Kaching Bundles en Loox blijven aan.
+
+## 14 okt – Nieuwe productpagina: Glow Palette
+- Product "Glow Palette – Highlighter voor Ogen & Wangen" (concept/DRAFT), €34,95, handle glow-palette-highlighter-ogen-wangen,
+  template `glow-palette`, FAQ in metaveld lovaire.faq.
+- templates/product.glow-palette.json = exact dezelfde opbouw als de oogcrème (main, videos, moe, waarom, anders, gebruik,
+  slot, faq, cta), eigen teksten; foto- en videoplekken leeg (te vullen in de thema-editor). Script: theme/glow_palette.py.
+- Thema 209125638483 hergebruikt (thema-limiet 20 bereikt), gelijk gezet aan live (UpCart uit) + nieuw template,
+  hernoemd naar "Lovaire – + Glow Palette pagina". Gebruiker publiceert.
+- Geen Tarte-naam of Tarte-foto's gebruikt: alleen toegestaan bij echte Tarte uit legale inkoop (merk- en auteursrecht).
