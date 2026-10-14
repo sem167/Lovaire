@@ -44,3 +44,11 @@ story("slot", "Glow zoals jij dat wilt",
 s["cta"]["settings"]["eyebrow"] = "KLAAR VOOR JOUW GLOW"
 json.dump(t, open("templates__product.glow-palette.json", "w"), ensure_ascii=False, indent=2)
 print(t["order"])
+
+# Foto's (aangeleverd door de gebruiker) in de verhaalblokken
+t = json.load(open("templates__product.glow-palette.json"))
+for key, img in {"moe": "glow-palette-all-in-1.jpg", "waarom": "glow-palette-tinten.jpg",
+                 "anders": "glow-palette-glow-your-way.jpg", "gebruik": "glow-palette-zo-aanbrengen.jpg"}.items():
+    t["sections"][key]["settings"]["image"] = "shopify://shop_images/" + img
+    t["sections"][key]["settings"]["show_placeholder"] = False
+json.dump(t, open("templates__product.glow-palette.json", "w"), ensure_ascii=False, indent=2)

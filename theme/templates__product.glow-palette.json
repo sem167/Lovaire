@@ -316,10 +316,11 @@
         "heading": "Wil je die glow, zonder tien producten?",
         "text": "<p>Je ziet het overal: die frisse, stralende <strong>golden-hour glow</strong>.</p><p>Maar met een losse highlighter, blush én oogschaduw raakt je make-uptasje snel vol – en duurt je ochtend lang.</p><p>De <strong>Glow Palette</strong> geeft je alles in <strong>één compact palette</strong>.</p>",
         "full_bleed": true,
-        "show_placeholder": true,
+        "show_placeholder": false,
         "background": "#ffffff",
         "padding_top": 24,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "image": "shopify://shop_images/glow-palette-all-in-1.jpg"
       }
     },
     "waarom": {
@@ -328,10 +329,11 @@
         "heading": "Vier tinten, eindeloos veel looks",
         "text": "<p>• <strong>Parel</strong> – een frisse highlight op je jukbeenderen en in je ooghoekjes</p><p>• <strong>Goud</strong> – warme golden-hour glow op wangen en oogleden</p><p>• <strong>Brons-rosé</strong> – zachte diepte op je ogen</p><p>• <strong>Roze</strong> – een blosje met glans op je wangen</p><p>Draag ze los of <strong>meng ze tot jouw eigen glow</strong>.</p>",
         "full_bleed": true,
-        "show_placeholder": true,
+        "show_placeholder": false,
         "background": "#ffffff",
         "padding_top": 40,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "image": "shopify://shop_images/glow-palette-tinten.jpg"
       }
     },
     "anders": {
@@ -340,10 +342,11 @@
         "heading": "Wat deze palette anders maakt",
         "text": "<p>Fijn poeder dat <strong>soepel uitblendt</strong> op je huid.</p><p>• <strong>Voor ogen én wangen</strong> – één palette in plaats van drie producten</p><p>• <strong>Opbouwbaar</strong> – van subtiel overdag tot stralend in de avond</p><p>• <strong>Compact</strong> – ideaal voor onderweg of op reis</p><p>Eén palette. Een paar tellen. Jouw glow.</p>",
         "full_bleed": true,
-        "show_placeholder": true,
+        "show_placeholder": false,
         "background": "#ffffff",
         "padding_top": 40,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "image": "shopify://shop_images/glow-palette-glow-your-way.jpg"
       }
     },
     "gebruik": {
@@ -352,10 +355,11 @@
         "heading": "Zo gebruik je het",
         "text": "<p><strong>1.</strong> Draai je kwast door één tint, of door de hele palette voor een mix.</p><p><strong>2.</strong> Dep op je jukbeenderen, wenkbrauwboog, oogleden en binnenste ooghoek.</p><p><strong>3.</strong> Bouw laagje voor laagje op tot de glow die jij wilt.</p>",
         "full_bleed": true,
-        "show_placeholder": true,
+        "show_placeholder": false,
         "background": "#ffffff",
         "padding_top": 40,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "image": "shopify://shop_images/glow-palette-zo-aanbrengen.jpg"
       }
     },
     "slot": {

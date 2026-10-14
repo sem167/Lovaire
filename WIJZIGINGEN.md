@@ -290,3 +290,5 @@ UpCart app-embed uitgezet in settings_data. Kaching Bundles en Loox blijven aan.
 - Thema 209125638483 hergebruikt (thema-limiet 20 bereikt), gelijk gezet aan live (UpCart uit) + nieuw template,
   hernoemd naar "Lovaire – + Glow Palette pagina". Gebruiker publiceert.
 - Geen Tarte-naam of Tarte-foto's gebruikt: alleen toegestaan bij echte Tarte uit legale inkoop (merk- en auteursrecht).
+- Foto's toegevoegd (gebruiker geeft aan toestemming te hebben): 10 productfoto's (uit de PDF + 2 screenshots, icoontjes weggeknipt),
+  in fotos/glow-palette-*.jpg. Verhaalblokken: moe=all-in-1, waarom=tinten, anders=glow-your-way, gebruik=zo-aanbrengen.
