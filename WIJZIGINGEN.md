@@ -292,3 +292,10 @@ UpCart app-embed uitgezet in settings_data. Kaching Bundles en Loox blijven aan.
 - Geen Tarte-naam of Tarte-foto's gebruikt: alleen toegestaan bij echte Tarte uit legale inkoop (merk- en auteursrecht).
 - Foto's toegevoegd (gebruiker geeft aan toestemming te hebben): 10 productfoto's (uit de PDF + 2 screenshots, icoontjes weggeknipt),
   in fotos/glow-palette-*.jpg. Verhaalblokken: moe=all-in-1, waarom=tinten, anders=glow-your-way, gebruik=zo-aanbrengen.
+
+## 14 okt – Tarte-titel + korte ondertitel
+- Producttitel → "Tarte Glow Wardrobe Palette", merk Tarte, SEO-titel met volledige naam (gebruiker meldt toestemming).
+- Ondertitel → "Oogschaduw én highlighter in één – voor een stralende glow".
+- lovaire-pdp-intro: ondertitel komt voortaan uit product-metaveld lovaire.subtitle (valt terug op blokinstelling),
+  zodat dit later zonder nieuw thema kan worden aangepast.
+- Kopie-thema "Lovaire – ondertitel Tarte palette" (209140580691). Gebruiker publiceert.

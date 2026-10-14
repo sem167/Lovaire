@@ -3,9 +3,10 @@
   grote prijs en een grote gekleurde winkelwagenknop voor de hele productsectie.
 {%- endcomment -%}
 {%- assign bid = block.id | replace: '_', '' | downcase -%}
+{%- assign lpi_sub = closest.product.metafields.lovaire.subtitle.value | default: block.settings.subtitle -%}
 <div class="lpi-{{ bid }}" {{ block.shopify_attributes }}>
-  {%- if block.settings.subtitle != blank -%}
-    <p class="lpi__sub">{{ block.settings.subtitle | escape }}</p>
+  {%- if lpi_sub != blank -%}
+    <p class="lpi__sub">{{ lpi_sub | escape }}</p>
   {%- endif -%}
   <ul class="lpi__pills" role="list">
     {%- for i in (1..4) -%}
@@ -50,7 +51,7 @@
 {
   "name": "Lovaire intro",
   "settings": [
-    { "type": "text", "id": "subtitle", "label": "Ondertitel", "default": "Oogcrème | Koreaanse formule" },
+    { "type": "text", "id": "subtitle", "label": "Ondertitel", "info": "Heeft het product een metaveld lovaire.subtitle, dan wordt dat getoond.", "default": "Oogcrème | Koreaanse formule" },
     { "type": "text", "id": "pill_1_emoji", "label": "Balkje 1 – emoji", "default": "🇰🇷" },
     { "type": "text", "id": "pill_1_text", "label": "Balkje 1 – tekst", "default": "Het K-beauty geheim voor stralende ogen" },
     { "type": "text", "id": "pill_2_emoji", "label": "Balkje 2 – emoji", "default": "👁️" },
