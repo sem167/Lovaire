@@ -304,3 +304,9 @@ UpCart app-embed uitgezet in settings_data. Kaching Bundles en Loox blijven aan.
 - templates/product.glow-palette.json: video_1 = 7557023000839720223.mp4, video_2 = "7678371031156788511 (1).mp4",
   kop "Zie de Tarte Glow Wardrobe Palette in actie ✨".
 - Kopie-thema "Lovaire – Tarte palette + video's" (209279451475) van live (209140580691). Gebruiker publiceert.
+
+## 15 okt – Tarte-video speelde niet af
+- Oorzaak (vermoedelijk): bestandsnaam "7678371031156788511 (1).mp4" met spatie/haakjes; hernoemen kan niet via API.
+- lovaire-video-duo: extra instellingen video_1_url / video_2_url (directe mp4-link) die voorgaan op de gekozen video.
+- Tarte-template: beide video's via directe Shopify-CDN 720p-links.
+- Kopie-thema "Lovaire – Tarte video's fix" (209279582547). Gebruiker publiceert.

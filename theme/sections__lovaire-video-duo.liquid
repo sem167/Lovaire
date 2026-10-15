@@ -5,8 +5,10 @@
 {%- liquid
   assign v1 = section.settings.video_1
   assign v2 = section.settings.video_2
+  assign u1 = section.settings.video_1_url
+  assign u2 = section.settings.video_2_url
   assign has_video = false
-  if v1 != blank or v2 != blank
+  if v1 != blank or v2 != blank or u1 != blank or u2 != blank
     assign has_video = true
   endif
 -%}
@@ -17,9 +19,11 @@
     {%- endif -%}
     <div class="lvd__grid">
       {%- for v in (1..2) -%}
-        {%- if v == 1 -%}{%- assign vid = v1 -%}{%- else -%}{%- assign vid = v2 -%}{%- endif -%}
+        {%- if v == 1 -%}{%- assign vid = v1 -%}{%- assign vurl = u1 -%}{%- else -%}{%- assign vid = v2 -%}{%- assign vurl = u2 -%}{%- endif -%}
         <div class="lvd__item">
-          {%- if vid != blank -%}
+          {%- if vurl != blank -%}
+            <video class="lvd__video" src="{{ vurl | escape }}" autoplay muted loop playsinline preload="metadata"></video>
+          {%- elsif vid != blank -%}
             {{ vid | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, controls: false, preload: 'metadata', image_size: '720x', class: 'lvd__video' }}
           {%- else -%}
             <div class="lvd__empty">Kies video {{ v }} in de thema-editor</div>
@@ -49,6 +53,8 @@
     { "type": "text", "id": "heading", "label": "Kop", "default": "Zie hem zelf in actie 💕" },
     { "type": "video", "id": "video_1", "label": "Video 1 (staand, 9:16)" },
     { "type": "video", "id": "video_2", "label": "Video 2 (staand, 9:16)" },
+    { "type": "url", "id": "video_1_url", "label": "Video 1 – directe link (optioneel)", "info": "Gaat voor 'Video 1'. Gebruik alleen als de gekozen video niet afspeelt." },
+    { "type": "url", "id": "video_2_url", "label": "Video 2 – directe link (optioneel)" },
     { "type": "color", "id": "background", "label": "Achtergrond", "default": "#ffffff" },
     { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 48 },
     { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 48 }
