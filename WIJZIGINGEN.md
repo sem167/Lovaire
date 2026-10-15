@@ -299,3 +299,8 @@ UpCart app-embed uitgezet in settings_data. Kaching Bundles en Loox blijven aan.
 - lovaire-pdp-intro: ondertitel komt voortaan uit product-metaveld lovaire.subtitle (valt terug op blokinstelling),
   zodat dit later zonder nieuw thema kan worden aangepast.
 - Kopie-thema "Lovaire – ondertitel Tarte palette" (209140580691). Gebruiker publiceert.
+
+## 15 okt – Video's op de Tarte-pagina
+- templates/product.glow-palette.json: video_1 = 7557023000839720223.mp4, video_2 = "7678371031156788511 (1).mp4",
+  kop "Zie de Tarte Glow Wardrobe Palette in actie ✨".
+- Kopie-thema "Lovaire – Tarte palette + video's" (209279451475) van live (209140580691). Gebruiker publiceert.

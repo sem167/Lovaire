@@ -304,10 +304,12 @@
     "videos": {
       "type": "lovaire-video-duo",
       "settings": {
-        "heading": "Zie de Glow Palette zelf in actie ✨",
+        "heading": "Zie de Tarte Glow Wardrobe Palette in actie ✨",
         "background": "#ffffff",
         "padding_top": 8,
-        "padding_bottom": 8
+        "padding_bottom": 8,
+        "video_1": "shopify://files/videos/7557023000839720223.mp4",
+        "video_2": "shopify://files/videos/7678371031156788511 (1).mp4"
       }
     },
     "moe": {
