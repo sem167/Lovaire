@@ -316,3 +316,8 @@ UpCart app-embed uitgezet in settings_data. Kaching Bundles en Loox blijven aan.
 - Gebruiker zette automatische bezorgdatums uit; daarna bleef "3 tot 5 werkdagen" (transittijd van het tarief) staan.
 - Tarief vervangen door een nieuw identiek tarief zonder transittijd (NL+BE, €0, DeliveryMethodDefinition 1478262686035);
   oude tarief 1338595901779 verwijderd (in één bewerking).
+
+## 15 okt – Levertijd in FAQ
+- lovaire-product-faq: standaardantwoord "Is verzending gratis?" + "De levertijd is 3 tot 8 dagen." (geldt voor alle
+  productpagina's met deze sectie, o.a. oogcrème en Tarte palette).
+- Kopie-thema "Lovaire – levertijd in FAQ" (209321001299) van live (209279582547). Gebruiker publiceert.
