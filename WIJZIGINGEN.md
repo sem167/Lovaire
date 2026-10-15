@@ -310,3 +310,9 @@ UpCart app-embed uitgezet in settings_data. Kaching Bundles en Loox blijven aan.
 - lovaire-video-duo: extra instellingen video_1_url / video_2_url (directe mp4-link) die voorgaan op de gekozen video.
 - Tarte-template: beide video's via directe Shopify-CDN 720p-links.
 - Kopie-thema "Lovaire – Tarte video's fix" (209279582547). Gebruiker publiceert.
+
+## 15 okt – Verzending in checkout zonder levertijd
+- Verzendtarief hernoemd: "Gratis verzending" met beschrijving "Inclusief trackingnummer".
+- Gebruiker zette automatische bezorgdatums uit; daarna bleef "3 tot 5 werkdagen" (transittijd van het tarief) staan.
+- Tarief vervangen door een nieuw identiek tarief zonder transittijd (NL+BE, €0, DeliveryMethodDefinition 1478262686035);
+  oude tarief 1338595901779 verwijderd (in één bewerking).
