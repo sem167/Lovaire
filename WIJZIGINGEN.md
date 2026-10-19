@@ -207,4 +207,5 @@ In concept-thema "Lovaire – zonder reviews" (208439312723).
 - Foto's: de 6 productfoto's van de Tarte-productpagina (map `fotos/dab-go-*`). Er zijn geen beelden zelf gemaakt.
 - Teksten (beschrijving, voordelen, FAQ, gebruik, ondertitel) gebaseerd op de Tarte-productinformatie; metavelden `lovaire.*` zoals bij de andere producten.
 - Productpagina `templates/product.uitgroei-concealer.json` (`theme/build_dabgo.py`), zelfde opbouw als oogcrème/Glow Palette: intro met balkjes → verhaalblokken met foto's → tinten → gebruik → FAQ → koopblok met vaste koopbalk.
+- Staat in concept-thema "Lovaire – + Dab & Go pagina" (209592844627), kopie van het live thema "levertijd in FAQ".
 - Kaching-bundel (1+1): instellen in de Kaching Bundles-app; de app-embed staat al aan en toont de bundel automatisch boven de knop.
