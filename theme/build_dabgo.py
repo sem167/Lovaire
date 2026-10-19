@@ -94,7 +94,7 @@ sections = {
     "<p><strong>Lichtbruin</strong> – donkerblond, licht kastanje en lichtbruin haar</p>"
     "<p><strong>Middenbruin</strong> – middenbruin, kastanje en karamel haar</p>"
     "<p><strong>Donkerbruin</strong> – kastanje en donkerbruin haar</p>"
-    "<p><strong>Zwartbruin</strong> – diepbruin en zwart haar</p>"
+    "<p><strong>Zwart</strong> – diepbruin en zwart haar</p>"
     "<p><strong>Grijs</strong> – peper-en-zout, zilver en grijs haar</p>",
     "dab-go-5-ugc.jpg"),
   "gebruik": story("Zo gebruik je het",

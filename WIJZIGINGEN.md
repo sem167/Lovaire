@@ -203,7 +203,7 @@ In concept-thema "Lovaire – zonder reviews" (208439312723).
 - FAQ op de homepage zonder lijntjes tussen de vragen.
 
 ## Nieuw product: Tarte Dab & Go Uitgroei Concealer (19 oktober 2026)
-- Product (sinds 19 okt **actief**): `tarte-dab-go-uitgroei-concealer`, €34,95 met doorgestreepte prijs €70,00 (op verzoek), collectie Haarverzorging, 7 tinten (Koel blond, Blond, Lichtbruin, Middenbruin, Donkerbruin, Zwartbruin, Grijs).
+- Product (sinds 19 okt **actief**): `tarte-dab-go-uitgroei-concealer`, €34,95 met doorgestreepte prijs €70,00 (op verzoek), collectie Haarverzorging, 7 tinten (Koel blond, Blond, Lichtbruin, Middenbruin, Donkerbruin, Zwart, Grijs).
 - Foto's: 5 productfoto's van de Tarte-productpagina (6e op verzoek verwijderd) (map `fotos/dab-go-*`). Er zijn geen beelden zelf gemaakt.
 - Teksten (beschrijving, voordelen, FAQ, gebruik, ondertitel) gebaseerd op de Tarte-productinformatie; metavelden `lovaire.*` zoals bij de andere producten.
 - Productpagina `templates/product.uitgroei-concealer.json` (`theme/build_dabgo.py`), zelfde opbouw als oogcrème/Glow Palette: intro met balkjes → verhaalblokken met foto's → tinten → gebruik → FAQ → koopblok met vaste koopbalk.
@@ -212,3 +212,5 @@ In concept-thema "Lovaire – zonder reviews" (208439312723).
 - Thema "Lovaire – + Dab & Go pagina" (209592844627) staat live. Video's (7657402609866771743 (1).mp4 en 7683657009014557983.mp4) staan in de kopie "Lovaire – Dab & Go video's" (209615585619); die nog publiceren.
 - Kleurvakjes geprobeerd en op verzoek weer verwijderd (kleur-metaobjecten, koppeling en categorie teruggedraaid). Concept-thema "Lovaire – kleurvakjes Dab & Go" (209617125715) niet publiceren.
 - Kaching-bundel (1+1): instellen in de Kaching Bundles-app; de app-embed staat al aan en toont de bundel automatisch boven de knop.
+
+- Tint "Zwartbruin" hernoemd naar "Zwart" (optie + FAQ). Tekst in het tintenblok aangepast in concept-thema "Lovaire – tint Zwart" (209617912147).
