@@ -70,7 +70,7 @@ sections = {
     "<p>Je kleur zit net mooi. En dan zie je ze toch weer: <strong>grijze haartjes en uitgroei</strong> bij je scheiding.</p>"
     "<p>Een nieuwe kleurbehandeling is nog lang niet aan de beurt. En een spray? Die plakt en komt overal behalve waar je hem wilt.</p>"
     "<p>Met de <strong>Dab & Go Uitgroei Concealer</strong> dep je je uitgroei in <strong>5 seconden</strong> weg.</p>",
-    "dab-go-3-voor-na.jpg", top=24),
+    "dab-go-3-voor-na-nl.jpg", top=24),
   "waarom": story("Uitgroei, grijs en dunne plekjes – in één keer weg",
     "<p>• <strong>Grijze haartjes</strong> – direct gecamoufleerd</p>"
     "<p>• <strong>Uitgroei en uitgegroeide highlights</strong> – je kleur ziet er weer egaal uit</p>"
@@ -83,7 +83,7 @@ sections = {
     "<p>• <strong>Amazone-klei</strong> voor een betere, langere hechting</p>"
     "<p>• <strong>Argan-, druivenpit- en castorolie</strong> verzorgen je haar en maken het glad</p>"
     "<p>Vegan, cruelty-free en dermatologisch getest.</p>",
-    "dab-go-4-sponsje.jpg"),
+    "dab-go-4-sponsje-nl.jpg"),
   "tinten": story("Zeven tinten, voor elke haarkleur",
     "<p><strong>Koel blond</strong> – licht, honing- en goudblond haar</p>"
     "<p><strong>Blond</strong> – as- en donkerblond haar</p>"
