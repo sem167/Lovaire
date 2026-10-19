@@ -209,4 +209,5 @@ In concept-thema "Lovaire – zonder reviews" (208439312723).
 - Productpagina `templates/product.uitgroei-concealer.json` (`theme/build_dabgo.py`), zelfde opbouw als oogcrème/Glow Palette: intro met balkjes → verhaalblokken met foto's → tinten → gebruik → FAQ → koopblok met vaste koopbalk.
 - Staat in concept-thema "Lovaire – + Dab & Go pagina" (209592844627), kopie van het live thema "levertijd in FAQ".
 - Tekst op voor/na- en sponsjefoto vertaald naar het Nederlands (`theme/dabgo_nl_fotos.py`, bestanden `*-nl.jpg`); Engelse versies uit het product gehaald.
+- Thema "Lovaire – + Dab & Go pagina" (209592844627) staat live. Video's (7657402609866771743 (1).mp4 en 7683657009014557983.mp4) staan in de kopie "Lovaire – Dab & Go video's" (209615585619); die nog publiceren.
 - Kaching-bundel (1+1): instellen in de Kaching Bundles-app; de app-embed staat al aan en toont de bundel automatisch boven de knop.

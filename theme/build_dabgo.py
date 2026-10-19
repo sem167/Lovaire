@@ -65,7 +65,11 @@ main = {
 sections = {
   "main": main,
   "videos": {"type": "lovaire-video-duo", "settings": {"heading": "Zie de Dab & Go zelf in actie 💕",
-    "background": "#ffffff", "padding_top": 8, "padding_bottom": 8}},
+    "background": "#ffffff", "padding_top": 8, "padding_bottom": 8,
+    "video_1": "shopify://files/videos/7657402609866771743 (1).mp4",
+    "video_2": "shopify://files/videos/7683657009014557983.mp4",
+    "video_1_url": "https://cdn.shopify.com/videos/c/vp/97455569a2dc4138a4b01359e4b78ede/97455569a2dc4138a4b01359e4b78ede.HD-720p-1.6Mbps-98119324.mp4",
+    "video_2_url": "https://cdn.shopify.com/videos/c/vp/67f8187c7e35469a9a1e538fcf1217ec/67f8187c7e35469a9a1e538fcf1217ec.HD-720p-1.6Mbps-98119354.mp4"}},
   "moe": story("Je uitgroei is er weer – en je kapper pas over weken?",
     "<p>Je kleur zit net mooi. En dan zie je ze toch weer: <strong>grijze haartjes en uitgroei</strong> bij je scheiding.</p>"
     "<p>Een nieuwe kleurbehandeling is nog lang niet aan de beurt. En een spray? Die plakt en komt overal behalve waar je hem wilt.</p>"
