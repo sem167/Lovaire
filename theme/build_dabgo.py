@@ -23,7 +23,7 @@ main = {
     "media-gallery": {"type": "_product-media-gallery", "static": True, "settings": {
       "media_presentation": "carousel", "media_columns": "one", "image_gap": 8, "icons_style": "arrow",
       "slideshow_controls_style": "thumbnails", "slideshow_mobile_controls_style": "dots",
-      "thumbnail_position": "bottom", "thumbnail_width": 64, "thumbnail_radius": 10, "aspect_ratio": "1/1.25",
+      "thumbnail_position": "bottom", "thumbnail_width": 64, "thumbnail_radius": 10, "aspect_ratio": "adapt",
       "media_fit": "cover", "media_radius": 20, "zoom": True, "hide_variants": False}, "blocks": {}},
     "product-details": {"type": "_product-details", "static": True, "settings": {
       "width": "fill", "width_mobile": "fill", "height": "fit", "details_position": "flex-start", "gap": 18,

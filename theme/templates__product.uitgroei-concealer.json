@@ -16,7 +16,7 @@
             "thumbnail_position": "bottom",
             "thumbnail_width": 64,
             "thumbnail_radius": 10,
-            "aspect_ratio": "1/1.25",
+            "aspect_ratio": "adapt",
             "media_fit": "cover",
             "media_radius": 20,
             "zoom": true,
