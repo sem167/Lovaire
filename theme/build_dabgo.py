@@ -98,7 +98,7 @@ sections = {
     "<p><strong>2.</strong> Dep het direct op droge uitgroei, grijze haartjes of dunne plekjes.</p>"
     "<p><strong>3.</strong> Werk van binnen naar buiten tot je de gewenste dekking hebt.</p>"
     "<p><strong>Pro-tip:</strong> dep langs je scheiding en haarlijn voor voller ogend haar.</p>",
-    "dab-go-6-ugc.jpg"),
+    "dab-go-1-stick.jpg"),
   "slot": story("Elke dag een verse kleur",
     "<p>Tussen twee kappersafspraken, voor een feestje of gewoon voor jezelf: met de <strong>Dab & Go</strong> ziet je haar er altijd verzorgd uit.</p>"
     "<p><strong>Dep je uitgroei vandaag nog weg.</strong></p>",
