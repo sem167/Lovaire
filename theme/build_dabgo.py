@@ -70,13 +70,13 @@ sections = {
     "<p>Je kleur zit net mooi. En dan zie je ze toch weer: <strong>grijze haartjes en uitgroei</strong> bij je scheiding.</p>"
     "<p>Een nieuwe kleurbehandeling is nog lang niet aan de beurt. En een spray? Die plakt en komt overal behalve waar je hem wilt.</p>"
     "<p>Met de <strong>Dab & Go Uitgroei Concealer</strong> dep je je uitgroei in <strong>5 seconden</strong> weg.</p>",
-    "dab-go-2-model.jpg", top=24),
+    "dab-go-3-voor-na.jpg", top=24),
   "waarom": story("Uitgroei, grijs en dunne plekjes – in één keer weg",
     "<p>• <strong>Grijze haartjes</strong> – direct gecamoufleerd</p>"
     "<p>• <strong>Uitgroei en uitgegroeide highlights</strong> – je kleur ziet er weer egaal uit</p>"
     "<p>• <strong>Scheiding en haarlijn</strong> – minder zichtbare hoofdhuid, voller ogend haar</p>"
     "<p>Zonder verf, zonder salon, zonder handigheid met haar.</p>",
-    "dab-go-3-voor-na.jpg"),
+    "dab-go-2-model.jpg"),
   "anders": story("Wat deze concealer anders maakt",
     "<p>Het <strong>ingebouwde sponsje</strong> doet het werk voor je: je dept de kleur precies waar je hem nodig hebt.</p>"
     "<p>• <strong>Waterproof</strong> – zonder het plakkerige gevoel van een spray</p>"
