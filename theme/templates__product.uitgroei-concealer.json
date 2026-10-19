@@ -285,6 +285,15 @@
         "padding-block-end": 0
       }
     },
+    "videos": {
+      "type": "lovaire-video-duo",
+      "settings": {
+        "heading": "Zie de Dab & Go zelf in actie 💕",
+        "background": "#ffffff",
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
     "moe": {
       "type": "lovaire-tekst-foto",
       "settings": {
@@ -381,6 +390,7 @@
   },
   "order": [
     "main",
+    "videos",
     "moe",
     "waarom",
     "anders",

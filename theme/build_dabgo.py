@@ -64,6 +64,8 @@ main = {
 
 sections = {
   "main": main,
+  "videos": {"type": "lovaire-video-duo", "settings": {"heading": "Zie de Dab & Go zelf in actie 💕",
+    "background": "#ffffff", "padding_top": 8, "padding_bottom": 8}},
   "moe": story("Je uitgroei is er weer – en je kapper pas over weken?",
     "<p>Je kleur zit net mooi. En dan zie je ze toch weer: <strong>grijze haartjes en uitgroei</strong> bij je scheiding.</p>"
     "<p>Een nieuwe kleurbehandeling is nog lang niet aan de beurt. En een spray? Die plakt en komt overal behalve waar je hem wilt.</p>"
@@ -105,7 +107,7 @@ sections = {
   "cta": {"type": "lovaire-product-cta", "settings": {"eyebrow": "KLAAR VOOR EEN VERSE KLEUR", "blend_top": "#f9f5f1", "blend_bottom": "#f6e7de"}},
 }
 
-tpl = {"sections": sections, "order": ["main", "moe", "waarom", "anders", "tinten", "gebruik", "slot", "faq", "cta"]}
+tpl = {"sections": sections, "order": ["main", "videos", "moe", "waarom", "anders", "tinten", "gebruik", "slot", "faq", "cta"]}
 with open(__file__.replace("build_dabgo.py", "templates__product.uitgroei-concealer.json"), "w") as f:
     json.dump(tpl, f, ensure_ascii=False, indent=2)
 print("ok")
