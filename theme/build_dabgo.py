@@ -35,7 +35,7 @@ main = {
           "color": "var(--color-foreground-heading)", "wrap": "pretty"}, "blocks": {}},
         "price": {"type": "price", "settings": {"show_sale_price_first": True, "show_installments": True,
           "show_tax_info": False, "type_preset": "h4", "width": "100%", "alignment": "left"}, "blocks": {}},
-        "variants": {"type": "variant-picker", "settings": {"variant_style": "buttons", "show_swatches": False,
+        "variants": {"type": "variant-picker", "settings": {"variant_style": "buttons", "show_swatches": True,
           "alignment": "left", "padding-block-start": 4, "padding-block-end": 4}, "blocks": {}},
         "buy": {"type": "buy-buttons", "settings": {"stacking": True, "show_pickup_availability": False, "gift_card_form": True},
           "blocks": {"quantity": {"type": "quantity", "static": True, "settings": {}, "blocks": {}},

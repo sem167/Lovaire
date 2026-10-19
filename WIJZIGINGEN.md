@@ -210,5 +210,5 @@ In concept-thema "Lovaire – zonder reviews" (208439312723).
 - Staat in concept-thema "Lovaire – + Dab & Go pagina" (209592844627), kopie van het live thema "levertijd in FAQ".
 - Tekst op voor/na- en sponsjefoto vertaald naar het Nederlands (`theme/dabgo_nl_fotos.py`, bestanden `*-nl.jpg`); Engelse versies uit het product gehaald.
 - Thema "Lovaire – + Dab & Go pagina" (209592844627) staat live. Video's (7657402609866771743 (1).mp4 en 7683657009014557983.mp4) staan in de kopie "Lovaire – Dab & Go video's" (209615585619); die nog publiceren.
-- Kleurvakjes: 7 kleur-metaobjecten (`tint-*`, shopify--color-pattern) gekoppeld aan optie Tint; productcategorie → Concealers (alleen die heeft een kleurkenmerk).
+- Kleurvakjes geprobeerd en op verzoek weer verwijderd (kleur-metaobjecten, koppeling en categorie teruggedraaid). Concept-thema "Lovaire – kleurvakjes Dab & Go" (209617125715) niet publiceren.
 - Kaching-bundel (1+1): instellen in de Kaching Bundles-app; de app-embed staat al aan en toont de bundel automatisch boven de knop.
