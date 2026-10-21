@@ -20,13 +20,20 @@
   assign lcu_variant = lcu_product.selected_or_first_available_variant
 -%}
 
-{%- if lcu_has_trigger and lcu_has_upsell == false and lcu_product.available -%}
+{%- comment -%} Alleen tonen als de kwast echt te koop is (een conceptproduct geeft geen titel, foto of prijs door) {%- endcomment -%}
+{%- if lcu_has_trigger and lcu_has_upsell == false and lcu_product.handle == lcu_upsell_handle and lcu_variant.available and lcu_variant.price -%}
   <div class="lv-upsell">
     <p class="lv-upsell__eyebrow">Maak je glow compleet ✨</p>
     <div class="lv-upsell__card">
       {%- if lcu_product.featured_image -%}
         <div class="lv-upsell__media">
-          {{ lcu_product.featured_image | image_url: width: 200 | image_tag: loading: 'lazy', alt: lcu_product.title }}
+          <img
+            src="{{ lcu_product.featured_image | image_url: width: 200 }}"
+            alt="{{ lcu_product.title | escape }}"
+            width="64"
+            height="64"
+            loading="lazy"
+          >
         </div>
       {%- endif -%}
       <div class="lv-upsell__info">
