@@ -214,3 +214,9 @@ In concept-thema "Lovaire – zonder reviews" (208439312723).
 - Kaching-bundel (1+1): instellen in de Kaching Bundles-app; de app-embed staat al aan en toont de bundel automatisch boven de knop.
 
 - Tint "Zwartbruin" hernoemd naar "Zwart" (optie + FAQ). Tekst in het tintenblok aangepast in concept-thema "Lovaire – tint Zwart" (209617912147).
+
+## Upsell Glow Kwast in de winkelwagen (21 oktober 2026)
+- Nieuw product **Glow Kwast** (`glow-kwast`), €9,95, **concept**, collectie Make-up; foto `fotos/glow-kwast.jpg` (van de klant).
+- Winkelwagen (drawer én pagina): zodra de Tarte Glow Wardrobe Palette erin zit en de kwast nog niet, verschijnt "Maak je glow compleet ✨" met de kwast en een knop "+ Toevoegen" (`snippets/lovaire-cart-upsell.liquid`). Het blok verdwijnt zodra de kwast is toegevoegd.
+- Origineel `snippets/cart-products.liquid` gekopieerd naar `snippets/cart-products-base.liquid`; `cart-products.liquid` is nu een omhulsel dat het origineel + de upsell rendert.
+- Alles in concept-thema "Lovaire – tint Zwart + kwast upsell" (209617912147), nog niet gepubliceerd. Het blok verschijnt pas als de kwast **actief** staat.

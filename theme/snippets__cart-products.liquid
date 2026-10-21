@@ -1,0 +1,6 @@
+{%- comment -%}
+  Lovaire: het originele Horizon-snippet staat nu in snippets/cart-products-base.liquid.
+  Dit omhulsel rendert dat ongewijzigd en zet het upsell-blok (Glow Kwast) eronder.
+{%- endcomment -%}
+{% render 'cart-products-base', force_empty: force_empty, block: block %}
+{% render 'lovaire-cart-upsell' %}

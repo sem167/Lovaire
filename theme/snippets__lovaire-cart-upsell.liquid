@@ -1,0 +1,123 @@
+{%- comment -%}
+  Lovaire upsell in de winkelwagen: zodra de Glow Palette in de winkelwagen zit (en de kwast nog niet),
+  verschijnt de Glow Kwast met een knop "+ Toevoegen". Wordt gerenderd vanuit snippets/cart-products.liquid,
+  dus de drawer en de winkelwagenpagina verversen dit blok vanzelf na elke wijziging.
+{%- endcomment -%}
+{%- liquid
+  assign lcu_trigger_handle = 'glow-palette-highlighter-ogen-wangen'
+  assign lcu_upsell_handle = 'glow-kwast'
+  assign lcu_product = all_products[lcu_upsell_handle]
+  assign lcu_has_trigger = false
+  assign lcu_has_upsell = false
+  for item in cart.items
+    if item.product.handle == lcu_trigger_handle
+      assign lcu_has_trigger = true
+    endif
+    if item.product.handle == lcu_upsell_handle
+      assign lcu_has_upsell = true
+    endif
+  endfor
+  assign lcu_variant = lcu_product.selected_or_first_available_variant
+-%}
+
+{%- if lcu_has_trigger and lcu_has_upsell == false and lcu_product.available -%}
+  <div class="lv-upsell">
+    <p class="lv-upsell__eyebrow">Maak je glow compleet ✨</p>
+    <div class="lv-upsell__card">
+      {%- if lcu_product.featured_image -%}
+        <div class="lv-upsell__media">
+          {{ lcu_product.featured_image | image_url: width: 200 | image_tag: loading: 'lazy', alt: lcu_product.title }}
+        </div>
+      {%- endif -%}
+      <div class="lv-upsell__info">
+        <p class="lv-upsell__title">{{ lcu_product.title | escape }}</p>
+        <p class="lv-upsell__text">Blend je Glow Palette zacht uit</p>
+        <p class="lv-upsell__price">
+          {{ lcu_variant.price | money }}
+          {%- if lcu_variant.compare_at_price > lcu_variant.price -%}
+            <s>{{ lcu_variant.compare_at_price | money }}</s>
+          {%- endif -%}
+        </p>
+      </div>
+      <button
+        type="button"
+        class="lv-upsell__btn"
+        data-lv-upsell-add="{{ lcu_variant.id }}"
+      >
+        + Toevoegen
+      </button>
+    </div>
+  </div>
+{%- endif -%}
+
+{%- comment -%}
+  Het klik-script staat altijd in de pagina (ook als het blok nog niet zichtbaar is), omdat scripts
+  in later ververste winkelwagen-HTML niet opnieuw worden uitgevoerd.
+{%- endcomment -%}
+<script type="module">
+  import { CartAddEvent } from '@theme/events';
+
+  if (!window.lovaireCartUpsell) {
+    window.lovaireCartUpsell = true;
+
+    document.addEventListener('click', async (event) => {
+      const button = event.target instanceof Element ? event.target.closest('[data-lv-upsell-add]') : null;
+      if (!button) return;
+      event.preventDefault();
+
+      button.disabled = true;
+      button.textContent = 'Toevoegen…';
+
+      const sections = [...document.querySelectorAll('cart-items-component')]
+        .map((element) => element.dataset.sectionId)
+        .filter(Boolean);
+      const root = window.Shopify?.routes?.root || '/';
+
+      try {
+        const response = await fetch(`${root}cart/add.js`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            items: [{ id: Number(button.dataset.lvUpsellAdd), quantity: 1 }],
+            sections: sections.join(','),
+            sections_url: window.location.pathname,
+          }),
+        });
+        const data = await response.json();
+        if (!response.ok || data.status) throw new Error(data.description || data.message || 'Toevoegen mislukt');
+
+        const cart = await (await fetch(`${root}cart.js`)).json();
+        document.dispatchEvent(
+          new CartAddEvent(cart, 'lovaire-cart-upsell', {
+            source: 'lovaire-cart-upsell',
+            itemCount: cart.item_count,
+            variantId: button.dataset.lvUpsellAdd,
+            sections: data.sections,
+          })
+        );
+      } catch (error) {
+        console.error(error);
+        button.disabled = false;
+        button.textContent = 'Probeer opnieuw';
+      }
+    });
+  }
+</script>
+
+{% stylesheet %}
+  .lv-upsell { margin-block-start: var(--margin-lg, 20px); padding: 14px; border-radius: 14px; background: #f6e7de; }
+  .lv-upsell__eyebrow { margin: 0 0 10px; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #8b6b4a; }
+  .lv-upsell__card { display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 10px; background: #fff; }
+  .lv-upsell__media { flex: none; width: 64px; height: 64px; border-radius: 8px; overflow: hidden; background: #f5f0e8; }
+  .lv-upsell__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .lv-upsell__info { flex: 1; min-width: 0; }
+  .lv-upsell__info p { margin: 0; }
+  .lv-upsell__title { font-size: 14px; font-weight: 700; color: #111; }
+  .lv-upsell__text { font-size: 12px; color: #5a5a5a; }
+  .lv-upsell__price { margin-top: 2px; font-size: 14px; font-weight: 600; color: #111; }
+  .lv-upsell__price s { margin-left: 6px; font-weight: 400; color: #9a9a9a; }
+  .lv-upsell__btn { flex: none; appearance: none; border: 0; cursor: pointer; padding: 10px 14px; border-radius: 999px;
+    background: #111; color: #fff; font-size: 13px; font-weight: 600; white-space: nowrap; transition: background .2s; }
+  .lv-upsell__btn:hover { background: #8b6b4a; }
+  .lv-upsell__btn[disabled] { opacity: .6; cursor: default; }
+{% endstylesheet %}
