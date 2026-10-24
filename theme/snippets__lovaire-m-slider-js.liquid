@@ -1,0 +1,43 @@
+{%- comment -%}
+  Gedeelde slider-logica voor de lovaire-m-secties: pijltjes, teller (1/3) en scrollen.
+  Werkt op elk element met [data-lvm-slider] dat een [data-lvm-track] bevat. Wordt maar één keer geactiveerd.
+{%- endcomment -%}
+<script>
+  (function () {
+    if (window.lovaireMSlider) { window.lovaireMSlider(); return; }
+    window.lovaireMSlider = function () {
+      document.querySelectorAll('[data-lvm-slider]:not([data-lvm-ready])').forEach(function (root) {
+        root.setAttribute('data-lvm-ready', '');
+        var track = root.querySelector('[data-lvm-track]');
+        if (!track) return;
+        var slides = Array.prototype.slice.call(track.children);
+        var prevs = root.querySelectorAll('[data-lvm-prev]');
+        var nexts = root.querySelectorAll('[data-lvm-next]');
+        var current = root.querySelector('[data-lvm-current]');
+        var index = function () {
+          var left = track.scrollLeft + 1, best = 0;
+          slides.forEach(function (s, i) { if (s.offsetLeft - track.offsetLeft - parseFloat(getComputedStyle(track).paddingLeft) <= left) best = i; });
+          return best;
+        };
+        var go = function (i) {
+          var s = slides[Math.max(0, Math.min(slides.length - 1, i))];
+          if (s) track.scrollTo({ left: s.offsetLeft - track.offsetLeft - parseFloat(getComputedStyle(track).paddingLeft), behavior: 'smooth' });
+        };
+        var update = function () {
+          var i = index();
+          if (current) current.textContent = i + 1;
+          var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+          prevs.forEach(function (b) { b.disabled = track.scrollLeft <= 2; });
+          nexts.forEach(function (b) { b.disabled = atEnd; });
+        };
+        prevs.forEach(function (b) { b.addEventListener('click', function () { go(index() - 1); }); });
+        nexts.forEach(function (b) { b.addEventListener('click', function () { go(index() + 1); }); });
+        track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+        update();
+      });
+    };
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', window.lovaireMSlider);
+    else window.lovaireMSlider();
+    document.addEventListener('shopify:section:load', window.lovaireMSlider);
+  })();
+</script>

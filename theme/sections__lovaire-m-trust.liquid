@@ -1,0 +1,53 @@
+{%- comment -%}
+  Smalle balk direct onder het menu met één belofte tegelijk (✓ 30 dagen retourrecht …), wisselt om de paar seconden.
+{%- endcomment -%}
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+<div class="lvm-trust-{{ sid }}" data-lvm-trust>
+  {%- for block in section.blocks -%}
+    <p class="lvm-trust__item{% if forloop.first %} is-on{% endif %}" {{ block.shopify_attributes }}>
+      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      {{ block.settings.text | escape }}
+    </p>
+  {%- endfor -%}
+</div>
+
+{% style %}
+  .lvm-trust-{{ sid }} { position: relative; height: 40px; background: {{ section.settings.background }}; color: {{ section.settings.text_color }};
+    border-bottom: 1px solid {{ section.settings.border }}; overflow: hidden; }
+  .lvm-trust-{{ sid }} .lvm-trust__item { position: absolute; inset: 0; margin: 0; display: flex; align-items: center; justify-content: center; gap: 10px;
+    font-family: var(--font-body--family); font-size: 13px; letter-spacing: .04em; text-transform: uppercase;
+    opacity: 0; transform: translateY(6px); transition: opacity .4s ease, transform .4s ease; }
+  .lvm-trust-{{ sid }} .lvm-trust__item.is-on { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .lvm-trust-{{ sid }} .lvm-trust__item { transition: none; } }
+{% endstyle %}
+
+<script>
+  (function () {
+    var wrap = document.currentScript.closest('.shopify-section') || document;
+    var root = wrap.querySelector('[data-lvm-trust]');
+    var items = root ? root.querySelectorAll('.lvm-trust__item') : [];
+    if (items.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var i = 0;
+    setInterval(function () {
+      items[i].classList.remove('is-on');
+      i = (i + 1) % items.length;
+      items[i].classList.add('is-on');
+    }, {{ section.settings.speed | times: 1000 }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Lovaire beloftebalk",
+  "settings": [
+    { "type": "range", "id": "speed", "label": "Wisselen na", "min": 2, "max": 8, "step": 1, "unit": "s", "default": 4 },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f8f6f3" },
+    { "type": "color", "id": "text_color", "label": "Tekst", "default": "#1f1f1f" },
+    { "type": "color", "id": "border", "label": "Lijn onder", "default": "#e7e2dc" }
+  ],
+  "blocks": [
+    { "type": "item", "name": "Belofte", "settings": [{ "type": "text", "id": "text", "label": "Tekst", "default": "30 dagen retourrecht" }] }
+  ],
+  "presets": [{ "name": "Lovaire beloftebalk", "blocks": [{ "type": "item" }] }]
+}
+{% endschema %}

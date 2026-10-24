@@ -1,0 +1,83 @@
+{%- comment -%}
+  Homepage-hero in Meroda-stijl: gekleurde achtergrond, kop in hoofdletters met een cursief serif-accent,
+  korte tekst, lichte knop en een grote foto. Mobiel: tekst boven, foto eronder. Desktop: naast elkaar.
+  Het serif-lettertype wordt hier geladen en als --lvm-serif gedeeld met de andere lovaire-m-secties.
+{%- endcomment -%}
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+{%- assign img = section.settings.image -%}
+{%- assign img_desktop = section.settings.image_desktop | default: img -%}
+
+<section class="lvm-hero-{{ sid }}">
+  <div class="lvm-hero__inner">
+    <div class="lvm-hero__copy">
+      {%- if section.settings.title_top != blank -%}<p class="lvm-hero__top">{{ section.settings.title_top | escape }}</p>{%- endif -%}
+      {%- if section.settings.title_accent != blank -%}<p class="lvm-hero__accent">{{ section.settings.title_accent | escape }}</p>{%- endif -%}
+      {%- if section.settings.text != blank -%}<p class="lvm-hero__text">{{ section.settings.text | escape }}</p>{%- endif -%}
+      {%- if section.settings.button_label != blank -%}
+        <a class="lvm-hero__btn" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }}</a>
+      {%- endif -%}
+    </div>
+    <div class="lvm-hero__media">
+      {%- if img != blank -%}
+        {{ img | image_url: width: 1200 | image_tag: class: 'lvm-hero__img lvm-hero__img--mobile', loading: 'eager', fetchpriority: 'high', sizes: '100vw', widths: '600, 900, 1200', alt: img.alt }}
+        {{ img_desktop | image_url: width: 1600 | image_tag: class: 'lvm-hero__img lvm-hero__img--desktop', loading: 'eager', sizes: '50vw', widths: '800, 1200, 1600', alt: img_desktop.alt }}
+      {%- else -%}
+        <div class="lvm-hero__placeholder">{{ 'lifestyle-1' | placeholder_svg_tag }}</div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% style %}
+  {{ section.settings.serif_font | font_face: font_display: 'swap' }}
+  :root { --lvm-serif: {{ section.settings.serif_font.family }}, {{ section.settings.serif_font.fallback_families }}; }
+
+  .lvm-hero-{{ sid }} { background: linear-gradient(180deg, {{ section.settings.bg_top }} 0%, {{ section.settings.bg_bottom }} 100%); color: {{ section.settings.text_color }}; overflow: hidden; }
+  .lvm-hero-{{ sid }} .lvm-hero__inner { display: flex; flex-direction: column; }
+  .lvm-hero-{{ sid }} .lvm-hero__copy { padding: 44px 20px 32px; text-align: center; }
+  .lvm-hero-{{ sid }} .lvm-hero__top { margin: 0; font-family: var(--font-body--family); font-weight: 400; text-transform: uppercase;
+    font-size: clamp(30px, 8.4vw, 54px); line-height: 1.05; letter-spacing: -.01em; }
+  .lvm-hero-{{ sid }} .lvm-hero__accent { margin: 2px 0 0; font-family: var(--lvm-serif); font-style: italic; font-weight: {{ section.settings.serif_font.weight }};
+    font-size: clamp(32px, 9vw, 58px); line-height: 1.05; }
+  .lvm-hero-{{ sid }} .lvm-hero__text { margin: 16px auto 0; max-width: 34ch; font-family: var(--font-body--family); font-size: 16px; line-height: 1.5; opacity: .92; }
+  .lvm-hero-{{ sid }} .lvm-hero__btn { display: inline-block; margin-top: 22px; padding: 16px 34px; min-width: 240px; border-radius: 4px;
+    background: {{ section.settings.button_bg }}; color: {{ section.settings.button_text }}; font-family: var(--font-body--family);
+    font-size: 15px; letter-spacing: .04em; text-transform: uppercase; text-decoration: none; transition: opacity .2s; }
+  .lvm-hero-{{ sid }} .lvm-hero__btn:hover { opacity: .88; }
+  .lvm-hero-{{ sid }} .lvm-hero__media { position: relative; aspect-ratio: 4 / 5; }
+  .lvm-hero-{{ sid }} .lvm-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: {{ section.settings.focal }}; }
+  .lvm-hero-{{ sid }} .lvm-hero__img--desktop { display: none; }
+  .lvm-hero-{{ sid }} .lvm-hero__placeholder svg { width: 100%; height: 100%; background: rgb(255 255 255 / 8%); fill: rgb(255 255 255 / 30%); }
+
+  @media (min-width: 900px) {
+    .lvm-hero-{{ sid }} .lvm-hero__inner { flex-direction: row; align-items: stretch; min-height: {{ section.settings.desktop_height }}vh; }
+    .lvm-hero-{{ sid }} .lvm-hero__copy { flex: 1 1 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 64px 48px; }
+    .lvm-hero-{{ sid }} .lvm-hero__media { flex: 1 1 50%; aspect-ratio: auto; }
+    .lvm-hero-{{ sid }} .lvm-hero__img--mobile { display: none; }
+    .lvm-hero-{{ sid }} .lvm-hero__img--desktop { display: block; }
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Lovaire hero (Meroda)",
+  "settings": [
+    { "type": "text", "id": "title_top", "label": "Kop (hoofdletters)", "default": "De glow van het seizoen" },
+    { "type": "text", "id": "title_accent", "label": "Kop (cursief accent)", "default": "Tarte Glow Palette" },
+    { "type": "text", "id": "text", "label": "Tekst", "default": "Oogschaduw én highlighter in één palette." },
+    { "type": "text", "id": "button_label", "label": "Knoptekst", "default": "Shop de Glow Palette" },
+    { "type": "url", "id": "button_link", "label": "Knoplink" },
+    { "type": "image_picker", "id": "image", "label": "Foto" },
+    { "type": "image_picker", "id": "image_desktop", "label": "Foto desktop (optioneel)" },
+    { "type": "text", "id": "focal", "label": "Focuspunt foto", "default": "center center", "info": "Bijv. 'center 30%' om de foto hoger uit te snijden." },
+    { "type": "range", "id": "desktop_height", "label": "Hoogte op desktop", "min": 50, "max": 100, "step": 5, "unit": "vh", "default": 80 },
+    { "type": "font_picker", "id": "serif_font", "label": "Cursief accent-lettertype", "default": "playfair_display_i4" },
+    { "type": "color", "id": "bg_top", "label": "Achtergrond boven", "default": "#3d1f24" },
+    { "type": "color", "id": "bg_bottom", "label": "Achtergrond onder", "default": "#6e3b41" },
+    { "type": "color", "id": "text_color", "label": "Tekstkleur", "default": "#ffffff" },
+    { "type": "color", "id": "button_bg", "label": "Knopkleur", "default": "#ffffff" },
+    { "type": "color", "id": "button_text", "label": "Knoptekstkleur", "default": "#1f1f1f" }
+  ],
+  "presets": [{ "name": "Lovaire hero (Meroda)" }]
+}
+{% endschema %}

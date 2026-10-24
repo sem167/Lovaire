@@ -220,3 +220,11 @@ In concept-thema "Lovaire – zonder reviews" (208439312723).
 - Winkelwagen (drawer én pagina): zodra de Tarte Glow Wardrobe Palette erin zit en de kwast nog niet, verschijnt "Maak je glow compleet ✨" met de kwast en een knop "+ Toevoegen" (`snippets/lovaire-cart-upsell.liquid`). Het blok verdwijnt zodra de kwast is toegevoegd.
 - Origineel `snippets/cart-products.liquid` gekopieerd naar `snippets/cart-products-base.liquid`; `cart-products.liquid` is nu een omhulsel dat het origineel + de upsell rendert.
 - Alles in concept-thema "Lovaire – tint Zwart + kwast upsell" (209617912147), nog niet gepubliceerd. Het blok verschijnt pas als de kwast **actief** staat.
+
+## Homepage in Meroda-stijl (24 oktober 2026)
+Concept-thema "Lovaire – homepage Meroda-stijl" (210062541139), kopie van het live thema; nog niet gepubliceerd.
+Alleen de opbouw/stijl van merodacosmetics is als voorbeeld gebruikt; foto's, teksten en producten zijn van Lovaire.
+- Nieuwe secties (`theme/sections__lovaire-m-*.liquid`, slider-script `snippets__lovaire-m-slider-js.liquid`):
+  beloftebalk (wisselt: 30 dagen retourrecht / gratis verzending / veilig betalen), hero (Tarte Glow Palette, donkere achtergrond, kop in hoofdletters + cursief serif-accent), categorieën (grote foto's, schuiven, teller 1/3), productcarrousel "Onze favorieten" (label, prijs + doorgestreept, "Bespaar x%", zwarte knop; direct in winkelwagen), uitgelicht (Dab & Go en Oogcrème), fotogalerij #LovaireGlow (geen reviews).
+- Homepage-indeling: `theme/build_home_meroda.py` → `templates__index.json`; beloftelijst en FAQ blijven.
+- Aankondigingsbalk: één tekst "1+1 gratis op onze bestsellers · Gratis verzending" op beige (scheme-4).

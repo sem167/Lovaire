@@ -1,0 +1,69 @@
+{%- comment -%}
+  Uitgelicht product in Meroda-stijl: grote foto, daaronder "Introducing our new" in cursief serif,
+  de productnaam in hoofdletters en een zwarte knop. Desktop: foto en tekst naast elkaar.
+{%- endcomment -%}
+{%- assign sid = section.id | replace: '_', '' | downcase -%}
+<section class="lvm-feat-{{ sid }}{% if section.settings.image_right %} lvm-feat--right{% endif %}">
+  <div class="lvm-feat__inner">
+    <a class="lvm-feat__media" href="{{ section.settings.button_link | default: '#' }}">
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 50vw, 100vw', widths: '700, 1000, 1400', alt: section.settings.title }}
+      {%- else -%}
+        {{ 'lifestyle-2' | placeholder_svg_tag }}
+      {%- endif -%}
+    </a>
+    <div class="lvm-feat__copy">
+      {%- if section.settings.eyebrow != blank -%}<p class="lvm-feat__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      {%- if section.settings.title != blank -%}<h2 class="lvm-feat__title">{{ section.settings.title | escape }}</h2>{%- endif -%}
+      {%- if section.settings.text != blank -%}<p class="lvm-feat__text">{{ section.settings.text | escape }}</p>{%- endif -%}
+      {%- if section.settings.button_label != blank -%}
+        <a class="lvm-feat__btn" href="{{ section.settings.button_link | default: '#' }}">{{ section.settings.button_label | escape }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% style %}
+  .lvm-feat-{{ sid }} { background: {{ section.settings.background }}; color: #1f1f1f; padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px; }
+  .lvm-feat-{{ sid }} .lvm-feat__inner { max-width: 1320px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px; }
+  .lvm-feat-{{ sid }} .lvm-feat__media { display: block; aspect-ratio: 5 / 4; overflow: hidden; background: #efe9e2; }
+  .lvm-feat-{{ sid }} .lvm-feat__media img, .lvm-feat-{{ sid }} .lvm-feat__media svg { width: 100%; height: 100%; object-fit: cover; display: block;
+    object-position: {{ section.settings.focal }}; }
+  .lvm-feat-{{ sid }} .lvm-feat__copy { padding: 0 clamp(0px, 8vw, 72px); }
+  .lvm-feat-{{ sid }} .lvm-feat__eyebrow { margin: 0; font-family: var(--lvm-serif, 'Playfair Display', Georgia, serif); font-style: italic;
+    font-size: clamp(24px, 6vw, 34px); line-height: 1.1; }
+  .lvm-feat-{{ sid }} .lvm-feat__title { margin: 2px 0 0; font-family: var(--font-body--family); font-weight: 400; text-transform: uppercase;
+    font-size: clamp(26px, 6.6vw, 40px); line-height: 1.08; letter-spacing: -.01em; color: #1f1f1f; }
+  .lvm-feat-{{ sid }} .lvm-feat__text { margin: 14px 0 0; max-width: 46ch; font-family: var(--font-body--family); font-size: 16px; line-height: 1.6; color: #4a4a4a; }
+  .lvm-feat-{{ sid }} .lvm-feat__btn { display: inline-flex; align-items: center; justify-content: center; margin-top: 28px; min-width: 210px; min-height: 54px;
+    padding: 0 30px; border-radius: 4px; background: #1f1f1f; color: #fff; font-family: var(--font-body--family); font-size: 15px; letter-spacing: .08em;
+    text-transform: uppercase; text-decoration: none; transition: background .2s; }
+  .lvm-feat-{{ sid }} .lvm-feat__btn:hover { background: #3a3a3a; }
+  @media (min-width: 900px) {
+    .lvm-feat-{{ sid }} { padding-left: 40px; padding-right: 40px; }
+    .lvm-feat-{{ sid }} .lvm-feat__inner { flex-direction: row; align-items: center; gap: 64px; }
+    .lvm-feat-{{ sid }}.lvm-feat--right .lvm-feat__inner { flex-direction: row-reverse; }
+    .lvm-feat-{{ sid }} .lvm-feat__media { flex: 1 1 55%; aspect-ratio: 4 / 5; }
+    .lvm-feat-{{ sid }} .lvm-feat__copy { flex: 1 1 45%; padding: 0; }
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Lovaire uitgelicht",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Foto" },
+    { "type": "text", "id": "focal", "label": "Focuspunt foto", "default": "center center" },
+    { "type": "text", "id": "eyebrow", "label": "Regel in cursief", "default": "Nieuw bij Lovaire" },
+    { "type": "text", "id": "title", "label": "Titel", "default": "Productnaam" },
+    { "type": "text", "id": "text", "label": "Tekst (optioneel)" },
+    { "type": "text", "id": "button_label", "label": "Knoptekst", "default": "Ontdek" },
+    { "type": "url", "id": "button_link", "label": "Knoplink" },
+    { "type": "checkbox", "id": "image_right", "label": "Foto rechts (desktop)", "default": false },
+    { "type": "color", "id": "background", "label": "Achtergrond", "default": "#f8f6f3" },
+    { "type": "range", "id": "padding_top", "label": "Ruimte boven", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 40 },
+    { "type": "range", "id": "padding_bottom", "label": "Ruimte onder", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 64 }
+  ],
+  "presets": [{ "name": "Lovaire uitgelicht" }]
+}
+{% endschema %}

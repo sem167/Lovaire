@@ -9,32 +9,8 @@
         "a1": {
           "type": "_announcement",
           "settings": {
-            "text": "Always free shipping",
-            "link": "shopify://pages/bestellingen-en-levering",
-            "font": "var(--font-accent--family)",
-            "font_size": "0.75rem",
-            "letter_spacing": "loose",
-            "case": "uppercase"
-          },
-          "blocks": {}
-        },
-        "a2": {
-          "type": "_announcement",
-          "settings": {
-            "text": "Every order with tracking",
-            "link": "shopify://pages/verzendbeleid",
-            "font": "var(--font-accent--family)",
-            "font_size": "0.75rem",
-            "letter_spacing": "loose",
-            "case": "uppercase"
-          },
-          "blocks": {}
-        },
-        "a3": {
-          "type": "_announcement",
-          "settings": {
-            "text": "Secure checkout with iDEAL & Klarna",
-            "link": "",
+            "text": "1+1 gratis op onze bestsellers · Gratis verzending",
+            "link": "shopify://collections/all",
             "font": "var(--font-accent--family)",
             "font_size": "0.75rem",
             "letter_spacing": "loose",
@@ -44,14 +20,12 @@
         }
       },
       "block_order": [
-        "a1",
-        "a2",
-        "a3"
+        "a1"
       ],
       "settings": {
         "speed": 5,
         "section_width": "full-width",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-4",
         "divider_width": 0,
         "padding-block-start": 10,
         "padding-block-end": 10

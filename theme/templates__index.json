@@ -1,27 +1,281 @@
 {
   "sections": {
-    "hero": {
-      "type": "lovaire-hero",
+    "trust": {
+      "type": "lovaire-m-trust",
+      "blocks": {
+        "t1": {
+          "type": "item",
+          "settings": {
+            "text": "30 dagen retourrecht"
+          }
+        },
+        "t2": {
+          "type": "item",
+          "settings": {
+            "text": "Altijd gratis verzending"
+          }
+        },
+        "t3": {
+          "type": "item",
+          "settings": {
+            "text": "Veilig betalen met iDEAL & Klarna"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
       "settings": {
-        "image": "shopify://shop_images/lovaire-hero-glow.jpg",
-        "focal": "center 25%",
-        "eyebrow": "Lovaire beauty",
-        "title": "<p>Feel beautiful, <em>every day</em></p>",
-        "text": "Make-up, skin and hair care you'll actually use. Carefully selected and always shipped for free.",
-        "button_label": "Shop now",
-        "button_link": "shopify://collections/all",
-        "button2_label": "Explore collections",
-        "button2_link": "/collections",
-        "trust_1": "Free shipping",
-        "trust_2": "Secure checkout with iDEAL",
-        "trust_3": "Personal service",
-        "badge_title": "Always free shipping",
-        "badge_text": "With tracking sent to your inbox",
-        "seal_text": "LOVAIRE · BEAUTY · ESSENTIALS · ",
-        "background": "#f6e7de",
-        "height": 85,
-        "blend_top": "#ffffff",
-        "blend_bottom": "#fdf9f7"
+        "speed": 4,
+        "background": "#f8f6f3",
+        "text_color": "#1f1f1f",
+        "border": "#e7e2dc"
+      }
+    },
+    "hero": {
+      "type": "lovaire-m-hero",
+      "settings": {
+        "title_top": "De glow van het seizoen",
+        "title_accent": "Tarte Glow Palette",
+        "text": "Oogschaduw én highlighter in één palette. Nu 1+1 gratis.",
+        "button_label": "Shop de Glow Palette",
+        "button_link": "shopify://products/glow-palette-highlighter-ogen-wangen",
+        "image": "shopify://shop_images/glow-palette-all-in-1.jpg",
+        "focal": "center center",
+        "desktop_height": 80,
+        "serif_font": "playfair_display_i4",
+        "bg_top": "#3d1f24",
+        "bg_bottom": "#6e3b41",
+        "text_color": "#ffffff",
+        "button_bg": "#ffffff",
+        "button_text": "#1f1f1f"
+      }
+    },
+    "cats": {
+      "type": "lovaire-m-categories",
+      "blocks": {
+        "c1": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/glow-palette-glow-your-way.jpg",
+            "label": "Make-up",
+            "link": "shopify://collections/make-up"
+          }
+        },
+        "c2": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/5-hero-helderdere-ogen.jpg",
+            "label": "Huidverzorging",
+            "link": "shopify://collections/huid-producten"
+          }
+        },
+        "c3": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/dab-go-5-ugc.jpg",
+            "label": "Haar",
+            "link": "shopify://collections/haarverzorging"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Shop per categorie",
+        "link_label": "Shop alles",
+        "link": "shopify://collections/all",
+        "background": "#f8f6f3",
+        "padding_top": 64,
+        "padding_bottom": 40
+      }
+    },
+    "loved": {
+      "type": "lovaire-m-products",
+      "blocks": {
+        "p1": {
+          "type": "product",
+          "settings": {
+            "product": "glow-palette-highlighter-ogen-wangen",
+            "badge": "Bestseller"
+          }
+        },
+        "p2": {
+          "type": "product",
+          "settings": {
+            "product": "tarte-dab-go-uitgroei-concealer",
+            "badge": "Nieuw",
+            "options_label": "Kies je tint"
+          }
+        },
+        "p3": {
+          "type": "product",
+          "settings": {
+            "product": "dr-melaxin-calcium-dark-spot-cover-oogcreme-15g",
+            "badge": "K-beauty"
+          }
+        },
+        "p4": {
+          "type": "product",
+          "settings": {
+            "product": "glow-kwast",
+            "badge": ""
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "settings": {
+        "heading": "Onze favorieten",
+        "link_label": "Bekijk alles",
+        "link": "shopify://collections/all",
+        "add_label": "In winkelwagen",
+        "options_label": "Kies je tint",
+        "background": "#f8f6f3",
+        "card_bg": "#f3ede6",
+        "padding_top": 40,
+        "padding_bottom": 56
+      }
+    },
+    "feat_dabgo": {
+      "type": "lovaire-m-feature",
+      "settings": {
+        "image": "shopify://shop_images/dab-go-2-model.jpg",
+        "focal": "center 30%",
+        "eyebrow": "Nieuw bij Lovaire",
+        "title": "Tarte Dab & Go Uitgroei Concealer",
+        "text": "Uitgroei en grijze haartjes weg in 5 seconden. Waterproof, in zeven tinten.",
+        "button_label": "Ontdek",
+        "button_link": "shopify://products/tarte-dab-go-uitgroei-concealer",
+        "image_right": false,
+        "background": "#f8f6f3",
+        "padding_top": 24,
+        "padding_bottom": 56
+      }
+    },
+    "feat_oog": {
+      "type": "lovaire-m-feature",
+      "settings": {
+        "image": "shopify://shop_images/6-voor-direct.jpg",
+        "focal": "center center",
+        "eyebrow": "Het K-beauty geheim",
+        "title": "Calcium Dark Spot Oogcrème",
+        "text": "Oogcrème én concealer in één: camoufleert donkere kringen direct en verzorgt de huid rond je ogen.",
+        "button_label": "Ontdek",
+        "button_link": "shopify://products/dr-melaxin-calcium-dark-spot-cover-oogcreme-15g",
+        "image_right": true,
+        "background": "#f8f6f3",
+        "padding_top": 24,
+        "padding_bottom": 56
+      }
+    },
+    "gallery": {
+      "type": "lovaire-m-gallery",
+      "blocks": {
+        "g1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/glow-palette-ugc-1.jpg",
+            "product": "glow-palette-highlighter-ogen-wangen"
+          }
+        },
+        "g2": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/glow-palette-ugc-4.jpg",
+            "product": "glow-palette-highlighter-ogen-wangen"
+          }
+        },
+        "g3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/oogcreme-oog-druppels.jpg",
+            "product": "dr-melaxin-calcium-dark-spot-cover-oogcreme-15g"
+          }
+        },
+        "g4": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/glow-palette-ugc-6.jpg",
+            "product": "glow-palette-highlighter-ogen-wangen"
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4"
+      ],
+      "settings": {
+        "heading": "#LovaireGlow",
+        "subheading": "Zo dragen jullie het",
+        "background": "#f8f6f3",
+        "padding_top": 40,
+        "padding_bottom": 64
+      }
+    },
+    "belofte": {
+      "type": "lovaire-belofte",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "title": "Gratis verzending",
+            "text": "Op elke bestelling, geen minimumbedrag."
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "icon": "lock",
+            "title": "Veilig betalen",
+            "text": "iDEAL, Klarna en meer via een veilige checkout."
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "icon": "package",
+            "title": "Bestelling volgen",
+            "text": "Volg je pakket vanaf het moment dat het verzonden wordt."
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "icon": "chat",
+            "title": "24/7 klantenservice",
+            "text": "Nederlandse klantenservice, dag en nacht bereikbaar."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "heading": "",
+        "show_payment": false,
+        "background": "#f8f6f3",
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "layout": "list",
+        "blend_top": "#f8f6f3",
+        "blend_bottom": "#f8f6f3"
       }
     },
     "faq": {
@@ -31,7 +285,7 @@
         "heading": {
           "type": "text",
           "settings": {
-            "text": "<h2>Frequently asked questions</h2>",
+            "text": "<h2>Veelgestelde vragen</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -54,7 +308,7 @@
             "q1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "When will I receive my order?",
+                "heading": "Wanneer ontvang ik mijn bestelling?",
                 "open_by_default": false,
                 "icon": "none"
               },
@@ -62,7 +316,7 @@
                 "q1_t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>As soon as your order ships, you'll receive an email with your tracking link, so you can follow your parcel every step of the way. You'll find all the details in our <a href=\"/pages/verzendbeleid\">shipping policy</a>.</p>",
+                    "text": "<p>Zodra je bestelling is verzonden, ontvang je een e-mail met je trackinglink, zodat je je pakket bij elke stap kunt volgen. Alle details vind je in ons <a href=\"/pages/verzendbeleid\">verzendbeleid</a>.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -81,7 +335,7 @@
             "q2": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "How much is shipping?",
+                "heading": "Wat kost de verzending?",
                 "open_by_default": false,
                 "icon": "none"
               },
@@ -89,7 +343,7 @@
                 "q2_t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Nothing: shipping is always free at Lovaire.</p>",
+                    "text": "<p>Niets: verzending is bij Lovaire altijd gratis.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -108,7 +362,7 @@
             "q3": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Can I return my order?",
+                "heading": "Kan ik mijn bestelling retourneren?",
                 "open_by_default": false,
                 "icon": "none"
               },
@@ -116,7 +370,7 @@
                 "q3_t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>You can return your order within 14 days of receiving it. Separate conditions apply to hygiene products such as cosmetics and underwear. Read everything on our <a href=\"/pages/bestellingen-en-levering-1\">returns and exchanges</a> page.</p>",
+                    "text": "<p>Je kunt ongeopende producten binnen 30 dagen na ontvangst retourneren. Voor hygiëneproducten zoals cosmetica en ondergoed gelden aparte voorwaarden. Lees alles op onze pagina <a href=\"/pages/bestellingen-en-levering-1\">ruilen en retourneren</a>.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -135,7 +389,7 @@
             "q4": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Where are your products made?",
+                "heading": "Waar worden jullie producten gemaakt?",
                 "open_by_default": false,
                 "icon": "none"
               },
@@ -143,7 +397,7 @@
                 "q4_t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our products are made both locally and around the world. We choose our production partners carefully, so you get quality at a fair price.</p>",
+                    "text": "<p>Onze producten worden zowel lokaal als wereldwijd gemaakt. We kiezen onze productiepartners zorgvuldig, zodat jij kwaliteit krijgt voor een eerlijke prijs.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -162,7 +416,7 @@
             "q5": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "I have a question, how can I reach you?",
+                "heading": "Ik heb een vraag, hoe bereik ik jullie?",
                 "open_by_default": false,
                 "icon": "none"
               },
@@ -170,7 +424,7 @@
                 "q5_t": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Send us a message via our <a href=\"/pages/contact\">contact page</a>. We reply on weekdays between 09:00 and 17:00.</p>",
+                    "text": "<p>Stuur ons een bericht via onze <a href=\"/pages/contact\">contactpagina</a>. Onze Nederlandse klantenservice is 24/7 voor je bereikbaar.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -212,169 +466,7 @@
         "padding-block-end": 80
       }
     },
-    "favorieten": {
-      "type": "lovaire-favorieten",
-      "settings": {
-        "eyebrow": "OUR FAVOURITES",
-        "heading": "Shop the",
-        "products": [
-          "lashlift-waterproof-mascara",
-          "zelfkleurende-foundation-spf15",
-          "self-tanner-tanning-lotion",
-          "lovaire-hairboost-shampoo",
-          "elektrische-spray-massage-borstel-lovaire",
-          "lovaire-support-bh"
-        ],
-        "columns": 3,
-        "button_label": "Shop all",
-        "button_link": "shopify://collections/all",
-        "background": "#f4ece4",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "heading_italic": "favourites",
-        "badge_text": "Favourite",
-        "badge_count": 0,
-        "blend_top": "#f9f5f1",
-        "blend_bottom": "#f9f5f1"
-      }
-    },
-    "belofte": {
-      "type": "lovaire-belofte",
-      "blocks": {
-        "b1": {
-          "type": "item",
-          "settings": {
-            "icon": "truck",
-            "title": "Free shipping",
-            "text": "On every order, no minimum spend."
-          }
-        },
-        "b2": {
-          "type": "item",
-          "settings": {
-            "icon": "lock",
-            "title": "Secure payment",
-            "text": "iDEAL, Klarna and more via a secure checkout."
-          }
-        },
-        "b3": {
-          "type": "item",
-          "settings": {
-            "icon": "package",
-            "title": "Order tracking",
-            "text": "Follow your parcel from the moment it ships."
-          }
-        },
-        "b4": {
-          "type": "item",
-          "settings": {
-            "icon": "chat",
-            "title": "Personal service",
-            "text": "We're here for you Mon–Fri, 09:00–17:00."
-          }
-        }
-      },
-      "block_order": [
-        "b1",
-        "b2",
-        "b3",
-        "b4"
-      ],
-      "settings": {
-        "eyebrow": "",
-        "heading": "",
-        "show_payment": false,
-        "background": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "layout": "list",
-        "blend_top": "#fdf9f7"
-      }
-    },
-    "categories": {
-      "type": "lovaire-categories",
-      "settings": {
-        "eyebrow": "DISCOVER",
-        "heading": "What are you looking for?",
-        "collections": [
-          "make-up",
-          "huid-producten",
-          "haarverzorging",
-          "beauty-tools",
-          "shapewear"
-        ],
-        "background": "#ffffff",
-        "padding_top": 64,
-        "padding_bottom": 64,
-        "blend_bottom": "#f9f5f1"
-      }
-    },
-    "statement": {
-      "type": "lovaire-statement",
-      "settings": {
-        "eyebrow": "LOVAIRE",
-        "text": "<p>Make-up, skin and hair. For every moment of <em>your day</em>.</p>",
-        "show_line": true,
-        "background": "#ffffff",
-        "padding_top": 96,
-        "padding_bottom": 72,
-        "blend_top": "#f9f5f1"
-      }
-    },
-    "momenten": {
-      "type": "lovaire-momenten",
-      "blocks": {
-        "m1": {
-          "type": "moment",
-          "settings": {
-            "label": "Morning",
-            "icon": "sun",
-            "intro": "A fresh, radiant start to your day.",
-            "products": [
-              "zelfkleurende-foundation-spf15",
-              "lashlift-waterproof-mascara"
-            ]
-          }
-        },
-        "m2": {
-          "type": "moment",
-          "settings": {
-            "label": "Daytime",
-            "icon": "cloud",
-            "intro": "Comfortable and polished all day long.",
-            "products": [
-              "lovaire-support-bh",
-              "self-tanner-tanning-lotion"
-            ]
-          }
-        },
-        "m3": {
-          "type": "moment",
-          "settings": {
-            "label": "Evening",
-            "icon": "moon",
-            "intro": "A moment just for you.",
-            "products": [
-              "lovaire-hairboost-shampoo",
-              "elektrische-spray-massage-borstel-lovaire"
-            ]
-          }
-        }
-      },
-      "block_order": [
-        "m1",
-        "m2",
-        "m3"
-      ],
-      "settings": {
-        "eyebrow": "EVERY MOMENT",
-        "heading": "Your day with Lovaire",
-        "background": "#ffffff",
-        "padding_top": 24,
-        "padding_bottom": 88
-      }
-    },
-    "fade_7": {
+    "fade_end": {
       "type": "lovaire-fade",
       "settings": {
         "from": "#ffffff",
@@ -384,13 +476,15 @@
     }
   },
   "order": [
+    "trust",
     "hero",
+    "cats",
+    "loved",
+    "feat_dabgo",
+    "feat_oog",
+    "gallery",
     "belofte",
-    "categories",
-    "favorieten",
-    "statement",
-    "momenten",
     "faq",
-    "fade_7"
+    "fade_end"
   ]
 }
