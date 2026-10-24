@@ -228,3 +228,6 @@ Alleen de opbouw/stijl van merodacosmetics is als voorbeeld gebruikt; foto's, te
   beloftebalk (wisselt: 30 dagen retourrecht / gratis verzending / veilig betalen), hero (Tarte Glow Palette, donkere achtergrond, kop in hoofdletters + cursief serif-accent), categorieën (grote foto's, schuiven, teller 1/3), productcarrousel "Onze favorieten" (label, prijs + doorgestreept, "Bespaar x%", zwarte knop; direct in winkelwagen), uitgelicht (Dab & Go en Oogcrème), fotogalerij #LovaireGlow (geen reviews).
 - Homepage-indeling: `theme/build_home_meroda.py` → `templates__index.json`; beloftelijst en FAQ blijven.
 - Aankondigingsbalk: één tekst "1+1 gratis op onze bestsellers · Gratis verzending" op beige (scheme-4).
+
+## Glow Palette – regel "10k+ tevreden klanten" (concept-thema "Lovaire – Glow Palette 10k+ regel", 210065424723)
+- `theme/templates__product.glow-palette.json`: tekstblok "Glow Palette: 10k+ tevreden klanten" direct onder de producttitel. Kopie van het live thema; nog niet gepubliceerd.

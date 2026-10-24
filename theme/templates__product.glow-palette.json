@@ -1,0 +1,408 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-information",
+      "blocks": {
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
+          "settings": {
+            "media_presentation": "carousel",
+            "media_columns": "one",
+            "image_gap": 8,
+            "icons_style": "arrow",
+            "slideshow_controls_style": "thumbnails",
+            "slideshow_mobile_controls_style": "dots",
+            "thumbnail_position": "bottom",
+            "thumbnail_width": 64,
+            "thumbnail_radius": 10,
+            "aspect_ratio": "1/1.25",
+            "media_fit": "cover",
+            "media_radius": 20,
+            "zoom": true,
+            "hide_variants": false
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "width": "fill",
+            "width_mobile": "fill",
+            "height": "fit",
+            "details_position": "flex-start",
+            "gap": 18,
+            "sticky_details_desktop": true,
+            "inherit_color_scheme": true,
+            "padding-block-start": 16,
+            "padding-block-end": 0,
+            "padding-inline-start": 12,
+            "padding-inline-end": 12
+          },
+          "blocks": {
+            "title": {
+              "type": "text",
+              "settings": {
+                "text": "<h1>{{ closest.product.title }}</h1>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h2",
+                "font": "var(--font-heading--family)",
+                "color": "var(--color-foreground-heading)",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            },
+            "klanten": {
+              "type": "text",
+              "settings": {
+                "text": "<p><strong>Glow Palette: 10k+ tevreden klanten</strong></p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "color": "var(--color-foreground)",
+                "wrap": "pretty"
+              },
+              "blocks": {}
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": true,
+                "show_tax_info": false,
+                "type_preset": "h4",
+                "width": "100%",
+                "alignment": "left"
+              },
+              "blocks": {}
+            },
+            "variants": {
+              "type": "variant-picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": true,
+                "alignment": "left",
+                "padding-block-start": 4,
+                "padding-block-end": 4
+              },
+              "blocks": {}
+            },
+            "buy": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": true,
+                "show_pickup_availability": false,
+                "gift_card_form": true
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "description": {
+              "type": "product-description",
+              "settings": {},
+              "blocks": {}
+            },
+            "info": {
+              "type": "accordion",
+              "settings": {
+                "icon": "plus",
+                "dividers": true,
+                "type_preset": "h6",
+                "inherit_color_scheme": true
+              },
+              "blocks": {
+                "ship": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Verzending & levering",
+                    "open_by_default": false,
+                    "icon": "none"
+                  },
+                  "blocks": {
+                    "ship_t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Je ontvangt een e-mail met een track-and-trace-link zodra je bestelling onderweg is. Meer info: <a href=\"/pages/verzendbeleid\">verzendbeleid</a>.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "color": "var(--color-foreground)",
+                        "wrap": "pretty"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "ship_t"
+                  ]
+                },
+                "ret": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Retourneren",
+                    "open_by_default": false,
+                    "icon": "none"
+                  },
+                  "blocks": {
+                    "ret_t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Je kunt ongeopende producten binnen 30 dagen na ontvangst retourneren. Voor hygiëneproducten zoals cosmetica en ondergoed gelden aparte voorwaarden: zie <a href=\"/pages/ruilen-en-retourneren\">hygiëneproducten</a>. Alle stappen vind je op onze pagina <a href=\"/pages/bestellingen-en-levering-1\">ruilen en retourneren</a>.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "color": "var(--color-foreground)",
+                        "wrap": "pretty"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "ret_t"
+                  ]
+                },
+                "pay": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Veilig betalen",
+                    "open_by_default": false,
+                    "icon": "none"
+                  },
+                  "blocks": {
+                    "pay_t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Je betaalt via de beveiligde checkout van Shopify, onder andere met iDEAL en Klarna. Wij zien of bewaren je betaalgegevens nooit.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "color": "var(--color-foreground)",
+                        "wrap": "pretty"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "pay_t"
+                  ]
+                },
+                "help": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Vragen? We helpen je graag",
+                    "open_by_default": false,
+                    "icon": "none"
+                  },
+                  "blocks": {
+                    "help_t": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Mail ons via onze <a href=\"/pages/contact\">contactpagina</a>. Onze Nederlandse klantenservice is 24/7 voor je bereikbaar.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "color": "var(--color-foreground)",
+                        "wrap": "pretty"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "help_t"
+                  ]
+                }
+              },
+              "block_order": [
+                "ship",
+                "ret",
+                "pay",
+                "help"
+              ]
+            },
+            "lovaire_trust": {
+              "type": "lovaire-product-trust",
+              "settings": {},
+              "blocks": {}
+            },
+            "lyvelle_intro": {
+              "type": "lovaire-pdp-intro",
+              "settings": {
+                "subtitle": "Oogschaduw én highlighter in één – voor een stralende glow",
+                "pill_1_emoji": "✨",
+                "pill_1_text": "4 tinten voor ogen & wangen",
+                "pill_2_emoji": "🌅",
+                "pill_2_text": "Golden-hour glow in een paar tellen",
+                "pill_3_emoji": "👜",
+                "pill_3_text": "Compact – past in elke tas",
+                "restyle_section": true,
+                "button_color": "#6ab04c",
+                "button_hover_color": "#5c9d40"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "title",
+            "klanten",
+            "lyvelle_intro",
+            "price",
+            "variants",
+            "buy",
+            "lovaire_trust",
+            "description",
+            "info"
+          ]
+        }
+      },
+      "settings": {
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "equal_columns": true,
+        "limit_details_width": true,
+        "gap": 48,
+        "enable_sticky_add_to_cart": false,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 32,
+        "padding-block-end": 0
+      }
+    },
+    "faq": {
+      "type": "lovaire-product-faq",
+      "settings": {
+        "background": "#ffffff",
+        "blend_top": "#ffffff",
+        "blend_bottom": "#f9f5f1"
+      }
+    },
+    "cta": {
+      "type": "lovaire-product-cta",
+      "settings": {
+        "eyebrow": "KLAAR VOOR JOUW GLOW",
+        "blend_top": "#f9f5f1",
+        "blend_bottom": "#f6e7de"
+      }
+    },
+    "videos": {
+      "type": "lovaire-video-duo",
+      "settings": {
+        "heading": "Zie de Tarte Glow Wardrobe Palette in actie ✨",
+        "background": "#ffffff",
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "video_1": "shopify://files/videos/7557023000839720223.mp4",
+        "video_2": "shopify://files/videos/7678371031156788511 (1).mp4",
+        "video_1_url": "https://cdn.shopify.com/videos/c/vp/eb6de4e3e8b74032817200a4536a809c/eb6de4e3e8b74032817200a4536a809c.HD-720p-1.6Mbps-97670585.mp4",
+        "video_2_url": "https://cdn.shopify.com/videos/c/vp/5d9deeee09b5400380dc7047d85022bf/5d9deeee09b5400380dc7047d85022bf.HD-720p-1.6Mbps-97670671.mp4"
+      }
+    },
+    "moe": {
+      "type": "lovaire-tekst-foto",
+      "settings": {
+        "heading": "Wil je die glow, zonder tien producten?",
+        "text": "<p>Je ziet het overal: die frisse, stralende <strong>golden-hour glow</strong>.</p><p>Maar met een losse highlighter, blush én oogschaduw raakt je make-uptasje snel vol – en duurt je ochtend lang.</p><p>De <strong>Glow Palette</strong> geeft je alles in <strong>één compact palette</strong>.</p>",
+        "full_bleed": true,
+        "show_placeholder": false,
+        "background": "#ffffff",
+        "padding_top": 24,
+        "padding_bottom": 0,
+        "image": "shopify://shop_images/glow-palette-all-in-1.jpg"
+      }
+    },
+    "waarom": {
+      "type": "lovaire-tekst-foto",
+      "settings": {
+        "heading": "Vier tinten, eindeloos veel looks",
+        "text": "<p>• <strong>Parel</strong> – een frisse highlight op je jukbeenderen en in je ooghoekjes</p><p>• <strong>Goud</strong> – warme golden-hour glow op wangen en oogleden</p><p>• <strong>Brons-rosé</strong> – zachte diepte op je ogen</p><p>• <strong>Roze</strong> – een blosje met glans op je wangen</p><p>Draag ze los of <strong>meng ze tot jouw eigen glow</strong>.</p>",
+        "full_bleed": true,
+        "show_placeholder": false,
+        "background": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "image": "shopify://shop_images/glow-palette-tinten.jpg"
+      }
+    },
+    "anders": {
+      "type": "lovaire-tekst-foto",
+      "settings": {
+        "heading": "Wat deze palette anders maakt",
+        "text": "<p>Fijn poeder dat <strong>soepel uitblendt</strong> op je huid.</p><p>• <strong>Voor ogen én wangen</strong> – één palette in plaats van drie producten</p><p>• <strong>Opbouwbaar</strong> – van subtiel overdag tot stralend in de avond</p><p>• <strong>Compact</strong> – ideaal voor onderweg of op reis</p><p>Eén palette. Een paar tellen. Jouw glow.</p>",
+        "full_bleed": true,
+        "show_placeholder": false,
+        "background": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "image": "shopify://shop_images/glow-palette-glow-your-way.jpg"
+      }
+    },
+    "gebruik": {
+      "type": "lovaire-tekst-foto",
+      "settings": {
+        "heading": "Zo gebruik je het",
+        "text": "<p><strong>1.</strong> Draai je kwast door één tint, of door de hele palette voor een mix.</p><p><strong>2.</strong> Dep op je jukbeenderen, wenkbrauwboog, oogleden en binnenste ooghoek.</p><p><strong>3.</strong> Bouw laagje voor laagje op tot de glow die jij wilt.</p>",
+        "full_bleed": true,
+        "show_placeholder": false,
+        "background": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "image": "shopify://shop_images/glow-palette-zo-aanbrengen.jpg"
+      }
+    },
+    "slot": {
+      "type": "lovaire-tekst-foto",
+      "settings": {
+        "heading": "Glow zoals jij dat wilt",
+        "text": "<p>Een natuurlijke dagglow of een stralende avondlook – met de <strong>Glow Palette</strong> heb je het allemaal in één hand.</p><p><strong>Ontdek jouw glow vandaag nog.</strong></p>",
+        "full_bleed": true,
+        "show_placeholder": false,
+        "background": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 48
+      }
+    }
+  },
+  "order": [
+    "main",
+    "videos",
+    "moe",
+    "waarom",
+    "anders",
+    "gebruik",
+    "slot",
+    "faq",
+    "cta"
+  ]
+}
